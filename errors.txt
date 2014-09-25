@@ -2,7 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/glossary_gallery.rpy", line 558: is not terminated with a newline. (Check strings and parenthesis.)
-            textbutton "Room 3 - AgentAbacus" action (mr.Play("bgm/room3.mp3"), SetVariable('playing', name_playing())
+File "game/a_script_kazuki_1c.rpy", line 64: expected statement.
+    triple_min(2)
+                 ^
 
 Ren'Py Version: Ren'Py 6.17.7.521

@@ -523,23 +523,25 @@ label gallery:
 
     return
 
+# MusicRoom code #
 init python:
-
     # Step 1. Create a MusicRoom instance.
     mr = MusicRoom(fadeout=1.0)
-
     # Step 2. Add music files.
     mr.add("bgm/room3.mp3", always_unlocked=True)
     mr.add("bgm/the_round.mp3", always_unlocked=True)
-
     # Step X. name lookup
+    
     def name_playing():
         file_playing = renpy.music.get_playing()
         if(file_playing == "bgm/room3.mp3"):
             file_playing =  "Room 3 - AgentAbacus"
         elif(file_playing == "bgm/the_round.mp3"):
             file_playing =  "The Round - Nihilore"
-        else:
+            
+        elif(file_playing == None):#handle none case
+            file_playing = "Nothing"
+        else:#handle otherwise unhandled file
             file_playing =  "Secret file!"
         if (hasattr(store, 'playing')):
             store.playing = file_playing
@@ -550,22 +552,21 @@ init python:
 screen music_room:
 
     tag menu
-
+    window:
+        style "mm_root"#background
     frame:
         has vbox
 
         # The buttons that play each track.
         textbutton "Room 3 - AgentAbacus" action (mr.Play("bgm/room3.mp3"), SetVariable('playing', name_playing()))
         textbutton "The Round - Nihilore" action (mr.Play("bgm/the_round.mp3"), SetVariable('playing', name_playing()))
-
-
         null height 20
 
         # Buttons that let us advance tracks.
         text "Now playing:\n[playing]\n"
+        # now playing doesn't work without setting store.playing twice. research?
         textbutton "Next" action (mr.Next(), SetVariable('playing', name_playing()))
         textbutton "Previous" action (mr.Previous(), SetVariable('playing', name_playing()))
-
         null height 20
 
         # The button that lets the user exit the music room.
