@@ -1,0 +1,1035 @@
+﻿
+Ren'Py 6.17.7.521 lint report, generated at: Mon Jul 14 20:33:34 2014
+
+game/a_script_base.rpy:289 The jump is to nonexistent label 'dlc1_1a'.
+
+game/a_script_kazuki_1a.rpy:125 Could not evaluate 'nnvlmc', in the who part of a say statement.
+Perhaps you forgot to declare a character?
+
+game/a_script_kazuki_1a.rpy:127 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:129 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:130 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:131 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:133 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:135 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:137 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:138 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:139 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:140 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:143 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:144 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:159 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:161 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:167 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:170 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:171 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:174 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:178 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:179 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:186 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:189 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:191 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:194 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:198 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:200 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:202 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:206 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:213 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:215 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:216 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:218 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:219 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:221 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:223 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:225 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:226 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:235 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:237 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:243 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:244 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:245 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:246 Could not evaluate 'j', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:247 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:248 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:249 Could not evaluate 'j', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:250 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:254 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:257 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:259 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:261 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:263 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:266 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:268 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:287 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:297 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:298 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:301 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:302 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:303 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:305 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:308 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:309 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:310 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:312 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:313 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:336 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:337 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:338 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:339 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:340 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:341 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:342 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:343 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:344 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:348 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:349 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:350 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:351 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:352 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:353 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:354 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:355 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:356 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:357 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:359 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:362 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:363 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:364 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:365 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:366 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:367 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:368 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:376 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:377 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:379 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:380 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:383 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:384 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:386 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:391 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:392 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:393 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:394 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:395 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:396 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:397 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:398 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:402 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:404 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:405 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:406 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:407 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:408 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:409 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:410 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:411 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:422 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:423 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:427 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:428 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:435 Could not evaluate 'l', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:440 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:442 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:443 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:446 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:450 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:454 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:458 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:461 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:462 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:465 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:466 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:467 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:468 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:469 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:470 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:478 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:479 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:480 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:482 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:483 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:484 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:485 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:486 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:487 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:488 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:491 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:493 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:495 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:496 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:497 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:498 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:499 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:500 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:501 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:502 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:504 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:505 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:507 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:509 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:511 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:513 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:514 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:516 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:517 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:531 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:532 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:533 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:534 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:535 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:536 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:542 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:543 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:544 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:545 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:546 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:547 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:554 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:555 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:556 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:560 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:561 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:562 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:563 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:565 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:574 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:575 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:576 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:577 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:578 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:579 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:582 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:586 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:589 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:590 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:591 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:592 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:593 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:599 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:601 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:602 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:609 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:610 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:611 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:612 Could not evaluate 'n', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:613 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:614 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:615 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:628 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:630 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:633 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1a.rpy:635 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:2 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:5 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:6 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:7 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:8 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:12 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:13 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:14 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:15 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:16 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:17 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:19 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:20 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:21 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:22 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:24 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:25 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:33 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:34 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:35 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:36 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:37 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:38 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:39 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:40 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:41 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:42 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:43 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:44 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:45 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:46 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:49 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:50 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:54 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:55 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:56 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:57 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:59 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:61 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:62 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:63 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:64 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:65 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:67 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:68 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:69 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:70 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:71 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:72 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:73 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:74 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:75 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:76 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:77 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:78 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:79 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:83 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:84 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:85 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:86 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:87 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:88 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:89 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:90 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:94 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:95 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:96 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:97 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:98 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:99 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:100 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:101 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:102 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:103 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:104 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:108 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:110 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:111 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:120 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:121 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:122 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:123 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:124 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:125 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:126 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:127 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:128 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:130 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:131 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:141 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:142 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:143 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:144 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:149 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:150 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:151 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:152 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:153 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:154 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:155 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:160 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:162 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:172 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:173 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:177 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:180 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:182 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:187 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:188 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:189 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:192 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:194 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:196 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:198 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:200 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:201 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:203 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:208 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:210 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:212 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:214 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:217 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:218 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:220 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:221 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:222 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:225 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:227 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:228 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:230 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:231 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:232 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:233 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:234 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:235 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:236 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:237 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:238 Could not evaluate 't', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:240 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:245 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:247 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:248 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:249 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:250 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:252 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:253 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:254 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:255 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:256 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:257 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:258 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:259 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:260 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:261 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:262 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:263 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:265 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:267 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:268 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:269 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:271 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:272 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:273 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:274 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:275 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:276 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:278 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:280 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:282 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:283 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:284 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:285 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:286 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:287 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:288 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:291 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:292 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:293 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:294 Could not evaluate 'b', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:295 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:296 Could not evaluate 'b', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:297 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:299 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:300 Could not evaluate 'b', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:301 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:302 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:303 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:304 Could not evaluate 'w', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:305 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:307 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:309 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:310 Could not evaluate 'b', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:312 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:313 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:314 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:323 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:328 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:333 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:340 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:341 Could not evaluate 'li', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:342 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:343 Could not evaluate 'li', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:344 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:345 Could not evaluate 'li', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:347 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:350 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:353 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:354 Could not evaluate 'li', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:356 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:357 Could not evaluate 'li', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:358 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:360 Could not evaluate 'li', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:361 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:363 Could not evaluate 'li', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:365 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:366 Could not evaluate 'li', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:367 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:370 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:373 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:380 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:384 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:404 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:405 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:407 Could not evaluate 'mt', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:408 Could not evaluate 'mt', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:410 Could not evaluate 'mt', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:412 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:413 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:414 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:425 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:426 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:427 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:428 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:429 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:430 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:431 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:432 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:435 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:436 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:437 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:438 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:440 Could not evaluate 'nnvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:441 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:442 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_kazuki_1b.rpy:443 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:93 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:94 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:95 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:96 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:97 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:98 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:99 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:102 Could not evaluate 'nvlrm', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:103 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:104 Could not evaluate 'nvlrm', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:105 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:106 Could not evaluate 'nvlrm', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:107 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:108 Could not evaluate 'nvlrm', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:109 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:110 Could not evaluate 'nvlrm', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:111 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:112 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:113 Could not evaluate 'nvlrm', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:114 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:116 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:117 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:121 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:122 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:123 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:124 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:125 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:126 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:127 Could not evaluate 'nvls', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:128 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:130 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:131 Could not evaluate 'nvlmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:132 Could not evaluate 'nvlnmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:136 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:138 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:139 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:140 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:141 Could not evaluate 's', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:142 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:143 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:144 Could not evaluate 's', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:145 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:146 Could not evaluate 'mc', in the who part of a say statement.
+
+game/a_script_rin_1a.rpy:147 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/screens_extra.rpy:108 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/screens_extra.rpy:110 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/screens_extra.rpy:113 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/screens_extra.rpy:116 Could not evaluate 'nmc', in the who part of a say statement.
+
+game/screens_extra.rpy:118 Could not evaluate 'nmc', in the who part of a say statement.
+
+
+Statistics:
+
+The game contains 704 dialogue blocks, containing 9,960 words and 55,316
+characters, for an average of 14.1 words and 79 characters per block.
+
+The game contains 21 menus, 19 images, and 23 screens.
+
+
+Remember to set config.developer to False before releasing.
+
+Lint is not a substitute for thorough testing. Remember to update Ren'Py
+before releasing. New releases fix bugs and improve compatibility.

@@ -1,0 +1,36 @@
+law_lecture
+law_test <
+law_nothing > law_hesitation
+law_hesitation
+
+nat_xc-skipped
+nat_no_or_hesitation
+nat_will_try
+
+wil_camping
+wil_backup
+wil_nvm
+
+tam_lawrence
+tam_sorry
+tam_indifference
+
+self_skip
+self_go
+self_indecisive
+
+wil_lily_group
+self_40
+undecided_g40
+
+thought_heaven
+thought_hell
+thought_head_neither
+thought_head_empty
+
+lunch_work_1
+lunch_bagel_1
+
+meeting_known <
+meeting_hlawrence <
+meeting_no

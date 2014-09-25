@@ -1,0 +1,3983 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 132, in script call
+    call _start_store
+  File "renpy/common/00start.rpy", line 102, in script
+    python hide:
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 537, in name_playing
+    file_playing = renpy.music.get_playing()
+RuntimeError: maximum recursion depth exceeded
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 132, in script call
+    call _start_store
+  File "renpy/common/00start.rpy", line 102, in script
+    python hide:
+  File "/Users/fallen/Dropbox/Public Script/run_me_please/renpy/ast.py", line 761, in execute
+    i()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 544, in name_playing
+    name_playing()
+  File "game/glossary_gallery.rpy", line 537, in name_playing
+    file_playing = renpy.music.get_playing()
+  File "/Users/fallen/Dropbox/Public Script/run_me_please/renpy/audio/music.py", line 292, in get_playing
+    return c.get_playing()
+  File "/Users/fallen/Dropbox/Public Script/run_me_please/renpy/audio/audio.py", line 476, in get_playing
+    rv = pss.playing_name(self.number)
+RuntimeError: maximum recursion depth exceeded
+
+Darwin-13.3.0-x86_64-i386-64bit
+Ren'Py 6.17.7.521
+Project Exist v0.2.5_(1029)

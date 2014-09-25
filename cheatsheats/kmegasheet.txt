@@ -1,0 +1,12 @@
+s = Shadow
+mt = Math Teacher
+r = Rin
+l = Lawrence
+j = Jonathan
+n = Natalie
+t = Tamara
+w = Wil
+li = Lilian
+r = Robert
+mc = Kazuki
+nmc = internal Kazuki
