@@ -36,8 +36,6 @@
     #style.say_who_window.yminimum = 15
     #style.say_who_window.xfill = False
     
-
-    ## Don't use False, even for testing purposes.
     config.developer = checkDev()
     # access to developer commands
     config.keymap['save_delete'].append('K_BACKSPACE')
@@ -49,7 +47,6 @@
     config.window_title = "Project Exist"
     config.default_fullscreen = None
     config.gl_resize = False
-    #name and resolution
     style.clipFrame = Style(style.frame)
     style.clipFrame.background = Frame("menus/FoxFrameClip.png", 25, 25)
     
@@ -82,7 +79,6 @@
     ##
     ## The theme function takes a number of parameters that can
     ## customize the color scheme.
-    # **** colors man
     theme.threeD(
         # Color scheme: Colorblind
                                     
@@ -130,16 +126,6 @@
         ## do so below.            
         )
 
-
-    #########################################
-    ## This stuff has to get sorted out -URGENT-
-    ## These settings let you customize the window containing the
-    ## dialogue and narration, by replacing it with an image.
-
-    ## The background of the window. In a Frame, the two numbers
-    ## are the size of the left/right and top/bottom borders,
-    ## respectively.
-
     style.window.background = Frame("menus/FoxDialogueBox.png", 25, 25)
     style.frame.background = Frame("menus/FoxFrameBox.png", 25, 25)
 
@@ -164,21 +150,7 @@
 
     # style.window.yminimum = 250
 
-
-    #########################################
-    ## Main menu placement solved
-
-
-    #########################################
-    ## These let you customize the default font used for text in Ren'Py. -URGENT- Plan on implementing aqua font
-
-    ## The file containing the default font.
-
     style.default.font = checkFont()
-    # style.default.language = "korean-with-spaces"
-
-    ## The default size of text.
-
     style.default.size = checkSize()
 
     ## Note that these only change the size of some of the text. Other

@@ -17,6 +17,7 @@ init python:
         import EasyDialogsWin as EasyDialogs
     except:
         EasyDialogs = None
+        #EasyDialogs if windows, TK otherwise
     import re
     import os
     import subprocess
@@ -31,7 +32,7 @@ init python:
     def begin_game():
         savename = renpy.input("Please name this savefile.")
         savename = savename.strip()
-        valid = re.match('^[a-zA-Z0-9]+$', savename) is not None
+        valid = re.match('^[a-zA-Z0-9]+$', savename) is not None#alphanumerics
         if(((savename == "") or (savename == None)) or not valid):
             renpy.say(None, "That savefile name was invalid. Please try again.")
             savename = begin_game()
@@ -40,10 +41,11 @@ init python:
                 os.makedirs(home + "/My Games/" + dirname + "/" + savename)
                 #renpy.say(None, "A folder now exists at \"" + (os.path.abspath(home + "/My Games/" + dirname + "/" + savename)) + 
                 #    "\". This is a beta feature. Please do not delete it.")
+                #quietly make the folder
             except:
                 renpy.say(None, "It appears that you do not have permission to write to your own folder. Remedy this before playing " + 
                     build.executable_name + ".")
-                renpy.reload_script()
+                renpy.full_restart()
         else:
             renpy.say(None, "That savefile name has already been taken. Please choose a different one.")
             savename = begin_game()
@@ -64,7 +66,7 @@ init python:
         file.close()
         return
         
-    def delete_file(magic_folder, magic_file):#DANGEROUSDANGEROUSDANGEROUS
+    def delete_file(magic_folder, magic_file):
         if(magic_folder == None):
             magic_file = os.path.abspath(get_user_dir() + "/" + magic_file)
         else:
@@ -73,7 +75,8 @@ init python:
         try:
             os.remove(magic_file)
         except:
-            renpy.say(None, "You do not appear to have the adequate permissions required to delete this folder" + build.executable_name + ".")
+            renpy.say(None, build.executable_name + " tried to delete a file: " + magic_file + ". It could not be removed. Try fixing your permissions in the containing folder. Moving to main menu.")
+            renpy.reload_script()
         #
         return
     
@@ -83,16 +86,12 @@ init python:
         else:
             magic_file = os.path.abspath(get_user_dir() + "/" + magic_folder + "/" + magic_file)
         #Written by Thorium
-        str = ""
         try:
-            file = open(magic_file, 'r+')#needed single quote
-            str = file.read().decode("utf-8")
-            file.close()
+            str = file(magic_file).read().decode("utf-8")
         except:
-            renpy.say(None, "It appears the file you're attempting to access is unreadable, please remedy this" + build.executable_name + ".")
+            renpy.say(None, build.executable_name + " tried to read a file: " + magic_file + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
+            renpy.full_restart()
         return str
-        #
-        #return file(magic_file).read().decode("utf-8")
     
     def filify_string(given_message, magic_folder, magic_file):
         if(magic_folder == None):
@@ -105,7 +104,8 @@ init python:
             file.write("%s" % given_message)
             file.close()
         except: 
-            renpy.say(None, "It appears that you are unable to write to this file, please remedy this." + build.executable_name)
+            renpy.say(None, build.executable_name + " tried to read a file: " + magic_file + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
+            renpy.reload_script()
         #
         return
     
@@ -115,8 +115,7 @@ init python:
             try:
                 os.makedirs(magic_folder)
             except:
-                renpy.say(None, "It appears that you do not have permission to write to your own folder. Remedy this before playing " + 
-                    build.executable_name + ".")
+                renpy.say(None, build.executable_name + " tried to create a folder: " + magic_folder + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
                 renpy.reload_script()
         return
         
@@ -126,8 +125,8 @@ init python:
         try:
             shutil.rmtree(magic_folder)
         except:
-            renpy.say(None, "You do not appear to have the adequate permissions required to delete this folder" + build.executable_name + ".")
-        #
+            renpy.say(None, build.executable_name + " tried to delete a folder: " + magic_folder + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
+            renpy.reload_script()
         return
     
     def show_file(magic_folder, magic_file):
@@ -144,8 +143,8 @@ init python:
             else:
                 subprocess.Popen([ "xdg-open", magic_file ])
         except: 
-            renpy.say(None, "It appears the file you're attempting to access is unreadable, please remedy this." + build.executable_name)
-        #
+            renpy.say(None, build.executable_name + " tried to read a file: " + magic_file + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
+            renpy.reload_script()
         return
         
     def show_folder(magic_folder):
@@ -159,8 +158,8 @@ init python:
             else:
                 subprocess.Popen([ "xdg-open", magic_folder ])
         except: 
-            renpy.say(None, "The folder you're trying to open appears unreadable, please remedy this." + build.executable_name)
-        #
+            renpy.say(None, build.executable_name + " tried to read a folder: " + magic_folder + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
+            renpy.reload_script()
         return
     
     def ui_find_folder(given_message, magic_folder):
@@ -226,6 +225,13 @@ label test_iorpy_magic:
     $ create_folder("homework")
     $ kill_save(save_name)
     return
+    
+#v0.1.3 changelog from v0.1.2
+#decided kicking to main menu smarter than reloading
+#better error messages
+#few more comments
+#reverted method of reading certain files
+    
 #v0.1.2 changelog from v0.1.1
 #Throium made marked functions safer
 #actual alphanumeric check
