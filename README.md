@@ -15,3 +15,6 @@ In general, the latest build <a href = http://wiki2.projectexist.net/index.php?t
 
 ### Getting involved
 I'd prefer that people join the team through the <a href = http://blog.projectexist.net/?page_id=127>the online application</a>. However, the adventurous may simply send me an email at nolan@projectexist.net and I will most likely find a way to add you to the team.
+
+### Other stuff
+Nearly all information is available at either our <a href = http://wiki2.projectexist.net/>wiki</a> or <a href = http://blog.projectexist.net/>blog</a>. You may also connect to projectexist.net in the <a href = http://www.teamspeak.com/?page=downloads>TeamSpeak 3 client</a>.
