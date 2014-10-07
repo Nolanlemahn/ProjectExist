@@ -514,7 +514,7 @@ label Kazuki_1i:
         nmc "But I had better figure out whether or not I am going to that faculty thing."
         menu:
             extend ""
-            "I should make a name for myself":
+            "The physics department should know who I am":
                 $ answer_add("meeting_known")
                 nmc "If I am so important to Lawrence, then perhaps I could be of use to the entire faculty, and that relationship, 
                      of course, would be of use to me."

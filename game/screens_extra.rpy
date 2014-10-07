@@ -70,9 +70,9 @@ init python:
         remaining = length - st
         #ui.bar
         if remaining > 3.0:
-            return VBox(Text("%.1f" % remaining, color="#fff", size=72, xalign=0.5), ui.bar(length, remaining, width=400)), .1
+            return VBox(Text("%.1f" % remaining, color="#fff", size=72, xalign=0.5)), .1#, ui.bar(length, remaining, width=400)), .1
         elif remaining > 0.0:
-            return VBox(Text("%.1f" % remaining, color="#f00", size=72, xalign=0.5), ui.bar(length, remaining, width=400)), .1
+            return VBox(Text("%.1f" % remaining, color="#f00", size=72, xalign=0.5)), .1#, ui.bar(length, remaining, width=400)), .1
         else:
             return anim.Blink(Text("0.0", color="#f00", size=72)), None
 
@@ -84,8 +84,13 @@ transform alpha_dissolve:
     # This is to fade the bar in and out, and is only required once in your script
 
 screen countdown:
-    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve # This is the timer bar.
+    timer 0.1 repeat True action If(time > 0, true=SetVariable('time', time - 0.1), false=[Hide('countdown'), Jump(timer_jump)])
+    if time > 3:
+        bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_bar"
+        text str("%.1f" % time) xalign .5 ypos .25 color "#FFFFFF" size 72 at alpha_dissolve
+    elif time > 0:
+        bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_barw"
+        text str("%.1f" % time) xalign .5 ypos .25 color "#F00000" size 72 at alpha_dissolve
 
 screen side_note:
     tag side_note_tag

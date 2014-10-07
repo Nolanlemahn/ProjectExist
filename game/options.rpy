@@ -79,10 +79,36 @@ image sn siebener = DynamicDisplayable(show_sn, tt=
 image sn frank = DynamicDisplayable(show_sn, tt=
     "Frank Anthoni Bruni was the chief restaurant critic of the New York Times from 2004 to 2009.")
 
+init -1 python:
+    def img(name, color, x, y):#from 00themes
+        rv = theme.OneOrTwoColor(name, color)
+        if x is not None:
+            rv = Frame(rv, x, y, tile=True)
+        return rv
+        
 init -1:
     #styles - ui
+    $ cdw_color = (255, 0, 0, 255)#red
     $ style.create("game_box", "frame")
     $ style.game_box.background = Frame("menus/FoxGameBox.png", 25, 25)
+    $ style.create("cd_barw", "bar")
+    $ style.cd_barw.left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
+    $ style.cd_barw.right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
+    $ style.cd_barw.thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
+    $ style.cd_barw.hover_left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
+    $ style.cd_barw.hover_right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
+    $ style.cd_barw.hover_thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
+    
+    $ cd_color = (255, 255, 255, 255)#white
+    $ style.create("cd_bar", "bar")
+    $ style.cd_bar.left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
+    $ style.cd_bar.right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
+    $ style.cd_bar.thumb = img("menus/thslider_thumb.png", cd_color, None, None)
+    $ style.cd_bar.hover_left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
+    $ style.cd_bar.hover_right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
+    $ style.cd_bar.hover_thumb = img("menus/thslider_thumb.png", cd_color, None, None)
+    
+    
     $ style.alertnow_text.color = "#FF0000"
     style centered_talker:
         yalign 0.5
@@ -344,7 +370,7 @@ init -2 python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.5_(1031)"
+    config.version = "v0.2.5_(1033)"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True
@@ -356,11 +382,10 @@ init -2 python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify('cleanup.bat', None)
+    build.classify('cleanup.command', None)
     build.classify("**.rpy", None)
-    ## To archive files, classify them as 'archive'.
-    
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+
 
     build.documentation('*.html')
     build.documentation('*.txt')

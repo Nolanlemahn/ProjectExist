@@ -11,6 +11,8 @@
 #   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
 #
 #  0. You just DO WHAT THE FUCK YOU WANT TO.
+# ... note that some of the things that Thorium has done were 
+# edited slightly...
 
 init python:
     try:
@@ -207,6 +209,7 @@ init python:
         return
         
 label reset_button:
+    $ renpy.reload_script()
     $ freaking_delete_every_external_file_associated_with_this()
     return
     

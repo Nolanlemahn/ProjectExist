@@ -321,8 +321,10 @@ label Kazuki_1b:
     l "Interesting. Well, you must have had something intelligent to say or ask since you didn't stampede out with the rest of them. Am I right?"
     mc "Uhh..."
     nmc "I end up asking about..."
-    show countdown 7 at Position(xalign=0.5, yalign=0.3)
-    $ ui.timer(7.0, ui.jumps("Kazuki_1b_pre"))
+    $ time = 7
+    $ timer_range = 7
+    $ timer_jump = 'Kazuki_1b_pre'
+    show screen countdown
     menu:
         extend ""
         "Today's lecture":
