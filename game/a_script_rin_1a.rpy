@@ -1,6 +1,6 @@
 # Aborted Arc + Schrödinger's Gun much? This'll be a crapload of fun.
 label Rin_1a:#this_label_done
-    call rollfind
+    
     $ mother_name = "Mother"
     $ shadow_name = "Rin's Shadow"
     $ main_name = "?"

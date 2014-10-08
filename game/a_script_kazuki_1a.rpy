@@ -62,6 +62,9 @@ label Kazuki_1a:#this_label_done
     
     $ mtname = "Math Teacher"
     $ mt = DynamicCharacter("mtname", show_two_window=True)
+    
+    $ dname = "\"Dad\""
+    $ d = DynamicCharacter("dname", show_two_window=True)
 
     #Rin
     $ r = Character('Rin', color="#000000", kind=char_null, show_two_window=True)
@@ -341,8 +344,6 @@ label Kazuki_1b:
 
     
 label Kazuki_1b_pre:
-    call rollfind
-    hide countdown 7
     if ("law_lecture" in answers):
         mc "There were a few concepts in today's lecture I didn't quite understand."
         l "Liar. I know you understood everything."
@@ -426,18 +427,16 @@ label Kazuki_1b_stub:
        with my phone until the meeting actually starts. So, are you coming?"
     $ minutes = minutes + 2
     #9:50PM
-    show countdown 20 at Position(xalign=0.5, yalign=.3)
-    $ ui.timer(20.0, ui.jumps("Kazuki_1b_interstitial"))
+    $ time = 20
+    $ timer_range = 20
+    $ timer_jump = "Kazuki_1b_interstitial"
+    show screen countdown
     menu:
         extend ""
         "Yes":
-            hide countdown 20
-            call rollfind
             mc "I should be able to attend. Should I just come to this classroom at 6 then?"
             l "Yes. You won't be able to get into the meeting without my key. I'm counting on you."
         "No":
-            hide countdown 20
-            call rollfind
             mc "I don't think so."
             l "Well, meet me in this classroom at 6 if you change your mind."
         "...":
@@ -445,8 +444,6 @@ label Kazuki_1b_stub:
     return
         
 label Kazuki_1b_interstitial:
-    call rollfind
-    hide countdown 20
     l "Not sure, eh? Well, if you do decide to come, meet me in this classroom at 6. Ciao."
     return
         
@@ -483,13 +480,13 @@ label Kazuki_1b_extend:
     nmc "Oh my God. She knows my name."
     mc "That's me. What's up?"
     n "Are you going to cross-country today?"
-    show countdown 5 at Position(xalign=0.5, yalign=.3)
-    $ ui.timer(5.0, ui.jumps("Kazuki_1b_fail"))
+    $ time = 5
+    $ timer_range = 5
+    $ timer_jump = "Kazuki_1b_fail"
+    show screen countdown
     menu:
         extend ""
         "Yes":
-            call rollfind
-            hide countdown 5
             mc "Yes, why do you ask?"
             n "Well, I was hoping you'd be able to take me to cross-country practice."
             nmc "Oh God. She wants me to do her a favor. Wait, that can't be right.{w} I take the opportunity to clear my throat again and calm
@@ -529,8 +526,10 @@ label Kazuki_1b_extend:
                  speak again."
             n "Well, I should probably get to my next class. So, will you be able to- eep!"
             nmc "Her legs buckle and she starts to fall! I..."
-            show countdown 4 at Position(xalign=0.5, yalign=.3)
-            $ ui.timer(4.0, ui.jumps("Kazuki_1b_extend2"))
+            $ time = 4
+            $ timer_range = 4
+            $ timer_jump = "Kazuki_1b_extend2"
+            show screen countdown
             menu:
                 extend ""
                 "Catch her!":
@@ -540,8 +539,6 @@ label Kazuki_1b_extend:
             jump Kazuki_1b_extend2
         "No":
             $ answer_add("nat_no_or_hesitation")
-            call rollfind
-            hide countdown 5
             mc "No, why do you ask?"
             n "Well, I was hoping you'd be able to take me to cross-country practice, but if you're busy..."
             nmc "My throat collapses in on itself. God, I should have said yes. And now I physically can't change my mind."
@@ -551,8 +548,6 @@ label Kazuki_1b_extend:
             $ points[1] += -2
         "...":
             $ answer_add("nat_no_or_hesitation")
-            call rollfind
-            hide countdown 5
             nmc "I can't say anything in front of the perfect Natalie. What if I stutter? What if I spit on her? What if I..."
             n "Oh... Umm, s-s-..."
             nmc "... Better not to say anything at all."
@@ -563,8 +558,6 @@ label Kazuki_1b_extend:
     jump Kazuki_1c
     
 label Kazuki_1b_extend2:
-    call rollfind
-    hide countdown 4
     nnvlmc "... Natalie never hit the floor."
     nnvlmc "It took me a full 5 seconds to realize that Natalie was in my arms."
     nnvlmc "... My body didn't even wait for me to make a decision. It moved all on its own, and embraced her."
@@ -577,13 +570,13 @@ label Kazuki_1b_extend2:
     nmc "That's when I realized she was still in my arms. And that I was still in hers."
     extend "\n... I let go of her. Reluctantly."
     n " So umm... will you be able to walk me over at a quarter to 8?"
-    show countdown 5 at Position(xalign=0.5, yalign=.3)
-    $ ui.timer(5.0, ui.jumps("Kazuki_1b_fail"))
+    $ time = 5
+    $ timer_range = 5
+    $ timer_jump = "Kazuki_1b_fail"
+    show screen countdown
     menu:
         extend ""
         "Yes":
-            call rollfind
-            hide countdown 5
             $ answer_add("nat_will_try")
             mc "Yeah, I'll come get you."
             n "Oh, you're the best. Here's my address."
@@ -607,8 +600,6 @@ label Kazuki_1b_extend2:
             nmc "..."
             extend "\nI wonder if she fell on purpose."
         "No":
-            call rollfind
-            hide countdown 5
             $ answer_add("nat_no_or_hesitation")
             nmc "I sadly shake my head. I'm a very busy man, with things to see and people to do. Or something along those lines."
             $ points[1] += -2
@@ -619,7 +610,6 @@ label Kazuki_1b_extend2:
     jump Kazuki_1c
     
 label Kazuki_1b_fail:
-    hide countdown 5
     nmc "I can't say anything in front of the perfect Natalie. What if I stutter? What if I spit on her? What if I..."
     n "Oh... Umm, s-s-..."
     nmc "... Better not to say anything at all."

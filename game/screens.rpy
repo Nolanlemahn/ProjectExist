@@ -252,8 +252,6 @@ python early:
 #
 # http://www.renpy.org/doc/html/screen_special.html#say
 screen fake_say:
-    if (not persistent.all_rollback):
-        $ renpy.block_rollback()
     #show rpg stats code
     # automatically re-draw the GUI over and over and over again
     if(not in_debug):
@@ -274,8 +272,6 @@ screen fake_say:
             $ Wallet()
         
 screen say:
-    if (not persistent.all_rollback):
-        $ renpy.block_rollback()
     #show rpg stats code
     # automatically re-draw the GUI over and over and over again
     if(not in_debug):
@@ -339,22 +335,6 @@ screen say:
 
 screen choice:
     $ in_menu = True
-    if (not persistent.choice_rollback):
-        $ renpy.block_rollback()
-    #if nvl_q:
-    #    window:
-    #        style "nvl_window"
-    #        has vbox:
-    #            style "nvl_vbox"
-    #            if items:
-    #                vbox:
-    #                    id "menu"
-    #                    for caption, action, chosen in items:
-    #                        if action:
-    #                            button:
-    #                                style "nvl_menu_choice_button"
-    #                                action action
-    #                                text caption style "nvl_menu_choice"
     window: 
         style "menu_window"        
         xalign 0.5
@@ -398,8 +378,6 @@ screen input:
 # http://www.renpy.org/doc/html/screen_special.html#nvl
 
 screen nvl_hard:
-    if (not persistent.all_rollback):
-        $ renpy.block_rollback()
     window:
         style "nvl_window"
 
@@ -416,9 +394,6 @@ screen nvl_hard:
                     else:
                         text caption style "nvl_dialogue"
 screen nvl:
-    if (not persistent.all_rollback):
-        $ renpy.block_rollback()
-
     window:
         style "nvl_window"
 
@@ -810,8 +785,6 @@ init -2 python:
 screen yesno_prompt:
 
     modal True
-    if (not persistent.choice_rollback):
-        $ renpy.block_rollback()
     window:
         style "gm_root"
 

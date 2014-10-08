@@ -84,13 +84,16 @@ transform alpha_dissolve:
     # This is to fade the bar in and out, and is only required once in your script
 
 screen countdown:
-    timer 0.1 repeat True action If(time > 0, true=SetVariable('time', time - 0.1), false=[Hide('countdown'), Jump(timer_jump)])
-    if time > 3:
-        bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_bar"
-        text str("%.1f" % time) xalign .5 ypos .25 color "#FFFFFF" size 72 at alpha_dissolve
-    elif time > 0:
-        bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_barw"
-        text str("%.1f" % time) xalign .5 ypos .25 color "#F00000" size 72 at alpha_dissolve
+    tag countdown_tag
+    if(not renpy.in_fixed_rollback()):
+        key "rollback" action [[]]
+        timer 0.1 repeat True action If(time > 0, true=SetVariable('time', time - 0.1), false=[Hide('countdown'), Jump(timer_jump)])
+        if time > 3:
+            bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_bar"
+            text str("%.1f" % time) xalign .5 ypos .25 color "#FFFFFF" size 72
+        elif time > 0:
+            bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_barw"
+            text str("%.1f" % time) xalign .5 ypos .25 color "#F00000" size 72
 
 screen side_note:
     tag side_note_tag

@@ -60,6 +60,14 @@ init python:
             return None
         return q_answers[result - 1]
         
+    def menu_callback(mode, old_modes):
+        if mode == "say" or mode == "nvl":
+            renpy.hide_screen("countdown_tag")
+            renpy.fix_rollback()
+        if (renpy.in_fixed_rollback()):
+            renpy.hide_screen("countdown_tag")
+    config.mode_callbacks.append(menu_callback)
+        
 label sn_label(select_tip):
     $ selected_note = select_tip
     $ snroutine = 3

@@ -61,18 +61,21 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     nmc "As I confirmed this morning, it takes 5 minutes to get to school if I sprint, trespass, pick a few locks, jump dangerously, and so on."
     nmc "But honestly, I'm not up for repeating all of that nonsense. So, I'm taking the bus home."
     $ sio_l("bg blackdrop")
-    $ triple_min(2)
+    call triple_min(2)
     nmc "The rest of the bus drive proceeded without incident."
     $ sio_l("bg kazuki kitchen")
     nmc "I let myself into the apartment and begin getting things out of the refrigerator."
     nmc "Father doesn't own a car. He had a Subaru, but then he sold it to pay off his tab. So I can't actually tell if he's home or not. 
          At least not just by walking through the front door."
     nmc "And honestly, I don't care enough to check on him."
-    mc "Freaking why."
+    mc "...Freaking why."
     nmc "While all of my smoked salmon was where I left it, someone had eaten the last bagel after I left for school."
-    nmc "I suppose white bread will have to do."
+    nmc "And there aren't any English muffins left either... {w}I suppose white bread will have to do."
+    
 
 label Kazuki_1j_essay:#we're writing an essay, lol ya right
+    $ sio_l("bg cafeteria")
+    nmc "I walk to the cafeteria with my laptop."
     nmc "A 10 page essay on why I wasn't paying attention in class."
     nmc "\"Well gee, Ms. Amnaki, it may or may not have to do with your inability to teach things that are new to me.\""
     nmc "Mm, an excellent topic sentence."

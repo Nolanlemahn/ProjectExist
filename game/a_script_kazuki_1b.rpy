@@ -23,12 +23,13 @@ label Kazuki_1d_wil:
     $ minutes = 603
     w "Hah... anyway, class starts soon. You should probably sit down."
     mc "Yeah, see ya... Wait, hang on. I wanted to ask you something..."
-    show countdown 7 at Position(xalign=0.5, yalign=.3)
-    $ ui.timer(7.0, ui.jumps("Kazuki_1d_insert"))
+    $ time = 7
+    $ timer_range = 7
+    $ timer_jump = "Kazuki_1d_insert"
+    show screen countdown
     menu:
         extend ""
         "Ask to go camping with him this weekend":
-            hide countdown 7
             $ answer_add("wil_camping")
             mc "Would you mind if I tagged along?"
             w "Huh? Tag what?"
@@ -49,7 +50,6 @@ label Kazuki_1d_wil:
             t "... And I don't want to see any of you spacing out and pretending that you aren't here."
             nmc "I pulled my laptop out of its case and read some comics."
         "I need backup at tonight's meeting" if (answers[0] == "law_hesitation"):
-            hide countdown 7
             $ answer_add("wil_backup")
             mc "I'm going to need help at tonight's meeting."
             nmc "Some moral support is better than absolutely none. Besides, Wil took the accelerated Physics 101 course with me."
@@ -78,7 +78,6 @@ label Kazuki_1d_wil:
             w "Whatever. Looks like Tamara is about to start her crap show."
             nmc "Nodding, I trot back to my desk."
         "Actually, never mind":
-            hide countdown 7
             $ answer_add("wil_nvm")
             mc "... Never mind."
             w "What?"
@@ -94,7 +93,6 @@ label Kazuki_1d_wil:
     jump Kazuki_1d_tamara_b
 
 label Kazuki_1d_insert:
-    hide countdown 7
     $ answer_add("wil_nvm")
     mc "..."
     w "What?"
@@ -119,13 +117,13 @@ label Kazuki_1d_tamara_a:
     call dev_com("tamaraplus")
     mc "I'm sorry, but what do you mean by \"again\"?"
     t "This is the second time you have been late to class this week. What gives?"
-    show countdown 15 at Position(xalign=0.5, yalign=.3)
-    $ ui.timer(15.0, ui.jumps("Kazuki_1d_tamara_b1"))
+    $ time = 15
+    $ timer_range = 15
+    $ timer_jump = "Kazuki_1d_tamara_b1"
+    show screen countdown
     menu:
         extend ""
         "She can't prove that":
-            hide countdown 15
-            call rollfind
             $ answer_add("tam_no_proof")
             $ points[2] += -2
             mc "I don't believe you have documentation of this first alleged tardiness."
@@ -133,8 +131,6 @@ label Kazuki_1d_tamara_a:
             mc "Well, we last had this class on Thursday, and you forgot to take roll call that day."
             t "Tch... Just make sure it doesn't happen again."
         "I'll have Lawrence talk to her":
-            hide countdown 15
-            call rollfind
             $ answer_add("tam_lawrence")
             nmc "I don't say anything. I do however, pull out my Nokia 3310."
             t "What are you doing?"
@@ -144,8 +140,6 @@ label Kazuki_1d_tamara_a:
             t "That won't be necessary. I trust him. Go to your seat."
             nmc "I guess his name carries weight everywhere around here... To my seat I go, then."
         "Apologizing will get this over with faster":
-            hide countdown 15
-            call rollfind
             $ answer_add("tam_sorry")
             mc "My apologies, Tamara. I'll make sure it doesn't happen again."
             $ points[2] += 3
@@ -155,8 +149,6 @@ label Kazuki_1d_tamara_a:
     jump Kazuki_1d_tamara_b
     
 label Kazuki_1d_tamara_b1:
-    hide countdown 15
-    call rollfind
     $ answer_add("tam_indifference")
     t "... Can't get a word out, huh? Oh well, as long as the point got across..."
     nmc "Well actually, I didn't feel like gracing such a stupid question with a response, but whatever contents her."
@@ -302,30 +294,25 @@ label Kazuki_1d_tamara_b:
     nmc "Well, there's about half an hour until Math 122."
     nmc "I'm Japanese. By birth, I think I've earned the right to skip all mathematics courses until the end of time."
     nmc "Double integrals, rotations and optimizations; such topics come to me naturally."
-    show countdown 30 at Position(xalign=0.5, yalign=.3)
-    $ ui.timer(30.0, ui.jumps("Kazuki_1e"))
+    $ time = 30
+    $ timer_range = 30
+    $ timer_jump = "Kazuki_1e"
+    show screen countdown
     menu:
         extend ""
         "Skip class":
-            hide countdown 30
-            call rollfind
             $ answer_add("self_skip")
             mc "There is absolutely no point in me going... but what would I do if I skipped?"
         "Attend":
-            hide countdown 30
-            call rollfind
             $ answer_add("self_go")
             mc "I should probably go anyway, though. Just to keep up appearances."
         "...":
-            hide countdown 30
-            call rollfind
             $ answer_add("self_indecisive")
             mc "... I can't make up my mind."
     jump Kazuki_1e
     
 label Kazuki_1e:
     if("self_skip" not in answers and "self_go" not in answers):
-        hide countdown 30
         $ answer_add("self_indecisive")
         mc "... I can't make up my mind."
     li "Eh?"
@@ -372,18 +359,18 @@ label Kazuki_1e:
     hide asset flier last
     $ minutes = minutes + 3
     nmc "I unceremoniously stuff the flier in my bag. Actually, now that I think about it... This could be..."
-    show countdown 15 at Position(xalign=0.5, yalign=.3)
-    $ ui.timer(15.0, ui.jumps("Kazuki_1g"))
+    $ time = 15
+    $ timer_range = 15
+    $ timer_jump = "Kazuki_1g"
+    show screen countdown
     menu:
         extend ""
         "Wil can get in with Lily":
-            hide countdown 15
             $ answer_add("wil_lily_group")
         "I can get a 4.0 in Japanese":
-            hide countdown 15
             $ answer_add("self_40")
         "...":
-            hide countdown 15
+            $ python_pass()
     jump Kazuki_1g
     #10:37AM
 
@@ -391,7 +378,7 @@ label Kazuki_1g:
     $ minutes = minutes + 3
     if("wil_lily_group" not in answers and "self_40" not in answers):
         $ answer_add("undecided_g40")
-        nmc "I supposed I can make up my mind later."
+        nmc "I supposed I can decide what that means later."
     nmc "With the knowledge that there is good help available, I shove the flier in my laptop bag and head to math."
     $ sio_s("bg classroom3")
     $ minutes = minutes + 15
@@ -474,8 +461,10 @@ label Kazuki_1h:
          time when you shove some stuff down your throat and into your stomach because you have to."
     nmc "Fun fact, that wise man was myself."
     nmc "In any case, I have to figure out something to do for lunch."
-    show countdown 30 at Position(xalign=0.5, yalign=.3)
-    $ ui.timer(30.0, ui.jumps("Kazuki_1i"))
+    $ time = 30
+    $ timer_range = 30
+    $ timer_jump = "Kazuki_1i"
+    show screen countdown
     menu:
         extend ""
         "I should get that essay done right now":
@@ -486,7 +475,6 @@ label Kazuki_1h:
             $ answer_add("lunch_bagel_1")
         "...":
             $ answer_add("lunch_work_1")
-    hide countdown 30
     jump Kazuki_1i
     
 label Kazuki_1i:
