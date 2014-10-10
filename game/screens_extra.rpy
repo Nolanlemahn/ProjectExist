@@ -65,16 +65,6 @@ init python:
     
     def python_pass():
         return
-        
-    def countdown(st, at, length=0.0):
-        remaining = length - st
-        #ui.bar
-        if remaining > 3.0:
-            return VBox(Text("%.1f" % remaining, color="#fff", size=72, xalign=0.5)), .1#, ui.bar(length, remaining, width=400)), .1
-        elif remaining > 0.0:
-            return VBox(Text("%.1f" % remaining, color="#f00", size=72, xalign=0.5)), .1#, ui.bar(length, remaining, width=400)), .1
-        else:
-            return anim.Blink(Text("0.0", color="#f00", size=72)), None
 
 transform alpha_dissolve:
     alpha 0.0
@@ -82,6 +72,27 @@ transform alpha_dissolve:
     on hide:
         linear 0.5 alpha 0
     # This is to fade the bar in and out, and is only required once in your script
+
+init -1:
+    $ cdw_color = (255, 0, 0, 255)#red
+    $ style.create("game_box", "frame")
+    $ style.game_box.background = Frame("menus/FoxGameBox.png", 25, 25)
+    $ style.create("cd_barw", "bar")
+    $ style.cd_barw.left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
+    $ style.cd_barw.right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
+    $ style.cd_barw.thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
+    $ style.cd_barw.hover_left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
+    $ style.cd_barw.hover_right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
+    $ style.cd_barw.hover_thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
+    
+    $ cd_color = (255, 255, 255, 255)#white
+    $ style.create("cd_bar", "bar")
+    $ style.cd_bar.left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
+    $ style.cd_bar.right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
+    $ style.cd_bar.thumb = img("menus/thslider_thumb.png", cd_color, None, None)
+    $ style.cd_bar.hover_left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
+    $ style.cd_bar.hover_right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
+    $ style.cd_bar.hover_thumb = img("menus/thslider_thumb.png", cd_color, None, None)
 
 screen countdown:
     tag countdown_tag

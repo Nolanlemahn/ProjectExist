@@ -24,16 +24,6 @@ init python:
         
 image empty = "drops/empty.png"
 
-#countdowns
-image countdown 1 = DynamicDisplayable(countdown, length=1.0)
-image countdown 4 = DynamicDisplayable(countdown, length=4.0)
-image countdown 5 = DynamicDisplayable(countdown, length=5.0)
-image countdown 7 = DynamicDisplayable(countdown, length=7.0)
-image countdown 10 = DynamicDisplayable(countdown, length=10.0)
-image countdown 15 = DynamicDisplayable(countdown, length=15.0)
-image countdown 20 = DynamicDisplayable(countdown, length=20.0)
-image countdown 30 = DynamicDisplayable(countdown, length=30.0)
-
 #bg - support
 image bg blackdrop = "#000000"
 image bg graydrop = "drops/graydrop.png"
@@ -90,27 +80,6 @@ init -1 python:
         
 init -1:
     #styles - ui
-    $ cdw_color = (255, 0, 0, 255)#red
-    $ style.create("game_box", "frame")
-    $ style.game_box.background = Frame("menus/FoxGameBox.png", 25, 25)
-    $ style.create("cd_barw", "bar")
-    $ style.cd_barw.left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
-    $ style.cd_barw.right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
-    $ style.cd_barw.thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
-    $ style.cd_barw.hover_left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
-    $ style.cd_barw.hover_right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
-    $ style.cd_barw.hover_thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
-    
-    $ cd_color = (255, 255, 255, 255)#white
-    $ style.create("cd_bar", "bar")
-    $ style.cd_bar.left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
-    $ style.cd_bar.right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
-    $ style.cd_bar.thumb = img("menus/thslider_thumb.png", cd_color, None, None)
-    $ style.cd_bar.hover_left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
-    $ style.cd_bar.hover_right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
-    $ style.cd_bar.hover_thumb = img("menus/thslider_thumb.png", cd_color, None, None)
-    
-    
     $ style.alertnow_text.color = "#FF0000"
     style centered_talker:
         yalign 0.5
