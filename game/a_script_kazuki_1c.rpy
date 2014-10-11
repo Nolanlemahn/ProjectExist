@@ -71,7 +71,7 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     mc "...Freaking why."
     nmc "While all of my smoked salmon was where I left it, someone had eaten the last bagel after I left for school."
     nmc "And there aren't any English muffins left either... {w}I suppose white bread will have to do."
-    
+    return
 
 label Kazuki_1j_essay:#we're writing an essay, lol ya right
     $ sio_l("bg cafeteria")
