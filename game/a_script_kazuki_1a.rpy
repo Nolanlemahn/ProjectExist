@@ -497,7 +497,8 @@ label Kazuki_1b_extend:
             n "I would be a bad judge of that. Perhaps you don't listen to gossip, but I'm a lesbian."
             nmc "... That was embarassing. Now I know I'd never have a chance with her. Time to walk away... wait. Something is still wrong."
             mc "Don't you normally walk to cross-country practice?"
-            n "I don't want to do that at 8PM... Just because I'm lesbian doesn't mean I'm not a girl."
+            n "I don't want to do that at 8PM... Just because I'm lesbian doesn't mean I'm not a girl. I'm probably easy to pick on."
+            nmc "Natalie gives me a surprisingly pronounced frown."
             $ minutes = minutes + 2
             if (answers[0] == "law_hesitation"):
                 mc "I suppose the school could get a bit dangerous at this time of the day. You knew Prof- err, Coach Cyrus had the practice 

@@ -3,7 +3,7 @@ label Kazuki_1j_skip:#we skipped lunch
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
          long at all. Which is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
          shop would be an expensive pain in the ass in terms of both paperwork and physically changing the sign, so the name stuck."
-    extend "\nHis words, not mine."
+    extend "\nHis words, not mine. There have been a few awkward moments though, when I have been mistaken as his son..."
     nmc "In any case, I happen to work for him. Three hours a day, by the sweat and grime  my brow, wrench in hand... actually I just handle 
          the taxes, the telephone, and the computers."
     mc "Hello, Robert and Son's Machines. Yes, we can service your BMW. Yes, I can schedule you for Monday. Certainly. Good day to you too."
@@ -53,7 +53,6 @@ label Kazuki_1j_skip:#we skipped lunch
     nmc "Long story short, the carpet has a very large coffee stain in it."
     nmc "And so, I allowed another day of appointment scheduling and paperwork to drag on."
     jump Kazuki_1k_routing
-    return  
     
 label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     # 1:50PM
@@ -61,21 +60,39 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     nmc "As I confirmed this morning, it takes 5 minutes to get to school if I sprint, trespass, pick a few locks, jump dangerously, and so on."
     nmc "But honestly, I'm not up for repeating all of that nonsense. So, I'm taking the bus home."
     $ sio_l("bg blackdrop")
-    call triple_min(2)
+    $ triple_min(2)
     nmc "The rest of the bus drive proceeded without incident."
     $ sio_l("bg kazuki kitchen")
     nmc "I let myself into the apartment and begin getting things out of the refrigerator."
-    nmc "Father doesn't own a car. He had a Subaru, but then he sold it to pay off his tab. So I can't actually tell if he's home or not. 
-         At least not just by walking through the front door."
-    nmc "And honestly, I don't care enough to check on him."
-    mc "...Freaking why."
+    nmc "Father doesn't own a car. He had a Subaru, but then he sold it to pay off his tab. So I can't actually tell if he's home or not."
+    nmc "Not that I care."
+    mc "Freaking why."
     nmc "While all of my smoked salmon was where I left it, someone had eaten the last bagel after I left for school."
-    nmc "And there aren't any English muffins left either... {w}I suppose white bread will have to do."
-    
+    nmc "I suppose white bread will have to do."
+    "{i}Clatter!{/i}"
+    mc "Who's there?"
+    nmc "I snap my wrist and adjust my grip of the butter knife, holding it as I would a dagger. It may not have been sharp, but it was threatening
+         enough."
+    nmc "The sound had been loud and unexpected, but its source was..."
+    f "Go back to school, you little faggot."
+    nmc "In his drunken swagger, my father had succeeded in knocking my plate to the floor. Although gaudy, these new plastic plates are proving 
+         to be nigh-unbreakable, saving me several dollars a day on housekeeping."
+    mc "You'd be in jail and out of alcohol if I wasn't paying for this place."
+    nmc "I put down the knife, and twist a rubber band around a bundle of 5's from my wallet. Father's beer money for the week."
+    $ main_char_cash -= 50
+    mc "And I'm going to work, not school. Once I shove some bread and meat down my throat, anyway. Which reminds me. Stop eating my crap. I 
+        need my bagels."
+    nmc "My father lifts his right hand and makes a \"blah blah\" motion with it. An unsuspecting target for a wad of cash. The money drops 
+         to the floor with a light rustle. I can't resist a smirk as I lift the plastic plate off of the floor."
+    f "I wasn't ready."
+    mc "You were always shit at catch."
+    nmc "My \"bagel\" made, I make my way towards the door."
+    f "There's one thing I've gotta know... why do you keep me around, anyway?"
+    nmc "I stop walking, but I don't look back."
+    mc "You were the last thing my mother ever touched. If it wasn't for that, you'd have three bullets through your skull."
+    nmc "I open the door and walk out, intentionally leaving it open."
 
 label Kazuki_1j_essay:#we're writing an essay, lol ya right
-    $ sio_l("bg cafeteria")
-    nmc "I walk to the cafeteria with my laptop."
     nmc "A 10 page essay on why I wasn't paying attention in class."
     nmc "\"Well gee, Ms. Amnaki, it may or may not have to do with your inability to teach things that are new to me.\""
     nmc "Mm, an excellent topic sentence."
@@ -93,4 +110,4 @@ label Kazuki_1k_routing:
     #we need to check for both the faculty thing and for the move natalie thing, which could be awkward
     if(("meeting_known" in answers) or ("meeting_hlawrence" in answers)):
         nmc "I'd better get to that damned meeting now."
-    return
+    returna

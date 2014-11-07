@@ -358,14 +358,14 @@ label Kazuki_1e:
     extend "\nI see. At least they don't claim to know Parseltongue."
     hide asset flier last
     $ minutes = minutes + 3
-    nmc "I unceremoniously stuff the flier in my bag. Actually, now that I think about it... This could be..."
+    nmc "I unceremoniously stuff the flier in my bag. Actually, now that I think about it..."
     $ time = 15
     $ timer_range = 15
     $ timer_jump = "Kazuki_1g"
     show screen countdown
     menu:
         extend ""
-        "Wil can get in with Lily":
+        "Wil can get a date with Lily":
             $ answer_add("wil_lily_group")
         "I can get a 4.0 in Japanese":
             $ answer_add("self_40")
@@ -471,7 +471,7 @@ label Kazuki_1h:
             $ answer_add("lunch_essay_1")
         "Don't eat and go to work early":
             $ answer_add("lunch_work_1")
-        "Grab another bagel":
+        "Grab a bagel before work":
             $ answer_add("lunch_bagel_1")
         "...":
             $ answer_add("lunch_work_1")
