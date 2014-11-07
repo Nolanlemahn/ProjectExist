@@ -110,4 +110,4 @@ label Kazuki_1k_routing:
     #we need to check for both the faculty thing and for the move natalie thing, which could be awkward
     if(("meeting_known" in answers) or ("meeting_hlawrence" in answers)):
         nmc "I'd better get to that damned meeting now."
-    returna
+    return

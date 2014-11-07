@@ -7,6 +7,75 @@ init -1:
 init python:
     #import locale
     #locale.setlocale(locale.LC_ALL, 'en_US')
+
+    #def Alert():
+    #    if(dev_alert == None):
+    #        ui.frame(xfill=False, xminimum = 33, yminimum=None, xalign=0.801, yalign = 0.76, style='clipFrame')
+    #        ui.vbox()
+    #        ui.text("", xalign=1.0, size=checkSizeTwo())
+    #        ui.close()
+    #    elif(dev_alert == "hide"):
+    #        return
+    #    else:
+    #        ui.textbutton("!", style=style.dev_button, text_style = style.dev_button_text, xalign=0.801, yalign = 0.760, clicked = ui.callsinnewcontext("small_dir", dev_alert), xminimum=22, yminimum=37)
+
+    
+    def answer_add(new_answer):
+        answers.append(new_answer)
+        return
+    
+    def python_pass():
+        return
+
+transform alpha_dissolve:
+    alpha 0.0
+    linear 0.5 alpha 1.0
+    on hide:
+        linear 0.5 alpha 0
+    # This is to fade the bar in and out, and is only required once in your script
+
+#start countdown code
+init -1 python:
+    def img(name, color, x, y):#from 00themes
+        rv = theme.OneOrTwoColor(name, color)
+        if x is not None:
+            rv = Frame(rv, x, y, tile=True)
+        return rv
+
+init -1:
+    $ cdw_color = (255, 0, 0, 255)#red
+    $ style.create("cd_barw", "bar")
+    $ style.cd_barw.left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
+    $ style.cd_barw.right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
+    $ style.cd_barw.thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
+    $ style.cd_barw.hover_left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
+    $ style.cd_barw.hover_right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
+    $ style.cd_barw.hover_thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
+    
+    $ cd_color = (255, 255, 255, 255)#white
+    $ style.create("cd_bar", "bar")
+    $ style.cd_bar.left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
+    $ style.cd_bar.right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
+    $ style.cd_bar.thumb = img("menus/thslider_thumb.png", cd_color, None, None)
+    $ style.cd_bar.hover_left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
+    $ style.cd_bar.hover_right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
+    $ style.cd_bar.hover_thumb = img("menus/thslider_thumb.png", cd_color, None, None)
+
+screen countdown:
+    tag countdown_tag
+    if(not renpy.in_fixed_rollback()):
+        key "rollback" action [[]]
+        timer 0.1 repeat True action If(time > 0, true=SetVariable('time', time - 0.1), false=[Hide('countdown'), Jump(timer_jump)])
+        if time > 3:
+            bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_bar"
+            text str("%.1f" % time) xalign .5 ypos .25 color "#FFFFFF" size 72
+        elif time > 0:
+            bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_barw"
+            text str("%.1f" % time) xalign .5 ypos .25 color "#F00000" size 72
+#end countdown code
+
+#start side note code
+init -1 python:
     style.sn_button = Style(style.button)
     style.sn_button.background = Frame("menus/emptyframe.png", 400,200)
     style.sn_button.hover_background = "#FFFFFF"
@@ -45,56 +114,7 @@ init python:
             Image("menus/buttonframe.png"),
             VBox("menus/topline.png",
                 Text("%s" % tip, color="#fff", size=22, xmaximum=400, first_indent=6, rest_indent=6))), None
-
-            
-    #def Alert():
-    #    if(dev_alert == None):
-    #        ui.frame(xfill=False, xminimum = 33, yminimum=None, xalign=0.801, yalign = 0.76, style='clipFrame')
-    #        ui.vbox()
-    #        ui.text("", xalign=1.0, size=checkSizeTwo())
-    #        ui.close()
-    #    elif(dev_alert == "hide"):
-    #        return
-    #    else:
-    #        ui.textbutton("!", style=style.dev_button, text_style = style.dev_button_text, xalign=0.801, yalign = 0.760, clicked = ui.callsinnewcontext("small_dir", dev_alert), xminimum=22, yminimum=37)
-
-    
-    def answer_add(new_answer):
-        answers.append(new_answer)
-        return
-    
-    def python_pass():
-        return
         
-    def countdown(st, at, length=0.0):
-        remaining = length - st
-        #ui.bar
-        if remaining > 3.0:
-            return VBox(Text("%.1f" % remaining, color="#fff", size=72, xalign=0.5)), .1#, ui.bar(length, remaining, width=400)), .1
-        elif remaining > 0.0:
-            return VBox(Text("%.1f" % remaining, color="#f00", size=72, xalign=0.5)), .1#, ui.bar(length, remaining, width=400)), .1
-        else:
-            return anim.Blink(Text("0.0", color="#f00", size=72)), None
-
-transform alpha_dissolve:
-    alpha 0.0
-    linear 0.5 alpha 1.0
-    on hide:
-        linear 0.5 alpha 0
-    # This is to fade the bar in and out, and is only required once in your script
-
-screen countdown:
-    tag countdown_tag
-    if(not renpy.in_fixed_rollback()):
-        key "rollback" action [[]]
-        timer 0.1 repeat True action If(time > 0, true=SetVariable('time', time - 0.1), false=[Hide('countdown'), Jump(timer_jump)])
-        if time > 3:
-            bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_bar"
-            text str("%.1f" % time) xalign .5 ypos .25 color "#FFFFFF" size 72
-        elif time > 0:
-            bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_barw"
-            text str("%.1f" % time) xalign .5 ypos .25 color "#F00000" size 72
-
 screen side_note:
     tag side_note_tag
     vbox xalign 1.0 yalign 0.4 xsize 400 ysize 200:
@@ -103,6 +123,18 @@ screen side_note:
             idle "menus/emptyframe.png"
             #Thorium look over here
             action (ToggleVariable("in_side_note", True, True), Hide("side_note"), hide_side_note())
+            
+image sn demo = DynamicDisplayable(show_sn, tt=
+    "This is a demo side note. You may click to dismiss, or you may progress to the next dialogue screen. It will dismiss itself after three "+
+    "interactions.")
+image sn gre = DynamicDisplayable(show_sn, tt=
+    "GRE is short for Graduate Record Examination, a standardized test developed by " + 
+    "the Educational Testing Service (ETS) in the United States in order to measure and compare graduate school candidates.")
+image sn siebener = DynamicDisplayable(show_sn, tt=
+    "A Siebener refers to a 7 series BMW, just as a bimmer refers to any BMW car. A beemer actually refers to a motorcycle made by BMW.")
+image sn frank = DynamicDisplayable(show_sn, tt=
+    "Frank Anthoni Bruni was the chief restaurant critic of the New York Times from 2004 to 2009.")
+#end side note code
 
 label com_slide(message):
     if passedvalue > 0:
