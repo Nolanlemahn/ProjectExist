@@ -51,7 +51,7 @@ label Kazuki_1j_skip:#we skipped lunch
          farming. Ignoring the fact that some farmers do directly feed their livestock animal by-products. Which is basically bad beef."
     nmc "Anyway, I fixed the computer. The next day, I got admittedly cocky and tried to fix a coffee machine without telling Robert."
     nmc "Long story short, the carpet has a very large coffee stain in it."
-    nmc "And so, I allowed another day of appointment scheduling and paperwork to drag on."
+    nmc "And so, I allowed another monotonous day of appointment scheduling and paperwork to drag on."
     jump Kazuki_1k_routing
     
 label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
@@ -91,6 +91,7 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     nmc "I stop walking, but I don't look back."
     mc "You were the last thing my mother ever touched. If it wasn't for that, you'd have three bullets through your skull."
     nmc "I open the door and walk out, intentionally leaving it open."
+    jump Kazuki_1k_routing
 
 label Kazuki_1j_essay:#we're writing an essay, lol ya right
     nmc "A 10 page essay on why I wasn't paying attention in class."
@@ -99,9 +100,10 @@ label Kazuki_1j_essay:#we're writing an essay, lol ya right
     nmc "\"Additionally, due to the nature of your teaching style, all I need to do is briefly scan the 40' x 30' 
          Whiteboard to get a brief summary of the lesson. For instance, on the day that you gave me this assignment, you 
          were in the middle of a simple two-dimensional rotation problem...\""
+    nmc "..."
     $ minutes = minutes + 2
     $ sio_l("bg library1")
-    return
+    jump Kazuki_1k_routing
 
 label Kazuki_1k_routing:
     $ sio_l("bg fog")

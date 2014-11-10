@@ -23,9 +23,7 @@ label Kazuki_1d_wil:
     $ minutes = 603
     w "Hah... anyway, class starts soon. You should probably sit down."
     mc "Yeah, see ya... Wait, hang on. I wanted to ask you something..."
-    $ time = 7
-    $ timer_range = 7
-    $ timer_jump = "Kazuki_1d_insert"
+    $ cd_set(7, 7, 'Kazuki_1d_insert')
     show screen countdown
     menu:
         extend ""
@@ -40,9 +38,10 @@ label Kazuki_1d_wil:
             mc "Whatever. I need the exercise. Will you take me?"
             w "I don't have a reason to say no. I'll pick you up on Friday at 5:00PM, if that works for you."
             mc "We're going for a night hike?"
-            w "Yeah, but I figure if you're coming along, we might as well share a meal."
+            w "Yeah, but I figure if you're coming along, we might as well share a meal too."
             mc "... You really don't have to do that."
             w "Actually, I do. I need feedback for a recipe I've been working on. Anyway, you'd better sit down."
+            nmc "Wil wasn't exactly known for his cooking, but I'll bite."
             t "If we could all get back to our seats, we're going to dicuss how to best prepare your resumé..."
             nmc "Tamara Mirov has been the TA for this seminar as long as anyone can remember. She prefers that her \"friends\" (apparently she has
                  them) refer to her has Tammy. That's all I really know about her, and I only know that because some other TA occasionally visits
@@ -117,9 +116,7 @@ label Kazuki_1d_tamara_a:
     call dev_com("tamaraplus")
     mc "I'm sorry, but what do you mean by \"again\"?"
     t "This is the second time you have been late to class this week. What gives?"
-    $ time = 15
-    $ timer_range = 15
-    $ timer_jump = "Kazuki_1d_tamara_b1"
+    $ cd_set(15, 15, 'Kazuki_1d_tamara_b1')
     show screen countdown
     menu:
         extend ""
@@ -294,9 +291,7 @@ label Kazuki_1d_tamara_b:
     nmc "Well, there's about half an hour until Math 122."
     nmc "I'm Japanese. By birth, I think I've earned the right to skip all mathematics courses until the end of time."
     nmc "Double integrals, rotations and optimizations; such topics come to me naturally."
-    $ time = 30
-    $ timer_range = 30
-    $ timer_jump = "Kazuki_1e"
+    $ cd_set(30, 30, 'Kazuki_1e')
     show screen countdown
     menu:
         extend ""
@@ -359,9 +354,7 @@ label Kazuki_1e:
     hide asset flier last
     $ minutes = minutes + 3
     nmc "I unceremoniously stuff the flier in my bag. Actually, now that I think about it..."
-    $ time = 15
-    $ timer_range = 15
-    $ timer_jump = "Kazuki_1g"
+    $ cd_set(15, 15, 'Kazuki_1g')
     show screen countdown
     menu:
         extend ""
@@ -461,9 +454,7 @@ label Kazuki_1h:
          time when you shove some stuff down your throat and into your stomach because you have to."
     nmc "Fun fact, that wise man was myself."
     nmc "In any case, I have to figure out something to do for lunch."
-    $ time = 30
-    $ timer_range = 30
-    $ timer_jump = "Kazuki_1i"
+    $ cd_set(30, 30, 'Kazuki_1i')
     show screen countdown
     menu:
         extend ""

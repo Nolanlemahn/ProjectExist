@@ -24,16 +24,6 @@ init python:
         
 image empty = "drops/empty.png"
 
-#countdowns
-image countdown 1 = DynamicDisplayable(countdown, length=1.0)
-image countdown 4 = DynamicDisplayable(countdown, length=4.0)
-image countdown 5 = DynamicDisplayable(countdown, length=5.0)
-image countdown 7 = DynamicDisplayable(countdown, length=7.0)
-image countdown 10 = DynamicDisplayable(countdown, length=10.0)
-image countdown 15 = DynamicDisplayable(countdown, length=15.0)
-image countdown 20 = DynamicDisplayable(countdown, length=20.0)
-image countdown 30 = DynamicDisplayable(countdown, length=30.0)
-
 #bg - support
 image bg blackdrop = "#000000"
 image bg graydrop = "drops/graydrop.png"
@@ -376,7 +366,7 @@ init -2 python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.5_(1037)"
+    config.version = "v0.2.5_(1038)"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True

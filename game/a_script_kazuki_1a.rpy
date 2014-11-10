@@ -324,9 +324,7 @@ label Kazuki_1b:
     l "Interesting. Well, you must have had something intelligent to say or ask since you didn't stampede out with the rest of them. Am I right?"
     mc "Uhh..."
     nmc "I end up asking about..."
-    $ time = 7
-    $ timer_range = 7
-    $ timer_jump = 'Kazuki_1b_pre'
+    $ cd_set(7, 7, 'Kazuki_1b_pre')
     show screen countdown
     menu:
         extend ""
@@ -427,9 +425,7 @@ label Kazuki_1b_stub:
        with my phone until the meeting actually starts. So, are you coming?"
     $ minutes = minutes + 2
     #9:50PM
-    $ time = 20
-    $ timer_range = 20
-    $ timer_jump = "Kazuki_1b_interstitial"
+    $ cd_set(20, 20, 'Kazuki_1b_interstitial')
     show screen countdown
     menu:
         extend ""
@@ -480,9 +476,7 @@ label Kazuki_1b_extend:
     nmc "Oh my God. She knows my name."
     mc "That's me. What's up?"
     n "Are you going to cross-country today?"
-    $ time = 5
-    $ timer_range = 5
-    $ timer_jump = "Kazuki_1b_fail"
+    $ cd_set(5, 5, 'Kazuki_1b_fail')
     show screen countdown
     menu:
         extend ""
@@ -527,9 +521,7 @@ label Kazuki_1b_extend:
                  speak again."
             n "Well, I should probably get to my next class. So, will you be able to- eep!"
             nmc "Her legs buckle and she starts to fall! I..."
-            $ time = 4
-            $ timer_range = 4
-            $ timer_jump = "Kazuki_1b_extend2"
+            $ cd_set(4, 4, 'Kazuki_1b_extend2')
             show screen countdown
             menu:
                 extend ""
@@ -571,9 +563,7 @@ label Kazuki_1b_extend2:
     nmc "That's when I realized she was still in my arms. And that I was still in hers."
     extend "\n... I let go of her. Reluctantly."
     n " So umm... will you be able to walk me over at a quarter to 8?"
-    $ time = 5
-    $ timer_range = 5
-    $ timer_jump = "Kazuki_1b_fail"
+    $ cd_set(5, 5, 'Kazuki_1b_fail')
     show screen countdown
     menu:
         extend ""

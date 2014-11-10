@@ -67,6 +67,13 @@ init python:
         if (renpy.in_fixed_rollback()):
             renpy.hide_screen("countdown_tag")
     config.mode_callbacks.append(menu_callback)
+    
+    def cd_set(start_time, end_time, target_str):
+        #don't bother checking store
+        store.time = start_time
+        store.timer_range = end_time
+        store.timer_jump = target_str
+        return
         
 label sn_label(select_tip):
     $ selected_note = select_tip
