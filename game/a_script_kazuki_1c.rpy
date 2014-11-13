@@ -77,17 +77,20 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     f "Go back to school, you little faggot."
     nmc "In his drunken swagger, my father had succeeded in knocking my plate to the floor. Although gaudy, these new plastic plates are proving 
          to be nigh-unbreakable, saving me several dollars a day on housekeeping."
-    mc "You'd be in jail and out of alcohol if I wasn't paying for this place."
+    nmc "... He swings at me with his left arm, but I drop to the ground. The fist connects with nothing but air. I push hard with my right elbow, and 
+         he falls over, wheezing."
+    mc "You'd be in jail and out of alcohol if I wasn't paying for this place, dumbfuck."
     nmc "I put down the knife, and twist a rubber band around a bundle of 5's from my wallet. Father's beer money for the week."
     $ main_char_cash -= 50
     mc "And I'm going to work, not school. Once I shove some bread and meat down my throat, anyway. Which reminds me. Stop eating my crap. I 
         need my bagels."
-    nmc "My father lifts his right hand and makes a \"blah blah\" motion with it. An unsuspecting target for a wad of cash. The money drops 
-         to the floor with a light rustle. I can't resist a smirk as I lift the plastic plate off of the floor."
+    nmc "My father, still on the floor, lifts his right hand and makes a \"blah blah\" motion with it. An unsuspecting target for a wad of cash. 
+         The money drops to the floor with a light rustle. I can't resist a smirk as I lift the plastic plate off of the floor while he picks 
+         himself up."
     f "I wasn't ready."
     mc "You were always shit at catch."
-    nmc "My \"bagel\" made, I make my way towards the door."
-    f "There's one thing I've gotta know... why do you keep me around, anyway?"
+    nmc "He bends over to pick up the money, and his back makes a cracking sound. My \"bagel\" made, I make my way towards the door."
+    f "Kill me, goddammit. Put me out of my misery. I know you want to."
     nmc "I stop walking, but I don't look back."
     mc "You were the last thing my mother ever touched. If it wasn't for that, you'd have three bullets through your skull."
     nmc "I open the door and walk out, intentionally leaving it open."

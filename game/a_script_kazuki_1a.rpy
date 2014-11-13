@@ -252,6 +252,7 @@ label Kazuki_1b:
          on my left. {w}Run into the school grounds."
     $ sio_s("bg classroom1")
     nmc "Push the doors to Elmer Hall open and calmly... calmly... enter room 307 with the rest of the students."
+    nmc "... God dammit, my abs still really hurt. Adrenaline is one helluva drug, I suppose."
     $ minutes = 485
     nmc "As I breathe in the stale classroom air in an attempt to catch my breath, the bruise reawakens from its nap."
     mc "Haah... hoo... ow... shit..."
@@ -571,6 +572,7 @@ label Kazuki_1b_extend2:
             $ answer_add("nat_will_try")
             mc "Yeah, I'll come get you."
             n "Oh, you're the best. Here's my address."
+            nmc "She neatly scrawls - yes, neatly scrawls - her address on a notecard and hands it to me."
             mc "Wait, you can't drive there?"
             n "Well... I don't quite have my driver license yet."
             mc "Seriously?"

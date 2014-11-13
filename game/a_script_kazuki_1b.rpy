@@ -360,8 +360,11 @@ label Kazuki_1e:
         extend ""
         "Wil can get a date with Lily":
             $ answer_add("wil_lily_group")
+            nmc "I'm normally not one for playing matchmaker, but I owe Wil a few favors."
         "I can get a 4.0 in Japanese":
             $ answer_add("self_40")
+            nmc "To be honest, I should take advantage of this particular resource. My life is harder than I'd like it to be, and LAST sounds 
+                 like it could be useful."
         "...":
             $ python_pass()
     jump Kazuki_1g
