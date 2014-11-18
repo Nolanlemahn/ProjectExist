@@ -36,7 +36,7 @@ init -1 python:
             else:
                 image = Image(loc1)
                 setloc = loc1
-                text = " ".join(self.name) + ": " + self.img2
+                text = "(PLACEHOLDER) " + " ".join(self.name) + ": " + self.img2
                 
             
             # Do damnedest to get image parameters
@@ -73,3 +73,4 @@ init -1 python:
         def render(self, width, height, st, at):
             build = self.build_image()
             return renpy.render(build, width, height, st, at)
+            
