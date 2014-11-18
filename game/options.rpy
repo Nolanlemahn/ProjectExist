@@ -29,16 +29,14 @@ image bg blackdrop = "#000000"
 image bg graydrop = "drops/graydrop.png"
 image bg mainmenu = "drops/menu.png"
 
-#characters
-
 #bg generic
-image bg fog = "drops/fog.png"
+image bg fog = PlaceholderX("drops/brickwall.png", "drops/fog.png")
 image bg fakefog = "drops/sneakfog.png"
 
-image bg cafeteria1 = "drops/cafe1.png" #a generic picture of the outside of sacramento
+image bg cafeteria1 = PlaceholderX("drops/template.png", "drops/cafe1.png") #a generic picture of the outside of sacramento
 image bg city1 = "drops/city1.png" #a generic picture of the outside of sacramento
 image bg city1 blur = "drops/city1blur.png" #a generic picture of the outside of sacramento, but blurry (Kazuki is running)
-image bg classroom1 = "drops/classroom1.png" #lawrence's classroom
+image bg classroom1 = PlaceholderX("drops/template.png", "drops/classroom1.png") #lawrence's classroom
 image bg classroom2 = "drops/classroom2.png" #tamara's classroom
 image bg classroom3 = "drops/classroom3.png" #math classroom
 image bg hallway1 = "drops/hallway1.png" #some hallway in the college
@@ -52,12 +50,13 @@ image bg workshop = "drops/workshop.png"
 
 #kazuki
 image bg kazuki bed = "drops/kazuki/bed.png"
-image bg kazuki bathroom = "drops/kazuki/bathroom.png"
+image bg kazuki bathroom = PlaceholderX("drops/template.png", "drops/kazuki/bathroom.png")
 image bg kazuki journal = "drops/kazuki/journal.png"
 image bg kazuki bedroom = "drops/kazuki/bedroom.png"
 image bg kazuki kitchen = "drops/kazuki/kitchen.png"
 image asset flier last = "extra/flier_last.png"
 
+#characters
 
 #sidenotes
 image sn demo = DynamicDisplayable(show_sn, tt=
@@ -368,7 +367,7 @@ init -2 python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.5_(1039)"
+    config.version = "v0.2.6_(1046)"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True
