@@ -50,7 +50,7 @@ image bg workshop = "drops/workshop.png"
 
 #kazuki
 image bg kazuki bed = "drops/kazuki/bed.png"
-image bg kazuki bathroom = PlaceholderX("drops/template.png", "drops/kazuki/bathroom.png")
+image bg kazuki bathroom = PlaceholderX("drops/template.png", "drops/kazuki/bathroom.png", pretext = "(PLACEHOLDER) ")
 image bg kazuki journal = "drops/kazuki/journal.png"
 image bg kazuki bedroom = "drops/kazuki/bedroom.png"
 image bg kazuki kitchen = "drops/kazuki/kitchen.png"
@@ -367,7 +367,7 @@ init -2 python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.6_(1047)"
+    config.version = "v0.2.6_(1048)"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True

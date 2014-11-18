@@ -7,13 +7,14 @@ init -1 python:
         def after_setstate(self):
             self.build = None
 
-        def __init__(self, img1, img2, tsize=12, tcolor="#000", talign=(0.0, 0.0), **properties):
+        def __init__(self, img1, img2, tsize=12, tcolor="#000", talign=(0.0, 0.0), pretext = "", **properties):
             super(PlaceholderX, self).__init__(**properties)
             self.img1 = img1
             self.img2 = img2
             self.tsize = tsize
             self.tcolor = tcolor
             self.talign = talign
+            self.pretext = pretext
             self.build = None
             
         def build_image(self):
@@ -36,8 +37,7 @@ init -1 python:
             else:
                 image = Image(loc1)
                 setloc = loc1
-                text = "(PLACEHOLDER) " + " ".join(self.name) + ": " + self.img2
-                
+                text = self.pretext + " ".join(self.name) + ": " + self.img2
             
             # Do damnedest to get image parameters
             try:
@@ -61,7 +61,7 @@ init -1 python:
         
         # Don't use image.py's parameterize
         def parameterize(self, name, parameters):
-            placeheld = PlaceholderX(self.img1, self.img2, self.tsize, self.tcolor, self.talign)
+            placeheld = PlaceholderX(self.img1, self.img2, self.tsize, self.tcolor, self.talign, self.pretext)
             placeheld.name = list(name) + list(parameters)
             return placeheld
 
