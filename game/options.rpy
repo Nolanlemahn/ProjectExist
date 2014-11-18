@@ -30,30 +30,30 @@ image bg graydrop = "drops/graydrop.png"
 image bg mainmenu = "drops/menu.png"
 
 #bg generic
-image bg fog = PlaceholderX("drops/brickwall.png", "drops/fog.png")
+image bg fog = PlaceholderX("drops/brickwall.png", "drops/fog.png", pretext = "(PLACEHOLDER) ")
 image bg fakefog = "drops/sneakfog.png"
 
-image bg cafeteria1 = PlaceholderX("drops/template.png", "drops/cafe1.png") #a generic picture of the outside of sacramento
-image bg city1 = "drops/city1.png" #a generic picture of the outside of sacramento
-image bg city1 blur = "drops/city1blur.png" #a generic picture of the outside of sacramento, but blurry (Kazuki is running)
-image bg classroom1 = PlaceholderX("drops/template.png", "drops/classroom1.png") #lawrence's classroom
-image bg classroom2 = "drops/classroom2.png" #tamara's classroom
-image bg classroom3 = "drops/classroom3.png" #math classroom
-image bg hallway1 = "drops/hallway1.png" #some hallway in the college
-image bg window1 = "drops/window1.png" #outside tamara's window
-image bg stairwell1 = "drops/stairwell1.png" #stairs of the school
+#a generic picture of the outside of sacramento
+image bg cafeteria1 = PlaceholderX("drops/template.png", "drops/cafe1.png", pretext = "(PLACEHOLDER) ")
+image bg city1 = PlaceholderX("drops/template.png", "drops/city1.png", pretext = "(PLACEHOLDER) ") #a generic picture of the outside of sacramento
+image bg city1 blur = PlaceholderX("drops/template.png", "drops/city1blur.png", pretext = "(PLACEHOLDER) ") #a generic picture of the outside of sacramento, but blurry (Kazuki is running)
+image bg classroom1 = PlaceholderX("drops/template.png", "drops/classroom1.png", pretext = "(PLACEHOLDER) ") #lawrence's classroom
+image bg classroom2 = PlaceholderX("drops/template.png", "drops/classroom2.png", pretext = "(PLACEHOLDER) ") #tamara's classroom
+image bg classroom3 = PlaceholderX("drops/template.png", "drops/classroom3.png", pretext = "(PLACEHOLDER) ")  #math classroom
+image bg hallway1 = PlaceholderX("drops/template.png", "drops/hallway1.png", pretext = "(PLACEHOLDER) ") #some hallway in the college
+image bg window1 = PlaceholderX("drops/template.png", "drops/window1.png", pretext = "(PLACEHOLDER) ") #outside tamara's window
+image bg stairwell1 = PlaceholderX("drops/template.png", "drops/stairwell1.png", pretext = "(PLACEHOLDER) ") #stairs of the school
 image bg parkinglot1 = "drops/parkinglot1.png" #parkinglot of the school
-image bg bus1 = "drops/bus1.png" #public bus
-image bg bus2 = "drops/bus2.png" #public bus
-image bg library1 = "drops/library1.png"
-image bg workshop = "drops/workshop.png"
+image bg bus1 = PlaceholderX("drops/template.png", "drops/bus1.png", pretext = "(PLACEHOLDER) ") #public bus
+image bg bus2 = PlaceholderX("drops/template.png", "drops/bus2.png", pretext = "(PLACEHOLDER) ") #public bus
+image bg library1 = PlaceholderX("drops/template.png", "drops/library1.png", pretext = "(PLACEHOLDER) ")
+image bg workshop = PlaceholderX("drops/template.png", "drops/kazuki/bedroom.png", pretext = "(PLACEHOLDER) ")
 
 #kazuki
-image bg kazuki bed = "drops/kazuki/bed.png"
+image bg kazuki bed = PlaceholderX("drops/template.png", "drops/kazuki/bedroom.png", pretext = "(PLACEHOLDER) ")
 image bg kazuki bathroom = PlaceholderX("drops/template.png", "drops/kazuki/bathroom.png", pretext = "(PLACEHOLDER) ")
 image bg kazuki journal = "drops/kazuki/journal.png"
-image bg kazuki bedroom = "drops/kazuki/bedroom.png"
-image bg kazuki kitchen = "drops/kazuki/kitchen.png"
+image bg kazuki kitchen = PlaceholderX("drops/template.png", "drops/kazuki/kitchen.png", pretext = "(PLACEHOLDER) ")
 image asset flier last = "extra/flier_last.png"
 
 #characters
@@ -367,7 +367,7 @@ init -2 python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.6_(1048)"
+    config.version = "v0.2.6_(1049)"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True
