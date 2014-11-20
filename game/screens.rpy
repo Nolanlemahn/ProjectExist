@@ -249,31 +249,11 @@ python early:
 
 ##############################################################################
 # Say
-#
+# TODO: CLEANUP
 # http://www.renpy.org/doc/html/screen_special.html#say
-screen fake_say:
-    #show rpg stats code
-    # automatically re-draw the GUI over and over and over again
-    if(not in_debug):
-        if(fight_is_1v1):
-            $ show_stats (m1name, m1level, m1hp, m1maxhp, m1fp, m1maxfp, m1sp, m1maxsp, m1XP, m1maxXP, .02, .01)
-            $ show_stats_noXP(e1name, e1level, e1hp, e1maxhp, e1fp, e1maxfp, e1sp, e1maxsp, e1XP, e1maxXP, .98, .01)
-        elif(main_char_show_rpg):#the normal stats
-            $ show_stats(main_name, main_char_level, main_char_currentHP, main_char_maxHP, main_char_currentBelly, main_char_maxBelly, main_char_currentSleep, main_char_maxSleep, main_char_currentXP, main_char_maxXP, .02, .01)
-        if(enemy_char_show_rpg):
-            $ show_stats_noXP(enemy1_name, enemy1_char_level, enemy1_char_currentHP, enemy1_char_maxHP, enemy1_char_currentBelly, enemy1_char_maxBelly, enemy1_char_currentSleep, enemy1_char_maxSleep, .98, .01)
-
-        if(clock):#maybe we don't even need to check this variable...?
-            $ Calendar()
-            $ Clocks()
-        if(ui_check):
-            $ updateUI(intchange)
-        if(walletshow):
-            $ Wallet()
-        
 screen say:
     #show rpg stats code
-    # automatically re-draw the GUI over and over and over again
+    # automatically re-draw the GUI headers if necessary
     if(not in_debug):
         if(fight_is_1v1):
             $ show_stats (m1name, m1level, m1hp, m1maxhp, m1fp, m1maxfp, m1sp, m1maxsp, m1XP, m1maxXP, .02, .01)
@@ -290,42 +270,87 @@ screen say:
             $ updateUI(intchange)
         if(walletshow):
             $ Wallet()
-    #end show rpg stats code [I put that code here instead of inside non_rpg_mode so that the stats window does not show up during nvl mode. It should still show up in normal menus.]
-    #below this line: worthless code
-    # Defaults for side_image and two_window
+            
+    ############################################
+    # Defaults
     default side_image = None
     default two_window = True
-    #Maybe?
-    # Decide if we want to use the one-window or two-window varaint.
-    if not two_window:
-        # The one window variant.        
-        window:
-            id "window"
-            has vbox:
-                style "say_vbox"
-            if who:
-                text who id "who"
-            text what id "what"
-    else:
-        # The two window variant.
-        vbox:
-            style "say_two_window_vbox"
-            if who:            
-                window:
-                    style "say_who_window"
-                    text who:
-                        id "who"
+    default doublespeak = False
+    
+    # Check for not doublespeak first
+    if(not doublespeak):
+        # Decide if we want to use the one-window or two-window varaint.
+        if not two_window:
+            # The one window variant.        
             window:
                 id "window"
                 has vbox:
                     style "say_vbox"
+                if who:
+                    text who id "who"
                 text what id "what"
-    # If there's a side image, display it above the text.
-    if side_image:
-        add side_image
-    else:
-        add SideImage() xalign 0.0 yalign 1.0
+        else:
+            # The two window variant.
+            vbox:
+                style "say_two_window_vbox"
+                if who:            
+                    window:
+                        style "say_who_window"
+                        text who:
+                            id "who"
+                window:
+                    id "window"
+                    has vbox:
+                        style "say_vbox"
+                    text what id "what"
+        # If there's a side image, display it above the text.
+        if side_image:
+            add side_image
+        else:
+            add SideImage() xalign 0.0 yalign 1.0
 
+    else:
+        # Ignore SideImage
+        if not two_window:
+            # The one window variant.        
+            window:
+                xsize config.screen_width/2
+                id "window"
+                has vbox:
+                    style "say_vbox"
+                if who:
+                    text who[0][0] id "who"
+                text what[0] id "what"
+        else:
+            # The two window variant.
+            vbox:
+                xsize config.screen_width/2
+                style "say_two_window_vbox"
+                if who:            
+                    window:
+                        style "say_who_window"
+                        text who.items()[0][0]:
+                            id "who"
+                window:
+                    id "window"
+                    has vbox:
+                        style "say_vbox"
+                    text what[0] id "what"
+            vbox:
+                xsize config.screen_width/2
+                xpos config.screen_width/2
+                style "say_two_window_vbox"
+                if who:            
+                    window:
+                        style "say_who_window"
+                        text who.items()[1][0]:
+                            id "who"
+                window:
+                    id "window"
+                    has vbox:
+                        style "say_vbox"
+                    text what[1] id "what"
+                    
     # Use the quick menu.
     use quick_menu
     if (battle_mode):

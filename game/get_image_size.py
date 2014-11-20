@@ -35,6 +35,10 @@ import os
 import struct
 
 FILE_UNKNOWN = "Sorry, don't know how to get size for this file."
+BROKEN_FILE = "Sorry, I have no idea where that was."
+
+class BadFile(Exception):
+    pass
 
 class UnknownImageFormat(Exception):
     pass
@@ -44,9 +48,11 @@ def get_image_size(file_path):
     Return (width, height) for a given img file content - no external
     dependencies except the os and struct builtin modules
     """
+    if(not os.path.isfile(file_path)):
+        raise BadFile(BROKEN_FILE)
     size = os.path.getsize(file_path)
-
-    with open(file_path) as input:
+    
+    with open(file_path, "rb") as input:
         height = -1
         width = -1
         data = input.read(25)

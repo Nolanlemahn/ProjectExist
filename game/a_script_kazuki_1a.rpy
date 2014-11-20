@@ -99,8 +99,8 @@ label Kazuki_1a:#this_label_done
     $ nvlli = Character('Lilian', color="#00CC00", kind=nvl_forest)
     
     #Robert
-    $ r = Character('Robert', color="#FF9900", kind=char_tan, show_two_window = True)
-    $ nvlr = Character('Robert', color="#FF9900", kind=nvl_tan)
+    $ ro = Character('Robert', color="#FF9900", kind=char_tan, show_two_window = True)
+    $ nvlro = Character('Robert', color="#FF9900", kind=nvl_tan)
     
     #Athena
     $ a = Character('Athena', color="#FF0000", kind=char_red, show_two_window = True)
@@ -171,6 +171,7 @@ label Kazuki_1b:
     $ sio_l("bg kazuki bed")
     $ dev_screen = 0
     "... {w}... {w}..."
+    #doublespeak l mc "What?" "What are you saying?"
     mc "Hah... hah... hah... ... huh..."
     nmc "Gasp for air. Open my eyes. Look around. Untangle myself from the covers. Peel the drenched tank-top off of my body. Check my pulse. 
          Count to ten. Multiply by six."

@@ -16,27 +16,27 @@ label Kazuki_1j_skip:#we skipped lunch
     $ sio_l("bg workshop")
     mc "Hello, Robert and Son's Machines. Fuck you too."
     nmc "Now normally, that sort of language would get me fired and could get me sued. However..."
-    r "Kazuki, was that Rachel on the phone?"
+    ro "Kazuki, was that Rachel on the phone?"
     mc "Yes sir."
-    r "What a bitch. Carry on."
+    ro "What a bitch. Carry on."
     nmc "Rachel made the mistake of trying to get her cell phone repaired here. Not that we couldn't have repaired it, but she insisted that we 
          repair the phone for free and deliver the repaired phone on the same day the phone was brought in."
     nmc "A ridiculous customer by all accounts. So basically, everyone in the office hates this customer more than any other."
-    r "Oh, how's tomorrow's schedule looking?"
+    ro "Oh, how's tomorrow's schedule looking?"
     mc "Completely booked."
-    r "And Monday's schedule?"
+    ro "And Monday's schedule?"
     call sn_label("sn siebener")
     mc "One car. A Siebener. Nothing else for Monday."
-    r "I hate working on beemers. Tuesday?"
+    ro "I hate working on beemers. Tuesday?"
     mc "No cars at all. The whole week is basically empty, actually. I might not be needed for most of the week. Although I could still come in if 
         you'd like. Here, look at the schedule."
     nmc "There are very few schedules worse than an overbooked one. Because even if you are working overtime, you are still in fact working. 
          When we have an underbooked schedule, we spend a lot of time twiddling our thumbs and since our salaries are comission-based, we 
          also don't get paid as much."
-    r "I didn't think it would be possible to have less business this week than last week. I'll have someone else do the phones on Tuesday. 
+    ro "I didn't think it would be possible to have less business this week than last week. I'll have someone else do the phones on Tuesday. 
        Take Tuesday off."
     mc "You could show me how to repair something instead."
-    r "Nope. You aren't licensed for... anything. Even if I did show you the insides of an iPhone, it would be all kinds of illegal for 
+    ro "Nope. You aren't licensed for... anything. Even if I did show you the insides of an iPhone, it would be all kinds of illegal for 
        you to do paid work. Unless you want to fix another coffee maker."
     mc "... I suppose I learned my lesson with the coffee maker."
     nmc "Robert was of course, referring to \"The Ground Problem\", or at least, that's what he calls it when he retells the story to customers. 

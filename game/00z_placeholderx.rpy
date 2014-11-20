@@ -1,6 +1,6 @@
 init -1 python:
     import os
-    from get_image_size import get_image_size, UnknownImageFormat
+    from get_image_size import get_image_size, UnknownImageFormat, BadFile
     
     class PlaceholderX(renpy.Displayable):
 
@@ -23,19 +23,19 @@ init -1 python:
                 return self.build
             
             # Check both images
-            loc1 = os.path.join(config.gamedir, self.img1)
-            loc2 = os.path.join(config.gamedir, self.img2)
+            loc1 = os.path.abspath(config.gamedir + "/" + self.img1)
+            loc2 = os.path.abspath(config.gamedir + "/" + self.img2)
             
             # Show second image if available
             # Clear text because correct image
             if(os.path.isfile(loc2)):
-                image = Image(loc2)
+                setimage = self.img2
                 setloc = loc2
                 text = ""
             # First image otherwise
             # Generate text if wrong image
             else:
-                image = Image(loc1)
+                setimage = self.img1
                 setloc = loc1
                 text = self.pretext + " ".join(self.name) + ": " + self.img2
             
@@ -51,7 +51,7 @@ init -1 python:
             
             # Build the current version of the image
             placeheld = Fixed(
-                image,
+                Image(setimage),
                 Text(text, pos=textpos, xanchor=self.talign[0], yanchor=self.talign[1], style="_default", color=self.tcolor, text_align=0.0, size = self.tsize),
                 xysize=size,
             )
