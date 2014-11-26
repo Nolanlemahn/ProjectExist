@@ -60,7 +60,7 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     nmc "As I confirmed this morning, it takes 5 minutes to get to school if I sprint, trespass, pick a few locks, jump dangerously, and so on."
     nmc "But honestly, I'm not up for repeating all of that nonsense. So, I'm taking the bus home."
     $ sio_l("bg blackdrop")
-    $ triple_min(2)
+    call triple_min(2)
     nmc "The rest of the bus drive proceeded without incident."
     $ sio_l("bg kazuki kitchen")
     nmc "I let myself into the apartment and begin getting things out of the refrigerator."
@@ -74,8 +74,8 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     nmc "I snap my wrist and adjust my grip of the butter knife, holding it as I would a dagger. It may not have been sharp, but it was threatening
          enough."
     nmc "The sound had been loud and unexpected, but its source was..."
-    f "Go back to school, you little faggot."
-    nmc "In his drunken swagger, my father had succeeded in knocking my plate to the floor. Although gaudy, these new plastic plates are proving 
+    d "Go back to school, you little faggot."
+    nmc "In his drunken swagger, Father had succeeded in knocking my plate to the floor. Although gaudy, these new plastic plates are proving 
          to be nigh-unbreakable, saving me several dollars a day on housekeeping."
     nmc "... He swings at me with his left arm, but I drop to the ground. The fist connects with nothing but air. I push hard with my right elbow, and 
          he falls over, wheezing."
@@ -84,17 +84,21 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     $ main_char_cash -= 50
     mc "And I'm going to work, not school. Once I shove some bread and meat down my throat, anyway. Which reminds me. Stop eating my crap. I 
         need my bagels."
-    nmc "My father, still on the floor, lifts his right hand and makes a \"blah blah\" motion with it. An unsuspecting target for a wad of cash. 
+    nmc "In response, Father gets up and takes another swing at me. I crack a cutting board over his head."
+    d "Hnngggrr eaaaaah-"
+    nmc "Father collapses to the floor as a heap of flesh, making a gargling sound all the while."
+    mc "You haven't won a fight since I turned 14... I'm leaving now."
+    nmc "Father, still on the floor, lifts his right hand and makes a \"blah blah\" motion with it. An unsuspecting target for a wad of cash. 
          The money drops to the floor with a light rustle. I can't resist a smirk as I lift the plastic plate off of the floor while he picks 
          himself up."
-    f "I wasn't ready."
+    d "I wasn't ready."
     mc "You were always shit at catch."
     nmc "He bends over to pick up the money, and his back makes a cracking sound. My \"bagel\" made, I make my way towards the door."
-    f "Kill me, goddammit. Put me out of my misery. I know you want to."
+    d "Kill me, goddammit. Put me out of my misery. I know you want to."
     nmc "I stop walking, but I don't look back."
     mc "You were the last thing my mother ever touched. If it wasn't for that, you'd have three bullets through your skull."
     nmc "I open the door and walk out, intentionally leaving it open."
-    jump Kazuki_1k_routing
+    jump Kazuki_1k_work
 
 label Kazuki_1j_essay:#we're writing an essay, lol ya right
     nmc "A 10 page essay on why I wasn't paying attention in class."
@@ -115,4 +119,9 @@ label Kazuki_1k_routing:
     #we need to check for both the faculty thing and for the move natalie thing, which could be awkward
     if(("meeting_known" in answers) or ("meeting_hlawrence" in answers)):
         nmc "I'd better get to that damned meeting now."
+    return
+    
+label Kazuki_1k_work:
+    # 2:20PM
+    $ minutes = 860
     return

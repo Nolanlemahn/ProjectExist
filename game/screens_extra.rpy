@@ -3,36 +3,33 @@ init -1:
     transform tip_right:
         xpos 800 ypos 240
         linear 1.0 xpos 1200
+        
+    transform alpha_dissolve:
+        alpha 0.0
+        linear 0.5 alpha 1.0
+        on hide:
+            linear 0.5 alpha 0
 
-init python:
-    #import locale
-    #locale.setlocale(locale.LC_ALL, 'en_US')
+label triple_min(interval):
+    $ minutes = minutes + interval
+    "... "
+    $ minutes = minutes + interval
+    extend "... "
+    $ minutes = minutes + interval
+    extend "..."
+    return
 
-    #def Alert():
-    #    if(dev_alert == None):
-    #        ui.frame(xfill=False, xminimum = 33, yminimum=None, xalign=0.801, yalign = 0.76, style='clipFrame')
-    #        ui.vbox()
-    #        ui.text("", xalign=1.0, size=checkSizeTwo())
-    #        ui.close()
-    #    elif(dev_alert == "hide"):
-    #        return
-    #    else:
-    #        ui.textbutton("!", style=style.dev_button, text_style = style.dev_button_text, xalign=0.801, yalign = 0.760, clicked = ui.callsinnewcontext("small_dir", dev_alert), xminimum=22, yminimum=37)
-
-    
+init python:    
     def answer_add(new_answer):
         answers.append(new_answer)
         return
     
     def python_pass():
         return
-
-transform alpha_dissolve:
-    alpha 0.0
-    linear 0.5 alpha 1.0
-    on hide:
-        linear 0.5 alpha 0
-    # This is to fade the bar in and out, and is only required once in your script
+        
+    def triple_min(delta_minutes):
+        renpy.call("triple_min", delta_minutes)
+        return
 
 #start countdown code
 init -1 python:
@@ -155,15 +152,6 @@ label com_slide(message):
     return
 
 label audio_memory:
-    return
-
-label triple_min(interval):
-    $ minutes = minutes + interval
-    "... "
-    $ minutes = minutes + interval
-    extend "... "
-    $ minutes = minutes + interval
-    extend "..."
     return
 
 screen button:

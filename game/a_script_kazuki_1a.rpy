@@ -63,7 +63,7 @@ label Kazuki_1a:#this_label_done
     $ mtname = "Math Teacher"
     $ mt = DynamicCharacter("mtname", show_two_window=True)
     
-    $ dname = "\"Dad\""
+    $ dname = "\"Father\""
     $ d = DynamicCharacter("dname", show_two_window=True)
 
     #Rin
@@ -446,7 +446,6 @@ label Kazuki_1b_interstitial:
     return
         
 label Kazuki_1b_extend:
-    $ answer_add("nat_xc-skipped")
     nmc "And with that, he ushers me out of the door."
     $ sio_s("bg hallway1")
     mc "Ah, dammit..."
@@ -461,6 +460,7 @@ label Kazuki_1b_extend:
                 Japanese 101\n{w}2:00PM - 5:50PM: (Work + lunch)\n{w}6:00PM - 8:00PM: (Cross-country practice)"
     nvl clear
     if (answers[0] == "law_test"):
+        $ answer_add("nat_xc-skipped")
         nmc "Wait. I'm running late for my next class!"
         extend "\nI break into a sprint and rush towards Anderson Hall..."
         jump Kazuki_1c
