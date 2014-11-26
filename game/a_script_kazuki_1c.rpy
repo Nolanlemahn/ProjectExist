@@ -97,7 +97,7 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     d "Kill me, goddammit. Put me out of my misery. I know you want to."
     nmc "I stop walking, but I don't look back."
     mc "You were the last thing my mother ever touched. If it wasn't for that, you'd have three bullets through your skull."
-    nmc "I open the door and walk out, intentionally leaving it open."
+    nmc "I open the door and head out for work, intentionally leaving it open."
     jump Kazuki_1k_work
 
 label Kazuki_1j_essay:#we're writing an essay, lol ya right
@@ -122,6 +122,17 @@ label Kazuki_1k_routing:
     return
     
 label Kazuki_1k_work:
-    # 2:20PM
-    $ minutes = 860
+    # 2:00PM
+    $ minutes = 840
+    nmc "On the walk to Robert and Son's Machines, I realized that I had some time to think about problems. Specifically 
+         variants of them."
+    nmc "Consider for a moment, the Mutilated Chessboard Problem, as posed by Martin Gardner. An unmodified chessboard can clearly be filled with dominoes evenly. 
+         Assuming of course you place a domino over two adjacent squares and don't do anything silly, like placing a domino diagonally, using oversized dominoes, 
+         breaking dominoes in half, dangling dominoes off of the board's edge, and so on. If you remove two white squares on the board however, can you still fill 
+         the chessboard with dominoes?"
+    nmc "The answer is, of course, no. While it's certainly true that removing these spaces still leaves the board with an even number of squares... well."
+    nmc "A domino placed with these restrictions must cover both a black and a white square. If the ratio between the quantity of black squares to white squares 
+         is anything but one-to-one, this is evidently impossible."
+    nmc "But what happens if I remove a black tile and a white tile? Does it matter which tiles I remove? And can I still fill the board with dominoes?"
+    $ minutes = 870
     return
