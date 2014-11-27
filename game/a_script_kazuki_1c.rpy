@@ -125,14 +125,38 @@ label Kazuki_1k_work:
     # 2:00PM
     $ minutes = 840
     nmc "On the walk to Robert and Son's Machines, I realized that I had some time to think about problems. Specifically 
-         variants of them."
-    nmc "Consider for a moment, the Mutilated Chessboard Problem, as posed by Martin Gardner. An unmodified chessboard can clearly be filled with dominoes evenly. 
-         Assuming of course you place a domino over two adjacent squares and don't do anything silly, like placing a domino diagonally, using oversized dominoes, 
+         variants of impossible problems."
+    nmc "Consider for a moment, the Mutilated Chessboard Problem, as posed by Martin Gardner. Although I would have called it the 2-by-1 Corner Truncation Problem. 
+         The premise of the problem is that an unmodified chessboard can clearly be completely covered by a number of standard dominoes."
+    nmc "Of course, assuming that you place a domino over two adjacent squares and don't do anything silly, like placing a domino diagonally, using oversized dominoes, 
          breaking dominoes in half, dangling dominoes off of the board's edge, and so on. If you remove two white squares on the board however, can you still fill 
          the chessboard with dominoes?"
     nmc "The answer is, of course, no. While it's certainly true that removing these spaces still leaves the board with an even number of squares... well."
     nmc "A domino placed with these restrictions must cover both a black and a white square. If the ratio between the quantity of black squares to white squares 
          is anything but one-to-one, this is evidently impossible."
-    nmc "But what happens if I remove a black tile and a white tile? Does it matter which tiles I remove? And can I still fill the board with dominoes?"
+    nmc "But what happens if I remove a black tile and a white tile? Does it matter which tiles I remove? And can I then fill the board with dominoes?"
+    nmc "The answer then is, that I will always be able to fill the board regardless of the two removed tiles. Additionally, the proof is still somewhat geometric. 
+         Imagine how a rook would travel through board, and realize that it's movement 
+         pattern must alternate tiles: black, white, black, white, and so on. A single path is not necessarily possible if these two tiles are removed."
+    nmc "So what? Picture the removal of a black square. A single rook may still traverse the entire board, but starts and ends on a white square."
+    nmc "Then remove any white square. If remove one of the end squares, then we've presented the problem in an incredibly stupid manner, and have just asked \"well 
+         what happens if we remove a domino's worth of squares\"."
+    nmc "Remove a white square in the middle though, and we absolutely create two paths. Black at the start and white at the end. A traversable path with different 
+         ends. QED."
+    nmc "But what if we tried to solve the problem in a non-geometric manner? Hmm..."
+    # alternate intro to robert hale
+    $ sio_l("bg workshop")
     $ minutes = 870
+    ro "Blasted self-entitled good-for-nothing ignorant plebeian consuming sheep people."
+    mc "Mr. Hale?"
+    ro "That bitch Rachel called again."
+    nmc "Rachel made the mistake of trying to get her cell phone repaired here. Not that we couldn't have repaired it, but she insisted that we 
+         repair the phone for free and deliver the repaired phone on the same day the phone was brought in."
+    nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
+         long at all. Which is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
+         shop would be an expensive pain in the ass in terms of both paperwork and physically changing the sign, so the name stuck."
+    extend "\nHis words, not mine. There have been a few awkward moments though, when I have been mistaken as his son..."
+    nmc "In any case, I happen to work for him. Three hours a day, by the sweat and grime  my brow, wrench in hand... actually I just handle 
+         the taxes, the telephone, and the computers."
+    nmc ""
     return
