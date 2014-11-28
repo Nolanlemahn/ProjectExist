@@ -1,7 +1,7 @@
 label Kazuki_1j_skip:#we skipped lunch
     $ sio_l("bg workshop")
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
-         long at all. Which is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
+         long at all. This in itself is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
          shop would be an expensive pain in the ass in terms of both paperwork and physically changing the sign, so the name stuck."
     extend "\nHis words, not mine. There have been a few awkward moments though, when I have been mistaken as his son..."
     nmc "In any case, I happen to work for him. Three hours a day, by the sweat and grime  my brow, wrench in hand... actually I just handle 
@@ -124,7 +124,7 @@ label Kazuki_1k_routing:
 label Kazuki_1k_work:
     # 2:00PM
     $ minutes = 840
-    nmc "On the walk to Robert and Son's Machines, I realized that I had some time to think about problems. Specifically 
+    nmc "On the half-hour walk to Robert and Son's Machines, I realized that I had some time to think about problems. Specifically 
          variants of impossible problems."
     nmc "Consider for a moment, the Mutilated Chessboard Problem, as posed by Martin Gardner. Although I would have called it the 2-by-1 Corner Truncation Problem. 
          The premise of the problem is that an unmodified chessboard can clearly be completely covered by a number of standard dominoes."
@@ -142,21 +142,40 @@ label Kazuki_1k_work:
     nmc "Then remove any white square. If remove one of the end squares, then we've presented the problem in an incredibly stupid manner, and have just asked \"well 
          what happens if we remove a domino's worth of squares\"."
     nmc "Remove a white square in the middle though, and we absolutely create two paths. Black at the start and white at the end. A traversable path with different 
-         ends. QED."
+         ends. Quod erat demonstrandum."
     nmc "But what if we tried to solve the problem in a non-geometric manner? Hmm..."
     # alternate intro to robert hale
     $ sio_l("bg workshop")
     $ minutes = 870
-    ro "Blasted self-entitled good-for-nothing ignorant plebeian consuming sheep people."
+    ro "Blasted self-entitled good-for-nothing ignorant plebeian consumerist sheep peoplecuntdicks."
     mc "Mr. Hale?"
+    nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
+         long at all. This in itself is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
+         shop would be an expensive pain in the ass in terms of both paperwork and physically changing the sign, so the name stuck."
+    extend "\nHis words, not mine. There have been a few awkward moments though, when I have been mistaken as his son..."
+    nmc "Moments like these remind me of Robert's Irish descent."
+    mc "Excuse me, Mr. Hale?"
     ro "That bitch Rachel called again."
     nmc "Rachel made the mistake of trying to get her cell phone repaired here. Not that we couldn't have repaired it, but she insisted that we 
          repair the phone for free and deliver the repaired phone on the same day the phone was brought in."
-    nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
-         long at all. Which is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
-         shop would be an expensive pain in the ass in terms of both paperwork and physically changing the sign, so the name stuck."
-    extend "\nHis words, not mine. There have been a few awkward moments though, when I have been mistaken as his son..."
     nmc "In any case, I happen to work for him. Three hours a day, by the sweat and grime  my brow, wrench in hand... actually I just handle 
          the taxes, the telephone, and the computers."
-    nmc ""
+    mc "She's still alive?"
+    ro "Well her driver's license says that she's 84."
+    mc "Didn't you say she was your first customer?"
+    ro "Yep. Good ol' days, eh?"
+    mc "Umm. I find it unlikely that I was even alive back then."
+    ro "I suppose that would be unlikely yes. How old are you again? Twelve?"
+    mc "Robert..."
+    nmc "Our senses of humor are not exactly compatible."
+    ro "Heheh. Anyway, I've got work for you."
+    nmc "He points at the workstation."
+    mc "Oh! Is the computer broken!"
+    ro "No. The assholes have started scheduling appointments through e-mail."
+    mc "I see."
+    ro "You know what to do."
+    $ sio_l("bg blackdrop")
+    call triple_min(15)
+    $ sio_l("bg workshop")
+    nmc "... Okay, this was actually hard."
     return
