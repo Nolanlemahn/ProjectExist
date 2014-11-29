@@ -47,7 +47,7 @@ image bg parkinglot1 = "drops/parkinglot1.png" #parkinglot of the school
 image bg bus1 = PlaceholderX("drops/template.png", "drops/bus1.png", pretext = "(PLACEHOLDER) ") #public bus
 image bg bus2 = PlaceholderX("drops/template.png", "drops/bus2.png", pretext = "(PLACEHOLDER) ") #public bus
 image bg library1 = PlaceholderX("drops/template.png", "drops/library1.png", pretext = "(PLACEHOLDER) ")
-image bg workshop = PlaceholderX("drops/template.png", "drops/kazuki/bedroom.png", pretext = "(PLACEHOLDER) ")
+image bg workshop = PlaceholderX("drops/template.png", "drops/kazuki/workshop.png", pretext = "(PLACEHOLDER) ")
 
 #kazuki
 image bg kazuki bed = PlaceholderX("drops/template.png", "drops/kazuki/bed.png", pretext = "(PLACEHOLDER) ")

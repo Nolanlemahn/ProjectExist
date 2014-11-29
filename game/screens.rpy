@@ -485,6 +485,7 @@ screen main_menu:
         has vbox
 
         textbutton _("Start Game") xminimum 300 action Start()
+        textbutton _("Editor's Start") xminimum 300 action Start("requested_start_k")
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Preferences") action ShowMenu("preferences")
         textbutton _("Music Room") action (ShowMenu("music_room"), SetVariable('playing', name_playing()))
