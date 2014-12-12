@@ -177,14 +177,5 @@ label Kazuki_1k_work:
     $ sio_l("bg blackdrop")
     call triple_min(15)
     $ sio_l("bg workshop")
-    nmc "... Okay, this is actually hard."
-    nmc "The issue here is that I am looking at the appointments detailed in emails, and trying to put these into the calendar At the same time, I am taking 
-         phone calls, and putting those vocalized appointments into the calendar."
-    nmc "Multitasking is normally one of my stronger suits, but not when all of my work is being done on the same peripheral."
-    nmc "... This would actually be much easier if I had two computers and a tablet."
-    mc "Hello, Robert and Son's Machines. Yes, we can service your Hyundai. Certainly, I can schedule you for Monday. Give me a moment. Oh, you said an Audi for 
-        Friday? My mistake. One moment. Okay, you are all set for Wednesday. Oh my God, I am so sorry. Audi. Friday. Got it. Thank you for your business."
-    nmc "The rest of the calls went something along those lines."
-    jump Kazuki_1k_work
-
-label Kazuki_1k_work:
+    nmc "... Okay, this was actually hard."
+    return
