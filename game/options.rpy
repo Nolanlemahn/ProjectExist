@@ -78,8 +78,23 @@ init -1 python:
             rv = Frame(rv, x, y, tile=True)
         return rv
         
+#styles - ui
+    style.clipFrame = Style(style.frame)
+    style.clipFrame.background = Frame("menus/FoxFrameClip.png", 25, 25)
+    
+    style.nvl_menu_choice.idle_color = "#ffffffff"
+    style.nvl_menu_choice.hover_color = "#ccccccff"
+    style.nvl_menu_choice_button.hover_background = "#00000000"
+    style.nvl_menu_choice_button.left_margin = 0
+    
+    style.dev_button = Style(style.button)
+    style.dev_button.background = "#FF0000"
+    style.dev_button.hover_background = "#FF6600"
+    style.dev_button.selected_background = "#000000"
+    style.dev_button_text.color = "#000000"
+    style.dev_button_text.hover_color = "#000000"
+    style.dev_button_text.selected_color = "#000000"
 init -1:
-    #styles - ui
     $ cdw_color = (255, 0, 0, 255)#red
     $ style.create("game_box", "frame")
     $ style.game_box.background = Frame("menus/FoxGameBox.png", 25, 25)
@@ -226,6 +241,13 @@ init -1:
         what_prefix="{color=#FF0000}", what_suffix = "{/color}",
         who_prefix="{color=#FF0000}", who_suffix = ":{/color}")
 
+    define dev = Character('Developer', color="#FFFFFF", kind=char_white, show_two_window=True)
+    $ scentered = Character(None, what_style="scentered_text", window_style="centered_window")
+    $ narr = Character(None)
+    $ nvldev = NVLCharacter('Developer', color="#FFFFFF", kind=nvl_white)
+    $ nvln = NVLCharacter(None, kind=nvl)
+    $ nvlcap = NVLCharacter(None, kind=nvl, ctc=anim.Blink("extra/arrow.png"))
+
 #First, we'll define our persistents
 init -1 python hide:
     if persistent.useDyslexic is None:
@@ -336,13 +358,6 @@ init -1:
         layout "subtitle"
         font "Respective_Slanted.ttf"
         size 64
-    
-    define dev = Character('Developer', color="#FFFFFF", kind=char_white, show_two_window=True)
-    $ scentered = Character(None, what_style="scentered_text", window_style="centered_window")
-    $ narr = Character(None)
-    $ nvldev = NVLCharacter('Developer', color="#FFFFFF", kind=nvl_white)
-    $ nvln = NVLCharacter(None, kind=nvl)
-    $ nvlcap = NVLCharacter(None, kind=nvl, ctc=anim.Blink("extra/arrow.png"))
     
 init -2 python:
     style.quick_button.set_parent('default')
