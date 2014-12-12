@@ -1,5 +1,4 @@
 ﻿init -1 python hide:
-
     def checkFont():
         if (persistent.useDyslexic == True):
             return "OpenDyslexic-Regular.otf"
@@ -47,6 +46,24 @@
     config.window_title = "Project Exist"
     config.default_fullscreen = None
     config.gl_resize = False
+    style.clipFrame = Style(style.frame)
+    style.clipFrame.background = Frame("menus/FoxFrameClip.png", 25, 25)
+    
+    style.dys_button = Style(style.button_text)
+    style.dys_button_text.font = "OpenDyslexic-Regular.otf"
+    
+    style.nvl_menu_choice.idle_color = "#ffffffff"
+    style.nvl_menu_choice.hover_color = "#ccccccff"
+    style.nvl_menu_choice_button.hover_background = "#00000000"
+    style.nvl_menu_choice_button.left_margin = 0
+    
+    style.dev_button = Style(style.button)
+    style.dev_button.background = "#FF0000"
+    style.dev_button.hover_background = "#FF6600"
+    style.dev_button.selected_background = "#000000"
+    style.dev_button_text.color = "#000000"
+    style.dev_button_text.hover_color = "#000000"
+    style.dev_button_text.selected_color = "#000000"
     
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.

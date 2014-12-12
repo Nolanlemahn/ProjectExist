@@ -221,13 +221,6 @@ init -1:
         what_prefix="{color=#FF0000}", what_suffix = "{/color}",
         who_prefix="{color=#FF0000}", who_suffix = ":{/color}")
 
-    define dev = Character('Developer', color="#FFFFFF", kind=char_white, show_two_window=True)
-    $ scentered = Character(None, what_style="scentered_text", window_style="centered_window")
-    $ narr = Character(None)
-    $ nvldev = NVLCharacter('Developer', color="#FFFFFF", kind=nvl_white)
-    $ nvln = NVLCharacter(None, kind=nvl)
-    $ nvlcap = NVLCharacter(None, kind=nvl, ctc=anim.Blink("extra/arrow.png"))
-
 #First, we'll define our persistents
 init -1 python hide:
     if persistent.useDyslexic is None:
@@ -338,6 +331,13 @@ init -1:
         layout "subtitle"
         font "Respective_Slanted.ttf"
         size 64
+    
+    define dev = Character('Developer', color="#FFFFFF", kind=char_white, show_two_window=True)
+    $ scentered = Character(None, what_style="scentered_text", window_style="centered_window")
+    $ narr = Character(None)
+    $ nvldev = NVLCharacter('Developer', color="#FFFFFF", kind=nvl_white)
+    $ nvln = NVLCharacter(None, kind=nvl)
+    $ nvlcap = NVLCharacter(None, kind=nvl, ctc=anim.Blink("extra/arrow.png"))
     
 init -2 python:
     style.quick_button.set_parent('default')
