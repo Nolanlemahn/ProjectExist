@@ -1,27 +1,4 @@
-﻿#support
-init python:
-    def mlib(selection):
-        #bgm
-        if(selection == "room3"):
-            renpy.music.play("bgm/room3.mp3", loop=True, fadein=1.0)
-        if(selection == "round"):
-            renpy.music.play("bgm/the_round.mp3", loop=True, fadein=1.0)
-            
-        #these sfxs act as bgm, but do not constitute "music" in their own rights
-        #as such, we will not mark them as unlocked
-        if(selection == "march"):
-            renpy.music.play("bgm/march_lit.wav", loop=True)
-        if(selection == "calarm"):
-            renpy.music.play("sfx/clock_alarm.wav", loop=True)
-        if(selection == "falarm"):
-            renpy.music.play("sfx/domestic_falarm.mp3", loop=True)
-            
-        #sfxs
-        if(selection == "cskid"):
-            renpy.sound.play("sfx/car_skid.mp3")
-            renpy.pause(2.0)
-        return
-        
+﻿
 image empty = "drops/empty.png"
 
 #bg - support
@@ -79,6 +56,9 @@ init -1 python:
         return rv
         
 #styles - ui
+    style.dys_button = Style(style.button_text)
+    style.dys_button_text.font = "OpenDyslexic-Regular.otf"
+
     style.clipFrame = Style(style.frame)
     style.clipFrame.background = Frame("menus/FoxFrameClip.png", 25, 25)
     

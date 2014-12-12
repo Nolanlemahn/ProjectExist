@@ -188,3 +188,4 @@ label Kazuki_1k_work:
     jump Kazuki_1k_work
 
 label Kazuki_1k_work:
+    return
