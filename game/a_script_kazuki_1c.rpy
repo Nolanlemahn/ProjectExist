@@ -1,5 +1,7 @@
 label Kazuki_1j_skip:#we skipped lunch
     $ sio_l("bg workshop")
+    $ minutes = minutes + 5
+    #1:55PM
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
          long at all. This in itself is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
          shop would be an expensive pain in the ass in terms of both paperwork and physically changing the sign, so the name stuck."
@@ -147,7 +149,7 @@ label Kazuki_1k_work:
     # alternate intro to robert hale
     $ sio_l("bg workshop")
     $ minutes = 870
-    ro "Blasted self-entitled good-for-nothing ignorant plebeian consumerist sheep peoplecuntdicks."
+    ro "Blasted self-entitled good-for-nothing ignorant plebeian consumerist sheep people cunt dicks."
     mc "Mr. Hale?"
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
          long at all. This in itself is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
@@ -173,7 +175,9 @@ label Kazuki_1k_work:
     mc "Oh! Is the computer broken!"
     ro "No. The assholes have started scheduling appointments through e-mail."
     mc "I see."
-    ro "You know what to do."
+    ro "You know what to do. I need a nap."
+    mc "Pardon?"
+    ro "You heard me. G'night."
     $ sio_l("bg blackdrop")
     call triple_min(15)
     $ sio_l("bg workshop")
@@ -185,7 +189,11 @@ label Kazuki_1k_work:
     mc "Hello, Robert and Son's Machines. Yes, we can service your Hyundai. Certainly, I can schedule you for Monday. Give me a moment. Oh, you said an Audi for 
         Friday? My mistake. One moment. Okay, you are all set for Wednesday. Oh my God, I am so sorry. Audi. Friday. Got it. Thank you for your business."
     nmc "The rest of the calls went something along those lines."
-    jump Kazuki_1k_work
+    jump Kazuki_1l_work
 
-label Kazuki_1k_work:
+label Kazuki_1l_work:
+    $ sio_l("bg workshop")
+    nmc "I was just putting in the last of the appointments when Robert wobbled into the room."
+    mc "Were you actually able to get some sleep?"
+    ro "Enough."
     return
