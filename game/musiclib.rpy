@@ -9,7 +9,7 @@ init python:
         #these sfxs act as bgm, but do not constitute "music" in their own rights
         #as such, we will not mark them as unlocked
         if(selection == "march"):
-            renpy.music.play("bgm/march_lit.wav", loop=True)
+            renpy.music.play("bgm/march.mp3", loop=True)
         if(selection == "calarm"):
             renpy.music.play("sfx/clock_alarm.wav", loop=True)
         if(selection == "falarm"):

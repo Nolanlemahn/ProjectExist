@@ -1,22 +1,4 @@
 ﻿init -1 python hide:
-    def checkFont():
-        if (persistent.useDyslexic == True):
-            return "OpenDyslexic-Regular.otf"
-        else:
-            return "calibri.ttf"
-    
-    def checkDev():
-        if (persistent.amDev == True):
-            return True
-        else:
-            return False
-    
-    def checkSize():
-        if (persistent.useDyslexic == True):
-            return 16
-        else:
-            return 26
-
     from array import *
     config.python_callbacks = []
     
@@ -35,11 +17,11 @@
     #style.say_who_window.yminimum = 15
     #style.say_who_window.xfill = False
     
-    config.developer = checkDev()
-    # access to developer commands
+    # #developer options
+    config.developer = checkUserDev()
     config.keymap['save_delete'].append('K_BACKSPACE')
     config.fast_skipping = True
-    # just skipping
+
     ## Please don't change this
     config.screen_width = 1200
     config.screen_height = 800
@@ -131,8 +113,8 @@
 
     # style.window.yminimum = 250
 
-    style.default.font = checkFont()
-    style.default.size = checkSize()
+    style.default.font = checkDefaultFont()
+    style.default.size = checkDefaultSize()
 
     ## Note that these only change the size of some of the text. Other
     ## buttons have their own styles.
