@@ -1,35 +1,10 @@
-﻿#sidenote clock wallet calendar systems
-init -1:
-    transform tip_right:
-        xpos 800 ypos 240
-        linear 1.0 xpos 1200
-        
+﻿#clock wallet calendar systems
+init -1:        
     transform alpha_dissolve:
         alpha 0.0
         linear 0.5 alpha 1.0
         on hide:
             linear 0.5 alpha 0
-
-label triple_min(interval):
-    $ minutes = minutes + interval
-    "... "
-    $ minutes = minutes + interval
-    extend "... "
-    $ minutes = minutes + interval
-    extend "..."
-    return
-
-init python:    
-    def answer_add(new_answer):
-        answers.append(new_answer)
-        return
-    
-    def python_pass():
-        return
-        
-    def triple_min(delta_minutes):
-        renpy.call("triple_min", delta_minutes)
-        return
 
 #start countdown code
 init -1 python:
@@ -70,68 +45,6 @@ screen countdown:
             bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_barw"
             text str("%.1f" % time) xalign .5 ypos .25 color "#F00000" size 72
 #end countdown code
-
-#start side note code
-init -1 python:
-    style.sn_button = Style(style.button)
-    style.sn_button.background = Frame("menus/emptyframe.png", 400,200)
-    style.sn_button.hover_background = "#FFFFFF"
-    style.sn_button.selected_background = Frame("menus/emptyframe.png", 400,200)
-    style.sn_button_text = Style(style.button_text)
-    style.sn_button_text.color = "#FFFFFF"
-    style.sn_button_text.hover_color = "#FFFFFF"
-    style.sn_button_text.selected_color = "#FFFFFF"
-    style.sn_button_text.xalign = 0.0
-    style.sn_button_text.yalign = 0.03
-    
-    def hide_side_note():
-        if (store.in_side_note == True):
-            store.snroutine = -1
-            renpy.show(store.selected_note, at_list=[tip_right])
-        return
-    
-    def side_note_callback():
-        if (hasattr(store, 'snroutine') and hasattr(store, 'selected_note')):
-            if store.snroutine > 0:
-                store.snroutine = store.snroutine - 1
-                if store.snroutine == 1:
-                    renpy.show(store.selected_note, at_list=[tip_right])
-                    renpy.hide_screen("side_note_tag")
-                    store.snroutine = 0
-            elif(store.snroutine == 0):
-                renpy.show(store.selected_note, at_list=[tip_right])
-                renpy.hide(store.selected_note)
-                store.snroutine = -1
-        return
-    config.interact_callbacks.append(side_note_callback)
-
-    def show_sn(st, at, tt="something wrong"):
-        tip = tt
-        return Fixed(
-            Image("menus/buttonframe.png"),
-            VBox("menus/topline.png",
-                Text("%s" % tip, color="#fff", size=22, xmaximum=400, first_indent=6, rest_indent=6))), None
-        
-screen side_note:
-    tag side_note_tag
-    vbox xalign 1.0 yalign 0.4 xsize 400 ysize 200:
-        imagebutton:
-            hover "menus/emptyframe.png"
-            idle "menus/emptyframe.png"
-            #Thorium look over here
-            action (ToggleVariable("in_side_note", True, True), Hide("side_note"), hide_side_note())
-            
-image sn demo = DynamicDisplayable(show_sn, tt=
-    "This is a demo side note. You may click to dismiss, or you may progress to the next dialogue screen. It will dismiss itself after three "+
-    "interactions.")
-image sn gre = DynamicDisplayable(show_sn, tt=
-    "GRE is short for Graduate Record Examination, a standardized test developed by " + 
-    "the Educational Testing Service (ETS) in the United States in order to measure and compare graduate school candidates.")
-image sn siebener = DynamicDisplayable(show_sn, tt=
-    "A Siebener refers to a 7 series BMW, just as a bimmer refers to any BMW car. A beemer actually refers to a motorcycle made by BMW.")
-image sn frank = DynamicDisplayable(show_sn, tt=
-    "Frank Anthoni Bruni was the chief restaurant critic of the New York Times from 2004 to 2009.")
-#end side note code
 
 label com_slide(message):
     if passedvalue > 0:

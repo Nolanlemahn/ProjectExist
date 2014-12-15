@@ -1,8 +1,54 @@
+label triple_min(interval):
+    $ minutes = minutes + interval
+    "... "
+    $ minutes = minutes + interval
+    extend "... "
+    $ minutes = minutes + interval
+    extend "..."
+    return
+
+label sn_label(select_tip):
+    $ selected_note = select_tip
+    $ snroutine = 3
+    show screen side_note
+    if (select_tip=="sn demo"):
+        show sn demo:
+            xpos 1200 ypos 240
+            linear 1.0 xpos 800
+            
+    if (select_tip=="sn gre"):
+        show sn gre:
+            xpos 1200 ypos 240
+            linear 1.0 xpos 800
+            
+    if (select_tip=="sn siebener"):
+        show sn siebener:
+            xpos 1200 ypos 240
+            linear 1.0 xpos 800
+            
+    if (select_tip=="sn frank"):
+        show sn frank:
+            xpos 1200 ypos 240
+            linear 1.0 xpos 800
+    return
+
 init python:
-    #question should be a string or None, *answers is any number of strings as additional parameters
-    #selected answer becomes red on-screen, returns integer (min=1) in accordance to which answer chosen
-    #additionally requires following definition or similar (ctc need not be defined):
-    # $ nvlcap = NVLCharacter(None, kind=nvl, ctc=anim.Blink("extra/arrow.png"))
+    
+    def answer_add(new_answer):
+        answers.append(new_answer)
+        return
+    
+    def python_pass():
+        return
+        
+    def sn_draw(selected_sn):
+        renpy.call("sn_label", selected_sn)
+        return
+        
+    def triple_min(delta_minutes):
+        renpy.call("triple_min", delta_minutes)
+        return
+        
     def init_points():
         for i in range(0, 10001):
             points.append(0)
@@ -24,6 +70,10 @@ init python:
         renpy.show(called_scene)
         renpy.with_statement(dissolve)
     
+    #question should be a string or None, *answers is any number of strings as additional parameters
+    #selected answer becomes red on-screen, returns integer (min=1) in accordance to which answer chosen
+    #additionally requires following definition or similar (ctc need not be defined):
+    # $ nvlcap = NVLCharacter(None, kind=nvl, ctc=anim.Blink("extra/arrow.png"))
     def nvlq(question, *answers):
         full_answer = ""
         menu_answers = []
@@ -74,31 +124,6 @@ init python:
         store.timer_range = end_time
         store.timer_jump = target_str
         return
-        
-label sn_label(select_tip):
-    $ selected_note = select_tip
-    $ snroutine = 3
-    show screen side_note
-    if (select_tip=="sn demo"):
-        show sn demo:
-            xpos 1200 ypos 240
-            linear 1.0 xpos 800
-            
-    if (select_tip=="sn gre"):
-        show sn gre:
-            xpos 1200 ypos 240
-            linear 1.0 xpos 800
-            
-    if (select_tip=="sn siebener"):
-        show sn siebener:
-            xpos 1200 ypos 240
-            linear 1.0 xpos 800
-            
-    if (select_tip=="sn frank"):
-        show sn frank:
-            xpos 1200 ypos 240
-            linear 1.0 xpos 800
-    return
 
 label dev_com(com_dex):
     if(persistent.dev_commentary):

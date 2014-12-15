@@ -447,7 +447,7 @@ label Kazuki_1h:
     $ minutes = 830
     nmc "There is not always a good and bad, but where these opposites exist, the scale may or may not be subjective. The concept of \"good cop, 
          bad cop\", for instance, is objective. The strategy is generally defined by whatever police organization feels like employing it."
-    call sn_label("sn frank")
+    $ sn_draw("sn frank")
     nmc "Cooking however, is very subjective. You could put some filet mignon in front of me and I would turn up my nose because it is not as 
          flavorful as other cuts. But put that same slab of meat in front of Frank Bruni or some other food critic, and he'll give it a few stars 
          because of how tender it is."
