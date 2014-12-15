@@ -7,7 +7,7 @@ label triple_min(interval):
     extend "..."
     return
 
-label sn_label(select_tip):
+label sn_draw(select_tip):
     $ selected_note = select_tip
     $ snroutine = 3
     show screen side_note
@@ -42,7 +42,7 @@ init python:
         return
         
     def sn_draw(selected_sn):
-        renpy.call("sn_label", selected_sn)
+        renpy.call("sn_draw", selected_sn)
         return
         
     def triple_min(delta_minutes):

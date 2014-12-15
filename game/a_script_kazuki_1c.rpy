@@ -27,7 +27,7 @@ label Kazuki_1j_skip:#we skipped lunch
     ro "Oh, how's tomorrow's schedule looking?"
     mc "Completely booked."
     ro "And Monday's schedule?"
-    call sn_label("sn siebener")
+    call sn_draw("sn siebener")
     mc "One car. A Siebener. Nothing else for Monday."
     ro "I hate working on beemers. Tuesday?"
     mc "No cars at all. The whole week is basically empty, actually. I might not be needed for most of the week. Although I could still come in if 
