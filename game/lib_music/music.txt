@@ -1,0 +1,20 @@
+room3
+bgm/room3.mp3
+Room 3 - AgentAbacus
+True
+---
+round
+bgm/the_round.mp3
+The Round - Nihilore
+True
+---
+march
+bgm/march.mp3
+The Shadow's March - AgentAbacus
+True
+---
+lawmarch
+bgm/march2.mp3
+Lawrence's Reveal - AgentAbacus
+False
+---

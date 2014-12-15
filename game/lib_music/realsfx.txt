@@ -1,0 +1,4 @@
+cskid
+sfx/car_skid.mp3
+True
+---

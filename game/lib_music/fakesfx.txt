@@ -1,0 +1,6 @@
+calarm
+sfx/clock_alarm.wav
+---
+falarm
+sfx/domestic_falarm.mp3
+---

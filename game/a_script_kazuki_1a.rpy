@@ -509,7 +509,7 @@ label Kazuki_1b_extend:
             mc "... 3AM this morning?"
             n "Mmm. I think I need a nap."
             mc "What the hell were you doing at 3AM in the morning?"
-            call sn_label("sn gre")
+            $ sn_draw("sn gre")
             n "Studying for the GRE's..."
             mc "Already? I thought you were a junior."
             n "No... I'm a senior. Ideally, I'll get into a good graduate school that lets me both run and study medicine, but I'll have to take 
