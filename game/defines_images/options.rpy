@@ -1,64 +1,5 @@
-﻿
-image empty = "drops/empty.png"
-
-#bg - support
-image bg blackdrop = "#000000"
-image bg graydrop = "drops/graydrop.png"
-image bg mainmenu = "drops/menu.png"
-
-#bg generic
-image bg fog = PlaceholderX("drops/brickwall.png", "drops/fog.png", pretext = "(PLACEHOLDER) ")
-image bg fakefog = "drops/sneakfog.png"
-
-#a generic picture of the outside of sacramento
-image bg cafeteria1 = PlaceholderX("drops/template.png", "drops/cafe1.png", pretext = "(PLACEHOLDER) ")
-image bg city1 = PlaceholderX("drops/template.png", "drops/city1.png", pretext = "(PLACEHOLDER) ") #a generic picture of the outside of sacramento
-image bg city1 blur = PlaceholderX("drops/template.png", "drops/city1blur.png", pretext = "(PLACEHOLDER) ") #a generic picture of the outside of sacramento, but blurry (Kazuki is running)
-image bg classroom1 = PlaceholderX("drops/template.png", "drops/classroom1.png", pretext = "(PLACEHOLDER) ") #lawrence's classroom
-image bg classroom2 = PlaceholderX("drops/template.png", "drops/classroom2.png", pretext = "(PLACEHOLDER) ") #tamara's classroom
-image bg classroom3 = PlaceholderX("drops/template.png", "drops/classroom3.png", pretext = "(PLACEHOLDER) ")  #math classroom
-image bg hallway1 = PlaceholderX("drops/template.png", "drops/hallway1.png", pretext = "(PLACEHOLDER) ") #some hallway in the college
-image bg window1 = PlaceholderX("drops/template.png", "drops/window1.png", pretext = "(PLACEHOLDER) ") #outside tamara's window
-image bg stairwell1 = PlaceholderX("drops/template.png", "drops/stairwell1.png", pretext = "(PLACEHOLDER) ") #stairs of the school
-image bg parkinglot1 = "drops/parkinglot1.png" #parkinglot of the school
-image bg bus1 = PlaceholderX("drops/template.png", "drops/bus1.png", pretext = "(PLACEHOLDER) ") #public bus
-image bg bus2 = PlaceholderX("drops/template.png", "drops/bus2.png", pretext = "(PLACEHOLDER) ") #public bus
-image bg library1 = PlaceholderX("drops/template.png", "drops/library1.png", pretext = "(PLACEHOLDER) ")
-image bg workshop = PlaceholderX("drops/template.png", "drops/kazuki/workshop.png", pretext = "(PLACEHOLDER) ")
-
-#kazuki
-image bg kazuki bed = PlaceholderX("drops/template.png", "drops/kazuki/bed.png", pretext = "(PLACEHOLDER) ")
-image bg kazuki bedroom = PlaceholderX("drops/template.png", "drops/kazuki/bedroom.png", pretext = "(PLACEHOLDER) ")
-image bg kazuki bathroom = PlaceholderX("drops/template.png", "drops/kazuki/bathroom.png", pretext = "(PLACEHOLDER) ")
-image bg kazuki journal = "drops/kazuki/journal.png"
-image bg kazuki kitchen = PlaceholderX("drops/template.png", "drops/kazuki/kitchen.png", pretext = "(PLACEHOLDER) ")
-image asset flier last = "extra/flier_last.png"
-
-#characters
-
-#sidenotes
-image sn demo = DynamicDisplayable(show_sn, tt=
-    "This is a demo side note. You may click to dismiss, or you may progress to the next dialogue screen. It will dismiss itself after three "+
-    "interactions.")
-image sn gre = DynamicDisplayable(show_sn, tt=
-    "GRE is short for Graduate Record Examination, a standardized test developed by " + 
-    "the Educational Testing Service (ETS) in the United States in order to measure and compare graduate school candidates.")
-image sn siebener = DynamicDisplayable(show_sn, tt=
-    "A Siebener refers to a 7 series BMW, just as a bimmer refers to any BMW car. A beemer actually refers to a motorcycle made by BMW.")
-image sn frank = DynamicDisplayable(show_sn, tt=
-    "Frank Anthoni Bruni was the chief restaurant critic of the New York Times from 2004 to 2009.")
-
-init -1 python:
-    def img(name, color, x, y):#from 00themes
-        rv = theme.OneOrTwoColor(name, color)
-        if x is not None:
-            rv = Frame(rv, x, y, tile=True)
-        return rv
-        
+﻿init -1 python:        
 #styles - ui
-    style.dys_button = Style(style.button_text)
-    style.dys_button_text.font = "OpenDyslexic-Regular.otf"
-
     style.clipFrame = Style(style.frame)
     style.clipFrame.background = Frame("menus/FoxFrameClip.png", 25, 25)
     
@@ -75,26 +16,19 @@ init -1 python:
     style.dev_button_text.hover_color = "#000000"
     style.dev_button_text.selected_color = "#000000"
 init -1:
+    style scentered_text:
+        textalign 0.5
+        xalign 0.5
+        yalign 0.5
+        layout "subtitle"
+        font "fonts/Respective_Slanted.ttf"
+        size 64
+    
+    
+    
     $ cdw_color = (255, 0, 0, 255)#red
     $ style.create("game_box", "frame")
     $ style.game_box.background = Frame("menus/FoxGameBox.png", 25, 25)
-    $ style.create("cd_barw", "bar")
-    $ style.cd_barw.left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
-    $ style.cd_barw.right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
-    $ style.cd_barw.thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
-    $ style.cd_barw.hover_left_bar = img("menus/thslider_full.png", cdw_color, 12, 0)
-    $ style.cd_barw.hover_right_bar = img("menus/thslider_empty.png", cdw_color, 12, 0)
-    $ style.cd_barw.hover_thumb = img("menus/thslider_thumb.png", cdw_color, None, None)
-    
-    $ cd_color = (255, 255, 255, 255)#white
-    $ style.create("cd_bar", "bar")
-    $ style.cd_bar.left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
-    $ style.cd_bar.right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
-    $ style.cd_bar.thumb = img("menus/thslider_thumb.png", cd_color, None, None)
-    $ style.cd_bar.hover_left_bar = img("menus/thslider_full.png", cd_color, 12, 0)
-    $ style.cd_bar.hover_right_bar = img("menus/thslider_empty.png", cd_color, 12, 0)
-    $ style.cd_bar.hover_thumb = img("menus/thslider_thumb.png", cd_color, None, None)
-    
     
     $ style.alertnow_text.color = "#FF0000"
     style centered_talker:
@@ -223,10 +157,6 @@ init -1:
 
 #First, we'll define our persistents
 init -1 python hide:
-    if persistent.useDyslexic is None:
-        persistent.useDyslexic = False
-    if persistent.amDev is None:
-        persistent.amDev = False
     _preferences.set_volume('music', 0.5)
 
     if persistent.seen_move is None:
@@ -323,14 +253,6 @@ init -1:
     $ updateUIroutine = 0
     #]
     
-    style scentered_text:
-        textalign 0.5
-        xalign 0.5
-        yalign 0.5
-        layout "subtitle"
-        font "Respective_Slanted.ttf"
-        size 64
-    
     define dev = Character('Developer', color="#FFFFFF", kind=char_white, show_two_window=True)
     $ scentered = Character(None, what_style="scentered_text", window_style="centered_window")
     $ narr = Character(None)
@@ -362,7 +284,7 @@ init -2 python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.6_(1056)_houseclean_4"
+    config.version = "v0.2.6_(1056)_houseclean_5"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True

@@ -83,25 +83,7 @@ label pre_update:
     $ updater.update("http://projectexist.net/pe_updates/updates.json", restart=True)
     $ in_debug = False
     return
-    
-label dyslexic:
-    scene bg blackdrop
-    "{font=OpenDyslexic-Regular.otf}{size=20}When the game is set to dyslexic-mode, it uses this font. It is known as OpenDyslexic, which is 
-     available at {a=http://dyslexicfonts.com}http://dyslexicfonts.com{/a}. This is a beta feature.{/size}{/font}"
-    "{font=calibri.ttf}{size=26}For comparison, this is the normal font. Changing the font unlocks absolutely nothing.{/size}{/font}"
-    menu:
-        extend ""
-        "{font=OpenDyslexic-Regular.otf}Change to OpenDyslexic!{/font}":
-            $ persistent.useDyslexic = True
-            "The default font is now OpenDyslexic. The game will now reload."
-            $ renpy.reload_script()
-        "Change to calibri":
-            $ persistent.useDyslexic = False
-            "The default font is now calibri. The game will now reload."
-            $ renpy.reload_script()
-        "Change nothing":
-            "Nothing was changed."
-    return
+
 
 # this game purposefully uses multiple questions to get an answer from the player in order to get an answer. generally speaking, this fakes the feel of an actual conversation
 # (after all, most decisions and or conclusions are the result of a discussion rather than a quick and easy computer prompt.

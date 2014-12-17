@@ -19,7 +19,7 @@ label Maou_1a:
     nvln ".........."
     nvln "....."
     nvln "Mao {w} - Proper Noun - {w} 1. The first name of Chinese communist revolutionary Mao Zedong. {w} - 2a. A card game using in which players attempt to deplete their hands while following Mao's, or The Chairman's, unspoken rules. {w} - 2b. A card game that forbids its players from completely explaining the rules. {w} - 3. A type of suit."
-    nvln "Maou {w} - Noun - {w} 1. A popular Japanese remake of the Korean drama '{font=gulim.ttf}마왕{/font}' (Ma Wang). In the drama, the man who names the series is two-faced, being an angelic lawyer by day and a demonic plotter by night. {w} 2. Japanese for 'devil', 'demon king', or in some cases, 'Satan'."
+    nvln "Maou {w} - Noun - {w} 1. A popular Japanese remake of the Korean drama '{font=fonts/gulim.ttf}마왕{/font}' (Ma Wang). In the drama, the man who names the series is two-faced, being an angelic lawyer by day and a demonic plotter by night. {w} 2. Japanese for 'devil', 'demon king', or in some cases, 'Satan'."
     nvln "I will probably never know how I got that name... Mao... {w} heh... I don't even know if it's actually spelt that way."
     nvln "It means so many things... Chairman... Devil... Revolutionary... even a secretive game of all things."
     nvln "I suppose any of these four would suit me well. I am Mao, and your opponent, player."

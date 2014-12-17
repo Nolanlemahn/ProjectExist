@@ -54,6 +54,13 @@ label Kazuki_1j_skip:#we skipped lunch
     nmc "Anyway, I fixed the computer. The next day, I got admittedly cocky and tried to fix a coffee machine without telling Robert."
     nmc "Long story short, the carpet has a very large coffee stain in it."
     nmc "And so, I allowed another monotonous day of appointment scheduling and paperwork to drag on."
+    $ sio_l("bg blackdrop")
+    $ triple_min(20)
+    $ sio_l("bg workshop")
+    nmc "I had run out of tasks for today, so I began to record data of the cars Robert had worked on over the past week."
+    nmc "Specifically, the more useless data. Such as, that 60.3 percent of the cars that came through our shop were originally painted white."
+    nmc "Or that 32.4 percent had failed their previous smog check."
+    nmc ""
     jump Kazuki_1k_routing
     
 label Kazuki_1j_lunch:#originally had a bus crash intended; bad idea
