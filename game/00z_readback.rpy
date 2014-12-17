@@ -31,7 +31,7 @@ init -3 python:
     config.locked = False
 
     # Configuration Variable for Text History
-    config.readback_buffer_length = 10 # number of lines stored
+    config.readback_buffer_length = 50 # number of lines stored
     config.readback_full = True # completely replaces rollback, False = readback accessible from game menu only (dev mode)
     config.readback_disallowed_tags = ["size"] # a list of tags that will be removed in the text history
     config.readback_choice_prefix = ">> "   # this is prefixed to the choices the user makes in readback

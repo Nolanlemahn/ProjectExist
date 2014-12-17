@@ -276,7 +276,6 @@ init -1 python hide:
     config.fix_rollback_without_choice = False
 #These are our styles and whatnot
 init -1:
-    $ playing = "nothing"
     #$ renpy.watch("renpy.music.get_playing()", style = style.alertnow_text, xpos=0.0, xanchor='left', ypos=0.0, yanchor='bottom')
     $ renpy.watch("renpy.get_filename_line()", style = style.alertnow_text, xpos=1.0, xanchor='right', ypos=0.0, yanchor='top')
     if(config.developer):
@@ -363,7 +362,7 @@ init -2 python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.6_(1056)_houseclean"
+    config.version = "v0.2.6_(1056)_houseclean_3"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True

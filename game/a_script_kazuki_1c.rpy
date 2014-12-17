@@ -56,8 +56,9 @@ label Kazuki_1j_skip:#we skipped lunch
     nmc "And so, I allowed another monotonous day of appointment scheduling and paperwork to drag on."
     jump Kazuki_1k_routing
     
-label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
+label Kazuki_1j_lunch:#originally had a bus crash intended; bad idea
     # 1:50PM
+    $ minutes = 830
     $ sio_l("bg bus1")
     nmc "As I confirmed this morning, it takes 5 minutes to get to school if I sprint, trespass, pick a few locks, jump dangerously, and so on."
     nmc "But honestly, I'm not up for repeating all of that nonsense. So, I'm taking the bus home."
@@ -68,25 +69,30 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     nmc "I let myself into the apartment and begin getting things out of the refrigerator."
     nmc "Father doesn't own a car. He had a Subaru, but then he sold it to pay off his tab. So I can't actually tell if he's home or not."
     nmc "Not that I care."
-    mc "Freaking why."
+    mc "...Freaking why."
     nmc "While all of my smoked salmon was where I left it, someone had eaten the last bagel after I left for school."
     nmc "I suppose white bread will have to do."
     "{i}Clatter!{/i}"
     mc "Who's there?"
+    nmc "Without double-checking whether or not someone has actually joined me in the room, I get ready for a skirmish."
     nmc "I snap my wrist and adjust my grip of the butter knife, holding it as I would a dagger. It may not have been sharp, but it was threatening
          enough."
     nmc "The sound had been loud and unexpected, but its source was..."
     d "Go back to school, you little faggot."
+    nmc "Father either just got back from the bar, or has just woken up with a hangover. Either way, he is hostile."
     nmc "In his drunken swagger, Father had succeeded in knocking my plate to the floor. Although gaudy, these new plastic plates are proving 
          to be nigh-unbreakable, saving me several dollars a day on housekeeping."
-    nmc "... He swings at me with his left arm, but I drop to the ground. The fist connects with nothing but air. I push hard with my right elbow, and 
-         he falls over, wheezing."
+    mc "Tsk..."
+    nmc "... He swings at me with his left arm, but I drop to the ground. The fist connects with nothing but air. I have a free shot here.{w} I push hard with 
+         my right elbow, crushing his diaphragm. He falls over, wheezing."
+    nmc "It takes considerable self-control to not use the knife."
     mc "You'd be in jail and out of alcohol if I wasn't paying for this place, dumbfuck."
     nmc "I put down the knife, and twist a rubber band around a bundle of 5's from my wallet. Father's beer money for the week."
     $ main_char_cash -= 50
     mc "And I'm going to work, not school. Once I shove some bread and meat down my throat, anyway. Which reminds me. Stop eating my crap. I 
         need my bagels."
-    nmc "In response, Father gets up and takes another swing at me. I crack a cutting board over his head."
+    nmc "In response, Father gets up and takes another swing at me. Persistent bastard."
+    nmc "I crack a cutting board over his head, hopefully putting him down for a bit longer than a few seconds."
     d "Hnngggrr eaaaaah-"
     nmc "Father collapses to the floor as a heap of flesh, making a gargling sound all the while."
     mc "You haven't won a fight since I turned 14... I'm leaving now."
@@ -102,7 +108,7 @@ label Kazuki_1j_lunch:#we're getting a bagel, lol ya right
     nmc "I open the door and head out for work, intentionally leaving it open."
     jump Kazuki_1k_work
 
-label Kazuki_1j_essay:#we're writing an essay, lol ya right
+label Kazuki_1j_essay:
     nmc "A 10 page essay on why I wasn't paying attention in class."
     nmc "\"Well gee, Ms. Amnaki, it may or may not have to do with your inability to teach things that are new to me.\""
     nmc "Mm, an excellent topic sentence."
@@ -112,6 +118,11 @@ label Kazuki_1j_essay:#we're writing an essay, lol ya right
     nmc "..."
     $ minutes = minutes + 2
     $ sio_l("bg library1")
+    nmc "And you were showing us how to transform matrices in a manner that... oh."
+    nmc "... I'm not getting anything done..."
+    nmc "I'm saying a lot, but none of it is essay material."
+    li "And now you seem angry."
+    mc "... How long have you been standing there?"
     jump Kazuki_1k_routing
 
 label Kazuki_1k_routing:
@@ -138,7 +149,7 @@ label Kazuki_1k_work:
          is anything but one-to-one, this is evidently impossible."
     nmc "But what happens if I remove a black tile and a white tile? Does it matter which tiles I remove? And can I then fill the board with dominoes?"
     nmc "The answer then is, that I will always be able to fill the board regardless of the two removed tiles. Additionally, the proof is still somewhat geometric. 
-         Imagine how a rook would travel through board, and realize that it's movement 
+         Imagine how a rook would travel through board, and realize that its movement 
          pattern must alternate tiles: black, white, black, white, and so on. A single path is not necessarily possible if these two tiles are removed."
     nmc "So what? Picture the removal of a black square. A single rook may still traverse the entire board, but starts and ends on a white square."
     nmc "Then remove any white square. If remove one of the end squares, then we've presented the problem in an incredibly stupid manner, and have just asked \"well 
@@ -160,7 +171,7 @@ label Kazuki_1k_work:
     ro "That bitch Rachel called again."
     nmc "Rachel made the mistake of trying to get her cell phone repaired here. Not that we couldn't have repaired it, but she insisted that we 
          repair the phone for free and deliver the repaired phone on the same day the phone was brought in."
-    nmc "In any case, I happen to work for him. Three hours a day, by the sweat and grime  my brow, wrench in hand... actually I just handle 
+    nmc "In any case, I happen to work for Mr. Hale. Three hours a day, by the sweat and grime of my brow, wrench in hand... actually I just handle 
          the taxes, the telephone, and the computers."
     mc "She's still alive?"
     ro "Well her driver's license says that she's 84."
@@ -196,4 +207,5 @@ label Kazuki_1l_work:
     nmc "I was just putting in the last of the appointments when Robert wobbled into the room."
     mc "Were you actually able to get some sleep?"
     ro "Enough."
+    nmc "He says as he trips over absolutely nothing."
     return

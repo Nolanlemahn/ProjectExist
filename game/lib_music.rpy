@@ -2,7 +2,11 @@
 #/lib_music/fakesfx.txt holds entries for sfx that are played like music
 #/lib_music/realsfx.txt holds entries for sfx
 
+init -1:
+    $ playing = "nothing"
+
 init python:
+    import os
     from itertools import izip
     
     def dualwise(iterable):
@@ -96,7 +100,7 @@ init python:
         return file_playing
     config.python_callbacks.append(name_playing)
 
-# Step 3. Create the music room screen.
+# Step 7. Create the music room screen.
 screen music_room:
 
     tag menu
