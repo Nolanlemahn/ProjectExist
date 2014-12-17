@@ -111,14 +111,14 @@ screen music_room:
 
         # The buttons that play each track.
         for entry in musicEntries:
-            textbutton entry[2] action (mr.Play(entry[1]), SetVariable('playing', name_playing()))
+            textbutton entry[2] action (SetVariable('playing', name_playing()), mr.Play(entry[1]))
         null height 20
 
         # Buttons that let us advance tracks.
         text "Now playing:\n[playing]\n"
         # now playing doesn't work without setting store.playing twice. research?
-        textbutton "Next" action (mr.Next(), SetVariable('playing', name_playing()))
-        textbutton "Previous" action (mr.Previous(), SetVariable('playing', name_playing()))
+        textbutton "Next" action (SetVariable('playing', name_playing()), mr.Next())
+        textbutton "Previous" action (SetVariable('playing', name_playing()), mr.Previous())
         null height 20
 
         # The button that lets the user exit the music room.
