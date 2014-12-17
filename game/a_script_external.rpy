@@ -109,21 +109,6 @@ init python:
         else:
             return None
         return q_answers[result - 1]
-        
-    def menu_callback(mode, old_modes):
-        if mode == "say" or mode == "nvl":
-            renpy.hide_screen("countdown_tag")
-            renpy.fix_rollback()
-        if (renpy.in_fixed_rollback()):
-            renpy.hide_screen("countdown_tag")
-    config.mode_callbacks.append(menu_callback)
-    
-    def cd_set(start_time, end_time, target_str):
-        #don't bother checking store
-        store.time = start_time
-        store.timer_range = end_time
-        store.timer_jump = target_str
-        return
 
 label dev_com(com_dex):
     if(persistent.dev_commentary):
