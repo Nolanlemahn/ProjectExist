@@ -4,6 +4,10 @@
 # this file is licensed under the terms of the WTFPL
 # see http://sam.zoy.org/wtfpl/COPYING for details
 
+init -4:
+    $ in_countdown = False
+    $ showing_rb = False
+
 init -3 python:
 
     # Styles.
@@ -146,7 +150,7 @@ init -2 python:
 
     # keymap overriding to show text_history.
     def readback_catcher():
-        ui.add(renpy.Keymap(rollback=(SetVariable("readback_yvalue", 1.0), ShowMenu("text_history"))))
+        ui.add(renpy.Keymap(rollback=((SetVariable("readback_yvalue", 1.0)), If(not store.in_countdown, true=ShowMenu("text_history"), false=None))))
         ui.add(renpy.Keymap(rollforward=ui.returns(None)))
 
     if config.readback_full:
@@ -203,9 +207,7 @@ init python:
 
 # Text History Screen.
 screen text_history:
-
     tag menu
-
     if config.readback_nvl_page:
         $ readback_fix_yvalue()
 
@@ -234,15 +236,17 @@ screen text_history:
 
     else:
         $ adj = ReadbackAdj(changed = readback_store_yvalue, step = 300)
-
         window:
             style_group "readback"
 
             side "c r":
 
                 frame:
-                    $ ui.viewport(mousewheel = True, offsets=(0.0, readback_yvalue), yadjustment = adj)
-
+                    has viewport:
+                        mousewheel True
+                        draggable True
+                        yinitial readback_yvalue
+                        yadjustment adj
                     vbox:
                         null height 10
 

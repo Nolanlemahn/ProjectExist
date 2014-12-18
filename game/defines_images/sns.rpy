@@ -1,3 +1,33 @@
+label sn_draw(select_tip):
+    $ selected_note = select_tip
+    $ snroutine = 3
+    show screen side_note
+    if (select_tip=="sn demo"):
+        show sn demo:
+            xpos 1200 ypos 240
+            linear 1.0 xpos 800
+            
+    if (select_tip=="sn gre"):
+        show sn gre:
+            xpos 1200 ypos 240
+            linear 1.0 xpos 800
+            
+    if (select_tip=="sn siebener"):
+        show sn siebener:
+            xpos 1200 ypos 240
+            linear 1.0 xpos 800
+            
+    if (select_tip=="sn frank"):
+        show sn frank:
+            xpos 1200 ypos 240
+            linear 1.0 xpos 800
+    return
+
+init python:
+    def sn_draw(selected_sn):
+        renpy.call("sn_draw", selected_sn)
+        return
+
 #sidenotes
 image sn demo = DynamicDisplayable(show_sn, tt=
     "This is a demo side note. You may click to dismiss, or you may progress to the next dialogue screen. It will dismiss itself after three "+

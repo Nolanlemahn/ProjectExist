@@ -451,7 +451,7 @@ screen main_menu:
         textbutton _("Editor's Start") xminimum 300 action Start("requested_start_k")
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Music Room") action ShowMenu("music_room")
+        textbutton _("Music Room") action (SetVariable('playing', name_playing()), ShowMenu("music_room", "nopredict"))
         textbutton _("Extras") action ShowMenu("more_menu")
         textbutton _("Help") action Help()
         textbutton _("Quit") action Quit(confirm=True)

@@ -5,6 +5,9 @@ init -1 python:
             rv = Frame(rv, x, y, tile=True)
         return rv
 
+init -4:
+    $ in_countdown = False
+
 init -1:
     $ cdw_color = (255, 0, 0, 255)#red
     $ style.create("cd_barw", "bar")
@@ -26,23 +29,25 @@ init -1:
     
 screen countdown:
     tag countdown_tag
-    if(not renpy.in_fixed_rollback()):
-        key "rollback" action [[]]
-        timer 0.1 repeat True action If(time > 0, true=SetVariable('time', time - 0.1), false=[Hide('countdown'), Jump(timer_jump)])
-        if time > 3:
-            bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_bar"
-            text str("%.1f" % time) xalign .5 ypos .25 color "#FFFFFF" size 72
-        elif time > 0:
-            bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_barw"
-            text str("%.1f" % time) xalign .5 ypos .25 color "#F00000" size 72
+    timer 0.1 repeat True action If(time > 0, true=SetVariable('time', time - 0.1), false=[SetVariable('in_countdown', False), Hide('countdown'), Jump(timer_jump)])
+    if time > 3:
+        bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_bar"
+        text str("%.1f" % time) xalign .5 ypos .25 color "#FFFFFF" size 72
+    elif time > 0:
+        bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_barw"
+        text str("%.1f" % time) xalign .5 ypos .25 color "#F00000" size 72
+    if time < 0:
+        $ in_countdown = False
 
 init python:
     def menu_callback(mode, old_modes):
         if mode == "say" or mode == "nvl":
             renpy.hide_screen("countdown_tag")
             renpy.fix_rollback()
+            store.in_countdown = False
         if (renpy.in_fixed_rollback()):
             renpy.hide_screen("countdown_tag")
+            store.in_countdown = False
     config.mode_callbacks.append(menu_callback)
     
     def cd_set(start_time, end_time, target_str):
@@ -50,4 +55,6 @@ init python:
         store.time = start_time
         store.timer_range = end_time
         store.timer_jump = target_str
+        store.in_countdown = True
         return
+
