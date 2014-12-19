@@ -1,28 +1,38 @@
-#this file controls the dyslexic addons
-#usage:
-#  style.default.font = checkDefaultFont()
-#  textbutton "Dyslexic?" action ui.callsinnewcontext("dyslexic") text_style "dys_button_text"
+#######
+# File name: dyslexic_support.rpy
+# 
+# Description: Implements a font swapper.
+# 
+# Original author: Nolan/NintendoToad
+# 
+# Type: Library, Screen
+# 
+# Usage:
+#     style.default.font = checkDefaultFont()
+#     textbutton "Dyslexic?" action ui.callsinnewcontext("dyslexic") text_style "dys_button_text"
+#######
 
 init -1 python:#magic numbers
     dyslexic_size = 16
     normal_size = 26
     
-image bg blackdrop = "#000000"
+image bg blackdrop = "#000000"#black backgound redef just in case
 
-init -1 python hide:    
+init -1 python hide:
+    # persistent table  
     if persistent.useDyslexic is None:
         persistent.useDyslexic = False
     if persistent.amDev is None:
         persistent.amDev = False
 
 init -1 python:
-    #these are additional functions meant for, to some extent, allowing font
-    #files and sizes to be directly selected by screens if need be. In other words, 
-    #we are hiding some of our hidden magic numbers here. (largely with recards 
-    #to the dyslexic options)
+    # magic values and styles
+
+        # style for buttons that are always Dyslexic-formatted
     style.dys_button = Style(style.button_text)
     style.dys_button_text.font = "fonts/OpenDyslexic-Regular.otf"
     
+        # here are the strings/numbers/booleans!
     def checkDefaultFont():
         if (persistent.useDyslexic == True):
             return "fonts/OpenDyslexic-Regular.otf"
@@ -40,7 +50,16 @@ init -1 python:
             return dyslexic_size
         else:
             return normal_size
-            
+
+#####
+# Label name: dyslexic
+# 
+# Descripiton: Changes the default font and reloads the script if need be.
+# 
+# Parameters: none
+# 
+# Returns: none
+#####
 label dyslexic:
     scene bg blackdrop
     "{font=fonts/OpenDyslexic-Regular.otf}{size=20}When the game is set to dyslexic-mode, it uses this font. It is known as OpenDyslexic, which is 

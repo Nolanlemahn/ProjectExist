@@ -8,6 +8,7 @@
 # Modifications: Nolan/NintendoToad
 # 
 # Type: Library, Screen
+# 
 # Usage:
 #     doublespeak Character() Character() String
 # ##or##

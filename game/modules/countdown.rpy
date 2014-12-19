@@ -7,8 +7,9 @@
 # Original author: Nolan/NintendoToad
 # 
 # Type: Library, Screen
+# 
 # Usage:
-#     $ cd_set(Integer deplete_from, Integer full_value, String target_label)
+#     $ cd_set(Int, Int, String)
 #     show screen countdown
 #######
 
@@ -93,7 +94,7 @@ init python:
     # correctly.
     # 
     # Parameters:
-    # start_time - time started with
+    # start_time - time started with/number to start depleting from
     # end_time - time at which a jump is forced
     # target_str - where we force a jump to
     # 

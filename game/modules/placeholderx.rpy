@@ -1,3 +1,16 @@
+#######
+# File name: placeholderx.rpy
+# 
+# Description: Implements a different Placeholder(), showing the first image
+# with notes if the second image is not present. Second image otherwise.
+# 
+# Original author: Nolan/NintendoToad
+# 
+# Type: Library
+# Usage:
+#     image IMGNAME = PlaceholderX(String, String, **Etc)
+#######
+
 init -1 python:
     import os
     from get_image_size import get_image_size, UnknownImageFormat, BadFile
@@ -17,6 +30,16 @@ init -1 python:
             self.pretext = pretext
             self.build = None
             
+        #####
+        # Function name: build_image()
+        # 
+        # Descripiton: Actually assemble a new Image() object
+        # 
+        # Parameters:
+        # self - the current object
+        # 
+        # Returns: the transformed image
+        #####
         def build_image(self):
             # If already built, STFU and move on
             if self.build:
@@ -59,7 +82,19 @@ init -1 python:
             self.build = placeheld
             return placeheld
         
-        # Don't use image.py's parameterize
+        #####
+        # Function name: parameterize()
+        # 
+        # Descripiton: Parameterize the image without using image.py's
+        # parameterize() call.
+        # 
+        # Parameters:
+        # self - the current object
+        # name - the base name of the image
+        # paramaters - etcetera for the image
+        # 
+        # Returns: the transformed image with new parameters
+        #####
         def parameterize(self, name, parameters):
             placeheld = PlaceholderX(self.img1, self.img2, self.tsize, self.tcolor, self.talign, self.pretext)
             placeheld.name = list(name) + list(parameters)
