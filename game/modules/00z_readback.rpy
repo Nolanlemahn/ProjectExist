@@ -6,7 +6,6 @@
 
 init -4:
     $ in_countdown = False
-    $ showing_rb = False
 
 init -3 python:
 
