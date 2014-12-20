@@ -60,7 +60,7 @@ python early:
         renpy.shown_window()
         renpy.show_screen('say', doublespeak=True, who=info['chars'], what=info['messages'])
         
-        if(config.readback_full):
+        if(hasattr(store, "readback_installed")):
             store_say(info['chars'].items()[0][0], info['messages'][0])
             store_say(info['chars'].items()[1][0], info['messages'][1])
 

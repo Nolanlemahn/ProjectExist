@@ -6,6 +6,7 @@
 
 init -4:
     $ in_countdown = False
+    $ readback_installed = True
 
 init -3 python:
 

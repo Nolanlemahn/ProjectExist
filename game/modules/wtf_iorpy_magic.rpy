@@ -78,7 +78,7 @@ init python:
             os.remove(magic_file)
         except:
             renpy.say(None, build.executable_name + " tried to delete a file: " + magic_file + ". It could not be removed. Try fixing your permissions in the containing folder. Moving to main menu.")
-            renpy.reload_script()
+            renpy.full_restart()
         #
         return
     
@@ -107,7 +107,7 @@ init python:
             file.close()
         except: 
             renpy.say(None, build.executable_name + " tried to read a file: " + magic_file + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
-            renpy.reload_script()
+            renpy.full_restart()
         #
         return
     
@@ -118,7 +118,7 @@ init python:
                 os.makedirs(magic_folder)
             except:
                 renpy.say(None, build.executable_name + " tried to create a folder: " + magic_folder + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
-                renpy.reload_script()
+                renpy.full_restart()
         return
         
     def delete_folder(magic_folder):#DANGEROUSDANGEROUSDANGEROUS
@@ -128,7 +128,7 @@ init python:
             shutil.rmtree(magic_folder)
         except:
             renpy.say(None, build.executable_name + " tried to delete a folder: " + magic_folder + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
-            renpy.reload_script()
+            renpy.full_restart()
         return
     
     def show_file(magic_folder, magic_file):
@@ -146,7 +146,7 @@ init python:
                 subprocess.Popen([ "xdg-open", magic_file ])
         except: 
             renpy.say(None, build.executable_name + " tried to read a file: " + magic_file + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
-            renpy.reload_script()
+            renpy.full_restart()
         return
         
     def show_folder(magic_folder):
@@ -161,7 +161,7 @@ init python:
                 subprocess.Popen([ "xdg-open", magic_folder ])
         except: 
             renpy.say(None, build.executable_name + " tried to read a folder: " + magic_folder + ". It could not be read. Try fixing your permissions in the containing folder. Moving to main menu.")
-            renpy.reload_script()
+            renpy.full_restart()
         return
     
     def ui_find_folder(given_message, magic_folder):

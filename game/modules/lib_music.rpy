@@ -1,22 +1,73 @@
-#/lib_music/music.txt holds entries for actual music for the music room
-#/lib_music/fakesfx.txt holds entries for sfx that are played like music
-#/lib_music/realsfx.txt holds entries for sfx
+#######
+# File name: lib_music.rpy
+# 
+# Description: Dynamically declare music files
+# 
+# Original author: Nolan/NintendoToad
+# 
+# Type: Library, Screen
+# 
+# Usage:
+#     doublespeak Character() Character() String
+# --or--
+#     doublespeak Character() Character() String String
+# --also--
+#     /lib_music/music.txt holds entries for actual music for the music room
+#     /lib_music/fakesfx.txt holds entries for sfx that are played like music
+#     /lib_music/realsfx.txt holds entries for sfx
+#######
 
 init -1:
-    $ playing = "nothing"
+        # redundant but not show anything playing by default.
+    $ playing = "Nothing"
 
 init python:
-    import os
+    import os #abspath(), #isfile()
     from itertools import izip
     
+    #####
+    # Function name: dualwise()
+    # 
+    # Descripiton: Transforms data into tuplets of two (well three including garbage).
+    # For looping sfx.
+    # 
+    # Parameters:
+    # iterable - the data
+    # 
+    # Returns: the transformed data
+    #####
     def dualwise(iterable):
         list = iter(iterable)
         return izip(list, list, list)
     
+    
+    #####
+    # Function name: tripwise()
+    # 
+    # Descripiton: Transforms data into tuplets of three (well four including garbage).
+    # For real sfx.
+    # 
+    # Parameters:
+    # iterable - the data
+    # 
+    # Returns: the transformed data
+    #####
     def tripwise(iterable):
         list = iter(iterable)
         return izip(list, list, list, list)
     
+    
+    #####
+    # Function name: quadwise()
+    # 
+    # Descripiton: Transforms data into tuplets of four (well five including garbage).
+    # For music.
+    # 
+    # Parameters:
+    # iterable - the data
+    # 
+    # Returns: the transformed data
+    #####
     def quadwise(iterable):
         list = iter(iterable)
         return izip(list, list, list, list, list)
@@ -61,6 +112,16 @@ init python:
     for entry in musicEntries:
         mr.add(entry[1], always_unlocked=entry[3])
     
+    #####
+    # Function name: mlib()
+    # 
+    # Descripiton: Plays music/sfx based on the shortcode.
+    # 
+    # Parameters:
+    # selection - the shortcode
+    # 
+    # Returns: None
+    #####
     # Step 5. Be able to run the music files.
     def mlib(selection):
         #bgm
@@ -83,10 +144,22 @@ init python:
                 break
         return
 
+    #####
+    # Function name: name_playing()
+    # 
+    # Descripiton: Finds the name of the playing file.
+    # 
+    # Parameters:
+    # selection - the shortcode
+    # 
+    # Returns: The author-given name.
+    #####
     # Step 6. Be able to look up names.
     def name_playing():
+            # be ready to realize that we might not find the song
         never_seeked = True
         file_playing = renpy.music.get_playing()
+            # seek only through the music
         for entry in musicEntries:
             if(file_playing == entry[1]):
                 file_playing = entry[2]
@@ -95,6 +168,7 @@ init python:
             
         if(never_seeked):#handle none case
             file_playing = "Nothing"
+            # manually update store.playing just in case
         if(hasattr(store, 'playing')):
             store.playing = file_playing
         return file_playing
@@ -116,7 +190,8 @@ screen music_room:
 
         # Buttons that let us advance tracks.
         text "Now playing:\n[playing]\n"
-        # now playing doesn't work without setting store.playing twice. research?
+        # research done - we need to change the variable before we move on
+        # so that the callback works
         textbutton "Next" action (SetVariable('playing', name_playing()), mr.Next())
         textbutton "Previous" action (SetVariable('playing', name_playing()), mr.Previous())
         null height 20
