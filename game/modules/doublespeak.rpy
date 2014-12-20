@@ -10,7 +10,7 @@
 # 
 # Usage:
 #     doublespeak Character() Character() String
-# ##or##
+# --or--
 #     doublespeak Character() Character() String String
 #######
 
