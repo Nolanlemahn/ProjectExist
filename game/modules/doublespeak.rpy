@@ -1,8 +1,7 @@
 #######
 # File name: doublespeak.rpy
 # 
-# Description: Implements a countdown timer that changes colors and forces a 
-# jump once the timer runs out.
+# Description: Allows multiple Characters to speak at once
 # 
 # Original author: delta, Shiz
 # Modifications: Nolan/NintendoToad

@@ -38,6 +38,7 @@ init -4:
         # countdown.
     $ in_countdown = False
 
+# declare styles for red/white countdown bar
 init -1:
     $ cdw_color = (255, 0, 0, 255) # the color red
         # style for a red countdown bar
@@ -63,14 +64,22 @@ init -1:
 # jump if necessary.
 screen countdown:
     tag countdown_tag
-    timer 0.1 repeat True action If(time > 0, true=SetVariable('time', time - 0.1), false=[SetVariable('in_countdown', False), Hide('countdown'), Jump(timer_jump)])
+        # move timer every 0.1 seconds
+    timer 0.1 repeat True action If(time > 0,
+        true=SetVariable('time', time - 0.1),
+        false=[SetVariable('in_countdown', False),
+            Hide('countdown'),
+            Jump(timer_jump)])
     if time > 3:
+        # white bar for lots of time left
         bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_bar"
         text str("%.1f" % time) xalign .5 ypos .25 color "#FFFFFF" size 72
     elif time > 0:
+        # red bar otherwise
         bar value time range timer_range xalign 0.5 yalign 0.33 xsize 300 style "cd_barw"
         text str("%.1f" % time) xalign .5 ypos .25 color "#F00000" size 72
     if time < 0:
+        # redundantly set in_countdown to False just in case
         $ in_countdown = False
 
 init python:
