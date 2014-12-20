@@ -1,16 +1,16 @@
 #######
 # File name: doublespeak.rpy
 # 
-# Description: Implements a countdown timer that changes colors and forces a 
-# jump once the timer runs out.
+# Description: Allows multiple Characters to speak at once
 # 
 # Original author: delta, Shiz
 # Modifications: Nolan/NintendoToad
 # 
 # Type: Library, Screen
+# 
 # Usage:
 #     doublespeak Character() Character() String
-# ##or##
+# --or--
 #     doublespeak Character() Character() String String
 #######
 
@@ -60,7 +60,7 @@ python early:
         renpy.shown_window()
         renpy.show_screen('say', doublespeak=True, who=info['chars'], what=info['messages'])
         
-        if(config.readback_full):
+        if(hasattr(store, "readback_installed")):
             store_say(info['chars'].items()[0][0], info['messages'][0])
             store_say(info['chars'].items()[1][0], info['messages'][1])
 
