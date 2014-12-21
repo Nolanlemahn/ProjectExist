@@ -8,9 +8,7 @@
 # Type: Library, Screen
 # 
 # Usage:
-#     doublespeak Character() Character() String
-# --or--
-#     doublespeak Character() Character() String String
+#     $ mlib(String)
 # --also--
 #     /lib_music/music.txt holds entries for actual music for the music room
 #     /lib_music/fakesfx.txt holds entries for sfx that are played like music
