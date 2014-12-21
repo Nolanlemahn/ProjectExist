@@ -21,6 +21,7 @@ init -1:
 
 init python:
     import os #abspath(), #isfile()
+    import ast #literal_eval()
     from itertools import izip
     
     #####
@@ -95,12 +96,9 @@ init python:
     sfxlib2 = os.path.abspath(config.gamedir + "/lib_music/realsfx.txt")
     sfxlib2 = file(sfxlib2).read().decode("utf-8")
     sfxlib2 = sfxlib2.split("\n")
-    for shortname, fileloc, pause, nothing in tripwise(sfxlib2):
-        if(pause == "True"):
-            pause = True
-        else:
-            pause = False
-        newLine = (shortname, fileloc, pause)
+    for shortname, fileloc, time, nothing in tripwise(sfxlib2):
+        time = ast.literal_eval(time)
+        newLine = (shortname, fileloc, time)
         sfxEntries2.append(newLine)
     
     # Step 3. Create a MusicRoom instance.
@@ -137,8 +135,8 @@ init python:
         for entry in sfxEntries2:
             if(selection == entry[0]):
                 renpy.sound.play(entry[1])
-                if(entry[2]):
-                    renpy.pause(2.0)
+                if(entry[2] != 0):
+                    renpy.pause(entry[2])
                 break
         return
 
