@@ -61,8 +61,9 @@ python early:
         renpy.show_screen('say', doublespeak=True, who=info['chars'], what=info['messages'])
         
         if(hasattr(store, "readback_installed")):
-            store_say(info['chars'].items()[0][0], info['messages'][0])
-            store_say(info['chars'].items()[1][0], info['messages'][1])
+            if(store.readback_installed):
+                store_say(info['chars'].items()[0][0], info['messages'][0])
+                store_say(info['chars'].items()[1][0], info['messages'][1])
 
         ui.saybehavior(afm=longest)
         result = ui.interact(roll_forward=renpy.roll_forward_info(), type='say')

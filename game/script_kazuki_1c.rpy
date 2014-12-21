@@ -57,10 +57,11 @@ label Kazuki_1j_skip:#we skipped lunch
     $ sio_l("bg blackdrop")
     $ triple_min(20)
     $ sio_l("bg workshop")
+    #3:25PM
     nmc "I had run out of tasks for today, so I began to record data of the cars Robert had worked on over the past week."
     nmc "Specifically, the more useless data. Such as, that 60.3 percent of the cars that came through our shop were originally painted white."
     nmc "Or that 32.4 percent had failed their previous smog check."
-    nmc ""
+    nmc ""#write
     jump Kazuki_1k_routing
     
 label Kazuki_1j_lunch:#originally had a bus crash intended; bad idea
@@ -166,7 +167,7 @@ label Kazuki_1k_work:
     nmc "But what if we tried to solve the problem in a non-geometric manner? Hmm..."
     # alternate intro to robert hale
     $ sio_l("bg workshop")
-    $ minutes = 870
+    $ minutes = 870#2:30
     ro "Blasted self-entitled good-for-nothing ignorant plebeian consumerist sheep people cunt dicks."
     mc "Mr. Hale?"
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
@@ -183,6 +184,7 @@ label Kazuki_1k_work:
     mc "She's still alive?"
     ro "Well her driver's license says that she's 84."
     mc "Didn't you say she was your first customer?"
+    $ minutes = minutes + 2
     ro "Yep. Good ol' days, eh?"
     mc "Umm. I find it unlikely that I was even alive back then."
     ro "I suppose that would be unlikely yes. How old are you again? Twelve?"
@@ -190,9 +192,9 @@ label Kazuki_1k_work:
     nmc "Our senses of humor are not exactly compatible."
     ro "Heheh. Anyway, I've got work for you."
     nmc "He points at the workstation."
-    mc "Oh! Is the computer broken!"
+    mc "Oh! Is the computer broken?"
     ro "No. The assholes have started scheduling appointments through e-mail."
-    mc "I see."
+    mc "Ah. I see."
     ro "You know what to do. I need a nap."
     mc "Pardon?"
     ro "You heard me. G'night."
@@ -211,8 +213,45 @@ label Kazuki_1k_work:
 
 label Kazuki_1l_work:
     $ sio_l("bg workshop")
+    $ minutes = minutes + 15
+    #3:32PM
     nmc "I was just putting in the last of the appointments when Robert wobbled into the room."
     mc "Were you actually able to get some sleep?"
     ro "Enough."
     nmc "He says as he trips over absolutely nothing."
-    return
+    mc "... Are you sure?"
+    ro "No, but I'll live. How's the work coming along?"
+    mc "Nearly all of the appointments are in your system. Next Tuesday will be busy for you."
+    ro "Hmm. You did that a lot faster than I thought you would."
+    mc "Considering that your expectations are generally low..."
+    ro "\"Blessed is the man who expects nothing, for he shall never be disappointed.\""#write
+    $ cd_set(7, 7, 'Kazuki_1l_work_minus')
+    show screen countdown
+    menu:
+        extend ""
+        "Mark Twain?":
+            mc "Was it Mark Twain that said that?"
+            ro "No. It was actully Alexander Pope."
+        "Alexander Pope?":
+            mc "That sounds like an Alexander Pope quote." 
+            ro "It was indeed."
+        "Oscar Fingal O'Flahertie Wills Wilde?":
+            mc "That sounds like Oscar Fingal O'Flahertie Wills Wilde."
+            ro "Who?"
+            mc "You know. Oscar Wilde?"
+            ro "No... no I don't know."
+            mc "Never mind. So it wasn't Oscar Wilde who said that?"
+            ro "No, it was actually Alexander Pope."
+        "...":
+            jump Kazuki_1l_work_minus
+    jump Kazuki_1l_work_extend
+
+label Kazuki_1l_work_minus:
+    ro "Alexander Pope said that. He was a good man."
+    mc "It sounds like you knew him."
+    ro "I'm not that old..."
+
+label Kazuki_1l_work_extend:
+    mc "So you're telling me that you didn't expect me to get anything done?"
+    ro "And I was, in turn, impressed."
+    mc ""

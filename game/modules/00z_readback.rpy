@@ -228,7 +228,8 @@ screen text_history:
                     if line[0]:
                         label line[0]
 
-                    text line[1]
+                    if (line[1] != None):
+                        text line[1]
 
                     null height 10
 
