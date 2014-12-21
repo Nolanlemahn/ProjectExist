@@ -104,7 +104,6 @@ screen debug_menu:
         yalign .5
         xmaximum 800
         ymaximum 500
-    #end those values
     
         vbox:
             textbutton _("Text History") action ShowMenu("text_history")

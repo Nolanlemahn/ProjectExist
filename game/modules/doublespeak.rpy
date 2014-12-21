@@ -85,11 +85,16 @@ python early:
         for name in info['chars']:
             try:
                 char = eval(name)
+                full_who_prefix = "{b}" + char.who_prefix
+                full_who_suffix = char.who_suffix + "{/b}"
+                if('color' in char.who_args):
+                    full_who_prefix = full_who_prefix + "{color=" + char.who_args["color"] + "}"
+                    full_who_suffix = "{/color}" + full_who_suffix
                     # bold the character titles by default
                 if getattr(char, 'dynamic', False):
-                    name = "{b}" + char.who_prefix + eval(char.name) + char.who_suffix + "{/b}"
+                    name = full_who_prefix + eval(char.name) + full_who_suffix
                 else: # but don't re-evaluate character names if it isn't dynamic
-                    name = "{b}" + char.who_prefix + char.name + char.who_suffix + "{/b}"
+                    name = full_who_prefix + char.name + full_who_suffix
                     # remove bold tags if style specifies non-bold labels
                 if (not style.say_label.bold):
                     name = name[3:-4]

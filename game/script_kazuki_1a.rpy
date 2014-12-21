@@ -76,7 +76,7 @@ label Kazuki_1a:#this_label_done
     
     #Jonathan
     $ j = DynamicCharacter("j_name", color="#ADD8E6", kind=char_blue, show_two_window=True)
-    $ nvlj = Character('Johnathan', color="#ADD8E6", kind=nvl_blue)
+    $ nvlj = DynamicCharacter("j_name", color="#ADD8E6", kind=nvl_blue)
     
     #Natalie
     $ n = Character('Natalie', color='#FAAFBE', kind=char_pink, show_two_window=True)
