@@ -60,7 +60,8 @@ label basevars:
             "Points with Lawrence: [points[0]]"
             extend "\nPoints with Natalie: [points[1]]"
             extend "\nPoints with Tamara: [points[2]]"
-            extend "\nPoints with Lily: [points[3]]"
+            extend "\nPoints with Wil: [points[3]]"
+            extend "\nPoints with Lilly: [points[4]]"
     $ in_debug = False
     return
     
