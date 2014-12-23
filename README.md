@@ -8,7 +8,7 @@ The main "themes" are the thought process and dreams; it is intended that much o
 Project Exist is made using the Ren'Py Visual Novel Engine. <a href = http://renpy.org/>Get it here.</a>
 
 ### Playing this version
-You will not need to use the in-game updater. Simply clone this (and if need be, unzip it). You will need Ren'Py to play this version, simply select the folder ProjectExist is in as your project folder. It is actually recommended that you do not do this, as versions often temporarily break certain... "workarounds" the programmers use. The current Ren'Py version we prefer is <b>6.17.7.521</b>.
+You will not need to use the in-game updater. Simply clone this (and if need be, unzip it). You will need Ren'Py to play this version, simply select the folder ProjectExist is in as your project folder. It is actually recommended that you do not do this, as versions often temporarily break certain... "workarounds" the programmers use. The current Ren'Py version we prefer is <b>6.18.3.761</b>.
 
 ### Playing the other version
 In general, the latest build <a href = http://wiki2.projectexist.net/index.php?title=Builds>here</a> will suit a playtester's needs. Even if a build cannot be directly downloaded, often it is possible to update to the most recent version using the in-game updater.
