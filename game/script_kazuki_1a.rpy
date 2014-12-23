@@ -138,25 +138,25 @@ label Kazuki_1b:
     with dissolve
     scene bg fog
     nnvlmc "I knew right away... that this wasn't a dream.{w} That's not to say that it felt too real to be a dream. On the contrary, it felt too unreal 
-            to be a dream.\n"
+            to be a dream."
     nnvlmc "Someone else's thoughts and feelings... they were overpowering my own, to the point that I couldn't think or feel for myself. {w}And there
-            was nothing. Nothing at all. Nothing but a dull marching.\n"
-    nnvlmc "I am describing someone else's world. This is not my world, nor the world that we humans live in. {w}Someone else is controlling this place...\n"
-    nnvlmc "Yes, a dull marching and a perfect darkness. I couldn't see, smell, taste, touch, only hear.\n"
-    nnvlmc "I couldn't move, nor could I breathe. I could do nothing but merely exist.{w} Thinking itself... it could only be done in fragments.\n"
+            was nothing. Nothing at all. Nothing but a dull marching."
+    nnvlmc "I am describing someone else's world. This is not my world, nor the world that we humans live in. {w}Someone else is controlling this place..."
+    nnvlmc "Yes, a dull marching and a perfect darkness. I couldn't see, smell, taste, touch, only hear."
+    nnvlmc "I couldn't move, nor could I breathe. I could do nothing but merely exist.{w} Thinking itself... it could only be done in fragments."
     stop music
-    nnvlmc "But then the dull marching stops. I should be stressed and unsure of what is about to happen, but my body is relaxed.\n"
+    nnvlmc "But then the dull marching stops. I should be stressed and unsure of what is about to happen, but my body is relaxed."
     nvl clear
     nnvlmc "The marching changes to a single pair of footsteps, and as if this new presence brought light with it, a dim light fills my eyes, and
-            a shallow gust flows through my lungs.{w} And in front of me was a shadow, standing upright...\n"
-    nvls "Stand.\n"
-    nnvlmc "My body stood up, ignoring my brain's demands to ask questions.\n"
-    nvls "Feel pain. Remember me.\n"
+            a shallow gust flows through my lungs.{w} And in front of me was a shadow, standing upright..."
+    nvls "Stand."
+    nnvlmc "My body stood up, ignoring my brain's demands to ask questions."
+    nvls "Feel pain. Remember me."
     nnvlmc "I received what felt like a punch to the stomach, even though the shadow did not move."
     call domchange("HP", -20, 1)
-    extend " Pain surged through my nerves, but I did not budge nor gasp.\n"
-    nvls "Return.\n"
-    nnvlmc "And then the darkness covered my eyes, and I was returned to the world of the living...\n"
+    extend " Pain surged through my nerves, but I did not budge nor gasp."
+    nvls "Return."
+    nnvlmc "And then the darkness covered my eyes, and I was returned to the world of the living..."
     scene bg fakefog
     nvl clear
     #]

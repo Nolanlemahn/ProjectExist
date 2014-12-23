@@ -131,6 +131,7 @@ label Kazuki_1j_essay:
     nmc "I'm saying a lot, but none of it is essay material."
     li "And now you seem angry."
     mc "... How long have you been standing there?"
+    li "Mmm. I dunno."
     jump Kazuki_1k_routing
 
 label Kazuki_1k_routing:
@@ -234,7 +235,7 @@ label Kazuki_1l_work:
             ro "No. It was actully Alexander Pope."
         "Alexander Pope?":
             mc "That sounds like an Alexander Pope quote." 
-            ro "It was indeed."
+            ro "It was indeed him who said it."
         "Oscar Fingal O'Flahertie Wills Wilde?":
             mc "That sounds like Oscar Fingal O'Flahertie Wills Wilde."
             ro "Who?"
@@ -249,9 +250,11 @@ label Kazuki_1l_work:
 label Kazuki_1l_work_minus:
     ro "Alexander Pope said that. He was a good man."
     mc "It sounds like you knew him."
-    ro "I'm not that old..."
+    ro "I'm not that old... He died in 1744."
+    jump Kazuki_1l_work_extend
 
 label Kazuki_1l_work_extend:
     mc "So you're telling me that you didn't expect me to get anything done?"
     ro "And I was, in turn, impressed."
     mc ""
+    return

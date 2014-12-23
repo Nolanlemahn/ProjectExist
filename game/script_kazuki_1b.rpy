@@ -317,10 +317,10 @@ label Kazuki_1e:
     li "What is there to be unsure about?"
     if("self_skip" in answers):
         mc "Well, I don't think I want to go to math today."
-        $ points[3] = -1
+        $ points[4] -= 1
     if("self_go" in answers):
         mc "I feel like I'm only going to math for the sake of the roll call."
-        $ points[3] = -1
+        $ points[4] -= 1
     if("self_indecisive" in answers):
         mc "I can't decide whether to go to math class or not."
     li "Math class... I was never particularly good at math. I'm not sure if that explains why I always skipped, or if that's because I always 
@@ -493,7 +493,7 @@ label Kazuki_1i:
         nmc "... Salmon. Definitely salmon. And I got enough exercise this morning, so I'll go home the slow way. No shortcuts."
         
     if("law_hesitation" in answers):
-        nmc "But I had better figure out whether or not I am going to that faculty thing."
+        nmc "But I should actually plan ahead for that physics department meeting. Am I actually going to go...?"
         menu:
             extend ""
             "The physics department should know who I am":
