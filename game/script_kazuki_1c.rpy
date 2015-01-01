@@ -32,12 +32,14 @@ label Kazuki_1j_skip:#we skipped lunch
     ro "I hate working on beemers. Tuesday?"
     mc "No cars at all. The whole week is basically empty, actually. I might not be needed for most of the week. Although I could still come in if 
         you'd like. Here, look at the schedule."
-    nmc "There are very few schedules worse than an overbooked one. Because even if you are working overtime, you are still in fact working. 
+    nmc "There are indeed schedules worse than an overbooked one. Because even if you are working overtime, you are still in fact working. 
          When we have an underbooked schedule, we spend a lot of time twiddling our thumbs and since our salaries are comission-based, we 
          also don't get paid as much."
     ro "I didn't think it would be possible to have less business this week than last week. I'll have someone else do the phones on Tuesday. 
        Take Tuesday off."
-    mc "You could show me how to repair something instead."
+    mc "To be fair, I haven't scheduled any appointments yet."
+    ro "True."
+    mc "Also... You could show me how to repair something instead."
     ro "Nope. You aren't licensed for... anything. Even if I did show you the insides of an iPhone, it would be all kinds of illegal for 
        you to do paid work. Unless you want to fix another coffee maker."
     mc "... I suppose I learned my lesson with the coffee maker."
@@ -51,18 +53,19 @@ label Kazuki_1j_skip:#we skipped lunch
          trying to use Google as a router."
     nmc "... That's kind of like trying to use beef to fertilize the grass that cows eat. Which only makes sense if you know nothing about 
          farming. Ignoring the fact that some farmers do directly feed their livestock animal by-products. Which is basically bad beef."
-    nmc "Anyway, I fixed the computer. The next day, I got admittedly cocky and tried to fix a coffee machine without telling Robert."
+    nmc "Anyway, I fixed the computer. The next day, I was admittedly cocky and tried to fix a coffee machine without telling Robert."
     nmc "Long story short, the carpet has a very large coffee stain in it."
+    ro "Well, there are no cars left to work on, so I'm taking a nap."
+    mc "Understood."
     nmc "And so, I allowed another monotonous day of appointment scheduling and paperwork to drag on."
     $ sio_l("bg blackdrop")
-    $ triple_min(20)
+    $ triple_min(25)
     $ sio_l("bg workshop")
     #3:25PM
     nmc "I had run out of tasks for today, so I began to record data of the cars Robert had worked on over the past week."
     nmc "Specifically, the more useless data. Such as, that 60.3 percent of the cars that came through our shop were originally painted white."
     nmc "Or that 32.4 percent had failed their previous smog check."
-    nmc ""#write
-    jump Kazuki_1k_routing
+    jump Kazuki_1l_work
     
 label Kazuki_1j_lunch:#originally had a bus crash intended; bad idea
     # 1:50PM
@@ -132,6 +135,9 @@ label Kazuki_1j_essay:
     li "And now you seem angry."
     mc "... How long have you been standing there?"
     li "Mmm. I dunno."
+    mc "Well, when did you get here?"
+    li "Don't know that either!"
+    mc "Insufferable little..."
     jump Kazuki_1k_routing
 
 label Kazuki_1k_routing:
@@ -213,14 +219,16 @@ label Kazuki_1k_work:
     jump Kazuki_1l_work
 
 label Kazuki_1l_work:
+    call triple_min(15)
     $ sio_l("bg workshop")
-    $ minutes = minutes + 15
-    #3:32PM
-    nmc "I was just putting in the last of the appointments when Robert wobbled into the room."
+    $ minutes = 1005
+    #4:45PM
+    nmc "I was just putting in the last of the appointments when Robert wobbled into the room, clearly drowsy."
     mc "Were you actually able to get some sleep?"
     ro "Enough."
     nmc "He says as he trips over absolutely nothing."
     mc "... Are you sure?"
+    nmc "Robert picks himself up off of the floor and shakes his head as he answers."
     ro "No, but I'll live. How's the work coming along?"
     mc "Nearly all of the appointments are in your system. Next Tuesday will be busy for you."
     ro "Hmm. You did that a lot faster than I thought you would."
@@ -255,6 +263,18 @@ label Kazuki_1l_work_minus:
 
 label Kazuki_1l_work_extend:
     mc "So you're telling me that you didn't expect me to get anything done?"
-    ro "And I was, in turn, impressed."
-    mc ""
+    ro "Correct. And I was, in turn, impressed."
+    ro "Well in any case, here's your check for the day."
+    $ main_char_cash = main_char_cash + 60
+    if("lunch_work_1" in answers):
+        $ main_char_cash += main_char_cash + 20
+    mc "Sir? This is cash."
+    ro "Check, cash, money order, gift card, same thing."
+    mc "I really don't think that finances work that way."
+    ro "Sure they do. Money is money."
+    mc "If you say so. Thank you."
+    ro "I'm closing up, now. Get out of here."
+    jump Kazuki_1m_routing
+
+label Kazuki_1m_routing:
     return
