@@ -138,6 +138,7 @@ label Kazuki_1j_essay:
     mc "Well, when did you get here?"
     li "Don't know that either!"
     mc "Insufferable little..."
+    nmc "Lilian sticks her tongue out, and folds her hands behind her back."
     jump Kazuki_1k_routing
 
 label Kazuki_1k_routing:

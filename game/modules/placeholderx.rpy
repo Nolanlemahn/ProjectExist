@@ -15,6 +15,11 @@ init -1 python:
     import os
     from get_image_size import get_image_size, UnknownImageFormat, BadFile
     
+    # pseudo-macro for im.Scale
+    # http://www.renpy.org/doc/html/displayables.html#im.Scale
+    def Resize(image, width, height, bilinear=True, **properties):
+        return im.Scale(image, width, height, bilinear, *properties)
+    
     class PlaceholderX(renpy.Displayable):
 
         def after_setstate(self):

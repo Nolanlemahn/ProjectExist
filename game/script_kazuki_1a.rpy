@@ -133,7 +133,7 @@ label Kazuki_1b:
     $ walletshow = True
     $ main_char_show_rpg = True
     $ mlib("march")
-    #window show
+    window show
     scene bg fakefog
     with dissolve
     scene bg fog
@@ -171,7 +171,9 @@ label Kazuki_1b:
     nnvlmc "I knew who I was, but who am I now? And what is to become of me?"
     nvl clear
     nnvlmc "The marching changes to a single pair of footsteps, and as if this new presence brought light with it, a dim light fills my eyes, and
-            a shallow gust flows through my lungs.{w} And in front of me was a shadow, standing upright..."
+            a shallow gust flows through my lungs."
+    show shadow norm with dissolve
+    extend " And in front of me was a shadow, standing upright..."
     nvls "Stand."
     nnvlmc "My body stood up, ignoring my brain's demands to ask questions."
     nvls "See."
@@ -186,7 +188,6 @@ label Kazuki_1b:
     scene bg fakefog
     nvl clear
     #]
-    return
     
     #[scene2
     $ main_name = "Kazuki"

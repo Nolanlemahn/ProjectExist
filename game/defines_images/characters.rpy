@@ -1,0 +1,1 @@
+image shadow norm = Resize("chars/shadow/demon_alert.png", 330, 672)

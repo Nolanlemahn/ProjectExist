@@ -274,6 +274,8 @@ init -2 python:
     style.quick_button_text.selected_hover_color = "#cc0"
     style.quick_button_text.insensitive_color = "#000000"
     
+    # config.layers = [ 'premaster', 'master', 'postmaster', 'transient', 'screens', 'overlay' ]
+    
     # Set a default value for the auto-forward time, and note that AFM is
     # turned off by default.
     config.default_afm_time = 10
@@ -284,7 +286,7 @@ init -2 python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.7_(1060)"
+    config.version = "v0.2.7_(1061)"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True
