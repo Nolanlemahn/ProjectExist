@@ -286,7 +286,8 @@ init -2 python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.7_(1061)"
+    config.version = "v0.2.7_(1061)_houseclean_1"
+    config.log = config.gamedir + "/debuglog.txt"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True

@@ -15,11 +15,78 @@ init -1 python:
     import os
     from get_image_size import get_image_size, UnknownImageFormat, BadFile
     
-    # pseudo-macro for im.Scale
+    #####
+    # Function name: Resize()
+    # 
+    # Descripiton: Somewhat-intelligently resize an image. Basically a macro for
+    # im.scale with more math. Ratio only works for downscaling.
+    # 
+    # Parameters:
+    # image - location of the image
+    # width - either pixel width or ratio for scaling both width and height
+    # height - pixel height
+    # 
+    # Returns: the transformed image
+    #####
     # http://www.renpy.org/doc/html/displayables.html#im.Scale
-    def Resize(image, width, height, bilinear=True, **properties):
-        return im.Scale(image, width, height, bilinear, *properties)
+    def Resize(image, width, height=-1, bilinear=True, **properties):
+        # get the actual image width and height
+        setloc = os.path.abspath(config.gamedir + "/" + image)
+        try:
+            truwidth, truheight = get_image_size(setloc)
+        except UnknownImageFormat:
+            # passthrough if the image exists and worked
+            return Image(image)# make someone else deal with it.
+        renpy.log("Resize Parameters: " + str(truwidth) + " " + str(truheight))
+        ###
+        
+        # ratio case, width is the ratio
+        if(width > 0.0 and width < 1.0):
+            ratio = width
+            width = int(truwidth * ratio)
+            height = int(truheight * ratio)
+            renpy.log("Resize Attempt: " + str(width) + " " + str(height))
+            return im.Scale(image, width, height, bilinear, *properties)
+        ###
+        
+        # width without height case - scale to width
+        if(height == -1):
+            # multiply things by ratio
+            ratio = width / truwidth
+            height = int(truheight * ratio)
+            renpy.log("Resize Attempt: " + str(width) + " " + str(height))
+            return im.Scale(image, width, height, bilinear, *properties)
+        ###
+        
+        # height without width case - scale to height
+        if(height == -1):
+            # multiply things by ratio
+            ratio = height / truheight
+            width = int(truwidth * ratio)
+            renpy.log("Resize Attempt: " + str(width) + " " + str(height))
+            return im.Scale(image, width, height, bilinear, *properties)
+        ###
+        
+        return Image(image)# make someone else deal with it.
     
+
+    
+    #####
+    # Class name: PlaceholderX()
+    # 
+    # Descripiton: Be a write-once placeholder - in other words, show a placeholder image
+    # only if the "actual" image does not exist. Do other fancy stuff, like with debug text.
+    # 
+    # Parameters:
+    # img1 - the placeholder
+    # img2 - the real image
+    # tsize - size of debug text
+    # tcolor - color of debug text
+    # talign - x, y alignment of debug text within the image
+    # pretext - text to show before the standard debug text
+    # 
+    # Returns: the transformed image
+    #####
     class PlaceholderX(renpy.Displayable):
 
         def after_setstate(self):
