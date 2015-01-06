@@ -59,7 +59,7 @@ init -1 python:
         ###
         
         # height without width case - scale to height
-        if(height == -1):
+        if(width == -1):
             # multiply things by ratio
             ratio = height / truheight
             width = int(truwidth * ratio)
