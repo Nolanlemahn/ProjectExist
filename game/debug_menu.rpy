@@ -4,6 +4,12 @@ init:
     $ old_clock = False
     
 init python:
+    def destroy_persistent():
+        for attr in dir(persistent):
+            if not callable(attr) and not attr.startswith("_"):
+                setattr(persistent, attr, None)
+        return
+    
     def stringStack(list_strings):
         returnable = ""
         for s in list_strings:
