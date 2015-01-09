@@ -65,6 +65,8 @@ label Kazuki_1j_skip:#we skipped lunch
     nmc "I had run out of tasks for today, so I began to record data of the cars Robert had worked on over the past week."
     nmc "Specifically, the more useless data. Such as, that 60.3 percent of the cars that came through our shop were originally painted white."
     nmc "Or that 32.4 percent had failed their previous smog check."
+    nmc "Considering that I'm really not in the mood to work on my essay, this seemed to be a reasonably good use of time."
+    nmc "I lost myself in the spreadsheets in Robert's computer..."
     jump Kazuki_1l_work
     
 label Kazuki_1j_lunch:#originally had a bus crash intended; bad idea
@@ -138,7 +140,13 @@ label Kazuki_1j_essay:
     mc "Well, when did you get here?"
     li "Don't know that either!"
     mc "Insufferable little..."
-    nmc "Lilian sticks her tongue out, and folds her hands behind her back."
+    nmc "I mumble the rest of statement. Lilian sticks her tongue out, and folds her hands behind her back."
+    li "I heard that!"
+    mc "I don't believe you."
+    nmc "Lilian puts her tongue back in her mouth and frowns."
+    li "You called me a bitch."
+    mc "Dammit."
+    li "Really, though. What are you up to?"
     jump Kazuki_1k_routing
 
 label Kazuki_1k_routing:
