@@ -283,10 +283,8 @@ init -2 python:
     config.windows_icon = "icon.png"
     config.window_icon = "icon.png"
 
-    ## The name that's used for directories and archive files. For example, if
-    ## this is 'mygame-1.0', the windows distribution will be in the
-    ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    config.version = "v0.2.7_(1061)_houseclean_1"
+    ## These values tell Ren'Py how to build a distribution.
+    config.version = "v0.2.7_(1061)_houseclean_2"
     config.log = config.gamedir + "/debuglog.txt"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
@@ -307,10 +305,6 @@ init -2 python:
     build.documentation('*.html')
     build.documentation('*.txt')
     #build.documentation('*.pdf')
-    
-#Implemented wtf_iorpy_magic.
-#Worked around an NVL crash in the Glossary.
-#Removed some broken menus.
 
 init python:
     adj=user_adjustment

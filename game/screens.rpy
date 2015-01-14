@@ -1,4 +1,7 @@
-﻿init -1 python hide:
+﻿style insay:
+    slow_cps 20
+
+init -1 python hide:
     from array import *
     config.python_callbacks = []
     
@@ -298,7 +301,7 @@ screen say:
                     id "window"
                     has vbox:
                         style "say_vbox"
-                    text what[0] id "what"
+                    text what[0] id "what" style "insay"
             vbox:
                 xsize config.screen_width/2
                 xpos config.screen_width/2
@@ -312,7 +315,7 @@ screen say:
                     id "window"
                     has vbox:
                         style "say_vbox"
-                    text what[1] id "what"
+                    text what[1] id "what" style "insay"
                     
     # Use the quick menu.
     use quick_menu
@@ -448,7 +451,7 @@ screen main_menu:
         has vbox
 
         textbutton _("Start Game") xminimum 300 action Start()
-        #textbutton _("Editor's Start") xminimum 300 action Start("requested_start_k")
+        textbutton _("Editor's Start") xminimum 300 action Start("requested_start_k")
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Preferences") action ShowMenu("preferences")
         textbutton _("Music Room") action (SetVariable('playing', name_playing()), ShowMenu("music_room", "nopredict"))

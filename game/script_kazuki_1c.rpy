@@ -134,7 +134,13 @@ label Kazuki_1j_essay:
     nmc "And you were showing us how to transform matrices in a manner that... oh."
     nmc "... I'm not getting anything done..."
     nmc "I'm saying a lot, but none of it is essay material."
+    $ triple_min(10)
+    nmc "\"In short, because your online notes are far clearer than you are while lecturing, 
+         there is no real reason to pay attention in class.\""
+    mc "... That's no good either."
     li "And now you seem angry."
+    nmc "An unexpected but famiiliar voice rings through my eardrums, kindly pointing out that I am visibly losing control of 
+         my emotions."
     mc "... How long have you been standing there?"
     li "Mmm. I dunno."
     mc "Well, when did you get here?"
@@ -147,13 +153,66 @@ label Kazuki_1j_essay:
     li "You called me a bitch."
     mc "Dammit."
     li "Really, though. What are you up to?"
+    nmc "I told Lilian how I fell asleep in today's math class and as punishment, had to write a paper."
+    li "Oh. On why you fell asleep?"
+    mc "Yes, unfortunately. I don't know how anyone could write 10 pages on the subject."
+    li "Hee! You could write \"I am a moron.\" over and over again!"
+    mc "... Even if I was willing to deprecate myself in that way, I don't think Amnaki would accept that. "
+    extend "Although, using the same sentence repeatedly... eh, that sounds like the amount of effort I'm willing to 
+            put into this stupid assignment."
+    li "I figured as such. Would you like some help?"
+    mc "Err... why are you offering?"
+    li "So I can remind you that joining LAST is a good idea!"
+    mc "That figures."
+    li "Wah! I'm not actually that self-centered. That was a joke."
+    mc "Ugh. You aren't a very funny person."
+    li "Okay really, I just don't have anything better to do. Do you want help or not?"
+    menu:
+        extend ""
+        "Yes":
+            call Kazuki_1j_essay_yes
+        "No":
+            call Kazuki_1j_essay_no
     jump Kazuki_1k_routing
 
+label Kazuki_1j_essay_yes:
+    mc "I suppose I wouldn't mind the help."
+    li "Are you sure your pride can take it?"
+    mc "Hm? Take what?"
+    li "Oh, just the fact that you're going to be getting English help from a little girl."
+    mc "Tiny would be the better word, I would think."
+    li "That's not very nice."
+    mc "Had you been in grade school or something along those lines, then I'd be pissed."
+    li "Um... in that case, I'm leaving."
+    mc "Hey now, that was just payback for your earlier jab. Really, I'm grateful for the help."
+    li "Sure, sure. Let's look at it, top-downwards..."
+    nmc "Lilian quickly scanned through the first page of actual content."
+    li "... Wow. \"In somewhat-general terms, your lectures are mostly composed of senile ramblings.\" Really?"
+    mc "Well... I'm not wrong."
+    li "You said this was for Amnaki?"
+    mc "Yeah. That one."
+    li "Okay. Fine. You're not wrong."
+    mc "Have I ever been wrong?"
+    li "Statistically speaking you probably were at one point, but even if you're right, that isn't something you 
+        can write here."
+    mc "So, what do I write?"
+    doublespeak li mc "Complete and utter..." "Bullshit?"
+    li "Well, I was going to say nonsense, yeah, pulling some lies out of some cow's rear end works just as well."
+    mc "Okay, that isn't really my thing. Unless I'm pretending that I'm well-prepared for a presentation or something."
+    li "Perhaps it would be better to look at what you wanted to say, and then reverse it. You know, something like 
+        \"I'd like to explain why I managed to fall asleep during your extremely informative lecture\"."
+    mc "Just writing that is going to hurt."
+    return
+
+label Kazuki_1j_essay_no:
+    mc "No thank you."
+    return
+    
 label Kazuki_1k_routing:
     $ sio_l("bg fog")
     $ minutes = 1070
     #first major branch of the common route;
-    #we need to check for both the faculty thing and for the move natalie thing, which could be awkward
+    #see flowchart
     if(("meeting_known" in answers) or ("meeting_hlawrence" in answers)):
         nmc "I'd better get to that damned meeting now."
     return
