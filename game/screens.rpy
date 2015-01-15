@@ -460,6 +460,7 @@ screen main_menu:
         textbutton _("Quit") action Quit(confirm=True)
         textbutton "" action NullAction() style "dys_button"
         if config.developer:
+            textbutton _("Persistent Reset") action Function(destroy_persistent)
             textbutton "Seriously break things" action ui.callsinnewcontext("reset_button")
         textbutton "Report a Bug" action Help("game/dev/report.html")
         textbutton "Check for Updates" action ui.callsinnewcontext("pre_update")
