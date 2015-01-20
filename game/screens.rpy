@@ -1,7 +1,4 @@
-﻿style insay:
-    slow_cps 20
-
-init -1 python hide:
+﻿init -1 python hide:
     from array import *
     config.python_callbacks = []
     
@@ -301,7 +298,7 @@ screen say:
                     id "window"
                     has vbox:
                         style "say_vbox"
-                    text what[0] id "what" style "insay"
+                    text what[0] id "what" slow_cps True
             vbox:
                 xsize config.screen_width/2
                 xpos config.screen_width/2
@@ -315,7 +312,7 @@ screen say:
                     id "window"
                     has vbox:
                         style "say_vbox"
-                    text what[1] id "what" style "insay"
+                    text what[1] id "what" slow_cps True
                     
     # Use the quick menu.
     use quick_menu

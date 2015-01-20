@@ -132,7 +132,8 @@ label requested_start_k:
     $ main_name = "Kazuki"
     $ clock = True
     $ walletshow = True
-    jump Kazuki_1a_else
+    $ minutes = 1
+    jump Kazuki_1j_essay_yes
 
 label start:#this_label_done
     $ in_side_note = False

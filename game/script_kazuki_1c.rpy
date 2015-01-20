@@ -148,6 +148,7 @@ label Kazuki_1j_essay:
     mc "Insufferable little..."
     nmc "I mumble the rest of statement. Lilian sticks her tongue out, and folds her hands behind her back."
     li "I heard that!"
+    $ minutes = minutes + 5
     mc "I don't believe you."
     nmc "Lilian puts her tongue back in her mouth and frowns."
     li "You called me a bitch."
@@ -189,6 +190,7 @@ label Kazuki_1j_essay_yes:
     nmc "Lilian quickly scanned through the first page of actual content."
     li "... Wow. \"In somewhat-general terms, your lectures are mostly composed of senile ramblings.\" Really?"
     mc "Well... I'm not wrong."
+    $ minutes = minutes + 5
     li "You said this was for Amnaki?"
     mc "Yeah. That one."
     li "Okay. Fine. You're not wrong."
@@ -197,15 +199,27 @@ label Kazuki_1j_essay_yes:
         can write here."
     mc "So, what do I write?"
     doublespeak li mc "Complete and utter..." "Bullshit?"
-    li "Well, I was going to say nonsense, yeah, pulling some lies out of some cow's rear end works just as well."
+    li "Well, I was going to say nonsense, but yeah, pulling some shit out of a bull's ass works just as well."
     mc "Okay, that isn't really my thing. Unless I'm pretending that I'm well-prepared for a presentation or something."
     li "Perhaps it would be better to look at what you wanted to say, and then reverse it. You know, something like 
         \"I'd like to explain why I managed to fall asleep during your extremely informative lecture\"."
-    mc "Just writing that is going to hurt."
+    mc "... And the whole paper needs to sound like that?"
+    li "Hey, you wanna make her happy, right?"
+    mc "Fuck no."
+    li "All right then. You want to pass her class, right?"
+    mc "Well, I suppose I really don't have much of a choice."
+    li "Exactly. Now as for this next sentence..."
+    $ triple_min(10)#3:02?
+    nmc "30 minutes later, we had... something. It certainly was an improvement."
+    nmc "But the sentences simply didn't flow. Near the end, we may as well have been writing something along the lines of 
+         \"Amnaki, you are great. I should have paid attention. This class is useful.\" and so on."
+    nmc "... In fact, that is what we wrote for our concluding paragraph."
+    li "We did it!"
+    mc "Ehh... Not really. Sure, there are 10 full pages of writing here, but some of it is childish. I mean, \"I'll \"... Really?"
     return
 
 label Kazuki_1j_essay_no:
-    mc "No thank you."
+    mc "No thank you. Honestly, I should probably get to work."
     return
     
 label Kazuki_1k_routing:
