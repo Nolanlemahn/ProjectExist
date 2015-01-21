@@ -282,8 +282,17 @@ screen say:
                 has vbox:
                     style "say_vbox"
                 if who:
-                    text who[0][0] id "who"
-                text what[0] id "what"
+                    text who.items()[0][0] id "who"
+                text what[0] id "what" slow_cps True
+            window:
+                xsize config.screen_width/2
+                xpos config.screen_width/2
+                id "window"
+                has vbox:
+                    style "say_vbox"
+                if who:
+                    text who.items()[1][0] id "who"
+                text what[1] id "what" slow_cps True
         else:
             # The two window variant.
             vbox:

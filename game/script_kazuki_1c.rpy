@@ -57,7 +57,7 @@ label Kazuki_1j_skip:#we skipped lunch
     nmc "Long story short, the carpet has a very large coffee stain in it."
     ro "Well, there are no cars left to work on, so I'm taking a nap."
     mc "Understood."
-    nmc "And so, I allowed another monotonous day of appointment scheduling and paperwork to drag on."
+    nmc "And so, I allow another monotonous day of appointment scheduling and paperwork to drag on."
     $ sio_l("bg blackdrop")
     $ triple_min(25)
     $ sio_l("bg workshop")
@@ -88,9 +88,9 @@ label Kazuki_1j_lunch:#originally had a bus crash intended; bad idea
     "{i}Clatter!{/i}"
     mc "Who's there?"
     nmc "Without double-checking whether or not someone has actually joined me in the room, I get ready for a skirmish."
-    nmc "I snap my wrist and adjust my grip of the butter knife, holding it as I would a dagger. It may not have been sharp, but it was threatening
+    nmc "I snap my wrist and adjust my grip of the butter knife, holding it as I would a dagger. It may not be particularly sharp, but it is threatening
          enough."
-    nmc "The sound had been loud and unexpected, but its source was..."
+    nmc "The sound had been loud and unexpected, but its source is..."
     d "Go back to school, you little faggot."
     nmc "Father either just got back from the bar, or has just woken up with a hangover. Either way, he is hostile."
     nmc "In his drunken swagger, Father had succeeded in knocking my plate to the floor. Although gaudy, these new plastic plates are proving 
@@ -117,7 +117,7 @@ label Kazuki_1j_lunch:#originally had a bus crash intended; bad idea
     nmc "He bends over to pick up the money, and his back makes a cracking sound. My \"bagel\" made, I make my way towards the door."
     d "Kill me, goddammit. Put me out of my misery. I know you want to."
     nmc "I stop walking, but I don't look back."
-    mc "You were the last thing my mother ever touched. If it wasn't for that, you'd have three bullets through your skull."
+    mc "As much as it disgusts me, you were the last thing my mother ever touched. If it wasn't for that, you'd have three bullets through your skull."
     nmc "I open the door and head out for work, intentionally leaving it open."
     jump Kazuki_1k_work
 
@@ -220,7 +220,7 @@ label Kazuki_1j_essay_yes:
     li "I didn't write that."
     mc "You did. I am not a creepy person."
     li "But you're scary!"
-    nmc "Lilian actually teared up a little bit. Is my face that ugly...?"
+    nmc "Lilian is actually tearing up. Is my face that ugly...?"
     return
 
 label Kazuki_1j_essay_no:
@@ -239,7 +239,7 @@ label Kazuki_1k_routing:
 label Kazuki_1k_work:
     # 2:00PM
     $ minutes = 840
-    nmc "On the half-hour walk to Robert and Son's Machines, I realized that I had some time to think about problems. Specifically 
+    nmc "On the half-hour walk to Robert and Son's Machines, I realize that I have some time to think about problems. Specifically 
          variants of impossible problems."
     nmc "Consider for a moment, the Mutilated Chessboard Problem, as posed by Martin Gardner. Although I would have called it the 2-by-1 Corner Truncation Problem. 
          The premise of the problem is that an unmodified chessboard can clearly be completely covered by a number of standard dominoes."
@@ -310,7 +310,7 @@ label Kazuki_1l_work:
     $ sio_l("bg workshop")
     $ minutes = 1005
     #4:45PM
-    nmc "I was just putting in the last of the appointments when Robert wobbled into the room, clearly drowsy."
+    nmc "Robert wobbles into the room, clearly drowsy. I am just now putting in the last of the appointments."
     mc "Were you actually able to get some sleep?"
     ro "Enough."
     nmc "He says as he trips over absolutely nothing."
