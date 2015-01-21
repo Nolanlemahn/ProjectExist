@@ -180,7 +180,7 @@ label Kazuki_1b:
     nnvlmc "And then I realized then that I could in fact see. I was simply unable to process what I was seeing."
     nnvlmc "My body once more obeyed the shadowy voice. It belonged to an equally-shadowy body. I looked into its eyes, and I saw a void. And the void stared back."
     nvls "Feel pain. Remember me."
-    nnvlmc "I received what felt like a punch to the stomach, even though the shadow did not move."
+    nnvlmc "I receive what feels like a punch to the stomach, even though the shadow did not move."
     call domchange("HP", -20, 1)
     extend " Pain surged through my nerves, but I did not budge nor gasp. My body refused to buckle under the burning rage of the shadow, as it had also been instructed to stand."
     nvls "Return."
@@ -216,12 +216,12 @@ label Kazuki_1b:
     stop music
     extend "I slide my hand towards my cell phone, turn off the alarm, and begin my standard morning routine, which generally consists of a
             shower, change of clothing, journal entry, breakfast, and a walk to the bus stop."
-    nmc "... I wasted enough time with my little physical exam."
+    nmc "... I have wasted enough time with my little physical exam."
     nmc "So I shower. I pour the shampoo onto my head and whirl it through my wet hair. My hand swipes and slams the bar of soap down my body, 
          barely avoiding the new bruise on my stomach and last week's bruise on my right shoulder."
     $ minutes = minutes + 2
     extend " I generally take 2-minute showers, give or take a few seconds.{w} I step out of the shower and dry myself off with a black t-shirt. 
-            It's ripped in too many places to be socially acceptable as outdoor attire."
+            It is ripped in too many places to be socially acceptable as outdoor attire."
     $ sio_s("bg kazuki bedroom")
     $ minutes = minutes + 5
     nmc "I toss the shirt on the towel rack and open my closet."
@@ -230,7 +230,7 @@ label Kazuki_1b:
          I don't believe in fashion, and even if I did, fashion would be a luxury I can't afford."
     nmc "I can afford to be efficient, though. I find it faster to haphazardly hang up all of my clothing rather than fold anything."
     $ dev_screen = "dream"
-    nmc "I started keeping a nightmare log when I was 13. One night, I had a nightmare in which a vine coiled around me, crushed me, and called
+    nmc "I started keeping a nightmare log on my thirteenth birthday. One night, I had a nightmare in which a vine coiled around me, crushed me, and called
          my name. I asked my father if phantoms give us nightmares, and he said \"not a freaking clue\". Though, he did tell me to keep a log
          of my nightmares, and so I bought a journal and started writing my nightmares in it. Not that he ever read the journal."
     nmc "In fact, the next night, he quietly threw away everything my mother left behind. She was supposed to be here, answering my questions,
@@ -252,8 +252,8 @@ label Kazuki_1b:
     $ sio_s("bg kazuki bedroom")
     nmc "... Pfft. No boring dream would leave me sweaty and... bruised. The latter explanation is the most likely... my phone buzzes me 
          a second time."
-    nmc "I suppose that in some districts, my phone would probably be categorized as a brick or a paperweight."
-    nmc "Yes, I'm using a Nokia 3310. It does everything I need it to do. It sends and receives texts. It sends and receives
+    nmc "I suppose that in some districts, my phone would be categorized as a brick or a paperweight."
+    nmc "Yes, I'm using a Nokia 3310. It does everything that I need it to do. It sends and receives texts. It sends and receives
          calls. Best of all, it wakes me up in the morning, although I do need to use an online wake-up call service for that."
     mc "Crap."
     nmc "That doesn't change the fact that I have 3 minutes to get to the bus stop. Grab a bagel. Grab my book bag. Bend down to put on my..."
@@ -290,7 +290,7 @@ label Kazuki_1b:
     nmc "I force a frown in order to go with Jonathan's save. Besides, his save, for the most part, was very true."
     mc "Yeah... pretty much."
     j "Better luck next time, eh?"
-    nmc "Jonathan is the closest thing I have to a best friend. We met two years ago, when he moved here from who-knows-where. To make a long 
+    nmc "Jonathan is the closest thing I have to a best friend. We met two years ago, when he moved here from who-knows-where; he never told me. To make a long 
          story short, I helped him study, his mother's maidservant provided meals, and we eventually bonded as we discovered how similar we really 
          were. For instance, neither of us had a girlfriend at the time, nor did either of us speak to our mothers. We agreed to ignore the 
          fact that my mother is dead."
@@ -452,7 +452,10 @@ label Kazuki_1b_stub:
     l "Coach Cyrus and I are on very good terms. I told him I absolutely needed the field for my model rocket experiments."
     mc "... You must be joking."
     l "Physicists are the best commedians. I actually am testing out a new chemical formula for fuel. I'll probably manage the tests remotely 
-       with my phone until the meeting actually starts. So, are you coming?"
+       with my phone until the meeting actually starts."
+    nmc "It occurs to me that Lawrence really is the type of person who would build a few rockets and formulate a new few recipe just to get 
+         one of his students out of something."
+    l "So, are you coming?"
     $ minutes = minutes + 2
     #9:50PM
     $ cd_set(20, 20, 'Kazuki_1b_interstitial')
@@ -531,7 +534,7 @@ label Kazuki_1b_extend:
             else:
                 mc "I suppose the school could get a bit dangerous at this time of the day. Wait. 8PM?"
                 n "Yeah, Coach Cyrus had the practice moved. He sent out emails and texts late last night."
-            nmc "Natalie yawned. So cute."
+            nmc "Natalie lets out a yawn. So cute."
             mc "Did he...?"
             nmc "I pull out my phone. The e-mail was sent at..."
             mc "... 3AM this morning?"
@@ -544,9 +547,8 @@ label Kazuki_1b_extend:
                what I can get."
             mc "Oops. My mistake."
             $ minutes = minutes + 3
-            nmc "I just noticed that I'm having an easier time talking to her now that the shock of actually getting the chance to talk to her 
-                 has passed."
-            n "No worries! I get the 'I look young' thing a lot."
+            nmc "I am just noticing that I'm having an easier time talking to her, now that the shock of her starting the conversation has passed."
+            n "No worries! I get the whole \"you look young\" thing a lot. So I'll take that as a compliment."
             nmc "She sticks her tongue out, despite her red and baggy eyes. I start to force a laugh, but I stop myself as I see her start to 
                  speak again."
             n "Well, I should probably get to my next class. So, will you be able to- eep!"
@@ -576,22 +578,23 @@ label Kazuki_1b_extend:
             nmc "... Better not to say anything at all."
             n "Sorry for bothering you!"
             nmc "And with that, she runs off. Even with a textbook in one hand, she still runs faster than I do. By quite a bit."
-            mc "Hah... as expected of the great co-captain..." 
+            mc "Hah... as expected of the great co-captain of the cross country team..." 
             $ points[1] += -2
     jump Kazuki_1c
     
 label Kazuki_1b_extend2:
     nnvlmc "... Natalie never hit the floor."
     nnvlmc "It took me a full 5 seconds to realize that Natalie was in my arms."
-    nnvlmc "... My body didn't even wait for me to make a decision. It moved all on its own, and embraced her."
-    extend "\nIt took another 5 seconds to realize that her soft chest was pushed into mine."
-    extend " Her eyes were closed and her head was down. Long platinum hair made a veil blocking my view of her face."
+    nnvlmc "... My body didn't even wait for me to make a decision. It moved all on its own, and embraced her. "
+    extend "\nIt took another 5 seconds to realize that her soft chest was pushed into mine. "
+    extend " Her eyes are closed and her head is down. Long platinum hair make a veil blocking my view of her face. "
+    nnvlmc "The blissful sensation of her willowy frame being held up by my own hands."
     nvl clear
-    nmc "... Natalie broke the silence before I could."
+    nmc "... Natalie breaks the silence before I can."
     n "Hehe... thanks. I'm normally not this clumsy."
     mc "You really shouldn't go to bed that late."
-    nmc "That's when I realized she was still in my arms. And that I was still in hers."
-    extend "\n... I let go of her. Reluctantly."
+    nmc "That's when I realize... she is still in my arms. And that I am still in hers."
+    extend "\n... I let go of her. Reluctantly. But quickly."
     n " So umm... will you be able to walk me over at a quarter to 8?"
     $ cd_set(5, 5, 'Kazuki_1b_fail')
     show screen countdown
@@ -637,7 +640,7 @@ label Kazuki_1b_fail:
     nmc "... Better not to say anything at all."
     n "Sorry for bothering you!"
     nmc "And with that, she runs off. Even with a textbook in one hand, she still runs faster than I do. By quite a bit."
-    mc "Hah... as expected of the great co-captain..." 
+    mc "Hah... as expected of the great co-captain of the cross country team..." 
     nmc "I accept my 402nd failure at speaking to a female, and head to my next class..."
     $ answer_add("nat_no_or_hesitation")
     $ points[1] += -2
@@ -658,7 +661,7 @@ label Kazuki_1c:
         extend "\nOne wonders how these blasted community colleges are still standing. Oh right, they're obscenely cheap."
         nmc "I wonder how much those seminar interns get paid. Probably too much."
         $ minutes = 601
-        nmc "Well, I have 4 minutes left to kill. I should probably have a chat with Wil. To be honest, I don't really care how he decided
+        nmc "Well, I have 4 minutes left to kill. I should probably have a chat with Wil. To be honest, I don't really care how he decides
              to use his time before class, but since he is technically a friend of mine, it would only be just to offer the same concerns
              that he has offered to me."
         jump Kazuki_1d_wil

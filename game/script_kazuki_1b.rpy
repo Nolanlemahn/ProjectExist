@@ -5,7 +5,7 @@ label Kazuki_1d_wil:
     w "Hey, Kazuki, what's goin' on?"
     mc "Good afternoon. I suppose there hasn't been much going on, unless you wanted to count this seminar as a goings-on. What about you?"
     w "Not much, not much. Well, I'll finally have the chance to go hiking this weekend, so that will be fun."
-    nmc "I looked Wil up amd down. He's actually from Colorado, taking a quarter or two of school here so he can experience the Sierra Nevada
+    nmc "I look Wil up amd down. He's actually from Colorado, taking a quarter or two of school here so he can experience the Sierra Nevada
          mountains, or something along those lines. At 6 feet, 4 inches and boasting a lean but muscle-bound frame, it's hard not to take his 
          word for it."
     $ minutes = 601
@@ -47,7 +47,7 @@ label Kazuki_1d_wil:
                  them) refer to her has Tammy. That's all I really know about her, and I only know that because some other TA occasionally visits
                  and calls her Tammy. I suppose I could guess that she has a good 10 years and 300 pounds on me..."
             t "... And I don't want to see any of you spacing out and pretending that you aren't here."
-            nmc "I pulled my laptop out of its case and read some comics."
+            nmc "I pull my laptop out of its bag and read some comics, pretending that I am not here."
         "I need backup at tonight's meeting" if (answers[0] == "law_hesitation"):
             $ answer_add("wil_backup")
             mc "I'm going to need help at tonight's meeting."
@@ -110,7 +110,7 @@ label Kazuki_1d_tamara_a:
     $ persistent.seen_tamara = True
     t "Late again, I see."
     nmc "... Except the TA herself.\n"
-    extend "I consciously, yes, consciously leaned back a little. Playing on a few idioms, Tamara is 'getting too big 
+    extend "I consciously lean back a little, to give Tamara some breathing room. Playing on a few idioms, Tamara is 'getting too big 
          for her doorway', 'a massive woman in a small lake', 'carrying weight with the school President', but not doing a good job of 'pulling her 
          own weight'."
     call dev_com("tamaraplus")
@@ -163,10 +163,10 @@ label Kazuki_1d_tamara_b:
     $ minutes = 610
     call triple_min(5)
     # scene bg out_the_window
-    nmc "I'm not falling asleep, but I'm not giving Tamara any attention, either - my attention is directed at the traffic below."
+    nmc "I'm not falling asleep, but I'm not giving Tamara any attention, either - my attention is directed towards the traffic below."
     nmc "Traffic amuses me - not because I find cars interesting, but because of how people move about, both inside and outside of cars."
     nmc "The running man in the ridiculous Armani suit is clearly late for work. He holds an important position at his office, and whatever 
-         luxury vehicle he owns is likely refused to cooperate this morning, perhaps due to leak in the coolant tank. If he had been in a 
+         luxury vehicle he owns likely refused to cooperate this morning, perhaps due to a leak in the coolant tank. If he had been in a 
          crash, he would have had a loaner vehicle."
     nmc "He refused the inconvenience of calling a cab, and as a result, he's taking the indignity that is the nearest bus stop. His shoes are 
          overly shiny, meaning that both the polish and shoe are cheap. At least he prepared himself for the run."
@@ -184,7 +184,7 @@ label Kazuki_1d_tamara_b:
     $ sio_l("bg classroom2")
     $ mlib("falarm")
     $ minutes = minutes + 5
-    nmc "The blaring fire alarm snapped me out of my thought process as the sound waves crashed against my ears... why aren't flashing lights
+    nmc "The blaring fire alarm snaps me out of my thought process as the sound waves crash against my ears... why aren't flashing lights
          enough?"
     nmc "... I suppose I should be more sympathetic towards the blind."
     stop music
@@ -216,7 +216,7 @@ label Kazuki_1d_tamara_b:
     nmc "I'm not one for following the rules, either. One of Lawrence's newer TAs happened to leave his manual at his desk. I took it."
     t "All right, down the stairs. Chop chop."
     $ sio_s("bg stairwell1")
-    nmc "... As we walked down the stairs, it occurs to me that in a real fire, some of us would be using the elevators regardles of 
+    nmc "... As we walk down the stairs, it occurs to me that in a real fire, some of us would be using the elevators regardles of 
          the signs telling us not to, and that the rest of us would be in a mad dash down the stairs. Some of us would probably be 
          pushed over. Hmm... human dominoes..."
     $ minutes = minutes + 3
@@ -334,7 +334,7 @@ label Kazuki_1e:
     $ minutes = minutes + 2
     li "Yeah, Language And Science Tutors. It used to be called LASH for Language And Science Help, but apparently that sounded a little 
         naughty... {w}That was my reaction too!"
-    nmc "I was about to ask what she meant by \"her reaction\", but then I realized that my forehead was resting in my right palm."
+    nmc "I was about to ask her what she meant by \"her reaction\", but then I feel my forehead resting in my right palm."
     li "Oh, I've gotta go... here's a flier, we can help... Bye."
     nmc "With that, Lilian stuffs a piece of paper in my mouth and runs back into the building."
     extend "\n... That almost didn't make sense, but then I realized that I was holding my phone in my left hand and my right hand was in my 
@@ -374,7 +374,7 @@ label Kazuki_1g:
     $ minutes = minutes + 3
     if("wil_lily_group" not in answers and "self_40" not in answers):
         $ answer_add("undecided_g40")
-        nmc "I supposed I can decide what that means later."
+        nmc "I suppose I can decide what that means later."
     nmc "With the knowledge that there is good help available, I shove the flier in my laptop bag and head to math."
     $ sio_s("bg classroom3")
     $ minutes = minutes + 15
@@ -393,6 +393,7 @@ label Kazuki_1h:
     $ sio_l("bg fakefog")
     window hide
     scene bg fog
+    $ mlib("march")
     nnvlmc "..."
     nnvlmc "I fell asleep?"
     nvls "Yes. I didn't expect to see you again so soon."
@@ -417,8 +418,9 @@ label Kazuki_1h:
     nvlmc "Okay, now why the fucking hell are we having this conversation in the first place... Wait. You said you didn't expect 
            to see me again so soon... Oh shit."
     nvls "That's right. You won't remember."
-    nnvlmc "I received what felt like a punch to the stomach, even though the shadow did not move."
+    nnvlmc "I receive what feels like a punch to the stomach, even though the shadow did not move."
     nnvlmc "The darkness began to suck away the light from my eyes, like a funnel draining water..."
+    stop music
     nvl clear
     window show
     $ minutes = minutes + 12

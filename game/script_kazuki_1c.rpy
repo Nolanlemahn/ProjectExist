@@ -215,7 +215,12 @@ label Kazuki_1j_essay_yes:
          \"Amnaki, you are great. I should have paid attention. This class is useful.\" and so on."
     nmc "... In fact, that is what we wrote for our concluding paragraph."
     li "We did it!"
-    mc "Ehh... Not really. Sure, there are 10 full pages of writing here, but some of it is childish. I mean, \"I'll \"... Really?"
+    mc "Ehh... Not really. Sure, there are 10 full pages of writing here, but some of it is childish. I mean, 
+        \"My eyes will only be watching you from now on\"... Really?"
+    li "I didn't write that."
+    mc "You did. I am not a creepy person."
+    li "But you're scary!"
+    nmc "Lilian actually teared up a little bit. Is my face that ugly...?"
     return
 
 label Kazuki_1j_essay_no:
