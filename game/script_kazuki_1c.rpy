@@ -122,18 +122,18 @@ label Kazuki_1j_lunch:#originally had a bus crash intended; bad idea
     jump Kazuki_1k_work
 
 label Kazuki_1j_essay:
-    nmc "A 10 page essay on why I wasn't paying attention in class."
+    nmc "... A 10 page essay on why I wasn't paying attention in class."
     nmc "\"Well gee, Ms. Amnaki, it may or may not have to do with your inability to teach things that are new to me.\""
-    nmc "Mm, an excellent topic sentence."
+    nmc "Mmm, an excellent topic sentence."
     nmc "\"Additionally, due to the nature of your teaching style, all I need to do is briefly scan the 40' x 30' 
-         Whiteboard to get a brief summary of the lesson. For instance, on the day that you gave me this assignment, you 
+         whiteboard to gain a full understanding of the day's lesson. For instance, on the day that you gave me this assignment, you 
          were in the middle of a simple two-dimensional rotation problem...\""
     nmc "..."
     $ minutes = minutes + 2
     $ sio_l("bg library1")
     nmc "And you were showing us how to transform matrices in a manner that... oh."
-    nmc "... I'm not getting anything done..."
-    nmc "I'm saying a lot, but none of it is essay material."
+    nmc "... I'm not actually getting anything done..."
+    nmc "I'm saying and typing a lot, but none of it is truly essay material."
     $ triple_min(10)
     nmc "\"In short, because your online notes are far clearer than you are while lecturing, 
          there is no real reason to pay attention in class.\""
@@ -177,7 +177,7 @@ label Kazuki_1j_essay:
     jump Kazuki_1k_routing
 
 label Kazuki_1j_essay_yes:
-    mc "I suppose I wouldn't mind the help."
+    mc "I suppose that I wouldn't mind the help."
     li "Are you sure your pride can take it?"
     mc "Hm? Take what?"
     li "Oh, just the fact that you're going to be getting English help from a little girl."
@@ -220,11 +220,40 @@ label Kazuki_1j_essay_yes:
     li "I didn't write that."
     mc "You did. I am not a creepy person."
     li "But you're scary!"
-    nmc "Lilian is actually tearing up. Is my face that ugly...?"
+    nmc "Lilian is actually tearing up. Is my face that fearsome...?"
+    li "Actually, you're kinda cute! Like a super thin teddy bear!"
+    mc "..."
+    li "Hee hee! Messing with you is fun."
+    nmc "I honestly couldn't tell if she was messing around or not, but for the sake of my sanity, I decided to let the comment 
+         slide."
+    mc "Whatever... hang on. Don't you have to be somewhere? I imagine that you're quite busy..."
+    li "Me? No, not really. I mean, I've got time. Do you want to work on this more?"
+    # if mc indicated that he isn't interested in the 40 we're making him say no
+    if("self_40" not in answers):
+        jump Kazuki_1j_liwrapup
+    $ cd_set(15, 15, 'Kazuki_1j_handle')
+    show screen countdown
+    menu:
+        extend ""
+        "Yes":
+            $ answer_add("???")
+        "No":
+            $ answer_add("???")
+        "...":
+            $ answer_add("???")
+    jump Kazuki_1j_handle
     return
 
 label Kazuki_1j_essay_no:
     mc "No thank you. Honestly, I should probably get to work."
+    $ jump_break()
+    return
+
+label Kazuki_1j_handle:
+    return
+
+label Kazuki_1j_liwrapup:
+    $ jump_break()
     return
     
 label Kazuki_1k_routing:

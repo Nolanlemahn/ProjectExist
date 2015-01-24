@@ -133,10 +133,12 @@ label requested_start_k:
     $ clock = True
     $ walletshow = True
     $ minutes = 1
+    $ jump_in = True
     jump Kazuki_1j_essay_yes
 
 label start:#this_label_done
     $ in_side_note = False
+    $ jump_in = False
     scene bg blackdrop
     with dissolve
     #jump test_iorpy_magic

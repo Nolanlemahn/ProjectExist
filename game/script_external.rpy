@@ -8,6 +8,10 @@ label triple_min(interval):
     return
 
 init python:
+    def jump_break():
+        if(hasattr(store, 'jump_in')):
+            if(store.jump_in):
+                renpy.full_restart()
     
     def answer_add(new_answer):
         answers.append(new_answer)
