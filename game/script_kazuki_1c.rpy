@@ -166,14 +166,32 @@ label Kazuki_1j_essay:
     li "So I can remind you that joining LAST is a good idea!"
     mc "That figures."
     li "Wah! I'm not actually that self-centered. That was a joke."
-    mc "Ugh. You aren't a very funny person."
+    mc "Ugh. You aren't a funny person."
     li "Okay really, I just don't have anything better to do. Do you want help or not?"
+    $ cd_set(15, 15, 'Kazuki_1j_essay_what')
+    show screen countdown
+    # call block
     menu:
         extend ""
         "Yes":
+            $ answer_add("lily_essay_1_yes")
             call Kazuki_1j_essay_yes
+            if("self_40" not in answers):
+                jump Kazuki_1j_liwrapup
+                
+            if("lily_essay_2_yes" in answers):
+                jump Kazuki_1j_essay_more
+            elif("lily_essay_2_no" in answers):
+                jump Kazuki_1j_essay_stop
+            else:
+                jump Kazuki_1j_essay_lazy
+            jump Kazuki_1j_handle
         "No":
+            $ answer_add("lily_essay_1_no")
             call Kazuki_1j_essay_no
+        "...":
+            $ answer_add("lily_essay_1_no")
+            call Kazuki_1j_essay_what
     jump Kazuki_1k_routing
 
 label Kazuki_1j_essay_yes:
@@ -213,7 +231,7 @@ label Kazuki_1j_essay_yes:
     nmc "30 minutes later, we had... something. It certainly was an improvement."
     nmc "But the sentences simply didn't flow. Near the end, we may as well have been writing something along the lines of 
          \"Amnaki, you are great. I should have paid attention. This class is useful.\" and so on."
-    nmc "... In fact, that is what we wrote for our concluding paragraph."
+    nmc "... In fact, that {i}is{/i] what we wrote for our concluding paragraph."
     li "We did it!"
     mc "Ehh... Not really. Sure, there are 10 full pages of writing here, but some of it is childish. I mean, 
         \"My eyes will only be watching you from now on\"... Really?"
@@ -227,21 +245,43 @@ label Kazuki_1j_essay_yes:
     nmc "I honestly couldn't tell if she was messing around or not, but for the sake of my sanity, I decided to let the comment 
          slide."
     mc "Whatever... hang on. Don't you have to be somewhere? I imagine that you're quite busy..."
+    $ minutes = minutes + 3
     li "Me? No, not really. I mean, I've got time. Do you want to work on this more?"
     # if mc indicated that he isn't interested in the 40 we're making him say no
     if("self_40" not in answers):
-        jump Kazuki_1j_liwrapup
+        return
     $ cd_set(15, 15, 'Kazuki_1j_handle')
     show screen countdown
     menu:
         extend ""
         "Yes":
-            $ answer_add("???")
+            $ answer_add("lily_essay_2_yes")#more
         "No":
-            $ answer_add("???")
+            $ answer_add("lily_essay_2_no")#stop
         "...":
-            $ answer_add("???")
-    jump Kazuki_1j_handle
+            $ answer_add("lily_essay_2_what")#lazy
+    return
+
+label Kazuki_1j_essay_more:
+    mc "Yes."
+    li "Eh!?"
+    mc "You heard me. \"Yes.\" "
+    extend "As in, \"yes, I am desperate\"... "
+    extend "or \"yes, you have been helpful, believe it or not\"... "
+    extend "or even \"look, I really want to get this garbage assignment out of the way\"."
+    li "I didn't hear a \"yes\" in that last one..."
+    $ jump_break()
+    return
+
+label Kazuki_1j_essay_lazy:
+    nmc "... I stared blankly at the laptop screen."
+    $ jump_break()
+    return
+    
+label Kazuki_1j_essay_stop:
+    nmc "You've got to be kidding me."
+    nmc ""
+    $ jump_break()
     return
 
 label Kazuki_1j_essay_no:
@@ -249,10 +289,27 @@ label Kazuki_1j_essay_no:
     $ jump_break()
     return
 
-label Kazuki_1j_handle:
+label Kazuki_1j_essay_what:
+    nmc "I lazily stare back at the small girl in front of me. There is really no need for me to answer."
+    li "Ah, I suppose I'll take that as a \"no\" then."
+    nmc "Turning my head towards the eggshell white ceiling, I slightly slump into my chair to show my lack of care."
+    li "Alright! Well, best of luck!"
+    nmc "Perfectly understanding my desires, Lilian happily skips away from my table."
+    nmc "... I should probably head to work now..."
+    $ jump_break()
+    return
+
+label Kazuki_1j_handle1:
+    $ jump_break()
+    return
+    
+label Kazuki_1j_handle2:
+    $ jump_break()
     return
 
 label Kazuki_1j_liwrapup:
+    mc "No, that won't be necessary."
+    nmc "I save the file and close the window."
     $ jump_break()
     return
     

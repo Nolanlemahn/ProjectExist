@@ -34,3 +34,10 @@ lunch_bagel_1
 meeting_known <
 meeting_hlawrence <
 meeting_no
+
+lily_essay_1_yes
+lily_essay_1_no
+
+lily_essay_2_yes
+lily_essay_2_no
+lily_essay_2_what
