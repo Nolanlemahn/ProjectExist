@@ -178,13 +178,14 @@ label Kazuki_1j_essay:
             call Kazuki_1j_essay_yes
             if("self_40" not in answers):
                 jump Kazuki_1j_liwrapup
-                
+            # logic block, yes--> [more, stop, lazy]
             if("lily_essay_2_yes" in answers):
                 jump Kazuki_1j_essay_more
             elif("lily_essay_2_no" in answers):
                 jump Kazuki_1j_essay_stop
             else:
                 jump Kazuki_1j_essay_lazy
+            # end block
             jump Kazuki_1j_handle
         "No":
             $ answer_add("lily_essay_1_no")
@@ -217,7 +218,7 @@ label Kazuki_1j_essay_yes:
         can write here."
     mc "So, what do I write?"
     doublespeak li mc "Complete and utter..." "Bullshit?"
-    li "Well, I was going to say nonsense, but yeah, pulling some shit out of a bull's ass works just as well."
+    li "Well, I was going to say nonsense, but that works too!"
     mc "Okay, that isn't really my thing. Unless I'm pretending that I'm well-prepared for a presentation or something."
     li "Perhaps it would be better to look at what you wanted to say, and then reverse it. You know, something like 
         \"I'd like to explain why I managed to fall asleep during your extremely informative lecture\"."
@@ -231,7 +232,7 @@ label Kazuki_1j_essay_yes:
     nmc "30 minutes later, we had... something. It certainly was an improvement."
     nmc "But the sentences simply didn't flow. Near the end, we may as well have been writing something along the lines of 
          \"Amnaki, you are great. I should have paid attention. This class is useful.\" and so on."
-    nmc "... In fact, that {i}is{/i] what we wrote for our concluding paragraph."
+    nmc "... In fact, that {i}is{/i} what we wrote for our concluding paragraph."
     li "We did it!"
     mc "Ehh... Not really. Sure, there are 10 full pages of writing here, but some of it is childish. I mean, 
         \"My eyes will only be watching you from now on\"... Really?"
@@ -245,12 +246,12 @@ label Kazuki_1j_essay_yes:
     nmc "I honestly couldn't tell if she was messing around or not, but for the sake of my sanity, I decided to let the comment 
          slide."
     mc "Whatever... hang on. Don't you have to be somewhere? I imagine that you're quite busy..."
-    $ minutes = minutes + 3
-    li "Me? No, not really. I mean, I've got time. Do you want to work on this more?"
+    $ minutes = minutes + 3#3:05
+    li "Me? No, not really. I mean, I've got time. Why? Do you want to work on this more, or would you rather call it quits?"
     # if mc indicated that he isn't interested in the 40 we're making him say no
     if("self_40" not in answers):
         return
-    $ cd_set(15, 15, 'Kazuki_1j_handle')
+    $ cd_set(15, 15, 'Kazuki_1j_handle1')
     show screen countdown
     menu:
         extend ""
@@ -259,7 +260,14 @@ label Kazuki_1j_essay_yes:
         "No":
             $ answer_add("lily_essay_2_no")#stop
         "...":
-            $ answer_add("lily_essay_2_what")#lazy
+            jump Kazuki_1j_handle1
+    return
+    
+label Kazuki_1j_essay_no:
+    mc "No thank you. Honestly, I should probably get to work."
+    li "Ooh. Kazuki's a quitter! Kazuki's a quitter!"
+    mc "Grr..."
+    $ jump_break()
     return
 
 label Kazuki_1j_essay_more:
@@ -274,18 +282,18 @@ label Kazuki_1j_essay_more:
     return
 
 label Kazuki_1j_essay_lazy:
+    $ answer_add("lily_essay_2_what")
     nmc "... I stared blankly at the laptop screen."
+    mc "Uhh..."
     $ jump_break()
     return
     
 label Kazuki_1j_essay_stop:
     nmc "You've got to be kidding me."
-    nmc ""
-    $ jump_break()
-    return
-
-label Kazuki_1j_essay_no:
-    mc "No thank you. Honestly, I should probably get to work."
+    nmc "I don't think I could take more of this. And besides..."
+    mc "... Well, fuck me."
+    li "Err, I'd rather not. But what's up?"
+    mc "I'm late for work!"
     $ jump_break()
     return
 
@@ -299,8 +307,8 @@ label Kazuki_1j_essay_what:
     $ jump_break()
     return
 
+# dummy label
 label Kazuki_1j_handle1:
-    $ jump_break()
     return
     
 label Kazuki_1j_handle2:
