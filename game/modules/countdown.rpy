@@ -64,7 +64,7 @@ init -1:
 # jump if necessary.
 screen countdown:
     key "game_menu" action [[]]
-    key "hude_windows" action [[]]
+    key "hide_windows" action [[]]
     tag countdown_tag
         # move timer every 0.1 seconds
     timer 0.1 repeat True action If(time > 0,
