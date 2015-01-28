@@ -63,6 +63,8 @@ init -1:
 # Shows the bar as it depletes, and the timer. Recolors if necessary. Forces a 
 # jump if necessary.
 screen countdown:
+    key "game_menu" action [[]]
+    key "hude_windows" action [[]]
     tag countdown_tag
         # move timer every 0.1 seconds
     timer 0.1 repeat True action If(time > 0,

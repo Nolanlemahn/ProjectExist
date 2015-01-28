@@ -119,6 +119,10 @@ label other_stats:#show combat stats
     $ notin_other_stats = True
     return
 
+init python:
+    def domchange(passedvar, passedvalue, bool_loud):
+        renpy.call("domchange", passedvar, passedvalue, bool_loud)
+        return
    
 label domchange(passedvar, passedvalue, bool_loud):
     if passedvalue > 0:

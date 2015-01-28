@@ -390,6 +390,7 @@ label Kazuki_1g:
     
 label Kazuki_1h:
     $ ui_check = True#consider false
+    call domchange("FP", -2,0)
     $ sio_l("bg fakefog")
     window hide
     scene bg fog

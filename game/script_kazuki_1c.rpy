@@ -148,7 +148,7 @@ label Kazuki_1j_essay:
     mc "Insufferable little..."
     nmc "I mumble the rest of statement. Lilian sticks her tongue out, and folds her hands behind her back."
     li "I heard that!"
-    $ minutes = minutes + 5
+    $ minutes = minutes + 5#2:27
     mc "I don't believe you."
     nmc "Lilian puts her tongue back in her mouth and frowns."
     li "You called me a bitch."
@@ -170,12 +170,11 @@ label Kazuki_1j_essay:
     li "Okay really, I just don't have anything better to do. Do you want help or not?"
     $ cd_set(15, 15, 'Kazuki_1j_essay_what')
     show screen countdown
-    # call block
     menu:
         extend ""
         "Yes":
             $ answer_add("lily_essay_1_yes")
-            call Kazuki_1j_essay_yes
+            call Kazuki_1j_essay_yes#returns
             if("self_40" not in answers):
                 jump Kazuki_1j_liwrapup
             # logic block, yes--> [more, stop, lazy]
@@ -185,15 +184,12 @@ label Kazuki_1j_essay:
                 jump Kazuki_1j_essay_stop
             else:
                 jump Kazuki_1j_essay_lazy
-            # end block
-            jump Kazuki_1j_handle
         "No":
             $ answer_add("lily_essay_1_no")
-            call Kazuki_1j_essay_no
+            jump Kazuki_1j_essay_no
         "...":
             $ answer_add("lily_essay_1_no")
-            call Kazuki_1j_essay_what
-    jump Kazuki_1k_routing
+            jump Kazuki_1j_essay_what
 
 label Kazuki_1j_essay_yes:
     mc "I suppose that I wouldn't mind the help."
@@ -224,18 +220,18 @@ label Kazuki_1j_essay_yes:
         \"I'd like to explain why I managed to fall asleep during your extremely informative lecture\"."
     mc "... And the whole paper needs to sound like that?"
     li "Hey, you wanna make her happy, right?"
-    mc "Fuck no."
+    mc "Actually, I would prefer it if she was preparing for suicide."
     li "All right then. You want to pass her class, right?"
     mc "Well, I suppose I really don't have much of a choice."
     li "Exactly. Now as for this next sentence..."
     $ triple_min(10)#3:02?
-    nmc "30 minutes later, we had... something. It certainly was an improvement."
+    nmc "30 minutes later, we had... something. It certainly was an improvement from what I had written by myself."
     nmc "But the sentences simply didn't flow. Near the end, we may as well have been writing something along the lines of 
          \"Amnaki, you are great. I should have paid attention. This class is useful.\" and so on."
     nmc "... In fact, that {i}is{/i} what we wrote for our concluding paragraph."
     li "We did it!"
     mc "Ehh... Not really. Sure, there are 10 full pages of writing here, but some of it is childish. I mean, 
-        \"My eyes will only be watching you from now on\"... Really?"
+        \"You'll be the center of my attention from now on\"... Come on."
     li "I didn't write that."
     mc "You did. I am not a creepy person."
     li "But you're scary!"
@@ -247,6 +243,7 @@ label Kazuki_1j_essay_yes:
          slide."
     mc "Whatever... hang on. Don't you have to be somewhere? I imagine that you're quite busy..."
     $ minutes = minutes + 3#3:05
+    $ domchange("FP", -2, 0)
     li "Me? No, not really. I mean, I've got time. Why? Do you want to work on this more, or would you rather call it quits?"
     # if mc indicated that he isn't interested in the 40 we're making him say no
     if("self_40" not in answers):
@@ -265,10 +262,14 @@ label Kazuki_1j_essay_yes:
     
 label Kazuki_1j_essay_no:
     mc "No thank you. Honestly, I should probably get to work."
-    li "Ooh. Kazuki's a quitter! Kazuki's a quitter!"
-    mc "Grr..."
+    nmc "I save the file and close the window."
+    mc "I'm actually already running a little late."
+    li "Oh. In that case, I might as well head home myself. Do you want a ride?"
+    mc "Umm, I certainly wouldn't say no to a lift, but are you sure?"
+    li "Actually, I insist."
+    nmc "As she pulls me by the hand, it occurs to me that I've never actually seen Lilian drive."
     $ jump_break()
-    return
+    jump Kazuki_1k_alt_work
 
 label Kazuki_1j_essay_more:
     mc "Yes."
@@ -289,11 +290,25 @@ label Kazuki_1j_essay_lazy:
     return
     
 label Kazuki_1j_essay_stop:
-    nmc "You've got to be kidding me."
-    nmc "I don't think I could take more of this. And besides..."
+    li "Ooh. Kazuki's a quitter! Kazuki's a quitter!"
+    mc "Grr..."
+    li "Actually, that works out well. I haven't had lunch yet."
+    "{i}Grumble...{/i}"
+    nmc "Now that my stomach reminds me, I haven't had anything to eat since this morning."
+    li "..."
+    nmc "By now, the school cafeteria has probably stopped serving lunch."
+    li "..."
+    nmc "I didn't pack a lunch today, either."
+    li "...!"
+    nmc "I wonder what I could do for a-"
+    li "{size=40}Hey! I'm talking to you!{/size}"
+    nmc "I'm already fairly late for work... missing a day of work would certainly be unusual for me, but it probably wouldn't hurt."
     mc "... Well, fuck me."
-    li "Err, I'd rather not. But what's up?"
+    li "Aha, I'd rather not. But what's up?"
     mc "I'm late for work!"
+    li "E-Eh!? What do you mean?"
+    mc "We got so carried away working on the essay, that I didn't realize how much time had passed!"
+    li "What do you mean by \"we\"? Ooh, how could you be so careless?"
     $ jump_break()
     return
 
@@ -328,6 +343,14 @@ label Kazuki_1k_routing:
     #see flowchart
     if(("meeting_known" in answers) or ("meeting_hlawrence" in answers)):
         nmc "I'd better get to that damned meeting now."
+    return
+    
+label Kazuki_1k_alt_work:
+    $ triple_min(5)
+    li "All right, we're here!"
+    mc "..."
+    li "Wakey wakey, lemon cakey. You said Robert and Son's, yeah? This is the place..."
+    mc "I was ready to die..."
     return
     
 label Kazuki_1k_work:

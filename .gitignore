@@ -6,3 +6,4 @@ traceback.txt
 *.rpyb
 game/saves/
 game/debuglog.txt
+*.dia~

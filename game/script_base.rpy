@@ -35,6 +35,7 @@ label requested_start_k:
     $ main_char_armor = "Nothing"
     $ main_known_moves = [1,2,0,0,0,0,0,0]
     $ answers = []
+    $ answer_add("self_40")
     $ flags = []
     $ points = []
     $ init_points()
