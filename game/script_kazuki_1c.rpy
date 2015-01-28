@@ -257,7 +257,7 @@ label Kazuki_1j_essay_yes:
         "No":
             $ answer_add("lily_essay_2_no")#stop
         "...":
-            jump Kazuki_1j_handle1
+            pass
     return
     
 label Kazuki_1j_essay_no:
@@ -269,7 +269,7 @@ label Kazuki_1j_essay_no:
     li "Actually, I insist."
     nmc "As she pulls me by the hand, it occurs to me that I've never actually seen Lilian drive."
     $ jump_break()
-    jump Kazuki_1k_alt_work
+    jump Kazuki_1k_early_lily
 
 label Kazuki_1j_essay_more:
     mc "Yes."
@@ -309,8 +309,9 @@ label Kazuki_1j_essay_stop:
     li "E-Eh!? What do you mean?"
     mc "We got so carried away working on the essay, that I didn't realize how much time had passed!"
     li "What do you mean by \"we\"? Ooh, how could you be so careless?"
+    mc ""
     $ jump_break()
-    return
+    jump Kazuki_1k_late_lily#get lunch with her
 
 label Kazuki_1j_essay_what:
     nmc "I lazily stare back at the small girl in front of me. There is really no need for me to answer."
@@ -322,35 +323,21 @@ label Kazuki_1j_essay_what:
     $ jump_break()
     return
 
-# dummy label
-label Kazuki_1j_handle1:
-    return
-    
-label Kazuki_1j_handle2:
-    $ jump_break()
-    return
-
 label Kazuki_1j_liwrapup:
     mc "No, that won't be necessary."
     nmc "I save the file and close the window."
     $ jump_break()
     return
-    
-label Kazuki_1k_routing:
-    $ sio_l("bg fog")
-    $ minutes = 1070
-    #first major branch of the common route;
-    #see flowchart
-    if(("meeting_known" in answers) or ("meeting_hlawrence" in answers)):
-        nmc "I'd better get to that damned meeting now."
-    return
-    
-label Kazuki_1k_alt_work:
+
+label Kazuki_1k_early_lily:
     $ triple_min(5)
     li "All right, we're here!"
     mc "..."
     li "Wakey wakey, lemon cakey. You said Robert and Son's, yeah? This is the place..."
     mc "I was ready to die..."
+    return
+    
+label Kazuki_1k_late_lily:
     return
     
 label Kazuki_1k_work:
