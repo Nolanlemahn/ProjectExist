@@ -309,7 +309,8 @@ label Kazuki_1j_essay_stop:
     li "E-Eh!? What do you mean?"
     mc "We got so carried away working on the essay, that I didn't realize how much time had passed!"
     li "What do you mean by \"we\"? Ooh, how could you be so careless?"
-    mc ""
+    mc "Oh, never mind. It doesn't really matter."
+    li "Doesn't really matter?! Listen to yourself! Uurgh. This is why you don't have any friends."
     $ jump_break()
     jump Kazuki_1k_late_lily#get lunch with her
 
