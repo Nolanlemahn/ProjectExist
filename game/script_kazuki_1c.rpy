@@ -336,6 +336,8 @@ label Kazuki_1k_early_lily:
     mc "..."
     li "Wakey wakey, lemon cakey. You said Robert and Son's, yeah? This is the place..."
     mc "I was ready to die..."
+    li ""
+    $ jump_break()
     return
     
 label Kazuki_1k_late_lily:

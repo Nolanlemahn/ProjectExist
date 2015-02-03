@@ -29,6 +29,7 @@ label a1v1_test:
         
         
 label deal_damage:
+    window show#chances are high that we forgot to do this
     $ m1pass = True
     $ e1pass = True
     if (curr_eval == "m1"):
