@@ -54,6 +54,9 @@ init -1:
     $ m1parameterplus = 0
     $ m1mess1 = ""
     $ m1mess2 = ""
+    $ m1typea = ""
+    $ m1typeb = ""
+    $ m1typec = ""
     $ m1status = ""
     $ m1cost = ["",""]
     
@@ -66,6 +69,9 @@ init -1:
     $ e1parameterplus = 0
     $ e1mess1 = ""
     $ e1mess2 = ""
+    $ e1typea = ""
+    $ e1typeb = ""
+    $ e1typec = ""
     $ e1status = ""
     $ e1cost = ["",""]
     

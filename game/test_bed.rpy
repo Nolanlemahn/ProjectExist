@@ -46,7 +46,7 @@ label requested_start_cb:
     $ main_char_RS_SLOL2 = 0
     $ main_char_weapon = "Fists"
     $ main_char_armor = "Nothing"
-    $ main_known_moves = [1,2,0,0,0,0,0,0]
+    $ main_known_moves = [1,2,3,0,0,0,0,0]
     $ answers = []
     $ answer_add("self_40")
     $ flags = []

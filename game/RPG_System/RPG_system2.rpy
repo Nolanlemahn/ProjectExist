@@ -1,5 +1,5 @@
 label a1v1fight(m1_known_moves, m1name, m1level, m1hp, m1maxhp, m1fp, m1maxfp, m1sp, m1maxsp, m1stats, m1_ABI_SLO1, m1_ABI_SLOL1, m1_ABI_SLO2, m1_ABI_SLOL2, m1_RS_SLO1, m1_RS_SLOL1, m1_RS_SLO2, m1_RS_SLOL2, m1XP, m1maxXP, e1_known_moves, e1name, e1level, e1hp, e1maxhp, e1fp, e1maxfp, e1sp, e1maxsp, e1STR, e1DEX, e1RES, e1SPD, e1INT, e1SPI, e1XP, e1maxXP, eAIT, precursor):
-    #we're going to do a lot of processor unfriendly stuff here, but that's OKAY cause it's python
+    window show#chances are high that we forgot to do this
     $ fight_is_1v1 = True
     $ firstturn = True
     $ batcheckpoint = 0

@@ -18,16 +18,11 @@ label load_moves_part1(moveset):#player1
     while (movecount < 8):
         if (moveset[movecount] == 0):
             $ movenames[movecount] = "DNE"
-        if (moveset[movecount] == 1):
+        if (moveset[movecount] >= 1):
             $ moveexists = moveexists + 1
-            $ movenames[movecount] = "Pound"
-            $ movecosts[2 * movecount] = ""
-            $ movecosts[2 * movecount + 1] = ""
-        if (moveset[movecount] == 2):
-            $ moveexists = moveexists + 1
-            $ movenames[movecount] = "Check"
-            $ movecosts[2 * movecount] = ""
-            $ movecosts[2 * movecount + 1] = ""
+            $ movenames[movecount] = cbm.keys()[movecount + 1]
+            $ movecosts[2 * movecount] = cbm[cbm.keys()[movecount + 1]].cost[0]
+            $ movecosts[2 * movecount + 1] = cbm[cbm.keys()[movecount + 1]].cost[1]
         
         # ADDMOREMOVES
         $ movecount = movecount + 1
@@ -86,68 +81,14 @@ label load_moves_part2:
         call load_moves_part3(chosenmove)
     return
             
-label load_moves_part3(chosenmove):
-    if (chosenmove == "Struggle"):
-        $ power = 50
-        $ accuracy = 0.80
-        $ prority = 0
-        $ parameter = "struggle"
-        $ typea = "physical"
-        $ typeb = "normal"
-        $ typec = "close"
-        $ cost = ["", ""]
-    
-    if (chosenmove == "Pound"):
-        $ power = 50
-        $ accuracy = 0.95
-        $ priority = 0
-        $ parameter = "null"
-        $ typea = "physical"
-        $ typeb = "normal"
-        $ typec = "close"
-        $ cost = ["", ""]
-        
-    if (chosenmove == "Check"):
-        $ power = 10
-        $ accuracy = 0.70
-        $ priority = 1
-        $ parameter = "stun"
-        $ parameterplus = 30
-        $ typea = "physical"
-        $ typeb = "normal"
-        $ typec = "close"
-        $ cost = ["", ""]
-        
-    if (chosenmove == "Warlock's Fist"):
-        $ power = 85
-        $ accuracy = 100
-        $ priority = -1
-        $ parameter = "homing"
-        $ typea = "physical"
-        $ typeb = "dream"
-        $ typec = "close"
-        $ cost = [-4, "SP"]
-        
+label load_moves_part3(chosenmove):        
     if (curr_eval == "m1"):
-        $ m1power = power
-        $ m1accuracy = accuracy
-        $ m1priority = priority
-        $ m1move = chosenmove
-        $ m1parameter = parameter
-        $ m1parameterplus = parameterplus
-        $ m1cost = cost[:]
+        $ cbm[chosenmove].assign("m1", chosenmove)
         $ curr_eval = "e1"
-        call m1_damage_calc(power, accuracy, priority, parameter, parameterplus, typea, typeb)
+        call m1_damage_calc(m1power, m1accuracy, m1priority, m1parameter, m1parameterplus, m1typea, m1typeb)
         jump load_moves_part2
         
     if (curr_eval == "e1"):
-        $ e1power = power
-        $ e1accuracy = accuracy
-        $ e1priority = priority
-        $ e1move = chosenmove
-        $ e1parameter = parameter
-        $ e1parameterplus = parameterplus
-        $ e1cost = cost[:]
-        #"hold up"
-        call e1_damage_calc(power, accuracy, priority, parameter, parameterplus, typea, typeb)
+        $ cbm[chosenmove].assign("e1", chosenmove)
+        call e1_damage_calc(e1power, e1accuracy, e1priority, e1parameter, e1parameterplus, e1typea, e1typeb)
         jump a1v1_test
