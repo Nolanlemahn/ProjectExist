@@ -1,11 +1,16 @@
 label battle_end:
     $ single_combat_check = True
     "It's over..."
+    $ fight_is_1v1 = False
+    $ battle_current = False
     #if (progress == "001")
+    return#TODO implement jumping back
 
 label battle_death:
     $ single_combat_check = True
     "It's over..."
+    $ battle_current = False
+    return
 
 label load_moves_part1(moveset):#player1
     $ movecount = 0
@@ -77,7 +82,9 @@ label load_moves_part2:
             $ chosenmove = "Check"
         else:
             $ chosenmove = "Pound"
-    call load_moves_part3(chosenmove)
+    if(battle_current):
+        call load_moves_part3(chosenmove)
+    return
             
 label load_moves_part3(chosenmove):
     if (chosenmove == "Struggle"):
@@ -131,6 +138,7 @@ label load_moves_part3(chosenmove):
         $ m1cost = cost[:]
         $ curr_eval = "e1"
         call m1_damage_calc(power, accuracy, priority, parameter, parameterplus, typea, typeb)
+        jump load_moves_part2
         
     if (curr_eval == "e1"):
         $ e1power = power
@@ -142,3 +150,4 @@ label load_moves_part3(chosenmove):
         $ e1cost = cost[:]
         #"hold up"
         call e1_damage_calc(power, accuracy, priority, parameter, parameterplus, typea, typeb)
+        jump a1v1_test

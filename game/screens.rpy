@@ -468,6 +468,8 @@ screen main_menu:
         if config.developer:
             textbutton _("Persistent Reset") action Function(destroy_persistent)
             textbutton "Seriously break things" action ui.callsinnewcontext("reset_button")
+            textbutton "Test Combat" action Start("requested_start_cb")
+            textbutton "" action NullAction() style "dys_button"
         textbutton "Report a Bug" action Help("game/dev/report.html")
         textbutton "Check for Updates" action ui.callsinnewcontext("pre_update")
         textbutton "Dyslexic?" action ui.callsinnewcontext("dyslexic") text_style "dys_button_text"

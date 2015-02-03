@@ -256,7 +256,8 @@ label m1_damage_calc(po, ac, pr, pa, pp, ta, tb):
         $ damage = ((((((sect1 * sect2 * sect3 / 50) / sect4) * burn * field3) + 2) * critmod * battledice / 100) * sect5)
     
     $ m1damage = damage
-    jump load_moves_part2
+    return
+    #jump load_moves_part2
     
  
 label e1_damage_calc(po, ac, pr, pa, pp, ta, tb):
@@ -381,4 +382,5 @@ label e1_damage_calc(po, ac, pr, pa, pp, ta, tb):
         
     $ e1damage = damage
     $ batcheckpoint = 1
-    jump a1v1_test
+    #jump a1v1_test
+    return

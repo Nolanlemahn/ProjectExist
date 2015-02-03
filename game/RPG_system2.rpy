@@ -4,8 +4,9 @@ label a1v1fight(m1_known_moves, m1name, m1level, m1hp, m1maxhp, m1fp, m1maxfp, m
     $ firstturn = True
     $ batcheckpoint = 0
     $ curr_eval = "m1"
+    $ battle_current = True
     call load_moves_part1(m1_known_moves)
-    #return
+    return
 
 label m1_1v1_turnb:
     "What will [m1name] do?{fast}{nw}"
@@ -21,7 +22,7 @@ label m1_1v1_turnb:
         "Run":
             "[m1name] is not a coward and refuses to run!{fast}"
             jump m1_1v1_turnb
-
+    
 label m1_1v1_turnc:
     menu:
         extend "{fast}"
@@ -47,7 +48,9 @@ label m1_1v1_turnc:
             jump get_move_info
         "(Do something else)":
             jump m1_1v1_turnb
-    call load_moves_part3(chosenmove)
+    if(battle_current):
+        call load_moves_part3(chosenmove)
+    return
     #...
 
 label get_move_info:

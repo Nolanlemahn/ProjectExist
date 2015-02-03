@@ -172,12 +172,12 @@ init python:
         return
         
     def show_stats_noXP(name, level, hp, maxhp, fp, maxfp, sp, maxsp, xp, maxxp, xal1, yal1):
-        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1))
+        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1), style="game_box")
         ui.hbox()
         ui.text("%s" % name, size=checkSizeTwo())
         ui.text("  Lv. %d" % level, xalign=1.0, size=checkSizeTwo())
         ui.close()
-        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1 + 0.05))
+        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1 + 0.05), style="game_box")
         ui.hbox()
         ui.vbox()
         ui.text("HP", size=checkSizeTwo())
