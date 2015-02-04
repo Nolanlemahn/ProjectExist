@@ -7,7 +7,7 @@
 # 
 # Type: Library
 # Usage:
-#     ???
+#     Don't directly use this, but regularly update cbm
 #######
 
 init:
@@ -18,6 +18,10 @@ init:
     $ cbm["Pound"] = cb_move(50, 0.95, 0, "null", None, "physical", "normal", "close", ["", ""])
     $ cbm["Check"] = cb_move(10, 0.70, 1, "stun", 30, "physical", "normal", "close", ["", ""])
     $ cbm["Warlock's Fist"] = cb_move(85, 1.00, -1, "homing", None, "physical", "dream", "close", [-4, "SP"])
+    
+    $ cbm["Pound"].desc = "A basic attack in which the user, with any blunt object (including fists), strikes the opponent."
+    $ cbm["Check"].desc = "A somewhat advanced technique in which the user tries to get in a hit before the opponent. This has a 30%% chance of causing flinching."
+    $ cbm["Warlock's Fist"].desc = "A somewhat advanced technique that requires use of tactics learned in Dream Worlds. The user locks onto his opponent's being, and launches a strong punch backed with Dream Energy"
 
 init -1 python:
     #####
@@ -41,7 +45,7 @@ init -1 python:
     #####
     class cb_move:
 
-        def __init__(self, power, accuracy, priority, parameter, parameterplus, typea, typeb, typec, cost):
+        def __init__(self, power, accuracy, priority, parameter, parameterplus, typea, typeb, typec, cost, desc = ""):
             self.power = power
             self.accuracy = accuracy
             self.priority = priority
@@ -51,6 +55,7 @@ init -1 python:
             self.typeb = typeb
             self.typec = typec
             self.cost = cost
+            self.desc = desc
         def assign(move, user, movename):
             if(user == "m1"):
                 store.m1power = move.power

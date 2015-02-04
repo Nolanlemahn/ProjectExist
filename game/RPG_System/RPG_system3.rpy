@@ -43,12 +43,8 @@ label load_moves_part1(moveset):#player1
     jump m1_1v1_turnb
     
 label about_move(some_move):
-    if (some_move == "Struggle"):
-        "[[Power: 50 || Accuracy: 80 || Priority: -1 || Height: 0 || Physical || Normal || Close]\nA basic attack in which the user does absolutely whatever it can to harm the opponent. The flailing has a 25%% chance of causing self-damage equal to 25%% of damage done."
-    if (some_move == "Pound"):
-        "[[Power: 50 || Accuracy: 95 || Priority: 0 || Height: 0 || Physical || Normal || Close]\nA basic attack in which the user, with any blunt object (including fists) is used to strike the opponent."
-    if (some_move == "Check"):
-        "[[Power: 10 || Accuracy: 70 || Priority: 1 || Height: 0 || Physical || Normal || Close || Stun, 30]\nA somewhat advanced technique in which the user tries to get in a hit before the opponent. This has a 30%% chance of causing flinching."
+    "This feature will be re-implemented soon, with a somewhat better screen.
+    #    "[[Power: 50 || Accuracy: 80 || Priority: -1 || Height: 0 || Physical || Normal || Close]\nA basic attack in which the user does absolutely whatever it can to harm the opponent. The flailing has a 25%% chance of causing self-damage equal to 25%% of damage done."
     jump get_move_info
     
 label movePenalty(mod1, mod2):
