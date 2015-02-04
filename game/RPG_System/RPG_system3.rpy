@@ -43,8 +43,8 @@ label load_moves_part1(moveset):#player1
     jump m1_1v1_turnb
     
 label about_move(some_move):
-    "This feature will be re-implemented soon, with a somewhat better screen.
-    #    "[[Power: 50 || Accuracy: 80 || Priority: -1 || Height: 0 || Physical || Normal || Close]\nA basic attack in which the user does absolutely whatever it can to harm the opponent. The flailing has a 25%% chance of causing self-damage equal to 25%% of damage done."
+    $ tempsay = cbm[some_move].asm_desc()
+    "[tempsay]"
     jump get_move_info
     
 label movePenalty(mod1, mod2):

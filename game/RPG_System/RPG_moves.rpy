@@ -20,8 +20,8 @@ init:
     $ cbm["Warlock's Fist"] = cb_move(85, 1.00, -1, "homing", None, "physical", "dream", "close", [-4, "SP"])
     
     $ cbm["Pound"].desc = "A basic attack in which the user, with any blunt object (including fists), strikes the opponent."
-    $ cbm["Check"].desc = "A somewhat advanced technique in which the user tries to get in a hit before the opponent. This has a 30%% chance of causing flinching."
-    $ cbm["Warlock's Fist"].desc = "A somewhat advanced technique that requires use of tactics learned in Dream Worlds. The user locks onto his opponent's being, and launches a strong punch backed with Dream Energy"
+    $ cbm["Check"].desc = "A somewhat advanced technique in which the user tries to get in a hit before the opponent. This has a 30% chance of causing flinching."
+    $ cbm["Warlock's Fist"].desc = "A somewhat advanced technique that requires use of tactics learned in Dream Worlds. The user locks onto his opponent's being, and launches a strong punch backed with Dream Energy."
 
 init -1 python:
     #####
@@ -56,6 +56,32 @@ init -1 python:
             self.typec = typec
             self.cost = cost
             self.desc = desc
+        def asm_desc(move):#text version of assembling the text description
+            #power block
+            powertxt = "[Power: "
+            if(move.power != None):
+                powertxt += str(move.power)
+            else:
+                powertxt += "N/A"
+            #accuracy block
+            accuracytxt = " || Accuracy: "
+            if(move.accuracy != None):
+                accuracytxt += str(move.accuracy)
+            else:
+                accuracytxt += "N/A"
+            #priority block
+            prioritytxt = " || Priority: "
+            if(move.priority != None):
+                prioritytxt += str(move.priority)
+            else:
+                prioritytxt += "N/A"
+            typetxt = " || " + str(move.typea).title() + " || " + str(move.typeb).title()
+            #cost
+            if(move.cost == ["", ""]):
+                costtxt = "]\n"
+            else:
+                costtxt = " || Cost: " + str(move.cost[0]) + " " + move.cost[1] + "]\n"
+            return (powertxt + accuracytxt + prioritytxt + typetxt + costtxt + move.desc)
         def assign(move, user, movename):
             if(user == "m1"):
                 store.m1power = move.power
@@ -79,3 +105,6 @@ init -1 python:
                 store.e1typeb = move.typeb
                 store.e1typec = move.typec
                 store.e1cost = move.cost[:]
+                
+screen move_details:
+    pass
