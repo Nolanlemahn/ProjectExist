@@ -15,13 +15,13 @@ init:
     # 0
     $ cbm["Struggle"] = cb_move(50, 0.80, 0, "struggle", None, "physical", "normal", "close", ["", ""])
     # 1-3
-    $ cbm["Pound"] = cb_move(50, 0.95, 0, "null", None, "physical", "normal", "close", ["", ""])
+    $ cbm["Pound"] = cb_move(50, 0.95, 0, None, None, "physical", "normal", "close", ["", ""])
     $ cbm["Check"] = cb_move(10, 0.70, 1, "stun", 30, "physical", "normal", "close", ["", ""])
     $ cbm["Warlock's Fist"] = cb_move(85, 1.00, -1, "homing", None, "physical", "dream", "close", [-4, "SP"])
     
     $ cbm["Pound"].desc = "A basic attack in which the user, with any blunt object (including fists), strikes the opponent."
-    $ cbm["Check"].desc = "A somewhat advanced technique in which the user tries to get in a hit before the opponent. This has a 30% chance of causing flinching."
-    $ cbm["Warlock's Fist"].desc = "A somewhat advanced technique that requires use of tactics learned in Dream Worlds. The user locks onto his opponent's being, and launches a strong punch backed with Dream Energy."
+    $ cbm["Check"].desc = "A somewhat advanced technique in which the user tries to get in a light but surprising hit before the opponent has time to react. This has a 30% chance of causing flinching."
+    $ cbm["Warlock's Fist"].desc = "A somewhat advanced technique that requires use of tactics learned in Dream Worlds. The user locks onto his opponent's mind, and launches a strong punch backed with Dream Energy."
 
 init -1 python:
     #####
@@ -110,7 +110,15 @@ screen move_details(move):
     for dkey, dmove in cbm.iteritems():
         if move is dmove:
             $ md_move = dkey
-            
+    if(move.parameter == None):
+        $ effect = "None"
+    else:
+        $ effect = (move.parameter).title()
+    if(move.parameterplus == None):
+        $ coeffect = "N/A"
+    else:
+        $ coeffect = str(move.parameterplus).title() + "%"
+    
     modal True
     zorder 10
     window:
@@ -126,12 +134,37 @@ screen move_details(move):
                 text md_move
             hbox:
                 frame:
-                    xminimum 150
+                    xminimum 90
                     style "game_box"
                     text "Power:\n  " + str(move.power)
                 frame:
-                    xminimum 150
+                    xminimum 115
                     style "game_box"
                     text "Accuracy:\n  " + str(move.accuracy)
+                frame:
+                    xminimum 100
+                    style "game_box"
+                    text "Priority:\n  " + str(move.priority)
+                frame:
+                    xminimum 115
+                    style "game_box"
+                    text "Impact:\n  " + (move.typea).title()
+                frame:
+                    xminimum 135
+                    style "game_box"
+                    text "Alignment:\n  " + (move.typeb).title()
+                frame:
+                    xminimum 115
+                    style "game_box"
+                    text "Effect:\n  " + effect
+                frame:
+                    xminimum 165
+                    style "game_box"
+                    text "Rate of Effect:\n  " + coeffect
+            vbox:
+                frame:
+                    xminimum 988
+                    yminimum 590
+                    text move.desc
         textbutton _("Return") action Return() align (.97, 1.0)
 
