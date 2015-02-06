@@ -215,6 +215,7 @@ python early:
 # TODO: CLEANUP
 # http://www.renpy.org/doc/html/screen_special.html#say
 screen say:
+    tag say
     #show rpg stats code
     # automatically re-draw the GUI headers if necessary
     if(not in_debug):

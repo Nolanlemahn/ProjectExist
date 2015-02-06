@@ -43,8 +43,10 @@ label load_moves_part1(moveset):#player1
     jump m1_1v1_turnb
     
 label about_move(some_move):
-    $ tempsay = cbm[some_move].asm_desc()
-    "[tempsay]"
+    # use the screen
+    call screen move_details(cbm[some_move])
+    #$ tempsay = cbm[some_move].asm_desc()
+    #"[tempsay]"
     jump get_move_info
     
 label movePenalty(mod1, mod2):

@@ -106,5 +106,32 @@ init -1 python:
                 store.e1typec = move.typec
                 store.e1cost = move.cost[:]
                 
-screen move_details:
-    pass
+screen move_details(move):
+    for dkey, dmove in cbm.iteritems():
+        if move is dmove:
+            $ md_move = dkey
+            
+    modal True
+    zorder 10
+    window:
+        xminimum 1000
+        xmaximum 1000
+        yminimum 700
+        ymaximum 700
+        xalign .5
+        yalign .5
+        vbox:
+            frame:
+                xminimum 200
+                text md_move
+            hbox:
+                frame:
+                    xminimum 150
+                    style "game_box"
+                    text "Power:\n  " + str(move.power)
+                frame:
+                    xminimum 150
+                    style "game_box"
+                    text "Accuracy:\n  " + str(move.accuracy)
+        textbutton _("Return") action Return() align (.97, 1.0)
+
