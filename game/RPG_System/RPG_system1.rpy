@@ -1,3 +1,74 @@
+#Start the battle
+label a1v1fight(m1_known_moves, m1name, m1level, m1hp, m1maxhp, m1fp, m1maxfp, m1sp, m1maxsp, m1stats, m1_ABI_SLO1, m1_ABI_SLOL1, m1_ABI_SLO2, m1_ABI_SLOL2, m1_RS_SLO1, m1_RS_SLOL1, m1_RS_SLO2, m1_RS_SLOL2, m1XP, m1maxXP, e1_known_moves, e1name, e1level, e1hp, e1maxhp, e1fp, e1maxfp, e1sp, e1maxsp, e1STR, e1DEX, e1RES, e1SPD, e1INT, e1SPI, e1XP, e1maxXP, eAIT, precursor):
+    window show#chances are high that we forgot to do this
+    $ fight_is_1v1 = True
+    $ firstturn = True
+    $ batcheckpoint = 0
+    $ curr_eval = "m1"
+    $ battle_current = True
+    call load_moves_part1(m1_known_moves)
+    return
+    
+#Load the player's moves
+label load_moves_part1(moveset):#player1
+    $ movecount = 0
+    $ moveexists = 0
+    while (movecount < 8):
+        if (moveset[movecount] == 0):
+            $ movenames[movecount] = "DNE"
+        if (moveset[movecount] >= 1):
+            $ moveexists = moveexists + 1
+            $ movenames[movecount] = cbm.keys()[movecount + 1]
+            $ movecosts[2 * movecount] = cbm[cbm.keys()[movecount + 1]].cost[0]
+            $ movecosts[2 * movecount + 1] = cbm[cbm.keys()[movecount + 1]].cost[1]
+        
+        # ADDMOREMOVES
+        $ movecount = movecount + 1
+    ##begin checking symbols and innate abilities
+    #write this code later it's not needed yet
+    if (moveexists == 0):
+        $ moveexists = 1
+        $ movenames[0] = "Struggle"
+    $ movecount = 0
+    $ movename1 = movenames[0]
+    $ movename2 = movenames[1]
+    $ movename3 = movenames[2]
+    $ movename4 = movenames[3]
+    $ movename5 = movenames[4]
+    $ movename6 = movenames[5]
+    $ movename7 = movenames[6]
+    $ movename8 = movenames[7]
+    jump m1_1v1_turna
+
+label a1v1_priority:
+    if (firstturn == True):
+        $ firstturn = False
+        if (precursor == "m1"):
+            $ curr_eval = "m1"
+        elif (precursor == "e1"):
+            $ curr_eval = "e1"
+        else:
+            if (m1priority > e1priority):
+                $ curr_eval = "m1"
+            elif (e1priority > m1priority):
+                $ curr_eval = "e1"
+            else:
+                if (m1stats[3] > e1SPD):
+                    $ curr_eval = "m1"
+                else:#tie goes to the CPU
+                    $ curr_eval = "e1"
+    else:
+        if (m1priority > e1priority):
+            $ curr_eval = "m1"
+        elif (e1priority > m1priority):
+            $ curr_eval = "e1"
+        else:
+            if (m1stats[3] > e1SPD):
+                $ curr_eval = "m1"
+            else:#tie goes to the CPU
+                $ curr_eval = "e1"
+    return
+
 label a1v1_test:
     if (firstturn == True):
         $ firstturn = False
@@ -9,7 +80,7 @@ label a1v1_test:
             if (m1priority > e1priority):
                 $ curr_eval = "m1"
             elif (e1priority > m1priority):
-                $ curr_eval = "m1"
+                $ curr_eval = "e1"
             else:
                 if (m1stats[3] > e1SPD):
                     $ curr_eval = "m1"
@@ -19,7 +90,7 @@ label a1v1_test:
         if (m1priority > e1priority):
             $ curr_eval = "m1"
         elif (e1priority > m1priority):
-            $ curr_eval = "m1"
+            $ curr_eval = "e1"
         else:
             if (m1stats[3] > e1SPD):
                 $ curr_eval = "m1"
@@ -132,7 +203,7 @@ label deal_damage:
                     $ e1status = "stunned"
                     "[e1name] was stunned by the [m1move]!{fast}"
         $ curr_eval = "e1"
-    jump m1_1v1_turnb
+    jump m1_1v1_turna
    
 label m1_damage_calc(po, ac, pr, pa, pp, ta, tb):
     #call m1_damage_calc(power, accuracy, priority, parameter, parameterplus, typea, typeb)

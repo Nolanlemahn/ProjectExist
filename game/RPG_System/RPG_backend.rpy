@@ -217,3 +217,25 @@ init python:
         ui.close()
         ui.close()
         return
+        
+    def domchange(passedvar, passedvalue, bool_loud):
+        renpy.call("domchange", passedvar, passedvalue, bool_loud)
+        return
+   
+label domchange(passedvar, passedvalue, bool_loud):
+    if passedvalue > 0:
+        $ strchange = "+" + str(passedvalue) + " " +  passedvar
+    else:
+        $ strchange = str(passedvalue) + " " +  passedvar
+    if(passedvar == "HP"):
+        if(not fight_is_1v1):
+            $ main_char_currentHP = main_char_currentHP + passedvalue
+    elif(passedvar == "FP"):
+        if(not fight_is_1v1):
+            $ main_char_currentBelly = main_char_currentBelly + passedvalue
+    elif(passedvar == "SP"):
+        if(not fight_is_1v1):
+            $ main_char_currentSleep = main_char_currentSleep + passedvalue
+    if(bool_loud == 1):
+        $ updateUIroutine = 2
+    return

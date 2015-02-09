@@ -23,12 +23,9 @@ init:
     $ cbm["Pound"].desc = "A basic attack in which the user, with any blunt object (including fists), strikes the opponent."
     $ cbm["Check"].desc = "A somewhat advanced technique in which the user tries to get in a light but surprising hit before the opponent has time to react. This has a 30% chance of causing flinching."
     $ cbm["Warlock's Fist"].desc = "A somewhat advanced technique that requires use of tactics learned in Dream Worlds. The user locks onto his opponent's mind, and launches a strong punch backed with Dream Energy."
+    ###
 
 init -1 python:
-    
-    def move_glossary():
-        return
-    
     #####
     # Class name: cb_move()
     # 
@@ -73,8 +70,8 @@ init -1 python:
         # Returns: the text
         #####
         def asm_long_disp(self):
-            desc = self.desc
-            return
+            desc = self.desc + "\n"
+            return desc
         
         #####
         # Function name: assign()
@@ -211,6 +208,6 @@ screen move_details(move):
                 frame:
                     xminimum 988
                     yminimum 590
-                    text move.desc
+                    text move.asm_long_disp()
         textbutton _("Return") action Return() align (.97, 1.0)
 
