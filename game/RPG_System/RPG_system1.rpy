@@ -40,35 +40,6 @@ label load_moves_part1(moveset):#player1
     $ movename8 = movenames[7]
     jump m1_1v1_turna
 
-label a1v1_priority:
-    if (firstturn == True):
-        $ firstturn = False
-        if (precursor == "m1"):
-            $ curr_eval = "m1"
-        elif (precursor == "e1"):
-            $ curr_eval = "e1"
-        else:
-            if (m1priority > e1priority):
-                $ curr_eval = "m1"
-            elif (e1priority > m1priority):
-                $ curr_eval = "e1"
-            else:
-                if (m1stats[3] > e1SPD):
-                    $ curr_eval = "m1"
-                else:#tie goes to the CPU
-                    $ curr_eval = "e1"
-    else:
-        if (m1priority > e1priority):
-            $ curr_eval = "m1"
-        elif (e1priority > m1priority):
-            $ curr_eval = "e1"
-        else:
-            if (m1stats[3] > e1SPD):
-                $ curr_eval = "m1"
-            else:#tie goes to the CPU
-                $ curr_eval = "e1"
-    return
-
 label a1v1_test:
     if (firstturn == True):
         $ firstturn = False
