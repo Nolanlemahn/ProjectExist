@@ -48,6 +48,7 @@ label about_move(some_move):
     #$ tempsay = cbm[some_move].asm_desc()
     #"[tempsay]"
     jump get_move_info
+    return
     
 label movePenalty(mod1, mod2):
     if (curr_eval == "m1"):

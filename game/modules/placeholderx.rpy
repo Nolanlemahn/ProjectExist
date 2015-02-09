@@ -7,6 +7,7 @@
 # Original author: Nolan/NintendoToad
 # 
 # Type: Library
+# 
 # Usage:
 #     image IMGNAME = PlaceholderX(String, String, **Etc)
 #######

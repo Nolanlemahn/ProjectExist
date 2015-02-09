@@ -6,6 +6,7 @@
 # Original author: Nolan/NintendoToad
 # 
 # Type: Library
+# 
 # Usage:
 #     Don't directly use this, but regularly update cbm
 #######
@@ -24,6 +25,10 @@ init:
     $ cbm["Warlock's Fist"].desc = "A somewhat advanced technique that requires use of tactics learned in Dream Worlds. The user locks onto his opponent's mind, and launches a strong punch backed with Dream Energy."
 
 init -1 python:
+    
+    def move_glossary():
+        return
+    
     #####
     # Class name: cb_move()
     # 
@@ -56,7 +61,70 @@ init -1 python:
             self.typec = typec
             self.cost = cost
             self.desc = desc
-        def asm_desc(move):#text version of assembling the text description
+
+        #####
+        # Function name: asm_long_disp()
+        # 
+        # Descripiton: Assemble a textual representation of the combat move. This is for .
+        # 
+        # Parameters:
+        # move - the move object we are using.
+        # 
+        # Returns: the text
+        #####
+        def asm_long_disp(self):
+            desc = self.desc
+            return
+        
+        #####
+        # Function name: assign()
+        # 
+        # Descripiton: Assign the move parameters to the character stats.
+        # 
+        # Parameters:
+        # move - the move object we are using.
+        # user - who is using the move
+        # movename - the name of the move
+        # 
+        # Returns: None
+        #####
+        def assign(self, user, movename):
+            if(user == "m1"):
+                store.m1power = self.power
+                store.m1accuracy = self.accuracy
+                store.m1priority = self.priority
+                store.m1move = movename
+                store.m1parameter = self.parameter
+                store.m1parameterplus = self.parameterplus
+                store.m1typea = self.typea
+                store.m1typeb = self.typeb
+                store.m1typec = self.typec
+                store.m1cost = self.cost[:]
+            elif(user == "e1"):
+                store.e1power = self.power
+                store.e1accuracy = self.accuracy
+                store.e1priority = self.priority
+                store.e1move = movename
+                store.e1parameter = self.parameter
+                store.e1parameterplus = self.parameterplus
+                store.e1typea = self.typea
+                store.e1typeb = self.typeb
+                store.e1typec = self.typec
+                store.e1cost = self.cost[:]
+            return
+            
+            
+        #####
+        # Function name: asm_disp()
+        # 
+        # Descripiton: Assemble a textual representation of the combat move. This is mostly for debugging.
+        # 
+        # Parameters:
+        # move - the move object we are using.
+        # 
+        # Returns: the text
+        #####
+        def asm_disp(move):#text version of assembling the text description
             #power block
             powertxt = "[Power: "
             if(move.power != None):
@@ -82,29 +150,7 @@ init -1 python:
             else:
                 costtxt = " || Cost: " + str(move.cost[0]) + " " + move.cost[1] + "]\n"
             return (powertxt + accuracytxt + prioritytxt + typetxt + costtxt + move.desc)
-        def assign(move, user, movename):
-            if(user == "m1"):
-                store.m1power = move.power
-                store.m1accuracy = move.accuracy
-                store.m1priority = move.priority
-                store.m1move = movename
-                store.m1parameter = move.parameter
-                store.m1parameterplus = move.parameterplus
-                store.m1typea = move.typea
-                store.m1typeb = move.typeb
-                store.m1typec = move.typec
-                store.m1cost = move.cost[:]
-            elif(user == "e1"):
-                store.e1power = move.power
-                store.e1accuracy = move.accuracy
-                store.e1priority = move.priority
-                store.e1move = movename
-                store.e1parameter = move.parameter
-                store.e1parameterplus = move.parameterplus
-                store.e1typea = move.typea
-                store.e1typeb = move.typeb
-                store.e1typec = move.typec
-                store.e1cost = move.cost[:]
+        
                 
 screen move_details(move):
     for dkey, dmove in cbm.iteritems():

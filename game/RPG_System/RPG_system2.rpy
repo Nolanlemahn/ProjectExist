@@ -85,6 +85,7 @@ label get_move_info:
         "(Do something else)":
             jump m1_1v1_turnb
     call about_move(chosenmove)
+    return
 
 label inventory_crap:
     $ inventory_see = False
