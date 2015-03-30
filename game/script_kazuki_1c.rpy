@@ -153,8 +153,11 @@ label Kazuki_1j_essay:
     nmc "Lilian puts her tongue back in her mouth and frowns."
     li "You called me a bitch."
     mc "Dammit."
-    li "Really, though. What are you up to?"
-    nmc "I told Lilian how I fell asleep in today's math class and as punishment, had to write a paper."
+    li "Really, though. Whatcha working on?"
+    nmc "Happily inviting herself to my table, she jumps into the seat on my right."
+    mc "I didn't say you could set next to me."
+    li "Ah, but that's not important right now."
+    nmc "I sigh, and tell Lilian how I fell asleep in today's math class and as punishment, have to write a paper."
     li "Oh. On why you fell asleep?"
     mc "Yes, unfortunately. I don't know how anyone could write 10 pages on the subject."
     li "Hee! You could write \"I am a moron.\" over and over again!"
@@ -270,7 +273,7 @@ label Kazuki_1j_essay_no:
     nmc "As she pulls me by the hand, it occurs to me that I've never actually seen Lilian drive."
     $ jump_break()
     jump Kazuki_1k_early_lily
-
+    
 label Kazuki_1j_essay_more:
     mc "Yes."
     li "Eh!?"
@@ -325,8 +328,10 @@ label Kazuki_1j_essay_what:
     return
 
 label Kazuki_1j_liwrapup:
+    nmc "I start to say \"yes\", but then I remember that I really don't care about my grades, at least not my math ones."
     mc "No, that won't be necessary."
     nmc "I save the file and close the window."
+    mc "In fact, I think I need to get to work. I'm already running a little late."
     $ jump_break()
     return
 
