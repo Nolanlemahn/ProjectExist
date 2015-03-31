@@ -1,6 +1,7 @@
 # Aborted Arc + Schrödinger's Gun much? This'll be a crapload of fun.
 
 label Kazuki_1a:#this_label_done
+    #window hide
     $ ingame = "Kazuki"
     $ main_name = "?"
     $ main_type = "kk"
@@ -29,8 +30,7 @@ label Kazuki_1a:#this_label_done
     $ main_known_moves = [1,2,0,0,0,0,0,0]
     $ answers = []
     $ flags = []
-    $ points = []
-    $ init_points()
+    $ points = init_points()
     $ reminders = []
     $ j_name = "Jonathan"
     #[needed for clocks + alert
@@ -119,10 +119,13 @@ label Kazuki_1a:#this_label_done
     ###########
     $ minutes = 460
     $ clock = True
+    if(not jump_in):
+        jump Kazuki_1b
+    return
     
 label Kazuki_1b:
+    scene bg blackdrop
     $ dev_screen = "pass"
-    window hide
     #show screen fake_say
     #[scene1
     $ clock = False
@@ -133,7 +136,6 @@ label Kazuki_1b:
     $ walletshow = True
     $ main_char_show_rpg = True
     $ mlib("march")
-    window show
     scene bg fakefog
     with dissolve
     scene bg fog
@@ -172,7 +174,10 @@ label Kazuki_1b:
     nvl clear
     nnvlmc "The marching changes to a single pair of footsteps, and as if this new presence brought light with it, a dim light fills my eyes, and
             a shallow gust flows through my lungs."
+    scene bg fakefog
     show shadow norm with dissolve
+    scene bg fog
+    show shadow norm
     extend " And in front of me was a shadow, standing upright..."
     nvls "Stand."
     nnvlmc "My body stood up, ignoring my brain's demands to ask questions."
@@ -267,6 +272,10 @@ label Kazuki_1b:
          of these bruises. One more and I'll be put in a body cast."
     call domchange("FP", 5, 1)
     extend " I jam the bagel in my mouth, slip on some sandals, re-gather my things and rush out the door for school."
+    $ jump_break()
+    jump Kazuki_1b_2
+    
+label Kazuki_1b_2:
     #]
     #######
     

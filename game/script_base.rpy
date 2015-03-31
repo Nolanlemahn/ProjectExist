@@ -37,8 +37,7 @@ label requested_start_k:
     $ answers = []
     $ answer_add("self_40")
     $ flags = []
-    $ points = []
-    $ init_points()
+    $ points = init_points()
     $ reminders = []
     $ j_name = "Jonathan"
     #[needed for clocks + alert
@@ -147,7 +146,7 @@ label start:#this_label_done
     $ selected_note = ""
     #$ renpy.say(None, os.path.abspath(config.savedir))
     #$ save_name = begin_game()
-    $ renpy.block_rollback()
+    #$ renpy.block_rollback()
     #narr "This is a friendly reminder to go to the Options menu, and choose whether or not you would like Rollback to be enabled, and whether or not you want Developer/Writer commentary. By default, Rollback is disabled, and commentary is disabled."
     call dev_com(1)
     if (persistent.standalone_dlc_avail):

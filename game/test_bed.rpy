@@ -50,8 +50,7 @@ label requested_start_cb:
     $ answers = []
     $ answer_add("self_40")
     $ flags = []
-    $ points = []
-    $ init_points()
+    $ points = init_points()
     $ reminders = []
     $ j_name = "Jonathan"
     #[needed for clocks + alert

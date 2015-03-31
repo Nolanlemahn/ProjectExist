@@ -136,7 +136,7 @@
 
     config.has_voice = True
     config.has_autosave = False
-
+    style.empty_button = Style(style.button_text)
     ## Sounds that are used when button and imagemaps are clicked.
 
     # style.button.activate_sound = "click.wav"
@@ -461,16 +461,15 @@ screen main_menu:
         textbutton _("Editor's Start") xminimum 300 action Start("requested_start_k")
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Music Room") action (SetVariable('playing', name_playing()), ShowMenu("music_room", "nopredict"))
         textbutton _("Extras") action ShowMenu("more_menu")
         textbutton _("Help") action Help()
         textbutton _("Quit") action Quit(confirm=True)
-        textbutton "" action NullAction() style "dys_button"
+        textbutton "" action NullAction() style "empty_button"
         if config.developer:
             textbutton _("Persistent Reset") action Function(destroy_persistent)
             textbutton "Seriously break things" action ui.callsinnewcontext("reset_button")
             textbutton "Test Combat" action Start("requested_start_cb")
-            textbutton "" action NullAction() style "dys_button"
+            textbutton "" action NullAction() style "empty_button"
         textbutton "Report a Bug" action Help("game/dev/report.html")
         textbutton "Check for Updates" action ui.callsinnewcontext("pre_update")
         textbutton "Dyslexic?" action ui.callsinnewcontext("dyslexic") text_style "dys_button_text"
@@ -491,8 +490,11 @@ screen more_menu:
         xminimum 300
         has vbox
         
+        textbutton _("Music Room") action (SetVariable('playing', name_playing()), ShowMenu("music_room", "nopredict"))
         textbutton "Gallery" xminimum 300 action ShowMenu("gallery")
+        textbutton "" action NullAction() style "empty_button"
         textbutton "Glossary" action ShowMenu("glossary")
+        textbutton _("Scene Replay") action ShowMenu("scene_replay")
         textbutton "Add-ons/Cheats" action ShowMenu("install_extras")
         #textbutton _("Credits") action ui.callsinnewcontext("credits")
         textbutton _("Return") action Return()

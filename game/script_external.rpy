@@ -7,12 +7,7 @@ label triple_min(interval):
     extend "..."
     return
 
-init python:
-    def jump_break():
-        if(hasattr(store, 'jump_in')):
-            if(store.jump_in):
-                renpy.full_restart()
-    
+init -1 python:
     def answer_add(new_answer):
         answers.append(new_answer)
         return
@@ -25,9 +20,10 @@ init python:
         return
         
     def init_points():
+        temp_points = []
         for i in range(0, 10001):
-            points.append(0)
-        return
+            temp_points.append(0)
+        return temp_points
         
     def sio_l(called_scene):
         renpy.scene()
