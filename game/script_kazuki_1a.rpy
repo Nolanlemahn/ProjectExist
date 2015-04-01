@@ -137,7 +137,6 @@ label Kazuki_1a:#this_label_done
     
 label Kazuki_1b:
     scene bg blackdrop
-    $ dev_screen = "pass"
     $ clock = False
     $ walletshow = False
     $ main_char_show_rpg = False
@@ -240,7 +239,6 @@ label Kazuki_1b:
     
     window show
     $ sio_l("bg kazuki bed")
-    $ dev_screen = 0
     "... {w}... {w}..."
     #doublespeak l mc "What?" "What are you saying?"
     mc "Hah... hah... hah... ... huh..."
@@ -289,7 +287,6 @@ label Kazuki_1b:
          luxury I can't afford."
     nmc "I can afford to be efficient, though. I find it faster to haphazardly 
          hang up all of my clothing rather than fold anything."
-    $ dev_screen = "dream"
     nmc "I started keeping a nightmare log on my thirteenth birthday. One night,
          I had a nightmare in which a vine coiled around me, crushed me, and 
          called my name. I asked my father if phantoms give us nightmares, and 
@@ -305,10 +302,9 @@ label Kazuki_1b:
          made sense to me."
     nmc "Regardless, I salvaged the two things that mattered: her diary and 
          wedding ring. I had opened the book to a random page: page 47."
-    $ dev_screen = 0
-    nmc "\"21-06-92 (June 21st, 1992) - Phantoms, ghosts, zombies... they do not
-         exist. All that die return to the Earth, and the spirits of the dead 
-         are immediately judged.\""
+    nmc "(June 21st, 1992)\nPhantoms, ghosts, zombies... they do not exist. All 
+         that die return to the Earth, and the spirits of the dead are 
+         immediately judged.\""
     nmc "According to my mother, phantoms do not exist.\n{w}I have not yet dared
          to read the other pages... this one page taught me that the writings
          of a woman can reveal precisely how disturbed she is."
@@ -404,7 +400,6 @@ label Kazuki_1b_2:
        days... I probably should have done that earlier, but you clowns never 
        speak up unless you're with me alone... And the next time you laugh at 
        something I say, be prepared to explain the humor to the entire class..."
-    call dev_com("irc")
     nmc "Topics I already know. I tune Professor Lawrence out, open irssi on my 
          laptop and enter:"
     "/server 69.42.124.63\n{w}/join #physjabber ew1hf1QW!d\n{w}/nick kazokaz\n
@@ -414,7 +409,6 @@ label Kazuki_1b_2:
     
     #the if statement is a relic of a bugfix, leaving it here for now
     if(True):
-        $ dev_screen = "pass"
         nvln "{color=#C0C0C0}%%kazokaz{/color}: Good morning, Jonathan.{fast}"
         extend "\n{color=#ADD8E6}+jonrod{/color}: still can't believe you swore 
                 in class lol{fast}"
@@ -431,7 +425,6 @@ label Kazuki_1b_2:
                 swearing in class...{fast}"
         extend "\n{color=#ADD8E6}+jonrod{/color}: lolno{fast}"
         nvl clear
-    $ dev_screen = 0
     $ minutes = 515
     nmc "Never mind. IRC is a waste of time. I pull out my notepad and focus on 
          the lecture."
@@ -526,7 +519,6 @@ label Kazuki_1b_pre:
         mc "Perhaps I will... I honestly prefer his less scientific work."
         l "Don't actually go poisoning pidgeons in the park though... oh, 
            Noether dammit. You have to get going."
-        call dev_com("noether")
         nmc "... It's 10:00AM... My next class is in 5 minutes..."
         mc "Crap! I'll see you later!"
         nmc "Lawrence lets out a hearty laughter as I knock over yet another 
@@ -613,6 +605,7 @@ label Kazuki_1b_stub:
         "...":
             call Kazuki_1b_interstitial
     return
+    # ^ jump Kazuki_1b_extend
         
 label Kazuki_1b_interstitial:
     l "Not sure, eh? Well, if you do decide to come, meet me in this classroom 
@@ -624,8 +617,7 @@ label Kazuki_1b_extend:
     $ sio_s("bg hallway1")
     mc "Ah, dammit..."
     nmc "I visualize today's schedule in my head."
-    $ dev_screen = "pass"
-    if (answers[0] == "law_hesitation"):
+    if ("law_hesitation" in answers):
         nnvlmc "8:05AM - 9:45AM: Physics 102\n{w}
                 10:05AM - 11:00AM: General Studies 110\n{w}
                 11:05AM - 12:00AM: Math 122\n{w}
@@ -641,12 +633,11 @@ label Kazuki_1b_extend:
                 2:00PM - 5:50PM: (Work + lunch)\n{w}
                 6:00PM - 8:00PM: (Cross-country practice)"
     nvl clear
-    if (answers[0] == "law_test"):
+    if ("law_test" in answers):
         $ answer_add("nat_xc-skipped")
         nmc "Wait. I'm running late for my next class!"
         extend "\nI break into a sprint and rush towards Anderson Hall..."
         jump Kazuki_1c
-    $ dev_screen = 0
     nmc "I hate Tuesdays. And Wednesdays. Well, I don't hate the days 
          themselves, but the manner in which my classes are scheduled for those 
          days. 
@@ -690,7 +681,7 @@ label Kazuki_1b_extend:
                doesn't mean I'm not a girl. I'm probably easy to pick on."
             nmc "Natalie gives me a surprisingly pronounced frown."
             $ minutes = minutes + 2
-            if (answers[0] == "law_hesitation"):
+            if ("law_hesitation" in answers):
                 mc "I suppose the school could get a bit dangerous at this time 
                     of the day. You knew Prof- err, Coach Cyrus had the practice 
                     moved?"
@@ -848,7 +839,7 @@ label Kazuki_1c:
 label Kazuki_1c_continue:
     #WRITEHERE#...
     $ sio_l("bg classroom2")
-    if (answers[0] == "law_test"):
+    if ("law_test" in answers):
         $ minutes = 606
         jump Kazuki_1d_tamara_a
     else:

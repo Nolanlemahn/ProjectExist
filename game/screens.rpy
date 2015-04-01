@@ -683,14 +683,6 @@ screen preferences:
                 has vbox
 
                 textbutton _("Joystick...") action Preference("joystick")
-                
-            frame:
-                style_group "pref"
-                has vbox
-                label _("Developer/Writer Commentary")
-                textbutton _("Enabled") action SetField(persistent, "dev_commentary", True)
-                textbutton _("Disabled") action SetField(persistent, "dev_commentary", False)
-
 
         vbox:
             frame:

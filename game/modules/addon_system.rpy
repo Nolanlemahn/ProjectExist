@@ -87,9 +87,6 @@ label install(addon):
     if (addon=="rollback"):
         $ persistent.choice_rollback = True
         "Rollback beyond choices was enabled."
-    if (addon=="dev"):
-        $ persistent.dev_commentary = True
-        "Developer/Writer commentary was turned on."
     if (addon=="beta"):
         $ persistent.imabetatester = True
         "Beta access was enabled."
@@ -106,9 +103,6 @@ label uninstall(addon):
     if (addon=="rollback"):
         $ persistent.choice_rollback = False
         "Rollback beyond choices was disabled."
-    if (addon=="dev"):
-        $ persistent.dev_commentary = False
-        "Developer/Writer commentary was turned off."
     if (addon=="beta"):
         $ persistent.imabetatester = False
         "Beta access was disabled."

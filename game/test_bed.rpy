@@ -136,7 +136,6 @@ label requested_start_cb:
     $ nmc = Character(None, what_style="main_gray")#thinkmain
     $ nnvlmc = Character(None, color="#C0C0C0", kind=nvl_gray_narr)#nvl-thinkmain
     
-    $ dev_screen = "pass"
     #show screen fake_say
     #[scene1
     $ clock = False

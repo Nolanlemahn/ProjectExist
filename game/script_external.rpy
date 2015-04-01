@@ -80,24 +80,3 @@ init -1 python:
         else:
             return None
         return q_answers[result - 1]
-
-label dev_com(com_dex):
-    if(persistent.dev_commentary):
-        if(com_dex == 1):
-             dev "Developer commentary will look like this. When a reference is deemed necessary, it will appear as a separate button."
-        elif(com_dex == "irc"):
-             dev "While this IRC server doesn't exist, if it did, Kazuki would be the highest ranked user in this channel. The percent 
-                  symbol indicates that he is a half-operator, and can kick/ban any user operator and below."
-             dev "Jonathan has voice, the plus. This means that if the channel becomes moderated, he will still be able to talk."
-             dev "Wil... Wil has no privileges whatsoever."
-        elif(com_dex == "noether"):
-             dev "Emmy Noether is best known for her first theorem, which basically states that if an environment has a continuous symmetry, 
-                  then there is a corresponding conserved quantity."
-             dev "Please see the {a=http://en.wikipedia.org/wiki/Noether%27s_theorem#Informal_statement_of_the_theorem}WikiPedia page{/a} for 
-                  more detail. And in the event you didn't get the Lehrer references, please look up Lehrer the Elements, or something 
-                  along those lines. You'll thank me afterwards."
-        elif(com_dex == "tamaraplus"):
-            dev "When I originally wrote this bit, clicking on the tooltip would unlock extra dialogue (and mini-route) in which Kazuki explains 
-                 each idiom. This would cause Kazuki to laugh, which would piss Tamara off. Due to tech constraints with the rest of the tooltip 
-                 stuff, the idea was scrapped."
-    return

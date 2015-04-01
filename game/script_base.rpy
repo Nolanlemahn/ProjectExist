@@ -123,7 +123,6 @@ label requested_start_k:
     $ nmc = Character(None, what_style="main_gray")#thinkmain
     $ nnvlmc = Character(None, color="#C0C0C0", kind=nvl_gray_narr)#nvl-thinkmain
     
-    $ dev_screen = "pass"
     #show screen fake_say
     #[scene1
     $ clock = False
@@ -148,7 +147,6 @@ label start:#this_label_done
     #$ save_name = begin_game()
     #$ renpy.block_rollback()
     #narr "This is a friendly reminder to go to the Options menu, and choose whether or not you would like Rollback to be enabled, and whether or not you want Developer/Writer commentary. By default, Rollback is disabled, and commentary is disabled."
-    call dev_com(1)
     if (persistent.standalone_dlc_avail):
         "There is standalone DLC installed and unlocked. Would you like to launch one of those instead of the main game?"
         menu:

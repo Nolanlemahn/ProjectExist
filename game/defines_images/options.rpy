@@ -180,9 +180,6 @@ init -1 python hide:
         
     if persistent.dlc1_installed is None:
         persistent.dlc1_installed = False
-        
-    if persistent.dev_commentary is None:
-        persistent.dev_commentary = False
 
     if persistent.seen_natalie is None:
         persistent.seen_natalie = False
@@ -231,7 +228,6 @@ init -1:
     $ ingame = False
     $ battle_mode = False
     $ has_phone = False
-    $ dev_screen = "None"
     #]
     
     $ main_status = "None"

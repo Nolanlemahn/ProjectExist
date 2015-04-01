@@ -82,7 +82,6 @@ label Rin_1a:#this_label_done
 
     
 label Rin_1b:
-    show screen button
     #ui.button("surprise")
     #Help("www.google.com")
     scene bg fakefog
@@ -91,7 +90,6 @@ label Rin_1b:
     
     #[scene1
     $ mlib("room3")
-    $ dev_screen = "pass"
     nvlnmc "Katherine. Because it was my mother's mother's name."
     nvlnmc "Rin. Because I didn't want to be German."
     nvlnmc "Faust. Because it was the name on the back of the photo left with me."

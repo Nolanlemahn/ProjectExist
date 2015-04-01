@@ -113,7 +113,6 @@ label Kazuki_1d_tamara_a:
     extend "I consciously lean back a little, to give Tamara some breathing room. Playing on a few idioms, Tamara is 'getting too big 
          for her doorway', 'a massive woman in a small lake', 'carrying weight with the school President', but not doing a good job of 'pulling her 
          own weight'."
-    call dev_com("tamaraplus")
     mc "I'm sorry, but what do you mean by \"again\"?"
     t "This is the second time you have been late to class this week. What gives?"
     $ cd_set(15, 15, 'Kazuki_1d_tamara_b1')
