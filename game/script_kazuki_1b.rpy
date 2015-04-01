@@ -186,7 +186,7 @@ label Kazuki_1d_tamara_b:
     nmc "The blaring fire alarm snaps me out of my thought process as the sound waves crash against my ears... why aren't flashing lights
          enough?"
     nmc "... I suppose I should be more sympathetic towards the blind."
-    stop music
+    stop music fadeout 1.0
     nmc "I block out the alarm's sound in my mind. In all honesty, I find Tamara to be more annoying than any alarm I have come 
          across, but the alarms are generally more startling."
     nmc "... This seems to be an unwritten rule of public education systems. There is always at least one of those students. A student that craves
@@ -206,7 +206,7 @@ label Kazuki_1d_tamara_b:
     mc "Although I'm not really sure why Tamara told us that it's a scheduled drill. The TA's aren't supposed to tell us that...\n"
     extend "I suppose Tamara has always been a bitch for enforcing rules, but not following them."
     w "Wait, is that true?"
-    mc "Well, it's true that I consider Tamara to be a bitch, but I don't it would be fair to present that as a fact..."
+    mc "Well, it's true that I consider Tamara to be a bitch, but I don't think it would be fair to present that as a fact..."
     w "No, I mean is it true that the TA's know whether or not it's a drill, and that they aren't supposed to tell us?"
     mc "Yes."
     w "How the hell do you know?"
@@ -239,7 +239,7 @@ label Kazuki_1d_tamara_b:
     mc "You know... There is nearly no point to these drills."
     w "What makes you say that?"
     mc "In a real emergency, let's say a fire, all of the faculty would know that the alarm is not for a drill. At least one of the faculty 
-        members are going to panic. One panicked faculty member.is going to startle other students, whom are going to startle other students..."
+        members are going to panic. One panicked faculty member is going to startle other students, whom are going to startle other students..."
     w "What's your point?"
     $ minutes = minutes + 3
     mc "We are practicing for an un-panicked emergency when such a thing really cannot exist."
@@ -258,8 +258,8 @@ label Kazuki_1d_tamara_b:
     mc "Firstly, I'm fairly certain that nearly anything would make Lilian panicked. Secondly... when did you start referring to Lilian Crawford
         as 'Lily'?"
     w "I, uhh, refuse to respond to either statement. And plead the fifth. And ask for duct tape. Wait. Actually, everyone calls Lilian 'Lily'."
-    mc "No, everyone calls Lilian \"Lilian\"."
-    w "Well, I call Lilian \"Lily\"."
+    mc "No, everyone calls Lilian \"Lilian.\""
+    w "Well, I call Lilian \"Lily.\""
     mc "Don't tell me you've managed to fall in love with the girl. We're less than a month into the year."
     w "I can't help it. She's just my type of person."
     mc "... I was joking. Hah... At least you're honest."
@@ -285,11 +285,12 @@ label Kazuki_1d_tamara_b:
     nmc "The elevator however, can and should be used by firefighters to get to the various floors, both to put out fires and to rescue 
          civilians."
     nmc "... Regardless, Tamara has probably earned herself a lecture, and we won't be seeing her anytime soon."
-    b "All right, evearyone is accounted for. Dismissed."
+    b "All right, everyone is accounted for. Dismissed."
     $ minutes = minutes + 2
     nmc "Well, there's about half an hour until Math 122."
     nmc "I'm Japanese. By birth, I think I've earned the right to skip all mathematics courses until the end of time."
-    nmc "Double integrals, rotations and optimizations; such topics come to me naturally."
+    nmc "Double integrals, rotations and optimizations; such topics come to me 
+         naturally. Or so I pretend."
     $ cd_set(30, 30, 'Kazuki_1e')
     show screen countdown
     menu:
@@ -311,7 +312,7 @@ label Kazuki_1e:
         mc "... I can't make up my mind."
     li "Eh?"
     mc "Huh?"
-    li "Umm, I think you were talking out loud. You seem a litle lost."
+    li "Umm, I think you were talking out loud. You seem a little lost."
     mc "Sorry, I didn't realize. A little lost, huh? I suppose unsure would be the better word."
     li "What is there to be unsure about?"
     if("self_skip" in answers):
@@ -374,7 +375,10 @@ label Kazuki_1g:
     if("wil_lily_group" not in answers and "self_40" not in answers):
         $ answer_add("undecided_g40")
         nmc "I suppose I can decide what that means later."
-    nmc "With the knowledge that there is good help available, I shove the flier in my laptop bag and head to math."
+    $ temp = "."
+    if("self_skip" in answers):
+        $ temp = "... Mostly because I wouldn't have anything to do with the extra time."
+    nmc "With the knowledge that there is good help available, I shove the flier in my laptop bag and head to math[temp]"
     $ sio_s("bg classroom3")
     $ minutes = minutes + 15
     mt "... Now, observe the following problem:"
@@ -402,8 +406,12 @@ label Kazuki_1h:
     nvlmc "Oddly enough, the fact that I can't leave tells me that I am either in Heaven, Hell, or inside of my own head."
     nvls "How perceptive. I suppose that you know which of those three would be the most likely."
     nnvlmc "Clearly, I haven't died yet... actually, for the sake of argument, I should include that theory."
-    $ answer_add(nvlans(0, nvlq(None, "In front of me is an angel, this is Heaven.", "I wasn't good enough for Heaven; this is Hell.", 
-        "Too good to be Hell and too bad to be Heaven; this is my head.", "There is no one else here; this is my head.")))
+    $ answer_add(
+        nvlans(0, 
+            nvlq(None, "In front of me is an angel. This is Heaven.", 
+                "I wasn't good enough for Heaven. This is Hell.", 
+                "Too good to be Hell and too bad to be Heaven. This is my head.", 
+                "There is no one else here. This is my head.")))
     nvlmc "I think I've figured it out. All right, new question..."
     nvls "I will allow you only one more question."
     nvlmc "What?"
@@ -428,7 +436,7 @@ label Kazuki_1h:
     mt "... And Kazuki, I know you're good at maths, but this is just an insult."
     mc "Wha-what?"
     nmc "At that moment, Wil knocks his pencil off of his desk, and out of the corner of his mouth..."
-    w "Goddamnit Kazuki, what the hell do you think you're doing, fallking asleep in Ms. Amniaki's class? You're in big trouble now."
+    w "Goddamnit Kazuki, what the hell do you think you're doing, falling asleep in Ms. Amniaki's class? You're in big trouble now."
     nmc "I pick myself up off of the hard surface and look around."
     nmc "The math classroom. Wil. A nondescript professor. And my classmates... they're all staring down at me, happy for some entertainment.
          They're whispering, probably insults, gossip, and laughter."

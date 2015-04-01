@@ -6,7 +6,7 @@ label Kazuki_1j_skip:#we skipped lunch
          long at all. This in itself is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
          shop would be an expensive pain in the ass in terms of both paperwork and physically changing the sign, so the name stuck."
     extend "\nHis words, not mine. There have been a few awkward moments though, when I have been mistaken as his son..."
-    nmc "In any case, I happen to work for him. Three hours a day, by the sweat and grime  my brow, wrench in hand... actually I just handle 
+    nmc "In any case, I happen to work for him. Three hours a day, by the sweat and grime of my brow, wrench in hand... actually I just handle 
          the taxes, the telephone, and the computers."
     mc "Hello, Robert and Son's Machines. Yes, we can service your BMW. Yes, I can schedule you for Monday. Certainly. Good day to you too."
     $ minutes = minutes + 15
@@ -32,7 +32,7 @@ label Kazuki_1j_skip:#we skipped lunch
     ro "I hate working on beemers. Tuesday?"
     mc "No cars at all. The whole week is basically empty, actually. I might not be needed for most of the week. Although I could still come in if 
         you'd like. Here, look at the schedule."
-    nmc "There are indeed schedules worse than an overbooked one. Because even if you are working overtime, you are still in fact working. 
+    nmc "There are indeed schedules worse than an overbooked one. Because even if you are working overtime, you are still in fact working, and therefore being paid. 
          When we have an underbooked schedule, we spend a lot of time twiddling our thumbs and since our salaries are comission-based, we 
          also don't get paid as much."
     ro "I didn't think it would be possible to have less business this week than last week. I'll have someone else do the phones on Tuesday. 
@@ -267,14 +267,14 @@ label Kazuki_1j_essay_yes:
     # if mc indicated that he isn't interested in the 40 we're making him say no
     if("self_40" not in answers):
         return #line180
-    $ cd_set(15, 15, 'Kazuki_1j_handle1')
+    $ cd_set(15, 15, 'return_stub')
     show screen countdown
     menu:
         extend ""
         "Yes":
-            $ answer_add("lily_essay_2_yes")#more
+            $ answer_add("lily_essay_2_yes")#jump Kazuki_1j_essay_more
         "No":
-            $ answer_add("lily_essay_2_no")#stop
+            $ answer_add("lily_essay_2_no")#jump Kazuki_1j_essay_stop
         "...":
             pass
     return #line180
@@ -286,7 +286,10 @@ label Kazuki_1j_essay_no:
     li "Oh. In that case, I might as well head home myself. Do you want a ride?"
     mc "Umm, I certainly wouldn't say no to a lift, but are you sure?"
     li "Actually, I insist."
-    nmc "As she pulls me by the hand, it occurs to me that I've never actually seen Lilian drive."
+    nmc "As she pulls me by the hand, it occurs to me that I've never actually 
+         seen Lilian drive."
+    mc "Hey, just out of curiosity, for about how long have you had your 
+        license?"
     $ jump_break()
     jump Kazuki_1k_early_lily
     
@@ -296,7 +299,8 @@ label Kazuki_1j_essay_more:
     mc "You heard me. \"Yes.\" "
     extend "As in, \"yes, I am desperate\"... "
     extend "or \"yes, you have been helpful, believe it or not\"... "
-    extend "or even \"look, I really want to get this garbage assignment out of the way\"."
+    extend "or even \"look, I really want to get this garbage assignment out of 
+            the way\"."
     li "I didn't hear a \"yes\" in that last one..."
     $ jump_break()
     return
@@ -315,7 +319,8 @@ label Kazuki_1j_essay_stop:
     mc "Grr..."
     li "Actually, that works out well. I haven't had lunch yet."
     "{i}Grumble...{/i}"
-    nmc "Now that my stomach reminds me, I haven't had anything to eat since this morning myself."
+    nmc "Now that my stomach reminds me, I haven't had anything to eat since 
+         this morning myself."
     li "..."
     nmc "By now, the school cafeteria has probably stopped serving lunch."
     li "..."
@@ -323,15 +328,18 @@ label Kazuki_1j_essay_stop:
     li "...!"
     nmc "I wonder what I could do for a-"
     li "{size=40}Hey! I'm talking to you!{/size}"
-    nmc "I'm already fairly late for work... missing a day of work would certainly be unusual for me, but it probably wouldn't hurt."
+    nmc "I'm already fairly late for work... missing a day of work would 
+         certainly be unusual for me, but it probably wouldn't hurt."
     mc "... Well, fuck me."
     li "Aha, I'd rather not. But what's up?"
     mc "I'm late for work!"
     li "E-Eh!? What do you mean?"
-    mc "We somehow got carried away working on the essay. So carried away, that I didn't realize how much time had passed!"
+    mc "We somehow got carried away working on the essay. So carried away, that 
+        I didn't realize how much time had passed!"
     li "What do you mean by \"we\"? Ooh, how could you be so careless?"
     mc "Oh, never mind. It doesn't really matter."
-    li "Doesn't really matter?! Listen to yourself! Uurgh. This is why you don't have any friends."
+    li "Doesn't really matter?! Listen to yourself! Uurgh. This is why you don't
+        have any friends."
     $ jump_break()
     jump Kazuki_1k_late_lily#get lunch with her
 

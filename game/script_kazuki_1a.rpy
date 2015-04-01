@@ -203,19 +203,19 @@ label Kazuki_1b:
             makes me more impatient."
     nnvlmc "I knew who I was, but who am I now? And what is to become of me?"
     nvl clear
-    nnvlmc "The marching changes to a single pair of footsteps, and as if this 
-            new presence brought light with it, a dim light fills my eyes, and
-            a shallow gust flows through my lungs."
+    nnvlmc "The marching... it has changed to a single pair of footsteps, and as
+            if this new presence brought light with it, a dim light fills my 
+            eyes, and a shallow gust flows through my lungs."
     scene bg fakefog
     show shadow norm with dissolve
     scene bg fog
     show shadow norm
     extend " And in front of me was a shadow, standing upright..."
     nvls "Stand."
-    nnvlmc "My body stood up, ignoring my brain's demands to ask questions."
+    nnvlmc "My body stands up, ignoring my brain's demands to ask questions."
     nvls "See."
-    nnvlmc "And then I realized then that I could in fact see. I was simply 
-            unable to process what I was seeing."
+    nnvlmc "And now I realize that I could in fact see. I was simply unable to 
+            process what I was seeing."
     nnvlmc "My body once more obeyed the shadowy voice. It belonged to an 
             equally-shadowy body. I looked into its eyes, and I saw a void. And 
             the void stared back."
@@ -246,7 +246,7 @@ label Kazuki_1b:
          covers. Peel the drenched tank-top off of my body. Check my pulse. 
          Count to ten. Multiply by six."
     $ sio_s("bg kazuki bathroom")
-    nmc "Walk to the bathroom. Take a deep breathe. Grab the counter. Look at my
+    nmc "Walk to the bathroom. Take a deep breath. Grab the counter. Look at my
          image. One more bruise... "
     nmc "My body sluggishly obeys my brain's commands, even though I am 
          certainly wide awake. For the second time this month, my body has 
@@ -280,18 +280,19 @@ label Kazuki_1b:
     $ minutes = minutes + 5
     nmc "I toss the shirt on the towel rack and open my closet."
     nmc "I own 14 of everything: white tank tops, black t-shirts (excluding the 
-         4 shredded ones), pairs of boxers, and pairs of athletic shorts; 
-         choosing my outfit on a bad day is deciding whether I want the black 
-         shirt in the left side or the black shirt on the right side."
+         4 shredded ones), pairs of boxers, and pairs of athletic shorts. 
+         Choosing my outfit - even on a bad day - is deciding whether I want the
+         black shirt on the left side of the closet, or the black shirt on the 
+         right side of the closet."
     nmc "I don't believe in fashion, and even if I did, fashion would be a 
          luxury I can't afford."
     nmc "I can afford to be efficient, though. I find it faster to haphazardly 
          hang up all of my clothing rather than fold anything."
-    nmc "I started keeping a nightmare log on my thirteenth birthday. One night,
-         I had a nightmare in which a vine coiled around me, crushed me, and 
-         called my name. I asked my father if phantoms give us nightmares, and 
-         he said \"not a freaking clue\". Though, he did tell me to keep a log
-         of my nightmares, and so I bought a journal and started writing my 
+    nmc "...I started keeping a nightmare log on my thirteenth birthday. One 
+         night, I had a nightmare in which a vine coiled around me, crushed me, 
+         and called my name. I asked my father if phantoms give us nightmares, 
+         and he said \"not a freaking clue.\" Though, he did tell me to keep a 
+         log of my nightmares, and so I bought a journal and started writing my 
          nightmares in it. Not that he ever read the journal."
     nmc "In fact, the next night, he quietly threw away everything my mother 
          left behind. She was supposed to be here, answering my questions,making
@@ -312,10 +313,10 @@ label Kazuki_1b:
     nmc "I go to my desk and open my nightmare log. I uncap the blue pen, and 
          scrawl out the word \"nothing\" on today's page; a carbon-copy of 
          yesterday's entry. {w}Technically, that isn't true; I remember 
-         darkness, a steady beat, and lots of pain. But that's about it. I've 
-         been trying to figure out why I don't remember my dreams; popular 
-         theories include that my dreams are boring and vague, and that my brain
-         is repressing negative memories."
+         darkness, a steady beat, and a fair amount of pain. But that's about 
+         it. I've been trying to figure out why I don't remember my dreams; 
+         popular theories include that my dreams are boring and vague, and that 
+         my brain is repressing negative memories."
     $ minutes = minutes + 5
     $ sio_s("bg kazuki bedroom")
     nmc "... Pfft. No boring dream would leave me sweaty and... bruised. The 
@@ -367,7 +368,7 @@ label Kazuki_1b_2:
          breath, the bruise reawakens from its nap."
     mc "Haah... hoo... ow... shit..."
     nmc "My classmates turn towards me..."
-    j "Shit-told you to never talk to you again, huh? Rough love life, you got 
+    j "Shit-told you to never talk to her again, huh? Rough love life, you got 
        there."
     nmc "I force a frown in order to go with Jonathan's save. Besides, his save,
          for the most part, was very true."
@@ -521,8 +522,8 @@ label Kazuki_1b_pre:
            Noether dammit. You have to get going."
         nmc "... It's 10:00AM... My next class is in 5 minutes..."
         mc "Crap! I'll see you later!"
-        nmc "Lawrence lets out a hearty laughter as I knock over yet another 
-             desk."
+        nmc "Lawrence lets out a burst of hearty laughter as I knock over yet 
+             another desk on my way out."
         l "I wonder if anyone has actually had the gall to name their child 
            'Crap'... That would make a great last name..."
         $ points[0] += 3
