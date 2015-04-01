@@ -8,6 +8,9 @@
     style.nvl_menu_choice_button.hover_background = "#00000000"
     style.nvl_menu_choice_button.left_margin = 0
     
+    style.mm_button.background = Frame("menus/FoxButtonBox.png", 25, 25)
+    style.mm_button.hover_background = Frame("menus/FoxButtonHover.png", 25, 25)
+    
     style.dev_button = Style(style.button)
     style.dev_button.background = "#FF0000"
     style.dev_button.hover_background = "#FF6600"
