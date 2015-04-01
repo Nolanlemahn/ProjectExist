@@ -26,5 +26,5 @@ screen scene_replay:
         xminimum 300
         has vbox
         
-        textbutton "The Shadow In Me" xminimum 300 action If(renpy.seen_label("Kazuki_1b"), Function(jump_in, "Kazuki_1b"))
+        textbutton "Welcome to San Francisco\nCommunity College" xminimum 300 action If(renpy.seen_label("Kazuki_1b"), Function(jump_in, "Kazuki_1b"))
         textbutton _("Return") action Return()

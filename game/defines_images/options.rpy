@@ -284,7 +284,7 @@ init -2 python:
     config.window_icon = "icon.png"
 
     ## These values tell Ren'Py how to build a distribution.
-    config.version = "v0.2.7_(1062)"
+    config.version = "v0.2.8_(1064)"
     config.log = config.gamedir + "/debuglog.txt"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
