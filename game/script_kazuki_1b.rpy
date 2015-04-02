@@ -255,9 +255,10 @@ label Kazuki_1d_tamara_b:
     $ persistent.seen_lilian = True
     nmc "Lilian is the redhead in our little seminar. Quite the oddball, really.
          She has a somewhat bubbly personality, but gets scared by just about 
-         anything. Calling her name out when she isn't expecting it would 
-         likely make her jump. On the flip side, she's more than willing to 
-         advocate for one of her pet project: a tutoring club of sorts."
+         anything that she isn't expecting. Calling her name out when she isn't 
+         expecting it would likely make her jump. On the flip side, she's more 
+         than willing to advocate for her favorite pet project: a tutoring club 
+         of sorts."
     mc "Firstly, I'm fairly certain that nearly anything would make Lilian panicked. Secondly... when did you start referring to Lilian Crawford
         as 'Lily'?"
     w "I, uhh, refuse to respond to either statement. And plead the fifth. And ask for duct tape. Wait. Actually, everyone calls Lilian 'Lily'."
