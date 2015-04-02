@@ -5,15 +5,17 @@ init:
     
 init python:
     def fix_newlines():
-        for file in os.listdir(config.gamedir):
-            if ((file.endswith(".txt")) or (file.endswith(".rpy"))):
-                file = os.path.abspath(config.gamedir + "/" + file)
-                data = open(file, "rb").read()
-                newdata = data.replace("\r\n", "\n")
-                if newdata != data:
-                    f = open(file, "wb")
-                    f.write(newdata)
-                    f.close()
+        for root, subdirs, files in os.walk(config.gamedir):
+            for file in files:
+                if ((file.endswith(".txt")) or (file.endswith(".rpy"))):
+                    #renpy.say(None, file)
+                    file = os.path.abspath(root + "/" + file)
+                    data = open(file, "rb").read()
+                    newdata = data.replace("\r\n", "\n")
+                    if newdata != data:
+                        f = open(file, "wb")
+                        f.write(newdata)
+                        f.close()
         return
     
     def destroy_persistent():
