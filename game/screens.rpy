@@ -458,10 +458,10 @@ screen main_menu:
         has vbox
 
         textbutton _("Start Game") xminimum 300 action Start()
-        textbutton _("Editor's Start") xminimum 300 action Start("requested_start_k")
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Preferences") action ShowMenu("preferences")
         textbutton _("Extras") action ShowMenu("more_menu")
+        textbutton "Run Newline Fixer" xminimum 300 action ui.callsinnewcontext("eol_change")
         textbutton _("Help") action Help()
         textbutton _("Quit") action Quit(confirm=True)
         textbutton "" action NullAction() style "empty_button"

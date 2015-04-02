@@ -4,6 +4,17 @@ init:
     $ old_clock = False
     
 init python:
+    def fix_newlines():
+        for file in os.listdir(config.gamedir):
+            if ((file.endswith(".txt")) or (file.endswith(".rpy"))):
+                data = open(filename, "rb").read()
+                newdata = data.replace("\r\n", "\n")
+                if newdata != data:
+                    f = open(filename, "wb")
+                    f.write(newdata)
+                    f.close()
+        return
+    
     def destroy_persistent():
         for attr in dir(persistent):
             if not callable(attr) and not attr.startswith("_"):
@@ -26,6 +37,10 @@ init python:
     def ChangeVar(cv_a, cv_b):
         setattr(store, cv_a, cv_b)#:D
         return
+
+label eol_change:
+    $ fix_newlines()
+    return
 
 label varmani:
     $ in_debug = True
