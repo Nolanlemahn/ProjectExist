@@ -253,8 +253,11 @@ label Kazuki_1d_tamara_b:
     w "Lilian."
     mc "Ah, yes. Lilian... Now I remember."
     $ persistent.seen_lilian = True
-    nmc "Lilian is the quiet redhead in our little seminar. She always sits in the back, and even if I merely called her by name, she would, at
-         best, shake once or twice, turn towards me, nod slowly, and return to whatever previously held her attention unless I said more."
+    nmc "Lilian is the redhead in our little seminar. Quite the oddball, really.
+         She has a somewhat bubbly personality, but gets scared by just about 
+         anything. Calling her name out when she isn't expecting it would 
+         likely make her jump. On the flip side, she's more than willing to 
+         advocate for one of her pet project: a tutoring club of sorts."
     mc "Firstly, I'm fairly certain that nearly anything would make Lilian panicked. Secondly... when did you start referring to Lilian Crawford
         as 'Lily'?"
     w "I, uhh, refuse to respond to either statement. And plead the fifth. And ask for duct tape. Wait. Actually, everyone calls Lilian 'Lily'."
@@ -335,6 +338,7 @@ label Kazuki_1e:
     li "Yeah, Language And Science Tutors. It used to be called LASH for Language And Science Help, but apparently that sounded a little 
         naughty... {w}That was my reaction too!"
     nmc "I was about to ask her what she meant by \"her reaction\", but then I feel my forehead resting in my right palm."
+    mc "I suppose that I've heard of it, but I've actually never been-"
     li "Oh, I've gotta go... here's a flier, we can help... Bye."
     nmc "With that, Lilian stuffs a piece of paper in my mouth and runs back into the building."
     extend "\n... That almost didn't make sense, but then I realized that I was holding my phone in my left hand and my right hand was in my 

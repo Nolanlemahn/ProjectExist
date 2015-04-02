@@ -28,7 +28,7 @@ label about_sp:
     return
     
 label about_char(some_char):
-    scene bg fog
+    scene bg fakefog
     $ in_debug = True
     if (some_char == "kazuki"):
         centered "%(kazukiGloss)s"
