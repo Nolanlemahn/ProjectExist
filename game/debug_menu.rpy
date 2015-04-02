@@ -7,10 +7,11 @@ init python:
     def fix_newlines():
         for file in os.listdir(config.gamedir):
             if ((file.endswith(".txt")) or (file.endswith(".rpy"))):
-                data = open(filename, "rb").read()
+                file = os.path.abspath(config.gamedir + "/" + file)
+                data = open(file, "rb").read()
                 newdata = data.replace("\r\n", "\n")
                 if newdata != data:
-                    f = open(filename, "wb")
+                    f = open(file, "wb")
                     f.write(newdata)
                     f.close()
         return
