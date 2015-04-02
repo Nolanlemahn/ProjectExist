@@ -73,6 +73,11 @@ label unlock_code:
         $ persistent.imabetatester = True
         $ persistent.imabetatester_seen = True
         "Any beta features have been unlocked."
+    elif(unlockdevice=="dev"):
+        $ config.locked = False
+        $ config.developer = True
+        $ config.locked = True
+        "Set config.developer to True."
     else:
         "\"[unlockdevice]\" does not appear to be a valid unlock/cheat code. Ensure spelling, punctuation, and capitalization are all correct."
     $ in_debug = False

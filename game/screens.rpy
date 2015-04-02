@@ -461,12 +461,13 @@ screen main_menu:
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Preferences") action ShowMenu("preferences")
         textbutton _("Extras") action ShowMenu("more_menu")
-        textbutton "Run Newline Fixer" xminimum 300 action ui.callsinnewcontext("eol_change")
+        if(config.developer):
+            textbutton "Run Newline Fixer" xminimum 300 action ui.callsinnewcontext("eol_change")
         textbutton _("Help") action Help()
         textbutton _("Quit") action Quit(confirm=True)
         textbutton "" action NullAction() style "empty_button"
         if config.developer:
-            textbutton _("Persistent Reset") action Function(destroy_persistent)
+            textbutton _("Persistent Reset") action ui.callsinnewcontext("destroy_persistent")
             textbutton "Seriously break things" action ui.callsinnewcontext("reset_button")
             textbutton "Test Combat" action Start("requested_start_cb")
             textbutton "" action NullAction() style "empty_button"

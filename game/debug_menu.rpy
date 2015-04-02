@@ -41,6 +41,16 @@ init python:
         setattr(store, cv_a, cv_b)#:D
         return
 
+label destroy_persistent:
+    menu:
+        "Are you {b}certain{/b} that you want to clear the persistent data?"
+        "Yes":
+            $ destroy_persistent()
+            "Persistent data has been reset. The game will now reload."
+            $ renpy.reload_script()
+        "No":
+            return
+
 label eol_change:
     $ fix_newlines()
     return
