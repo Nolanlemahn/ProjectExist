@@ -28,19 +28,23 @@ python early:
     # Returns: The requested characters and messages as a dict
     #####
     def doublespeak_parse(lexer):
+        # We expect the first two expressions to be the characters
         leftchar = lexer.simple_expression()
         rightchar = lexer.simple_expression()
-
+        
+        # Take 1 or 2 messages
         leftmsg = eval(lexer.simple_expression())
         if lexer.eol():
             rightmsg = leftmsg
         else:
             rightmsg = eval(lexer.simple_expression())
 
+        # If there are still expressions, break
         if not lexer.eol():
             renpy.error('unexpected leftover data')
-
-        return { 'chars': [leftchar, rightchar], 'messages': [leftmsg, rightmsg] }
+            
+        # Return the grabbed info
+        return { 'chars': [leftchar, rightchar], 'messages': [leftmsg, rightmsg] , 'two_window':[False]}
 
 
     #####
@@ -58,8 +62,9 @@ python early:
         longest = sorted(info['messages'], key=len, reverse=True)[0]
 
         renpy.shown_window()
-        renpy.show_screen('say', doublespeak=True, who=info['chars'], what=info['messages'])
+        renpy.show_screen('say', doublespeak=True, who=info['chars'], what=info['messages'], two_window = info['two_window'])
         
+        # Store what is said into readback manually, if it's installed
         if(hasattr(store, "readback_installed")):
             if(store.readback_installed):
                 store_say(info['chars'].items()[0][0], info['messages'][0])
@@ -98,7 +103,8 @@ python early:
                     # remove bold tags if style specifies non-bold labels
                 if (not style.say_label.bold):
                     name = name[3:-4]
-
+                # apply two_window
+                info['two_window'] = char.show_two_window
                 chars[name] = char
             except:
                 # If we're rolling back, name may already be how we want it to 
