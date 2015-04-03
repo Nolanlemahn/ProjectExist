@@ -238,7 +238,7 @@ screen say:
     ############################################
     # Defaults
     default side_image = None
-    default two_window = True
+    default two_window = False
     default doublespeak = False
     
     # Check for not doublespeak first
@@ -279,6 +279,7 @@ screen say:
             # The one window variant.        
             window:
                 xsize config.screen_width/2
+                xalign 0.0
                 id "window"
                 has vbox:
                     style "say_vbox"
@@ -287,7 +288,7 @@ screen say:
                 text what[0] id "what" slow_cps True
             window:
                 xsize config.screen_width/2
-                xpos config.screen_width/2
+                xalign 1.0
                 id "window"
                 has vbox:
                     style "say_vbox"
