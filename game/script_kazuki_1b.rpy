@@ -487,20 +487,22 @@ label Kazuki_1h:
     jump Kazuki_1i
     
 label Kazuki_1i:
+    #logic block 1
     if("lunch_essay_1" in answers):
         jump Kazuki_1j_essay
-    if("lunch_work_1" not in answers and
-        "lunch_bagel_1" not in answers):
+        
+    if("lunch_work_1" not in answers and "lunch_bagel_1" not in answers):
         $ answer_add("lunch_work_1")
         nmc "... I can't actually make up my mind, so I guess I'll eat later and save myself the trouble."
         nmc "Either way, I can afford to skip a meal."
+        
     elif("lunch_work_1" in answers):
         nmc "I don't have time to eat. I have money to make and a boss to impress."
-        
+    
+    #logic block 2
     if("lunch_work_1" in answers):
         nmc "There is no rule to having exactly three mealtimes or even three meals, just that one must actually eat at some point."
         nmc "In other words, I'll work before I eat."
-        #BRANCH
     else:
         nmc "I need to get to work, but before I do, I need to get another bagel because this morning's bagel turned out like crap."
         nmc "This morning's bagel was basically a circular bit of toasted bread. A real bagel needs marinara sauce, a mozzarella and 

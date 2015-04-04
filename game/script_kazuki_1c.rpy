@@ -128,7 +128,9 @@ label Kazuki_1j_essay:
     nmc "\"Additionally, due to the nature of your teaching style, all I need to do is briefly scan the 40' x 30' 
          whiteboard to gain a full understanding of the day's lesson. For instance, on the day that you gave me this assignment, you 
          were in the middle of a simple two-dimensional rotation problem...\""
-    nmc "..."
+    nmc "... I can absolutely get the rest of this essay done in 10 minutes. 
+         Right? As long as I get to work by 2:30 or so, everything will be 
+         fine..."
     $ minutes = minutes + 2
     $ sio_l("bg library1")
     nmc "And you were showing us how to transform matrices in a manner that... oh."
@@ -203,7 +205,7 @@ label Kazuki_1j_essay_yes:
     mc "Tiny would be the better word, I would think."
     li "That's not very nice."
     mc "Had you been in grade school or something along those lines, then I'd be
-        pissed."
+        pissed. But a midget my age? Yeah, that's fine."
     li "Um... in that case, I'm leaving."
     mc "Hey now, that was just payback for your earlier jab. Really, I'm 
         grateful for the help."
@@ -214,12 +216,11 @@ label Kazuki_1j_essay_yes:
     mc "Well... I'm not wrong."
     $ minutes = minutes + 5
     li "You said this was for Amnaki?"
-    mc "Yeah. That one."
+    mc "Yeah. That's the one."
     li "Okay. Fine. You're not wrong."
     mc "Have I ever been wrong?"
-    li "Statistically speaking you probably were at one point, but even if 
-        you're right, that isn't something you 
-        can write here."
+    li "Statistically speaking, you probably were at one point. But even if 
+        you're right, that isn't something you can write here."
     mc "So, what do I write?"
     doublespeak li mc "Complete and utter..." "Bullshit?"
     li "Well, I was going to say nonsense, but that works too!"
@@ -249,7 +250,7 @@ label Kazuki_1j_essay_yes:
         some of it is childish. I mean, 
         \"You'll be the center of my attention from now on\"... Come on."
     li "I didn't write that."
-    mc "You did. I am not a creepy person."
+    mc "You did. I am not that creepy of a person."
     li "But you're scary!"
     nmc "Lilian is actually tearing up. Is my face that fearsome...?"
     li "Actually, you're kinda cute! Like a super thin teddy bear!"
@@ -290,18 +291,27 @@ label Kazuki_1j_essay_no:
          seen Lilian drive."
     mc "Hey, just out of curiosity, for about how long have you had your 
         license?"
+    li "Not telling!"
+    mc "Please, please tell me that you aren't about to do something illegal."
+    li "Okay. I won't tell."
+    nmc "Against my better judgement, I follow her out to the parking lot..."
     $ jump_break()
     jump Kazuki_1k_early_lily
     
 label Kazuki_1j_essay_more:
     mc "Yes."
-    li "Eh!?"
+    li "Whaa!?"
     mc "You heard me. \"Yes.\" "
     extend "As in, \"yes, I am desperate\"... "
     extend "or \"yes, you have been helpful, believe it or not\"... "
     extend "or even \"look, I really want to get this garbage assignment out of 
             the way\"."
-    li "I didn't hear a \"yes\" in that last one..."
+    li "I didn't hear a \"yes\" in that last one."
+    mc "Look, you've been very helpful so far. Please, help me finish this 
+        freaking thing!"
+    li "Haha, okay. So, the sentences don't really transition into each other, 
+        but they do outline what needs to be said. And we're still a few pages 
+        short of the 10 we need..."
     $ jump_break()
     return
 
@@ -340,6 +350,9 @@ label Kazuki_1j_essay_stop:
     mc "Oh, never mind. It doesn't really matter."
     li "Doesn't really matter?! Listen to yourself! Uurgh. This is why you don't
         have any friends."
+    mc "That... hurt. A lot."
+    nmc "Lilian probably has a point here. My lack of care does seem to turn 
+         people away."
     $ jump_break()
     jump Kazuki_1k_late_lily#get lunch with her
 
@@ -359,7 +372,8 @@ label Kazuki_1k_early_lily:
     mc "..."
     li "Wakey wakey, lemon cakey. You said Robert and Son's, yeah? This is the place..."
     mc "I was ready to die..."
-    li ""
+    li "Is my driving really that bad?"
+    mc "It's generally considered \"bad\" when you aren't in the correct lane."
     $ jump_break()
     return
     
