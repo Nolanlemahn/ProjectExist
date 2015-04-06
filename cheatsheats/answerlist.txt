@@ -46,3 +46,7 @@ lily_essay_1_no
 lily_essay_2_yes
 lily_essay_2_no
 lily_essay_2_what
+
+work_excuse_amnaki
+work_excuse_lilian
+work_excuse_none

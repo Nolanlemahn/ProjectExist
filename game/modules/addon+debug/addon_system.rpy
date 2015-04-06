@@ -74,10 +74,9 @@ label unlock_code:
         $ persistent.imabetatester_seen = True
         "Any beta features have been unlocked."
     elif(unlockdevice=="dev"):
-        $ config.locked = False
-        $ config.developer = True
-        $ config.locked = True
-        "Set config.developer to True."
+        $ persistent.amDev = True
+        "Set config.developer to True. Reloading."
+        $ renpy.reload_script()
     else:
         "\"[unlockdevice]\" does not appear to be a valid unlock/cheat code. Ensure spelling, punctuation, and capitalization are all correct."
     $ in_debug = False

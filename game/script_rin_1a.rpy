@@ -94,57 +94,94 @@ label Rin_1b:
     nvlnmc "Rin. Because I didn't want to be German."
     nvlnmc "Faust. Because it was the name on the back of the photo left with me."
     nvlnmc "Katherine \"Rin\" Faust. Abandoned. Unwanted. Left behind. Me."
-    nvlnmc "Some say my parents abandoned me because I was the unplanned result of a honeymoon. Some say they wanted a boy. Some say I was assumed to be defunct, since I made no sounds."
-    nvlnmc "It doesn't matter. Speculation doesn't matter. Only the truth matters."
-    nvlnmc "And the truth is that this world is filled with both light and darkness. I was born into darkness."
+    nvlnmc "Some say my parents abandoned me because I was the unplanned result 
+            of a honeymoon. Some say they wanted a boy. Some say I was assumed 
+            to be defunct, since I made no sounds."
+    nvlnmc "It doesn't matter. Speculation doesn't matter. Only the truth 
+            matters."
+    nvlnmc "And the truth is that this world is filled with both light and 
+            darkness. I was born into darkness."
     nvl clear
     
     nvlrm "Katherine!"
     nvlmc "It's \"Rin\", Mother."
     nvlrm "... Rin, what are you doing?"
-    nvlmc "That should be obvious. Burning my past. This photo, this blanket. They are both useless, now."
+    nvlmc "That should be obvious. Burning my past. This photo, this blanket. 
+           They are both useless, now."
     nvlrm "They aren't useless! Those are... were mementos of your parents."
-    nvlmc "My parents left me here. They don't want to remember me; I should not remember them."
+    nvlmc "My parents left me here. They don't want to remember me; I should not
+           remember them."
     nvlrm "But... they... Rin, you're burning your arm!"
-    nvlnmc "I am reliving a day from when I was 8. The date doesn't matter. This is a dream.{w}\nI walk over to the sink, and run my right arm under the cold water."
-    nvlrm "We need to get you to the ER! Rin, I can't afford another trip to the hospital!"
+    nvlnmc "I am reliving a day from when I was 8. The date doesn't matter. This
+            is a dream.{w}\nI walk over to the sink, and run my right arm under 
+            the cold water."
+    nvlrm "We need to get you to the ER! Rin, I can't afford another trip to the
+           hospital!"
     nvlmc "... My arm is fine, Mother. My arm doesn't matter."
-    nvlnmc "Mother backs away from me. Pain is a concept for her. It isn't for me; it never was.{w}\nI place the ashes of the photo and blanket in a plastic earring pouch. The pouch sits in my back pocket to this day."
+    nvlnmc "Mother backs away from me. Pain is a concept for her. It isn't for 
+            me; it never was.{w}\nI place the ashes of the photo and blanket in 
+            a plastic earring pouch. The pouch sits in my back pocket to this 
+            day."
     nvlrm "... Rin..."
     nvlnmc "I ignore her, and go to my desk to resume studying."
-    extend "\nOr at least, I do in my dream. Out here, I sigh, and sit down, and broadcast my demand."
-    nvlmc "Well. I've been having that dream for the past 16 years. Show me something different."
+    extend "\nOr at least, I do in my dream. Out here, I sigh, and sit down, 
+            and broadcast my demand."
+    nvlmc "Well. I've been having that dream for the past 16 years. Show me 
+           something different."
     nvlnmc "And then I let myself fall into my dream..."
     nvl clear
     
     $ mlib("march")
     nvls "Stand."
-    nvlnmc "I stand up, staring my shadow straight in the blue void that represents its eye. I know that it is my shadow. I know that it is a reflection of humanity, and wishes me to give into my carnal instincts. But I also know that it is dangerous, as neither of us yet understand the other."
+    nvlnmc "I stand up, staring my shadow straight in the blue void that 
+            represents its eye. I know that it is my shadow. I know that it is a
+            reflection of humanity, and wishes me to give into my carnal
+            instincts. But I already have."
+    nvlnmc "I also know that it is dangerous, as neither of us yet understand 
+            the other."
     nvls "Feel pain. Remember me."
-    nvlnmc "My shadow begins to shake rapidly, giving the appearance of transparency. But it can't hide from me.{w}\nI extend my right arm, catching my shadow's own right arm before his hand connects with my stomach."
-    nvlnmc "Its blue voids widen in surprise acknowledging that I am both hostile and interested."
+    nvlnmc "My shadow begins to shake rapidly, giving the appearance of 
+            transparency. But it can't hide from me.{w}\nI extend my right arm, 
+            catching my shadow's own right arm. His hand fails to connect with
+            my stomach."
+    nvlnmc "Its blue voids widen in surprise acknowledging that I am both
+            hostile and interested."
     nvlmc "I am above you, shadow."
     nvls "..."
-    nvlnmc "My shadow flings me several hundred miles away. I feel my skin ripple as I hurtle through space."
-    extend "\nI see a wall coming up ahead. I smash my hands and feet into it, taking a catlike stance on the wall."
-    nvlnmc "I examine my body. Other than slight burn marks on my hands, I am completely unharmed."
+    nvlnmc "My shadow flings me several hundred miles away. I feel my skin 
+            ripple as I hurtle through space."
+    extend "\nI see a wall coming up ahead. I smash my hands and feet into it, 
+            taking a catlike stance on the wall."
+    nvlnmc "I examine my body. Other than slight burn marks on my hands, I am 
+            completely unharmed."
     nvlmc "That is not how pain works."
     nvlnmc "I channel energy through both of my hands."
     nvl clear
     
     $ persistent.seen_move[3] = 1
-    nmc "... Warlock's Fists. I pull energy from the world around me, and launch myself towards my shadow, pummeling it all the while."
+    nmc "... Warlock's Fists. I pull energy from the world around me, and launch
+         myself towards my shadow, pummeling it all the while."
     $ persistent.seen_move[4] = 1
-    nmc "... Hell's Breeze. My shadow leaps backwards, leaving a multitude of meteors behind. But I plow directly through them, as if they did not exist."
-    nmc "My shadow raises its hands in surrender. That is because I am holding my shadow by its neck, and standing over the void."
-    mc "... Pain is the body's acknowledgement of fear. Fear is the understanding that you are no longer are in control of your own destiny. You fear me, and now you feel pain."
+    nmc "... Hell's Breeze. My shadow leaps backwards, leaving a multitude of 
+         meteors behind. But I plow directly through them, as if they did not 
+         exist."
+    nmc "My shadow raises its hands in surrender. That is because I am holding 
+         my shadow by its neck, and standing over the gaping hole that is my 
+         heart."
+    mc "... Pain is the body's acknowledgement of fear. Fear is the 
+        understanding that you are no longer are in control of your own destiny.
+        You fear me, and now you feel pain."
     s "... What are you?"
-    nmc "My shadow has its own answer. It doesn't want to know the actual answer. It simply wants to know what I consider myself to be."
-    mc "Just a girl who perfectly understands darkness, and therefore perfectly understands this world."
+    nmc "My shadow has its own answer. It doesn't want to know the actual 
+         answer. It simply wants to know what I consider myself to be."
+    mc "Just a girl who perfectly understands darkness, and therefore perfectly
+        understands this world."
     s "... No. You are darkness. Compared to you, I am light."
-    nmc "My shadow lets out a light chuckle, which builds into hearty laughter, which finally becomes a hyena's call."
+    nmc "My shadow lets out a light chuckle, which builds into hearty laughter,
+         which finally becomes a hyena's call."
     mc "... Annoying."
-    nmc "I encase my shadow in diamonds before returning to the world of the living... "
+    nmc "I encase my shadow in diamonds before returning to the world of the
+         living... "
     #should this be a menu?
     
     #define wrack at some point

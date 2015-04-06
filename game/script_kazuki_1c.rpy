@@ -281,8 +281,10 @@ label Kazuki_1j_essay_yes:
     return #line180
     
 label Kazuki_1j_essay_no:
-    mc "No thank you. Honestly, I should probably get to work."
-    nmc "I save the file and close the window."
+    mc "No thank you. Honestly, I should probably get to work. I'm already late
+        as it is."
+    nmc "I save the file and close the window. Not that there was a lot of 
+         progress to save. I suppose 3 pages in 30 minutes isn't horrible."
     mc "I'm actually already running a little late."
     li "Oh. In that case, I might as well head home myself. Do you want a ride?"
     mc "Umm, I certainly wouldn't say no to a lift, but are you sure?"
@@ -295,15 +297,34 @@ label Kazuki_1j_essay_no:
     mc "Please, please tell me that you aren't about to do something illegal."
     li "Okay. I won't tell."
     nmc "Against my better judgement, I follow her out to the parking lot..."
-    $ jump_break()
-    jump Kazuki_1k_early_lily
+    $ triple_min(5)
+    li "All right, we're here!"
+    mc "..."
+    li "Wakey wakey, lemon cakey. You said Robert and Son's, yeah? This is the 
+        place..."
+    mc "I was ready to die..."
+    nmc "I'm not exactly devout, but I was actually praying during Lilian's 
+         little excursion."
+    li "Is my driving really that bad?"
+    mc "It's generally considered \"bad\" when you aren't in the correct lane."
+    li "I was passing."
+    mc "You were a solid 20 miles per hour over the speed limit."
+    li "Better than being late, right?"
+    mc "Considering that we didn't get a ticket, I suppose that I should be 
+        thankful."
+    li "Darn right! Well, I'll catch you later."
+    nmc "With that, she heads back to the car. The thought of her being on the 
+         road is enough to make me reconsider getting my own license. Not that 
+         I could afford a car."
+    nmc "... In any case, time to face the music of Robert's wrath..."
+    jump Kazuki_1k_work_alt # 2:42 PM
     
 label Kazuki_1j_essay_more:
     mc "Yes."
     li "Whaa!?"
-    mc "You heard me. \"Yes.\" "
-    extend "As in, \"yes, I am desperate\"... "
-    extend "or \"yes, you have been helpful, believe it or not\"... "
+    mc "You heard me. \"Yes.\"\n"
+    extend "As in, \"yes, I am desperate\"...\n"
+    extend "or \"yes, you have been helpful, believe it or not\"...\n"
     extend "or even \"look, I really want to get this garbage assignment out of 
             the way\"."
     li "I didn't hear a \"yes\" in that last one."
@@ -353,27 +374,20 @@ label Kazuki_1j_essay_stop:
     mc "That... hurt. A lot."
     nmc "Lilian probably has a point here. My lack of care does seem to turn 
          people away."
+    li "Anyway, thanks for keeping me company today."
+    mc "Uhh, I didn't actually do you any favors."
+    li "Still. This was nice."
+    mc "Well, I'm glad that you thought so."
     $ jump_break()
     jump Kazuki_1k_late_lily#get lunch with her
 
 label Kazuki_1j_essay_what:
     nmc "I lazily stare back at the small girl in front of me. There is really no need for me to answer."
     li "Ah, I suppose I'll take that as a \"no\" then."
-    nmc "Turning my head towards the eggshell white ceiling, I slightly slump into my chair to show my lack of care."
+    nmc "Turning my head towards the eggshell-white ceiling, I slightly slump into my chair to show my lack of care."
     li "Alright! Well, best of luck!"
     nmc "Perfectly understanding my desires, Lilian happily skips away from my table."
     nmc "... I should probably head to work now..."
-    $ jump_break()
-    return
-
-label Kazuki_1k_early_lily:
-    $ triple_min(5)
-    li "All right, we're here!"
-    mc "..."
-    li "Wakey wakey, lemon cakey. You said Robert and Son's, yeah? This is the place..."
-    mc "I was ready to die..."
-    li "Is my driving really that bad?"
-    mc "It's generally considered \"bad\" when you aren't in the correct lane."
     $ jump_break()
     return
     
@@ -407,6 +421,7 @@ label Kazuki_1k_work:
     $ sio_l("bg workshop")
     $ minutes = 870#2:30
     ro "Blasted self-entitled good-for-nothing ignorant plebeian consumerist sheep people cunt dicks."
+    nmc "... The man is not known for his clean language."
     mc "Mr. Hale?"
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
          long at all. This in itself is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
@@ -449,6 +464,55 @@ label Kazuki_1k_work:
     nmc "The rest of the calls went something along those lines."
     jump Kazuki_1l_work
 
+label Kazuki_1k_work_alt:# 2:42 PM
+    $ sio_l("bg workshop")
+    nmc "Robert Hale has been the proud owner of Robert and Son's Machines for 
+         as long as anyone can remember, which is of course, not very long at 
+         all. This in itself is a bit awkward, since Robert lost custody of his 
+         son when he was divorced. But changing the name of his little shop
+         would be an expensive pain in the ass in terms of both paperwork and 
+         physically changing the sign, so the name stuck."
+    extend "\nHis words, not mine. There have been a few awkward moments though,
+            when I have been mistaken as his son..."
+    nmc "In any case, I happen to work for him. Three hours a day, by the sweat 
+         and grime of my brow, wrench in hand... actually I just handle the 
+         taxes, the telephone, and the computers."
+    mc "Apologies for the tardiness, Mr. Hale."
+    ro "Infernal self-entitled crap-infested ignorant plebeian capatalist 
+        scum-of-the-earth bitch."
+    nmc "... The man is not known for his clean language."
+    mc "Umm. Mr. Hale?"
+    ro "That bitch Rachel called again."
+    mc "I see. That would certainly explain the swearing."
+    nmc "Rachel made the mistake of trying to get her cell phone repaired here. 
+         Not that we couldn't have repaired it, but she insisted that we repair 
+         the phone for free and deliver the repaired phone on the same day the 
+         phone was brought in."
+    nmc "A ridiculous customer by all accounts. So basically, everyone in the 
+         office hates this customer more than any other."
+    mc "I'm sorry that I wasn't here to take the call."
+    nmc "Robert, for all of his years, is worse with people than I am, and has 
+         an incredibly hard time just hanging up on a customer. I normally 
+         curse out Rachel and put down the receiver, not giving her a chance 
+         to make any demands."
+    ro "Yeah, about that. Tell me why you weren't here on time again?"
+    mc "Well..."
+    $ cd_set(15, 15, 'Kazuki_1k_work_mum')
+    show screen countdown
+    menu:
+        extend ""
+        "Amnaki":
+            $ answer_add("work_excuse_amnaki")
+        "Lilian":
+            $ answer_add("work_excuse_lilian")
+        "...":
+            jump Kazuki_1k_work_mum
+    
+label Kazuki_1k_work_mum:
+    $ answer_add("work_excuse_none")
+    nmc "I can't actually think of a reasonable excuse, so I say nothing."
+    return
+    
 label Kazuki_1l_work:
     call triple_min(15)
     $ sio_l("bg workshop")

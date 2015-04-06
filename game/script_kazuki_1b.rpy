@@ -50,7 +50,7 @@ label Kazuki_1d_wil:
             nmc "I pull my laptop out of its bag and read some comics, pretending that I am not here."
         "I need backup at tonight's meeting" if (answers[0] == "law_hesitation"):
             $ answer_add("wil_backup")
-            mc "I'm going to need help at tonight's meeting."
+            mc "I'm going to need help at tonight's meeting. Having another level head around - like yours - would be helpful."
             nmc "Some moral support is better than absolutely none. Besides, Wil took the accelerated Physics 101 course with me."
             w "You huh? What kind of meeting are we talking about here?"
             mc "One of those departmental bullshit ones where professors talk about nothing and somehow manage to get something done after one

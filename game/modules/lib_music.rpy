@@ -109,7 +109,7 @@ init python:
         mr.add(entry[1], always_unlocked=entry[3])
     
     #####
-    # Function name: mlib()
+    # Class name: mlib()
     # 
     # Descripiton: Plays music/sfx based on the shortcode.
     # 
@@ -119,27 +119,37 @@ init python:
     # Returns: None
     #####
     # Step 5. Be able to run the music files.
-    def mlib(selection):
-        #bgm
-        for entry in musicEntries:
-            if(selection == entry[0]):
-                renpy.music.play(entry[1], loop=True, fadein=1.0)
-                break
-        
-        for entry in sfxEntries1:
-            if(selection == entry[0]):
-                renpy.music.play(entry[1], loop=True)
-                break
+    class mlib():
+        def __init__(self, selection=""):
+            self.selection = selection
+        def __call__(self, selection):
+            #bgm
+            for entry in musicEntries:
+                if(selection == entry[0]):
+                    renpy.music.play(entry[1], loop=True, fadein=1.0)
+                    return
             
-        #sfxs
-        for entry in sfxEntries2:
-            if(selection == entry[0]):
-                renpy.sound.play(entry[1])
-                if(entry[2] != 0):
-                    renpy.pause(entry[2])
-                break
-        return
+            for entry in sfxEntries1:
+                if(selection == entry[0]):
+                    renpy.music.play(entry[1], loop=True)
+                    return
+                
+            #sfxs
+            for entry in sfxEntries2:
+                if(selection == entry[0]):
+                    renpy.sound.play(entry[1])
+                    if(entry[2] != 0):
+                        renpy.pause(entry[2])
+                    return
+            return #nothing happened, oh well
+        def silence(self, seconds=2.0):
+            renpy.music.set_volume(0.0, seconds, channel="music")
+        def unsilence(self):
+            renpy.music.set_volume(1.0, seconds, channel="music")
+        def kill(self):
+            renpy.music.stop()
 
+init python:
     #####
     # Function name: name_playing()
     # 
