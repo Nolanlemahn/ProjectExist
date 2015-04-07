@@ -73,6 +73,10 @@ label unlock_code:
         $ persistent.imabetatester = True
         $ persistent.imabetatester_seen = True
         "Any beta features have been unlocked."
+    elif(unlockdevice=="dev"):
+        $ persistent.amDev = True
+        "Set config.developer to True. Reloading."
+        $ renpy.reload_script()
     else:
         "\"[unlockdevice]\" does not appear to be a valid unlock/cheat code. Ensure spelling, punctuation, and capitalization are all correct."
     $ in_debug = False
@@ -87,9 +91,6 @@ label install(addon):
     if (addon=="rollback"):
         $ persistent.choice_rollback = True
         "Rollback beyond choices was enabled."
-    if (addon=="dev"):
-        $ persistent.dev_commentary = True
-        "Developer/Writer commentary was turned on."
     if (addon=="beta"):
         $ persistent.imabetatester = True
         "Beta access was enabled."
@@ -106,9 +107,6 @@ label uninstall(addon):
     if (addon=="rollback"):
         $ persistent.choice_rollback = False
         "Rollback beyond choices was disabled."
-    if (addon=="dev"):
-        $ persistent.dev_commentary = False
-        "Developer/Writer commentary was turned off."
     if (addon=="beta"):
         $ persistent.imabetatester = False
         "Beta access was disabled."

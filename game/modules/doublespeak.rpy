@@ -28,19 +28,23 @@ python early:
     # Returns: The requested characters and messages as a dict
     #####
     def doublespeak_parse(lexer):
+        # We expect the first two expressions to be the characters
         leftchar = lexer.simple_expression()
         rightchar = lexer.simple_expression()
-
+        
+        # Take 1 or 2 messages
         leftmsg = eval(lexer.simple_expression())
         if lexer.eol():
             rightmsg = leftmsg
         else:
             rightmsg = eval(lexer.simple_expression())
 
+        # If there are still expressions, break
         if not lexer.eol():
             renpy.error('unexpected leftover data')
-
-        return { 'chars': [leftchar, rightchar], 'messages': [leftmsg, rightmsg] }
+            
+        # Return the grabbed info
+        return { 'chars': [leftchar, rightchar], 'messages': [leftmsg, rightmsg] , 'two_window':[False]}
 
 
     #####
@@ -58,8 +62,9 @@ python early:
         longest = sorted(info['messages'], key=len, reverse=True)[0]
 
         renpy.shown_window()
-        renpy.show_screen('say', doublespeak=True, who=info['chars'], what=info['messages'])
+        renpy.show_screen('say', doublespeak=True, who=info['chars'], what=info['messages'], two_window = info['two_window'])
         
+        # Store what is said into readback manually, if it's installed
         if(hasattr(store, "readback_installed")):
             if(store.readback_installed):
                 store_say(info['chars'].items()[0][0], info['messages'][0])
@@ -85,36 +90,44 @@ python early:
         for name in info['chars']:
             try:
                 char = eval(name)
+                
+                # Build the prefix, bolding char.name by default
                 full_who_prefix = "{b}" + char.who_prefix
                 full_who_suffix = char.who_suffix + "{/b}"
                 if('color' in char.who_args):
                     full_who_prefix = full_who_prefix + "{color=" + char.who_args["color"] + "}"
                     full_who_suffix = "{/color}" + full_who_suffix
-                    # bold the character titles by default
+                    
+                # Apply prefix/suffix
                 if getattr(char, 'dynamic', False):
                     name = full_who_prefix + eval(char.name) + full_who_suffix
-                else: # but don't re-evaluate character names if it isn't dynamic
+                # but don't re-evaluate character names if it isn't dynamic
+                else:
                     name = full_who_prefix + char.name + full_who_suffix
-                    # remove bold tags if style specifies non-bold labels
+                    
+                # remove bold tags if style specifies non-bold labels
                 if (not style.say_label.bold):
                     name = name[3:-4]
-
+                    
+                # apply two_window
+                if hasattr(char, 'show_two_window'):
+                    renpy.say(None, "wait!")
+                    info['two_window'] = getattr(char, 'show_two_window')
                 chars[name] = char
             except:
                 # If we're rolling back, name may already be how we want it to 
-                # be formatted.
+                # be formatted and thus run an exception
                 chars[name] = name
         info['chars'] = chars
 
         # Adjust messages properly.
         messages = []
         for (name, char), message in zip(info['chars'].items(), info['messages']):
-            if(not isinstance(char, basestring)):
-                # if char isn't a string then it hasn't been transformed yet
+            try:
                 message = char.what_prefix + message + char.what_suffix
                 messages.append(message)
-            else:
-                # has been transformed
+            except:
+                # has been transformed or something
                 messages.append(message)
         info['messages'] = messages
 

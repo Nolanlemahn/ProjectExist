@@ -50,7 +50,7 @@ label Kazuki_1d_wil:
             nmc "I pull my laptop out of its bag and read some comics, pretending that I am not here."
         "I need backup at tonight's meeting" if (answers[0] == "law_hesitation"):
             $ answer_add("wil_backup")
-            mc "I'm going to need help at tonight's meeting."
+            mc "I'm going to need help at tonight's meeting. Having another level head around - like yours - would be helpful."
             nmc "Some moral support is better than absolutely none. Besides, Wil took the accelerated Physics 101 course with me."
             w "You huh? What kind of meeting are we talking about here?"
             mc "One of those departmental bullshit ones where professors talk about nothing and somehow manage to get something done after one
@@ -113,7 +113,6 @@ label Kazuki_1d_tamara_a:
     extend "I consciously lean back a little, to give Tamara some breathing room. Playing on a few idioms, Tamara is 'getting too big 
          for her doorway', 'a massive woman in a small lake', 'carrying weight with the school President', but not doing a good job of 'pulling her 
          own weight'."
-    call dev_com("tamaraplus")
     mc "I'm sorry, but what do you mean by \"again\"?"
     t "This is the second time you have been late to class this week. What gives?"
     $ cd_set(15, 15, 'Kazuki_1d_tamara_b1')
@@ -187,7 +186,7 @@ label Kazuki_1d_tamara_b:
     nmc "The blaring fire alarm snaps me out of my thought process as the sound waves crash against my ears... why aren't flashing lights
          enough?"
     nmc "... I suppose I should be more sympathetic towards the blind."
-    stop music
+    stop music fadeout 1.0
     nmc "I block out the alarm's sound in my mind. In all honesty, I find Tamara to be more annoying than any alarm I have come 
          across, but the alarms are generally more startling."
     nmc "... This seems to be an unwritten rule of public education systems. There is always at least one of those students. A student that craves
@@ -207,7 +206,7 @@ label Kazuki_1d_tamara_b:
     mc "Although I'm not really sure why Tamara told us that it's a scheduled drill. The TA's aren't supposed to tell us that...\n"
     extend "I suppose Tamara has always been a bitch for enforcing rules, but not following them."
     w "Wait, is that true?"
-    mc "Well, it's true that I consider Tamara to be a bitch, but I don't it would be fair to present that as a fact..."
+    mc "Well, it's true that I consider Tamara to be a bitch, but I don't think it would be fair to present that as a fact..."
     w "No, I mean is it true that the TA's know whether or not it's a drill, and that they aren't supposed to tell us?"
     mc "Yes."
     w "How the hell do you know?"
@@ -240,7 +239,7 @@ label Kazuki_1d_tamara_b:
     mc "You know... There is nearly no point to these drills."
     w "What makes you say that?"
     mc "In a real emergency, let's say a fire, all of the faculty would know that the alarm is not for a drill. At least one of the faculty 
-        members are going to panic. One panicked faculty member.is going to startle other students, whom are going to startle other students..."
+        members are going to panic. One panicked faculty member is going to startle other students, whom are going to startle other students..."
     w "What's your point?"
     $ minutes = minutes + 3
     mc "We are practicing for an un-panicked emergency when such a thing really cannot exist."
@@ -254,13 +253,17 @@ label Kazuki_1d_tamara_b:
     w "Lilian."
     mc "Ah, yes. Lilian... Now I remember."
     $ persistent.seen_lilian = True
-    nmc "Lilian is the quiet redhead in our little seminar. She always sits in the back, and even if I merely called her by name, she would, at
-         best, shake once or twice, turn towards me, nod slowly, and return to whatever previously held her attention unless I said more."
+    nmc "Lilian is the redhead in our little seminar. Quite the oddball, really.
+         She has a somewhat bubbly personality, but gets scared by just about 
+         anything that she isn't expecting. Calling her name out when she isn't 
+         expecting it would likely make her jump. On the flip side, she's more 
+         than willing to advocate for her favorite pet project: a tutoring club 
+         of sorts."
     mc "Firstly, I'm fairly certain that nearly anything would make Lilian panicked. Secondly... when did you start referring to Lilian Crawford
         as 'Lily'?"
     w "I, uhh, refuse to respond to either statement. And plead the fifth. And ask for duct tape. Wait. Actually, everyone calls Lilian 'Lily'."
-    mc "No, everyone calls Lilian \"Lilian\"."
-    w "Well, I call Lilian \"Lily\"."
+    mc "No, everyone calls Lilian \"Lilian.\""
+    w "Well, I call Lilian \"Lily.\""
     mc "Don't tell me you've managed to fall in love with the girl. We're less than a month into the year."
     w "I can't help it. She's just my type of person."
     mc "... I was joking. Hah... At least you're honest."
@@ -286,11 +289,12 @@ label Kazuki_1d_tamara_b:
     nmc "The elevator however, can and should be used by firefighters to get to the various floors, both to put out fires and to rescue 
          civilians."
     nmc "... Regardless, Tamara has probably earned herself a lecture, and we won't be seeing her anytime soon."
-    b "All right, evearyone is accounted for. Dismissed."
+    b "All right, everyone is accounted for. Dismissed."
     $ minutes = minutes + 2
     nmc "Well, there's about half an hour until Math 122."
     nmc "I'm Japanese. By birth, I think I've earned the right to skip all mathematics courses until the end of time."
-    nmc "Double integrals, rotations and optimizations; such topics come to me naturally."
+    nmc "Double integrals, rotations and optimizations; such topics come to me 
+         naturally. Or so I pretend."
     $ cd_set(30, 30, 'Kazuki_1e')
     show screen countdown
     menu:
@@ -312,7 +316,7 @@ label Kazuki_1e:
         mc "... I can't make up my mind."
     li "Eh?"
     mc "Huh?"
-    li "Umm, I think you were talking out loud. You seem a litle lost."
+    li "Umm, I think you were talking out loud. You seem a little lost."
     mc "Sorry, I didn't realize. A little lost, huh? I suppose unsure would be the better word."
     li "What is there to be unsure about?"
     if("self_skip" in answers):
@@ -335,6 +339,7 @@ label Kazuki_1e:
     li "Yeah, Language And Science Tutors. It used to be called LASH for Language And Science Help, but apparently that sounded a little 
         naughty... {w}That was my reaction too!"
     nmc "I was about to ask her what she meant by \"her reaction\", but then I feel my forehead resting in my right palm."
+    mc "I suppose that I've heard of it, but I've actually never been-"
     li "Oh, I've gotta go... here's a flier, we can help... Bye."
     nmc "With that, Lilian stuffs a piece of paper in my mouth and runs back into the building."
     extend "\n... That almost didn't make sense, but then I realized that I was holding my phone in my left hand and my right hand was in my 
@@ -375,7 +380,10 @@ label Kazuki_1g:
     if("wil_lily_group" not in answers and "self_40" not in answers):
         $ answer_add("undecided_g40")
         nmc "I suppose I can decide what that means later."
-    nmc "With the knowledge that there is good help available, I shove the flier in my laptop bag and head to math."
+    $ temp = "."
+    if("self_skip" in answers):
+        $ temp = "... Mostly because I wouldn't have anything to do with the extra time."
+    nmc "With the knowledge that there is good help available, I shove the flier in my laptop bag and head to math[temp]"
     $ sio_s("bg classroom3")
     $ minutes = minutes + 15
     mt "... Now, observe the following problem:"
@@ -403,8 +411,12 @@ label Kazuki_1h:
     nvlmc "Oddly enough, the fact that I can't leave tells me that I am either in Heaven, Hell, or inside of my own head."
     nvls "How perceptive. I suppose that you know which of those three would be the most likely."
     nnvlmc "Clearly, I haven't died yet... actually, for the sake of argument, I should include that theory."
-    $ answer_add(nvlans(0, nvlq(None, "In front of me is an angel, this is Heaven.", "I wasn't good enough for Heaven; this is Hell.", 
-        "Too good to be Hell and too bad to be Heaven; this is my head.", "There is no one else here; this is my head.")))
+    $ answer_add(
+        nvlans(0, 
+            nvlq(None, "In front of me is an angel. This is Heaven.", 
+                "I wasn't good enough for Heaven. This is Hell.", 
+                "Too good to be Hell and too bad to be Heaven. This is my head.", 
+                "There is no one else here. This is my head.")))
     nvlmc "I think I've figured it out. All right, new question..."
     nvls "I will allow you only one more question."
     nvlmc "What?"
@@ -429,7 +441,7 @@ label Kazuki_1h:
     mt "... And Kazuki, I know you're good at maths, but this is just an insult."
     mc "Wha-what?"
     nmc "At that moment, Wil knocks his pencil off of his desk, and out of the corner of his mouth..."
-    w "Goddamnit Kazuki, what the hell do you think you're doing, fallking asleep in Ms. Amniaki's class? You're in big trouble now."
+    w "Goddamnit Kazuki, what the hell do you think you're doing, falling asleep in Ms. Amniaki's class? You're in big trouble now."
     nmc "I pick myself up off of the hard surface and look around."
     nmc "The math classroom. Wil. A nondescript professor. And my classmates... they're all staring down at me, happy for some entertainment.
          They're whispering, probably insults, gossip, and laughter."
@@ -475,20 +487,22 @@ label Kazuki_1h:
     jump Kazuki_1i
     
 label Kazuki_1i:
+    #logic block 1
     if("lunch_essay_1" in answers):
         jump Kazuki_1j_essay
-    if("lunch_work_1" not in answers and
-        "lunch_bagel_1" not in answers):
+        
+    if("lunch_work_1" not in answers and "lunch_bagel_1" not in answers):
         $ answer_add("lunch_work_1")
         nmc "... I can't actually make up my mind, so I guess I'll eat later and save myself the trouble."
         nmc "Either way, I can afford to skip a meal."
+        
     elif("lunch_work_1" in answers):
         nmc "I don't have time to eat. I have money to make and a boss to impress."
-        
+    
+    #logic block 2
     if("lunch_work_1" in answers):
         nmc "There is no rule to having exactly three mealtimes or even three meals, just that one must actually eat at some point."
         nmc "In other words, I'll work before I eat."
-        #BRANCH
     else:
         nmc "I need to get to work, but before I do, I need to get another bagel because this morning's bagel turned out like crap."
         nmc "This morning's bagel was basically a circular bit of toasted bread. A real bagel needs marinara sauce, a mozzarella and 

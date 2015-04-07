@@ -6,7 +6,7 @@ label Kazuki_1j_skip:#we skipped lunch
          long at all. This in itself is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
          shop would be an expensive pain in the ass in terms of both paperwork and physically changing the sign, so the name stuck."
     extend "\nHis words, not mine. There have been a few awkward moments though, when I have been mistaken as his son..."
-    nmc "In any case, I happen to work for him. Three hours a day, by the sweat and grime  my brow, wrench in hand... actually I just handle 
+    nmc "In any case, I happen to work for him. Three hours a day, by the sweat and grime of my brow, wrench in hand... actually I just handle 
          the taxes, the telephone, and the computers."
     mc "Hello, Robert and Son's Machines. Yes, we can service your BMW. Yes, I can schedule you for Monday. Certainly. Good day to you too."
     $ minutes = minutes + 15
@@ -32,7 +32,7 @@ label Kazuki_1j_skip:#we skipped lunch
     ro "I hate working on beemers. Tuesday?"
     mc "No cars at all. The whole week is basically empty, actually. I might not be needed for most of the week. Although I could still come in if 
         you'd like. Here, look at the schedule."
-    nmc "There are indeed schedules worse than an overbooked one. Because even if you are working overtime, you are still in fact working. 
+    nmc "There are indeed schedules worse than an overbooked one. Because even if you are working overtime, you are still in fact working, and therefore being paid. 
          When we have an underbooked schedule, we spend a lot of time twiddling our thumbs and since our salaries are comission-based, we 
          also don't get paid as much."
     ro "I didn't think it would be possible to have less business this week than last week. I'll have someone else do the phones on Tuesday. 
@@ -128,7 +128,9 @@ label Kazuki_1j_essay:
     nmc "\"Additionally, due to the nature of your teaching style, all I need to do is briefly scan the 40' x 30' 
          whiteboard to gain a full understanding of the day's lesson. For instance, on the day that you gave me this assignment, you 
          were in the middle of a simple two-dimensional rotation problem...\""
-    nmc "..."
+    nmc "... I can absolutely get the rest of this essay done in 10 minutes. 
+         Right? As long as I get to work by 2:30 or so, everything will be 
+         fine..."
     $ minutes = minutes + 2
     $ sio_l("bg library1")
     nmc "And you were showing us how to transform matrices in a manner that... oh."
@@ -177,9 +179,9 @@ label Kazuki_1j_essay:
         extend ""
         "Yes":
             $ answer_add("lily_essay_1_yes")
-            call Kazuki_1j_essay_yes#returns
+            call Kazuki_1j_essay_yes #returns
             if("self_40" not in answers):
-                jump Kazuki_1j_liwrapup
+                jump Kazuki_1j_essay_stop
             # logic block, yes--> [more, stop, lazy]
             if("lily_essay_2_yes" in answers):
                 jump Kazuki_1j_essay_more
@@ -198,29 +200,36 @@ label Kazuki_1j_essay_yes:
     mc "I suppose that I wouldn't mind the help."
     li "Are you sure your pride can take it?"
     mc "Hm? Take what?"
-    li "Oh, just the fact that you're going to be getting English help from a little girl."
+    li "Oh, just the fact that you're going to be getting English help from a 
+        little girl."
     mc "Tiny would be the better word, I would think."
     li "That's not very nice."
-    mc "Had you been in grade school or something along those lines, then I'd be pissed."
+    mc "Had you been in grade school or something along those lines, then I'd be
+        pissed. But a midget my age? Yeah, that's fine."
     li "Um... in that case, I'm leaving."
-    mc "Hey now, that was just payback for your earlier jab. Really, I'm grateful for the help."
+    mc "Hey now, that was just payback for your earlier jab. Really, I'm 
+        grateful for the help."
     li "Sure, sure. Let's look at it, top-downwards..."
     nmc "Lilian quickly scanned through the first page of actual content."
-    li "... Wow. \"In somewhat-general terms, your lectures are mostly composed of senile ramblings.\" Really?"
+    li "... Wow. \"In somewhat-general terms, your lectures are mostly composed 
+        of senile ramblings.\" Really?"
     mc "Well... I'm not wrong."
     $ minutes = minutes + 5
     li "You said this was for Amnaki?"
-    mc "Yeah. That one."
+    mc "Yeah. That's the one."
     li "Okay. Fine. You're not wrong."
     mc "Have I ever been wrong?"
-    li "Statistically speaking you probably were at one point, but even if you're right, that isn't something you 
-        can write here."
+    li "Statistically speaking, you probably were at one point. But even if 
+        you're right, that isn't something you can write here."
     mc "So, what do I write?"
     doublespeak li mc "Complete and utter..." "Bullshit?"
     li "Well, I was going to say nonsense, but that works too!"
-    mc "Okay, that isn't really my thing. Unless I'm pretending that I'm well-prepared for a presentation or something."
-    li "Perhaps it would be better to look at what you wanted to say, and then reverse it. You know, something like 
-        \"I'd like to explain why I managed to fall asleep during your extremely informative lecture\"."
+    mc "Okay, that isn't really my thing. Unless I'm pretending that I'm 
+        well-prepared for a presentation or something."
+    li "Perhaps it would be better to look at what you wanted to say, and then 
+        reverse it. You know, something like 
+        \"I'd like to explain why I managed to fall asleep during your extremely
+        informative lecture\"."
     mc "... And the whole paper needs to sound like that?"
     li "Hey, you wanna make her happy, right?"
     mc "Actually, I would prefer it if she was preparing for suicide."
@@ -228,60 +237,115 @@ label Kazuki_1j_essay_yes:
     mc "Well, I suppose I really don't have much of a choice."
     li "Exactly. Now as for this next sentence..."
     $ triple_min(10)#3:02?
-    nmc "30 minutes later, we had... something. It certainly was an improvement from what I had written by myself."
-    nmc "But the sentences simply didn't flow. Near the end, we may as well have been writing something along the lines of 
-         \"Amnaki, you are great. I should have paid attention. This class is useful.\" and so on."
-    nmc "... In fact, that {i}is{/i} what we wrote for our concluding paragraph."
+    $ points[4] += 2
+    nmc "30 minutes later, we had... something. It certainly was an improvement 
+         from what I had written by myself."
+    nmc "But the sentences simply didn't flow. Near the end, we may as well have
+         been writing something along the lines of 
+         \"Amnaki, you are great. I should have paid attention. This class is 
+         useful.\" and so on."
+    nmc "... In fact, that {i}is{/i} what we wrote for our concluding 
+         paragraph."
     li "We did it!"
-    mc "Ehh... Not really. Sure, there are 10 full pages of writing here, but some of it is childish. I mean, 
+    mc "Ehh... Not really. Sure, there are 10 full pages of writing here, but 
+        some of it is childish. I mean, 
         \"You'll be the center of my attention from now on\"... Come on."
     li "I didn't write that."
-    mc "You did. I am not a creepy person."
+    mc "You did. I am not that creepy of a person."
     li "But you're scary!"
     nmc "Lilian is actually tearing up. Is my face that fearsome...?"
     li "Actually, you're kinda cute! Like a super thin teddy bear!"
     mc "..."
     li "Hee hee! Messing with you is fun."
-    nmc "I honestly couldn't tell if she was messing around or not, but for the sake of my sanity, I decided to let the comment 
+    nmc "I honestly couldn't tell if she was messing around or not, but for the 
+         sake of my sanity, I decided to let the comment 
          slide."
-    mc "Whatever... hang on. Don't you have to be somewhere? I imagine that you're quite busy..."
+    mc "Whatever... hang on. Don't you have to be somewhere? I imagine that 
+        you're quite busy..."
     $ minutes = minutes + 3#3:05
     $ domchange("FP", -2, 0)
-    li "Me? No, not really. I mean, I've got time. Why? Do you want to work on this more, or would you rather call it quits?"
+    li "Me? No, not really. I mean, I've got time. Why? Do you want to work on 
+        this more, or would you rather call it quits?"
     # if mc indicated that he isn't interested in the 40 we're making him say no
     if("self_40" not in answers):
-        return
-    $ cd_set(15, 15, 'Kazuki_1j_handle1')
+        return #line180
+    $ cd_set(15, 15, 'return_stub')
     show screen countdown
     menu:
         extend ""
         "Yes":
-            $ answer_add("lily_essay_2_yes")#more
+            $ answer_add("lily_essay_2_yes")#jump Kazuki_1j_essay_more
         "No":
-            $ answer_add("lily_essay_2_no")#stop
+            $ answer_add("lily_essay_2_no")#jump Kazuki_1j_essay_stop
         "...":
             pass
-    return
+    return #line180
     
 label Kazuki_1j_essay_no:
-    mc "No thank you. Honestly, I should probably get to work."
-    nmc "I save the file and close the window."
+    $ points[4] += -2
+    mc "No thank you. Honestly, I should probably get to work. I'm already late
+        as it is."
+    nmc "I save the file and close the window. Not that there was a lot of 
+         progress to save. I suppose 3 pages in 30 minutes isn't horrible."
     mc "I'm actually already running a little late."
     li "Oh. In that case, I might as well head home myself. Do you want a ride?"
     mc "Umm, I certainly wouldn't say no to a lift, but are you sure?"
     li "Actually, I insist."
-    nmc "As she pulls me by the hand, it occurs to me that I've never actually seen Lilian drive."
-    $ jump_break()
-    jump Kazuki_1k_early_lily
+    nmc "As she pulls me by the hand, it occurs to me that I've never actually 
+         seen Lilian drive."
+    mc "Hey, just out of curiosity, for about how long have you had your 
+        license?"
+    li "Not telling!"
+    mc "Please, please tell me that you aren't about to do something illegal."
+    li "Okay. I won't tell."
+    nmc "Against my better judgement, I follow her out to the parking lot..."
+    $ triple_min(5)
+    li "All right, we're here!"
+    mc "..."
+    li "Wakey wakey, lemon cakey. You said Robert and Son's, yeah? This is the 
+        place..."
+    mc "I was ready to die..."
+    nmc "I'm not exactly devout, but I was actually praying during Lilian's 
+         little excursion."
+    li "Is my driving really that bad?"
+    mc "It's generally considered \"bad\" when you aren't in the correct lane."
+    li "I was passing."
+    mc "You were a solid 20 miles per hour over the speed limit."
+    li "Better than being late, right?"
+    mc "Considering that we didn't get a ticket, I suppose that I should be 
+        thankful."
+    li "Darn right! Well, I'll catch you later."
+    nmc "With that, she heads back to the car. The thought of her being on the 
+         road is enough to make me reconsider getting my own license. Not that 
+         I could afford a car."
+    nmc "... In any case, time to face the music of Robert's wrath..."
+    jump Kazuki_1k_work_alt # 2:42 PM
     
+label Kazuki_1j_essay_what:
+    nmc "I lazily stare back at the small girl in front of me. There is really no need for me to answer."
+    li "Ah, I suppose I'll take that as a \"no\" then."
+    nmc "Turning my head towards the eggshell-white ceiling, I slightly slump into my chair to show my lack of care."
+    li "Alright! Well, best of luck!"
+    nmc "Perfectly understanding my desires, Lilian happily skips away from my table."
+    nmc "... I should probably head to work now... I guess I have to take the bus."
+    $ triple_min(5)
+    jump Kazuki_1k_work_alt
+
 label Kazuki_1j_essay_more:
+    $ points[4] += 2
     mc "Yes."
-    li "Eh!?"
-    mc "You heard me. \"Yes.\" "
-    extend "As in, \"yes, I am desperate\"... "
-    extend "or \"yes, you have been helpful, believe it or not\"... "
-    extend "or even \"look, I really want to get this garbage assignment out of the way\"."
-    li "I didn't hear a \"yes\" in that last one..."
+    li "Whaa!?"
+    mc "You heard me. \"Yes.\"\n"
+    extend "As in, \"yes, I am desperate\"...\n"
+    extend "or \"yes, you have been helpful, believe it or not\"...\n"
+    extend "or even \"look, I really want to get this garbage assignment out of 
+            the way\"."
+    li "I didn't hear a \"yes\" in that last one."
+    mc "Look, you've been very helpful so far. Please, help me finish this 
+        freaking thing!"
+    li "Haha, okay. So, the sentences don't really transition into each other, 
+        but they do outline what needs to be said. And we're still a few pages 
+        short of the 10 we need..."
     $ jump_break()
     return
 
@@ -293,11 +357,14 @@ label Kazuki_1j_essay_lazy:
     return
     
 label Kazuki_1j_essay_stop:
+    mc "No, that won't be necessary."
+    nmc "I save the file and close the window."
     li "Ooh. Kazuki's a quitter! Kazuki's a quitter!"
-    mc "Grr..."
+    mc "Grr... In all seriousness, I think I've taken enough of your time."
     li "Actually, that works out well. I haven't had lunch yet."
     "{i}Grumble...{/i}"
-    nmc "Now that my stomach reminds me, I haven't had anything to eat since this morning."
+    nmc "Now that my stomach reminds me, I haven't had anything to eat since 
+         this morning myself."
     li "..."
     nmc "By now, the school cafeteria has probably stopped serving lunch."
     li "..."
@@ -305,45 +372,28 @@ label Kazuki_1j_essay_stop:
     li "...!"
     nmc "I wonder what I could do for a-"
     li "{size=40}Hey! I'm talking to you!{/size}"
-    nmc "I'm already fairly late for work... missing a day of work would certainly be unusual for me, but it probably wouldn't hurt."
+    nmc "I'm already fairly late for work... missing a day of work would 
+         certainly be unusual for me, but it probably wouldn't hurt."
     mc "... Well, fuck me."
     li "Aha, I'd rather not. But what's up?"
     mc "I'm late for work!"
     li "E-Eh!? What do you mean?"
-    mc "We got so carried away working on the essay, that I didn't realize how much time had passed!"
+    mc "We somehow got carried away working on the essay. So carried away, that 
+        I didn't realize how much time had passed!"
     li "What do you mean by \"we\"? Ooh, how could you be so careless?"
     mc "Oh, never mind. It doesn't really matter."
-    li "Doesn't really matter?! Listen to yourself! Uurgh. This is why you don't have any friends."
+    li "Doesn't really matter?! Listen to yourself! Uurgh. This is why you don't
+        have any friends."
+    mc "That... hurt. A lot."
+    nmc "Lilian probably has a point here. My lack of care does seem to turn 
+         people away."
+    li "I'm kidding. Anyway, thanks for keeping me company today."
+    mc "Uhh, I didn't actually do you any favors."
+    li "Still. This was nice."
+    mc "Well, I'm glad that you thought so... Actually, now that I think about 
+        it, I don't necessarily have to go to work..."
     $ jump_break()
     jump Kazuki_1k_late_lily#get lunch with her
-
-label Kazuki_1j_essay_what:
-    nmc "I lazily stare back at the small girl in front of me. There is really no need for me to answer."
-    li "Ah, I suppose I'll take that as a \"no\" then."
-    nmc "Turning my head towards the eggshell white ceiling, I slightly slump into my chair to show my lack of care."
-    li "Alright! Well, best of luck!"
-    nmc "Perfectly understanding my desires, Lilian happily skips away from my table."
-    nmc "... I should probably head to work now..."
-    $ jump_break()
-    return
-
-label Kazuki_1j_liwrapup:
-    nmc "I start to say \"yes\", but then I remember that I really don't care about my grades, at least not my math ones."
-    mc "No, that won't be necessary."
-    nmc "I save the file and close the window."
-    mc "In fact, I think I need to get to work. I'm already running a little late."
-    $ jump_break()
-    return
-
-label Kazuki_1k_early_lily:
-    $ triple_min(5)
-    li "All right, we're here!"
-    mc "..."
-    li "Wakey wakey, lemon cakey. You said Robert and Son's, yeah? This is the place..."
-    mc "I was ready to die..."
-    li ""
-    $ jump_break()
-    return
     
 label Kazuki_1k_late_lily:
     return
@@ -375,6 +425,7 @@ label Kazuki_1k_work:
     $ sio_l("bg workshop")
     $ minutes = 870#2:30
     ro "Blasted self-entitled good-for-nothing ignorant plebeian consumerist sheep people cunt dicks."
+    nmc "... The man is not known for his clean language."
     mc "Mr. Hale?"
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for as long as anyone can remember, which is of course, not very 
          long at all. This in itself is a bit awkward, since Robert lost custody of his son when he was divorced. But changing the name of his little 
@@ -417,6 +468,85 @@ label Kazuki_1k_work:
     nmc "The rest of the calls went something along those lines."
     jump Kazuki_1l_work
 
+label Kazuki_1k_work_alt:# 2:42 PM
+    $ minutes = 882
+    $ sio_l("bg workshop")
+    nmc "Robert Hale has been the proud owner of Robert and Son's Machines for 
+         as long as anyone can remember, which is of course, not very long at 
+         all. This in itself is a bit awkward, since Robert lost custody of his 
+         son when he was divorced. But changing the name of his little shop
+         would be an expensive pain in the ass in terms of both paperwork and 
+         physically changing the sign, so the name stuck."
+    extend "\nHis words, not mine. There have been a few awkward moments though,
+            when I have been mistaken as his son..."
+    nmc "In any case, I happen to work for him. Three hours a day, by the sweat 
+         and grime of my brow, wrench in hand... actually I just handle the 
+         taxes, the telephone, and the computers."
+    mc "Apologies for the tardiness, Mr. Hale."
+    ro "Infernal self-entitled crap-infested ignorant plebeian capatalist 
+        scum-of-the-earth bitch."
+    nmc "... The man is not known for his clean language."
+    mc "Umm. Mr. Hale?"
+    ro "That bitch Rachel called again."
+    mc "I see. That would certainly explain the swearing."
+    nmc "Rachel made the mistake of trying to get her cell phone repaired here. 
+         Not that we couldn't have repaired it, but she insisted that we repair 
+         the phone for free and deliver the repaired phone on the same day the 
+         phone was brought in."
+    nmc "A ridiculous customer by all accounts. So basically, everyone in the 
+         office hates this customer more than any other."
+    mc "I'm sorry that I wasn't here to take the call."
+    nmc "Robert, for all of his years, is worse with people than I am, and has 
+         an incredibly hard time just hanging up on a customer. I normally 
+         curse out Rachel and put down the receiver, not giving her a chance 
+         to make any demands."
+    ro "Yeah, about that. Tell me why you weren't here on time again?"
+    mc "Well..."
+    $ cd_set(15, 15, 'Kazuki_1k_work_mum')
+    show screen countdown
+    menu:
+        extend ""
+        "Amnaki":
+            $ answer_add("work_excuse_amnaki")
+        "Lilian":
+            $ answer_add("work_excuse_lilian")
+        "...":
+            jump Kazuki_1k_work_mum
+    jump Kazuki_1k_work_excuse
+    
+label Kazuki_1k_work_mum:
+    $ points[5] += -4
+    $ answer_add("work_excuse_none")
+    nmc "I can't actually think of a reasonable excuse, so I say nothing."
+    ro "... Whatever. Get to work. I'm taking a nap."
+    jump Kazuki_1k_work_excuse
+    
+label Kazuki_1k_work_excuse:
+    $ points[5] += -2
+    if("work_excuse_amnaki" in answers):
+        mc "Amnaki gave me one of her \"assignments\"."
+        ro "Oh. How many pages?"
+        mc "Ten."
+        ro "I see."
+        nmc "I bitch to Robert about school on a fairly regular basis, and even 
+             if I didn't, he keeps in contact with some of the faculty anyway. 
+             So he kind of knows most of the teachers and students that I see 
+             on a regular basis."
+        ro "Well, we weren't busy today, so it isn't too big of a deal. Get to
+            work now. I'm taking a nap."
+    if("work_excuse_lilian" in answers):
+        mc "I was working on a paper with Lilian, and I lost track of the time. 
+            I'm sorry."
+        nmc "I bitch to Robert about school on a fairly regular basis, and even 
+             if I didn't, he keeps in contact with some of the faculty anyway. 
+             So he kind of knows most of the teachers and students that I see 
+             on a regular basis."
+        ro "Make sure it never happens again. Or so I'd say, but this isn't your
+            first time being late. You screwed her afterwards though, right?"
+        mc "What? No."
+        ro "Hmph. Whatever. Get to work. I'm taking a nap."
+    jump Kazuki_1l_work
+    
 label Kazuki_1l_work:
     call triple_min(15)
     $ sio_l("bg workshop")
@@ -466,7 +596,9 @@ label Kazuki_1l_work_extend:
     ro "Well in any case, here's your check for the day."
     $ main_char_cash = main_char_cash + 60
     if("lunch_work_1" in answers):
-        $ main_char_cash += main_char_cash + 20
+        $ main_char_cash = main_char_cash + 20
+    if("lunch_essay_1" in answers):
+        $ main_char_cash = main_char_cash - 20
     mc "Sir? This is cash."
     ro "Check, cash, money order, gift card, same thing."
     mc "I really don't think that finances work that way."

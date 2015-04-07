@@ -27,16 +27,6 @@ label com_slide(message):
 label audio_memory:
     return
 
-screen button:
-    if (dev_screen == "pass"):
-        $ python_pass()
-    elif ((dev_screen == "dream") and persistent.dev_commentary):
-        vbox xalign 1.0 yalign 0.717:
-            textbutton "(Reference)" action Help("game/dev/sleepamnesia.pdf") style "dev_button" text_style "dev_button_text"
-    elif persistent.dev_commentary:
-        vbox xalign 1.0 yalign 0.717:
-            textbutton "(No Reference)" style "dev_button" text_style "dev_button_text"
-
 label pre_update:
     $ in_debug = True
     scene bg mainmenu

@@ -8,6 +8,9 @@
     style.nvl_menu_choice_button.hover_background = "#00000000"
     style.nvl_menu_choice_button.left_margin = 0
     
+    style.mm_button.background = Frame("menus/FoxButtonBox.png", 25, 25)
+    style.mm_button.hover_background = Frame("menus/FoxButtonHover.png", 25, 25)
+    
     style.dev_button = Style(style.button)
     style.dev_button.background = "#FF0000"
     style.dev_button.hover_background = "#FF6600"
@@ -180,9 +183,6 @@ init -1 python hide:
         
     if persistent.dlc1_installed is None:
         persistent.dlc1_installed = False
-        
-    if persistent.dev_commentary is None:
-        persistent.dev_commentary = False
 
     if persistent.seen_natalie is None:
         persistent.seen_natalie = False
@@ -231,7 +231,6 @@ init -1:
     $ ingame = False
     $ battle_mode = False
     $ has_phone = False
-    $ dev_screen = "None"
     #]
     
     $ main_status = "None"
@@ -284,7 +283,7 @@ init -2 python:
     config.window_icon = "icon.png"
 
     ## These values tell Ren'Py how to build a distribution.
-    config.version = "v0.2.7_(1062)"
+    config.version = "v0.2.8_(1066)"
     config.log = config.gamedir + "/debuglog.txt"
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"

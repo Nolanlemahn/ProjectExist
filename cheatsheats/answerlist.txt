@@ -1,3 +1,15 @@
+Lawrence: points[0]
+Natalie: points[1]
+Tamara: points[2]
+Wil: points[3]
+Lilian: points[4]
+Robert: points[5]
+=====
+triple_min() plays three renpy.says with minute mods
+
+sio_l() scene swap with black interstitial
+sio_s() with no interstitial
+=====
 law_lecture
 law_test <
 law_nothing > law_hesitation
@@ -41,3 +53,7 @@ lily_essay_1_no
 lily_essay_2_yes
 lily_essay_2_no
 lily_essay_2_what
+
+work_excuse_amnaki
+work_excuse_lilian
+work_excuse_none

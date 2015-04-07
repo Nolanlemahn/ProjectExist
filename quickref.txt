@@ -1,4 +1,0 @@
-triple_min() plays three renpy.says with minute mods
-
-sio_l() scene swap with black interstitial
-sio_s() with no interstitial

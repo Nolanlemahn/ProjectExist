@@ -8,7 +8,10 @@
 # Type: Library, Screen
 # 
 # Usage:
-#     $ mlib(String)
+#     # This is done for you!
+#     $ mlib = mlib_space()
+#     $ mlib.load()
+#     $ mlib(String) #This actually plays the music file in the correct channel
 # --also--
 #     /lib_music/music.txt holds entries for actual music for the music room
 #     /lib_music/fakesfx.txt holds entries for sfx that are played like music
@@ -27,8 +30,8 @@ init python:
     #####
     # Function name: dualwise()
     # 
-    # Descripiton: Transforms data into tuplets of two (well three including garbage).
-    # For looping sfx.
+    # Descripiton: Transforms data into tuplets of two (well three including 
+    # garbage). For looping sfx.
     # 
     # Parameters:
     # iterable - the data
@@ -43,8 +46,8 @@ init python:
     #####
     # Function name: tripwise()
     # 
-    # Descripiton: Transforms data into tuplets of three (well four including garbage).
-    # For real sfx.
+    # Descripiton: Transforms data into tuplets of three (well four including 
+    # garbage). For real sfx.
     # 
     # Parameters:
     # iterable - the data
@@ -59,8 +62,8 @@ init python:
     #####
     # Function name: quadwise()
     # 
-    # Descripiton: Transforms data into tuplets of four (well five including garbage).
-    # For music.
+    # Descripiton: Transforms data into tuplets of four (well five including 
+    # garbage). For music.
     # 
     # Parameters:
     # iterable - the data
@@ -70,46 +73,13 @@ init python:
     def quadwise(iterable):
         list = iter(iterable)
         return izip(list, list, list, list, list)
+
     
-    # Step 1. Find and parse the files for music.
-    musicEntries = []
-    mlib = os.path.abspath(config.gamedir + "/lib_music/music.txt")
-    mlib = file(mlib).read().decode("utf-8")
-    mlib = mlib.split("\n")
-    for shortname, fileloc, longname, unlocked, nothing in quadwise(mlib):
-        if(unlocked == "True"):
-            unlocked = True
-        else:
-            unlocked = False
-        newLine = (shortname, fileloc, longname, unlocked)
-        musicEntries.append(newLine)
-    
-    # Step 2. Find and parse the files for sfx.
-    sfxEntries1 = []
-    sfxlib1 = os.path.abspath(config.gamedir + "/lib_music/fakesfx.txt")
-    sfxlib1 = file(sfxlib1).read().decode("utf-8")
-    sfxlib1 = sfxlib1.split("\n")
-    for shortname, fileloc, nothing in dualwise(sfxlib1):
-        newLine = (shortname, fileloc)
-        sfxEntries1.append(newLine)
-    sfxEntries2 = []
-    sfxlib2 = os.path.abspath(config.gamedir + "/lib_music/realsfx.txt")
-    sfxlib2 = file(sfxlib2).read().decode("utf-8")
-    sfxlib2 = sfxlib2.split("\n")
-    for shortname, fileloc, time, nothing in tripwise(sfxlib2):
-        time = ast.literal_eval(time)
-        newLine = (shortname, fileloc, time)
-        sfxEntries2.append(newLine)
-    
-    # Step 3. Create a MusicRoom instance.
+    # Create a MusicRoom instance.
     mr = MusicRoom(fadeout=1.0)
     
-    # Step 4. Add music files.
-    for entry in musicEntries:
-        mr.add(entry[1], always_unlocked=entry[3])
-    
     #####
-    # Function name: mlib()
+    # Class name: mlib()
     # 
     # Descripiton: Plays music/sfx based on the shortcode.
     # 
@@ -119,27 +89,99 @@ init python:
     # Returns: None
     #####
     # Step 5. Be able to run the music files.
-    def mlib(selection):
-        #bgm
-        for entry in musicEntries:
-            if(selection == entry[0]):
-                renpy.music.play(entry[1], loop=True, fadein=1.0)
-                break
-        
-        for entry in sfxEntries1:
-            if(selection == entry[0]):
-                renpy.music.play(entry[1], loop=True)
-                break
+    class mlib_space():
+        def __init__(self, selection=""):
+            self.selection = selection
+            self.musicEntries = []
+            self.sfxEntries1 = []
+            self.sfxEntries2 = []
+        #####
+        # Function name: __call__()
+        # 
+        # Descripiton: Transforms data into tuplets of four (well five including 
+        # garbage). For music.
+        # 
+        # Parameters:
+        # selection - the shortcode for the audio file we play
+        # 
+        # Returns: None
+        #####
+        def __call__(self, selection):
+            #bgm
+            for entry in self.musicEntries:
+                if(selection == entry[0]):
+                    renpy.music.play(entry[1], loop=True, fadein=1.0)
+                    return
             
-        #sfxs
-        for entry in sfxEntries2:
-            if(selection == entry[0]):
-                renpy.sound.play(entry[1])
-                if(entry[2] != 0):
-                    renpy.pause(entry[2])
-                break
-        return
+            for entry in self.sfxEntries1:
+                if(selection == entry[0]):
+                    renpy.music.play(entry[1], loop=True)
+                    return
+                
+            #sfxs
+            for entry in self.sfxEntries2:
+                if(selection == entry[0]):
+                    renpy.sound.play(entry[1])
+                    if(entry[2] != 0):
+                        renpy.pause(entry[2])
+                    return
+            return #nothing happened, oh well
+        #####
+        # Function name: load()
+        # 
+        # Descripiton: Grabs data from the three text files, and sends it to the
+        # Music Room, which we rebuild.
+        # 
+        # Returns: None
+        #####
+        def load(self): # load() should work like reload()
+            # Step 1. Find and parse the files for music.
+            self.musicEntries = []
+            mlib_data = os.path.abspath(config.gamedir + "/lib_music/music.txt")
+            mlib_data = file(mlib_data).read().decode("utf-8")
+            mlib_data = mlib_data.split("\n")
+            for shortname, fileloc, longname, unlocked, nothing in quadwise(mlib_data):
+                if(unlocked == "True" or unlocked == "Unlocked"):
+                    unlocked = True
+                else:
+                    unlocked = False
+                newLine = (shortname, fileloc, longname, unlocked)
+                self.musicEntries.append(newLine)
+            
+            # Step 2. Rebuild MusicRoom instance with our music
+            global mr
+            mr = MusicRoom(fadeout=1.0)
+            for entry in self.musicEntries:
+                mr.add(entry[1], always_unlocked=entry[3])
+                
+            # Step 3. Find and parse the files for sfx.
+            self.sfxEntries1 = []
+            sfxlib1 = os.path.abspath(config.gamedir + "/lib_music/fakesfx.txt")
+            sfxlib1 = file(sfxlib1).read().decode("utf-8")
+            sfxlib1 = sfxlib1.split("\n")
+            for shortname, fileloc, nothing in dualwise(sfxlib1):
+                newLine = (shortname, fileloc)
+                self.sfxEntries1.append(newLine)
+            self.sfxEntries2 = []
+            sfxlib2 = os.path.abspath(config.gamedir + "/lib_music/realsfx.txt")
+            sfxlib2 = file(sfxlib2).read().decode("utf-8")
+            sfxlib2 = sfxlib2.split("\n")
+            for shortname, fileloc, time, nothing in tripwise(sfxlib2):
+                time = ast.literal_eval(time)
+                newLine = (shortname, fileloc, time)
+                self.sfxEntries2.append(newLine)
+        def silence(self, seconds=2.0):
+            renpy.music.set_volume(0.0, seconds, channel="music")
+        def unsilence(self, seconds=2.0):
+            renpy.music.set_volume(1.0, seconds, channel="music")
+        def kill(self):
+            renpy.music.stop()
 
+init:
+    $ mlib = mlib_space()
+    $ mlib.load()
+    
+init python:
     #####
     # Function name: name_playing()
     # 
@@ -156,7 +198,7 @@ init python:
         never_seeked = True
         file_playing = renpy.music.get_playing()
             # seek only through the music
-        for entry in musicEntries:
+        for entry in mlib.musicEntries:
             if(file_playing == entry[1]):
                 file_playing = entry[2]
                 never_seeked = False
@@ -180,7 +222,7 @@ screen music_room:
         has vbox
 
         # The buttons that play each track.
-        for entry in musicEntries:
+        for entry in mlib.musicEntries:
             textbutton entry[2] action (SetVariable('playing', name_playing()), mr.Play(entry[1]))
         null height 20
 

@@ -109,7 +109,7 @@ init python:
     # end_time - time at which a jump is forced
     # target_str - where we force a jump to
     # 
-    # Returns: the transformed image
+    # Returns: None
     #####
     def cd_set(start_time, end_time, target_str):
         #don't bother checking store
@@ -119,3 +119,5 @@ init python:
         store.in_countdown = True
         return
 
+label return_stub:
+    return

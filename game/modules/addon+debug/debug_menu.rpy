@@ -4,6 +4,20 @@ init:
     $ old_clock = False
     
 init python:
+    def fix_newlines():
+        for root, subdirs, files in os.walk(config.gamedir):
+            for file in files:
+                if ((file.endswith(".txt")) or (file.endswith(".rpy"))):
+                    #renpy.say(None, file)
+                    file = os.path.abspath(root + "/" + file)
+                    data = open(file, "rb").read()
+                    newdata = data.replace("\r\n", "\n")
+                    if newdata != data:
+                        f = open(file, "wb")
+                        f.write(newdata)
+                        f.close()
+        return
+    
     def destroy_persistent():
         for attr in dir(persistent):
             if not callable(attr) and not attr.startswith("_"):
@@ -26,6 +40,20 @@ init python:
     def ChangeVar(cv_a, cv_b):
         setattr(store, cv_a, cv_b)#:D
         return
+
+label destroy_persistent:
+    menu:
+        "Are you {b}certain{/b} that you want to clear the persistent data?"
+        "Yes":
+            $ destroy_persistent()
+            "Persistent data has been reset. The game will now reload."
+            $ renpy.reload_script()
+        "No":
+            return
+
+label eol_change:
+    $ fix_newlines()
+    return
 
 label varmani:
     $ in_debug = True

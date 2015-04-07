@@ -29,7 +29,6 @@ init -1 python:
     # magic values and styles
 
         # style for buttons that are always Dyslexic-formatted
-    style.dys_button = Style(style.button_text)
     style.dys_button_text.font = "fonts/OpenDyslexic-Regular.otf"
     
         # here are the strings/numbers/booleans!
