@@ -1,5 +1,4 @@
 label start:#this_label_done
-    $ mlib = mlib_space()
     $ in_side_note = False
     $ jump_in = False
     scene bg blackdrop
