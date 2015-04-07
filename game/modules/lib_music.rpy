@@ -119,7 +119,7 @@ init python:
     # Returns: None
     #####
     # Step 5. Be able to run the music files.
-    class mlib():
+    class mlib_space():
         def __init__(self, selection=""):
             self.selection = selection
         def __call__(self, selection):

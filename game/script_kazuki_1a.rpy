@@ -463,10 +463,12 @@ label Kazuki_1b_2:
     mc "Uhh..."
     nmc "I end up asking about..."
     $ cd_set(7, 7, 'Kazuki_1b_pre')
+    #$ override_mouse_set(600, 420, "fake_1", "surprise")
     show screen countdown
     menu:
         extend ""
         "Today's lecture":
+            #$ activate_mouse_hack()
             $ answer_add("law_lecture")
         "The upcoming test":
             $ answer_add("law_test")

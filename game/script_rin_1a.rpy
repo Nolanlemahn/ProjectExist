@@ -138,7 +138,7 @@ label Rin_1b:
             reflection of humanity, and wishes me to give into my carnal
             instincts. But I already have."
     nvlnmc "I also know that it is dangerous, as neither of us yet understand 
-            the other."
+            the other. At least, not fully."
     nvls "Feel pain. Remember me."
     nvlnmc "My shadow begins to shake rapidly, giving the appearance of 
             transparency. But it can't hide from me.{w}\nI extend my right arm, 
@@ -169,7 +169,7 @@ label Rin_1b:
          my shadow by its neck, and standing over the gaping hole that is my 
          heart."
     mc "... Pain is the body's acknowledgement of fear. Fear is the 
-        understanding that you are no longer are in control of your own destiny.
+        understanding that you are no longer in control of your own destiny.
         You fear me, and now you feel pain."
     s "... What are you?"
     nmc "My shadow has its own answer. It doesn't want to know the actual 
