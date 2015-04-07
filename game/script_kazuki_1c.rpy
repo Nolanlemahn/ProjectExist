@@ -237,6 +237,7 @@ label Kazuki_1j_essay_yes:
     mc "Well, I suppose I really don't have much of a choice."
     li "Exactly. Now as for this next sentence..."
     $ triple_min(10)#3:02?
+    $ points[4] += 2
     nmc "30 minutes later, we had... something. It certainly was an improvement 
          from what I had written by myself."
     nmc "But the sentences simply didn't flow. Near the end, we may as well have
@@ -281,6 +282,7 @@ label Kazuki_1j_essay_yes:
     return #line180
     
 label Kazuki_1j_essay_no:
+    $ points[4] += -2
     mc "No thank you. Honestly, I should probably get to work. I'm already late
         as it is."
     nmc "I save the file and close the window. Not that there was a lot of 
@@ -319,7 +321,18 @@ label Kazuki_1j_essay_no:
     nmc "... In any case, time to face the music of Robert's wrath..."
     jump Kazuki_1k_work_alt # 2:42 PM
     
+label Kazuki_1j_essay_what:
+    nmc "I lazily stare back at the small girl in front of me. There is really no need for me to answer."
+    li "Ah, I suppose I'll take that as a \"no\" then."
+    nmc "Turning my head towards the eggshell-white ceiling, I slightly slump into my chair to show my lack of care."
+    li "Alright! Well, best of luck!"
+    nmc "Perfectly understanding my desires, Lilian happily skips away from my table."
+    nmc "... I should probably head to work now... I guess I have to take the bus."
+    $ triple_min(5)
+    jump Kazuki_1k_work_alt
+
 label Kazuki_1j_essay_more:
+    $ points[4] += 2
     mc "Yes."
     li "Whaa!?"
     mc "You heard me. \"Yes.\"\n"
@@ -347,7 +360,7 @@ label Kazuki_1j_essay_stop:
     mc "No, that won't be necessary."
     nmc "I save the file and close the window."
     li "Ooh. Kazuki's a quitter! Kazuki's a quitter!"
-    mc "Grr..."
+    mc "Grr... In all seriousness, I think I've taken enough of your time."
     li "Actually, that works out well. I haven't had lunch yet."
     "{i}Grumble...{/i}"
     nmc "Now that my stomach reminds me, I haven't had anything to eat since 
@@ -374,22 +387,13 @@ label Kazuki_1j_essay_stop:
     mc "That... hurt. A lot."
     nmc "Lilian probably has a point here. My lack of care does seem to turn 
          people away."
-    li "Anyway, thanks for keeping me company today."
+    li "I'm kidding. Anyway, thanks for keeping me company today."
     mc "Uhh, I didn't actually do you any favors."
     li "Still. This was nice."
-    mc "Well, I'm glad that you thought so."
+    mc "Well, I'm glad that you thought so... Actually, now that I think about 
+        it, I don't necessarily have to go to work..."
     $ jump_break()
     jump Kazuki_1k_late_lily#get lunch with her
-
-label Kazuki_1j_essay_what:
-    nmc "I lazily stare back at the small girl in front of me. There is really no need for me to answer."
-    li "Ah, I suppose I'll take that as a \"no\" then."
-    nmc "Turning my head towards the eggshell-white ceiling, I slightly slump into my chair to show my lack of care."
-    li "Alright! Well, best of luck!"
-    nmc "Perfectly understanding my desires, Lilian happily skips away from my table."
-    nmc "... I should probably head to work now..."
-    $ jump_break()
-    return
     
 label Kazuki_1k_late_lily:
     return
@@ -465,6 +469,7 @@ label Kazuki_1k_work:
     jump Kazuki_1l_work
 
 label Kazuki_1k_work_alt:# 2:42 PM
+    $ minutes = 882
     $ sio_l("bg workshop")
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for 
          as long as anyone can remember, which is of course, not very long at 
@@ -507,11 +512,40 @@ label Kazuki_1k_work_alt:# 2:42 PM
             $ answer_add("work_excuse_lilian")
         "...":
             jump Kazuki_1k_work_mum
+    jump Kazuki_1k_work_excuse
     
 label Kazuki_1k_work_mum:
+    $ points[5] += -4
     $ answer_add("work_excuse_none")
     nmc "I can't actually think of a reasonable excuse, so I say nothing."
-    return
+    ro "... Whatever. Get to work. I'm taking a nap."
+    jump Kazuki_1k_work_excuse
+    
+label Kazuki_1k_work_excuse:
+    $ points[5] += -2
+    if("work_excuse_amnaki" in answers):
+        mc "Amnaki gave me one of her \"assignments\"."
+        ro "Oh. How many pages?"
+        mc "Ten."
+        ro "I see."
+        nmc "I bitch to Robert about school on a fairly regular basis, and even 
+             if I didn't, he keeps in contact with some of the faculty anyway. 
+             So he kind of knows most of the teachers and students that I see 
+             on a regular basis."
+        ro "Well, we weren't busy today, so it isn't too big of a deal. Get to
+            work now. I'm taking a nap."
+    if("work_excuse_lilian" in answers):
+        mc "I was working on a paper with Lilian, and I lost track of the time. 
+            I'm sorry."
+        nmc "I bitch to Robert about school on a fairly regular basis, and even 
+             if I didn't, he keeps in contact with some of the faculty anyway. 
+             So he kind of knows most of the teachers and students that I see 
+             on a regular basis."
+        ro "Make sure it never happens again. Or so I'd say, but this isn't your
+            first time being late. You screwed her afterwards though, right?"
+        mc "What? No."
+        ro "Hmph. Whatever. Get to work. I'm taking a nap."
+    jump Kazuki_1l_work
     
 label Kazuki_1l_work:
     call triple_min(15)
@@ -562,7 +596,9 @@ label Kazuki_1l_work_extend:
     ro "Well in any case, here's your check for the day."
     $ main_char_cash = main_char_cash + 60
     if("lunch_work_1" in answers):
-        $ main_char_cash += main_char_cash + 20
+        $ main_char_cash = main_char_cash + 20
+    if("lunch_essay_1" in answers):
+        $ main_char_cash = main_char_cash - 20
     mc "Sir? This is cash."
     ro "Check, cash, money order, gift card, same thing."
     mc "I really don't think that finances work that way."
