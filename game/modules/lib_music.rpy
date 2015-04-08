@@ -98,6 +98,8 @@ init python:
             self.musicEntries = []
             self.sfxEntries1 = []
             self.sfxEntries2 = []
+            self.data = []
+            self.human_view = ""
         #####
         # Function name: __call__()
         # 
@@ -113,11 +115,13 @@ init python:
             #bgm
             for entry in self.musicEntries:
                 if(selection == entry[0]):
+                    self.data = entry
                     renpy.music.play(entry[1], loop=True, fadein=1.0)
                     return
             
             for entry in self.sfxEntries1:
                 if(selection == entry[0]):
+                    self.data = entry
                     renpy.music.play(entry[1], loop=True)
                     return
                 
@@ -182,12 +186,33 @@ init python:
             return
         def stop(self, time=None):
             renpy.music.stop(channel='music', fadeout=time)
+            self.data = []
             return
+        def get_playing(self, showScreen = True):
+            entry = self.data
+            store.mlib_timer = 1.0
+            try:
+                self.human_view = "<" + entry[2] + "> - (" + entry[1] + ")"
+                if config.developer:
+                    self.human_view = "["+ entry[0] +"] - " + self.human_view
+            except:
+                self.human_view = "[Nothing is playing]"
+            if(showScreen):
+                renpy.call_in_new_context("mlib_show_data")
+            return self.human_view
         def restart(self):
             if(renpy.music.get_playing()):
                 renpy.music.play(renpy.music.get_playing(), loop=True, fadein=1.0)
             return
-            
+
+label mlib_show_data:
+    scene black
+    show text "[mlib.human_view]" at truecenter
+    with dissolve
+    pause 1
+    hide text
+    with dissolve
+    return
 
 init:
     $ mlib = mlib_space()
@@ -260,10 +285,17 @@ screen mlib_listener:
     key mlib_debug_key action Show("mlib_debug")
     
 screen mlib_debug:
+    tag mlib
     modal True
+    $ mlib
+    $ mlib_viewable = mlib.get_playing(showScreen = False)
     frame:
         align (.025, .5)
         has vbox
         label "mlib Debug Menu"
         textbutton "Restart Song" action Function(mlib.restart)
+        #textbutton "What's Playing" action Function(mlib.get_playing)
         textbutton "Return" action Hide("mlib_debug")
+    frame:
+        align (0.025, 0.4)
+        text "[mlib_viewable]"
