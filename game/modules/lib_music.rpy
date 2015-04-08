@@ -18,6 +18,9 @@
 #     /lib_music/realsfx.txt holds entries for sfx
 #######
 
+init:
+    $ mlib_debug_key = "M"
+
 init -1:
         # redundant but not show anything playing by default.
     $ playing = "Nothing"
@@ -170,12 +173,21 @@ init python:
                 time = ast.literal_eval(time)
                 newLine = (shortname, fileloc, time)
                 self.sfxEntries2.append(newLine)
+            return
         def silence(self, seconds=2.0):
             renpy.music.set_volume(0.0, seconds, channel="music")
+            return
         def unsilence(self, seconds=2.0):
             renpy.music.set_volume(1.0, seconds, channel="music")
-        def kill(self):
-            renpy.music.stop()
+            return
+        def stop(self, time=None):
+            renpy.music.stop(channel='music', fadeout=time)
+            return
+        def restart(self):
+            if(renpy.music.get_playing()):
+                renpy.music.play(renpy.music.get_playing(), loop=True, fadein=1.0)
+            return
+            
 
 init:
     $ mlib = mlib_space()
@@ -232,6 +244,7 @@ screen music_room:
         # so that the callback works
         textbutton "Next" action (SetVariable('playing', name_playing()), mr.Next())
         textbutton "Previous" action (SetVariable('playing', name_playing()), mr.Previous())
+        textbutton "Stop" action (SetVariable('playing', "Nothing"), Function(mlib.stop, 1.0))
         null height 20
 
         # The button that lets the user exit the music room.
@@ -243,3 +256,14 @@ screen music_room:
     # Restore the main menu music upon leaving.
     #on "replaced" action Play("music", "track1.ogg")
     
+screen mlib_listener:
+    key mlib_debug_key action Show("mlib_debug")
+    
+screen mlib_debug:
+    modal True
+    frame:
+        align (.025, .5)
+        has vbox
+        label "mlib Debug Menu"
+        textbutton "Restart Song" action Function(mlib.restart)
+        textbutton "Return" action Hide("mlib_debug")

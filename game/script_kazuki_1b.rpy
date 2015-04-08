@@ -186,7 +186,7 @@ label Kazuki_1d_tamara_b:
     nmc "The blaring fire alarm snaps me out of my thought process as the sound waves crash against my ears... why aren't flashing lights
          enough?"
     nmc "... I suppose I should be more sympathetic towards the blind."
-    stop music fadeout 1.0
+    $ mlib.stop(2.0)
     nmc "I block out the alarm's sound in my mind. In all honesty, I find Tamara to be more annoying than any alarm I have come 
          across, but the alarms are generally more startling."
     nmc "... This seems to be an unwritten rule of public education systems. There is always at least one of those students. A student that craves

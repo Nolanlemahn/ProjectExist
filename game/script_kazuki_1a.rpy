@@ -131,7 +131,7 @@ label Kazuki_1a:#this_label_done
     ###########
     $ minutes = 460
     $ clock = True
-    if(not jump_in):
+    if(not jumping_in):
         jump Kazuki_1b
     return
     
@@ -196,7 +196,7 @@ label Kazuki_1b:
     nnvlmc "I couldn't move, nor could I breathe. {w}I could do nothing but 
             merely exist.{w} Thinking itself... it could only be done in forced 
             fragments."
-    stop music
+    $ mlib.stop()
     nnvlmc "And then the dull marching stops. I should be stressed and unsure of
             what is about to happen, but my body is relaxed."
     nnvlmc "The extraneous thoughts are cleared from my mind, but this only 
@@ -261,7 +261,7 @@ label Kazuki_1b:
     $ mlib("calarm")
     nmc "My cell phone's alarm went off, throwing my train of thought straight 
          into the mental river. Annoying. "
-    stop music
+    $ mlib.stop()
     extend "I slide my hand towards my cell phone, turn off the alarm, and begin
             my standard morning routine, which generally consists of a
             shower, change of clothing, journal entry, breakfast, and a walk to 

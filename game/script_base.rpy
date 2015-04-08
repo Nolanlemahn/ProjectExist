@@ -1,6 +1,7 @@
 label start:#this_label_done
     $ in_side_note = False
-    $ jump_in = False
+    $ jumping_in = False
+    show screen mlib_listener
     scene bg blackdrop
     with dissolve
     #jump test_iorpy_magic

@@ -145,7 +145,7 @@ label requested_start_cb:
     $ clock = True
     $ walletshow = True
     $ minutes = 1
-    $ jump_in = True
+    $ jumping_in = True
     jump cb_test
     
 label cb_test:

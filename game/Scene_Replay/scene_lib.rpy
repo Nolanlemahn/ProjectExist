@@ -1,12 +1,12 @@
 ﻿init python:
     def jump_break():
-        if(hasattr(store, 'jump_in')):
-            if(store.jump_in):
+        if(hasattr(store, 'jumping_in')):
+            if(store.jumping_in):
                 renpy.end_replay()
         return
                 
     def jump_in(label_string):
-        store.jump_in = True;
+        store.jumping_in = True;
         scene_load(label_string)
         return
     
