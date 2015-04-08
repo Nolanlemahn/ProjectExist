@@ -11,19 +11,19 @@
 #     # This is done for you!
 #     $ mlib = mlib_space()
 #     $ mlib.load()
-#     $ mlib(String) #This actually plays the music file in the correct channel
+#     # This isn't!
+#     $ mlib(String) # This actually plays the music file in the correct channel
+#                    # String is the song's shortcode
 # --also--
 #     /lib_music/music.txt holds entries for actual music for the music room
 #     /lib_music/fakesfx.txt holds entries for sfx that are played like music
 #     /lib_music/realsfx.txt holds entries for sfx
 #######
 
-init:
-    $ mlib_debug_key = "M"
-
 init -1:
         # redundant but not show anything playing by default.
     $ playing = "Nothing"
+    $ mlib_debug_key = "M"
 
 init python:
     import os #abspath(), #isfile()
@@ -78,8 +78,9 @@ init python:
         return izip(list, list, list, list, list)
 
     
-    # Create a MusicRoom instance.
+    # Create a MusicRoom instance, and track mlib usage.
     mr = MusicRoom(fadeout=1.0)
+    mlib_usage = 0
     
     #####
     # Class name: mlib()
@@ -94,12 +95,17 @@ init python:
     # Step 5. Be able to run the music files.
     class mlib_space():
         def __init__(self, selection=""):
+            global mlib_usage
+            mlib_usage += 1
+            if(mlib_usage > 1):
+                renpy.error('more than one mlib object in use, only use one')
             self.selection = selection
             self.musicEntries = []
             self.sfxEntries1 = []
             self.sfxEntries2 = []
             self.data = []
             self.human_view = ""
+            self.human_mute = False
         #####
         # Function name: __call__()
         # 
@@ -182,19 +188,28 @@ init python:
             renpy.music.set_volume(0.0, seconds, channel="music")
             return
         def unsilence(self, seconds=2.0):
-            renpy.music.set_volume(1.0, seconds, channel="music")
+            if(not self.human_mute):
+                renpy.music.set_volume(1.0, seconds, channel="music")
             return
         def stop(self, time=None):
             renpy.music.stop(channel='music', fadeout=time)
             self.data = []
             return
+        def ui_mute(self):
+            if(not self.human_mute):
+                self.human_mute = True
+                renpy.music.set_volume(0.0, 2.0, channel="music")
+            else:
+                self.human_mute = False
+                renpy.music.set_volume(1.0, 2.0, channel="music")
+            return
         def get_playing(self, showScreen = True):
             entry = self.data
             store.mlib_timer = 1.0
             try:
-                self.human_view = "<" + entry[2] + "> - (" + entry[1] + ")"
+                self.human_view = "<" + entry[2] + ">"
                 if config.developer:
-                    self.human_view = "["+ entry[0] +"] - " + self.human_view
+                    self.human_view = "["+ entry[0] +"] - " + self.human_view +  "- (" + entry[1] + ")"
             except:
                 self.human_view = "[Nothing is playing]"
             if(showScreen):
@@ -216,6 +231,7 @@ label mlib_show_data:
 
 init:
     $ mlib = mlib_space()
+    #$ break_renpy = mlib_space()
     $ mlib.load()
     
 init python:
@@ -281,6 +297,7 @@ screen music_room:
     # Restore the main menu music upon leaving.
     #on "replaced" action Play("music", "track1.ogg")
     
+# Make label start show this
 screen mlib_listener:
     key mlib_debug_key action Show("mlib_debug")
     
@@ -292,8 +309,12 @@ screen mlib_debug:
     frame:
         align (.025, .5)
         has vbox
-        label "mlib Debug Menu"
+        if(config.developer):
+            label "mlib Debug Menu"
+        else:
+            label "Music Library Controls"
         textbutton "Restart Song" action Function(mlib.restart)
+        textbutton "Mute/Unmute Music" action Function(mlib.ui_mute)
         #textbutton "What's Playing" action Function(mlib.get_playing)
         textbutton "Return" action Hide("mlib_debug")
     frame:
