@@ -483,8 +483,7 @@ label Kazuki_1b_2:
     
 label Kazuki_1b_pre:
     if ("law_lecture" in answers):
-        mc "There were a few concepts in today's lecture I didn't quite 
-            understand."
+        mc "There were a few concepts in today's lecture I didn't quite understand."
         l "Liar. I know you understood everything."
         nmc "Perceptive as always..."
         mc "God. I was just making conversation."
@@ -499,10 +498,10 @@ label Kazuki_1b_pre:
         mc "I was hoping I could ask you a few questions regarding the upcoming 
             test."
         l "Well, I won't be answering any."
-        mc "Okay... I meant that I fully understand Gauss's law, but I am having
-            a hard time memorizing it."
-        l "Oh. That's easy. Rather than memorize what goes where, just remember 
-           the letters."
+        mc "Okay... I meant that I fully understand Gauss's law, but I am having a 
+            hard time memorizing it."
+        l "Oh. That's easy. Rather than memorize what goes where, just remember the 
+           letters."
         mc "What?"
         l "{size=30}Φ{/size}{size=14}E{/size}{size=30} = Q/{/size}
            {size=40}ϵ{/size}{size=14}0{/size}"
@@ -510,18 +509,18 @@ label Kazuki_1b_pre:
         l "Phi-sub-E is equal to Q divided by epsilon-sub-theta."
         mc "Oh. Thanks. That's a lot easier than the electric flux through some 
             isolated surface is equal to the total charge within... whatever."
-        nmc "To be honest, I was acting, and I think Lawrence saw through it, 
-             but played along anyway for the sake of using it as a conversation
+        nmc "To be honest, I was acting, and I think Lawrence saw through it, but 
+             played along anyway for the sake of using it as a conversation
              starter..."
         nmc "... However, said conversation goes on for another 15 minutes, with
              Lawrence giving a one-on-one lecture on Greek history (among other 
              things), and me not giving a damn about the time waste."
         call triple_min(5)
-        l "... which is why Mr. Lehrer would end with \"There's earth and air 
-           and fire and water.\" You really should give it a listen sometime."
+        l "... which is why Mr. Lehrer would end with \"There's earth and air and 
+           fire and water.\" You really should give it a listen sometime."
         mc "Perhaps I will... I honestly prefer his less scientific work."
-        l "Don't actually go poisoning pidgeons in the park though... oh, 
-           Noether dammit. You have to get going."
+        l "Don't actually go poisoning pidgeons in the park though... oh, Noether 
+           dammit. You have to get going."
         nmc "... It's 10:00AM... My next class is in 5 minutes..."
         mc "Crap! I'll see you later!"
         nmc "Lawrence lets out a burst of hearty laughter as I knock over yet 
@@ -547,8 +546,8 @@ label Kazuki_1b_pre:
         mc "... Uh..."
         nmc "I am always prepared to make conversation. I am rarely prepared to 
              begin a completely new one.{w} ... Fortunately, Professor Lawrence 
-             interjects before I have to pretend to be interested in some 
-             useless trinket."
+             interjects before I have to pretend to be interested in some useless 
+             trinket."
         l "Well, if you have nothing to say, I actually do have something."
         call Kazuki_1b_stub
     jump Kazuki_1b_extend
@@ -598,10 +597,10 @@ label Kazuki_1b_stub:
     menu:
         extend ""
         "Yes":
-            mc "I should be able to attend. Should I just come to this classroom
-                at 6 then?"
-            l "Yes. You won't be able to get into the meeting without my key. 
-               I'm counting on you."
+            mc "I should be able to attend. Should I just come to this classroom at 6 
+                then?"
+            l "Yes. You won't be able to get into the meeting without my key. I'm 
+               counting on you."
         "No":
             mc "I don't think so."
             l "Well, meet me in this classroom at 6 if you change your mind."
@@ -611,8 +610,8 @@ label Kazuki_1b_stub:
     # ^ jump Kazuki_1b_extend
         
 label Kazuki_1b_interstitial:
-    l "Not sure, eh? Well, if you do decide to come, meet me in this classroom 
-       at 6. Ciao."
+    l "Not sure, eh? Well, if you do decide to come, meet me in this classroom at 6.
+       Ciao."
     return
         
 label Kazuki_1b_extend:
@@ -643,9 +642,8 @@ label Kazuki_1b_extend:
         jump Kazuki_1c
     nmc "I hate Tuesdays. And Wednesdays. Well, I don't hate the days 
          themselves, but the manner in which my classes are scheduled for those 
-         days. 
-         I like my classes for the most part, but 6 hours of non-stop education?
-         Ridiculous. It's such a shame tha-"
+         days. I like my classes for the most part, but 6 hours of non-stop 
+         education? Ridiculous. It's such a shame tha-"
     $ persistent.seen_natalie = True
     n "Hey..."
     nmc "... I cannot believe I didn't notice that Natalie Bellangerd was 
@@ -665,35 +663,32 @@ label Kazuki_1b_extend:
     menu:
         extend ""
         "Yes":
+            #technically a second logic block
             mc "Yes, why do you ask?"
-            n "Well, I was hoping you'd be able to take me to cross-country 
-               practice."
-            nmc "Oh God. She wants me to do her a favor. Wait, that can't be 
-                 right.{w} I take the opportunity to clear my throat again and 
-                 calm down."
+            n "Well, I was hoping you'd be able to take me to cross-country practice."
+            nmc "Oh God. She wants me to do her a favor. Wait, that can't be right.{w} I
+                take the opportunity to clear my throat again and calm down."
             mc "Can't your boyfriend do that?"
             n "You say that as if I have a boyfriend."
-            mc "... You're single? None of the guys here are good enough for 
-                you?"
-            n "I would be a bad judge of that. Perhaps you don't listen to 
-               gossip, but I'm a lesbian."
-            nmc "... That was embarassing. Now I know I'd never have a chance 
-                 with her. Time to walk away... wait. Something is still wrong."
+            mc "... You're single? None of the guys here are good enough for you?"
+            n "I would be a bad judge of that. Perhaps you don't listen to gossip, but 
+               I'm a lesbian."
+            nmc "... That was embarassing. Now I know I'd never have a chance with her. 
+                 Time to walk away... wait. Something is still wrong."
             mc "Don't you normally walk to cross-country practice?"
-            n "I don't want to do that at 8PM... Just because I'm lesbian 
-               doesn't mean I'm not a girl. I'm probably easy to pick on."
+            n "I don't want to do that at 8PM... Just because I'm lesbian doesn't mean 
+               that I'm not a girl. I'm probably easy to pick on."
             nmc "Natalie gives me a surprisingly pronounced frown."
             $ minutes = minutes + 2
             if ("law_hesitation" in answers):
-                mc "I suppose the school could get a bit dangerous at this time 
-                    of the day. You knew Prof- err, Coach Cyrus had the practice 
-                    moved?"
+                mc "I suppose the school could get a bit dangerous at this time of the 
+                    day. You knew Prof- err, Coach Cyrus had the practice moved?"
                 n "Yeah, he sent out an email late last night."
             else:
-                mc "I suppose the school could get a bit dangerous at this time 
-                    of the day. Wait. 8PM?"
-                n "Yeah, Coach Cyrus had the practice moved. He sent out emails 
-                   and texts late last night."
+                mc "I suppose the school could get a bit dangerous at this time of the 
+                   day. Wait. 8PM?"
+                n "Yeah, Coach Cyrus had the practice moved. He sent out emails and 
+                   texts late last night."
             nmc "Natalie lets out a yawn. So cute."
             mc "Did he...?"
             nmc "I pull out my phone. The e-mail was sent at..."
@@ -703,21 +698,19 @@ label Kazuki_1b_extend:
             $ sn_draw("sn gre")
             n "Studying for the GRE's..."
             mc "Already? I thought you were a junior."
-            n "No... I'm a senior. Ideally, I'll get into a good graduate school
-               that lets me both run and study medicine, but I'll have to take 
-               what I can get."
+            n "No... I'm a senior. Ideally, I'll get into a good graduate school that 
+               lets me both run and study medicine, but I'll have to take what I can 
+               get."
             mc "Oops. My mistake."
             $ minutes = minutes + 3
-            nmc "I am just noticing that I'm having an easier time talking to 
-                 her, now that the shock of her starting the conversation has 
-                 passed."
-            n "No worries! I get the whole \"you look young\" thing a lot. So 
-               I'll take that as a compliment."
-            nmc "She sticks her tongue out, despite her red and baggy eyes. I 
-                 start to force a laugh, but I stop myself as I see her start to 
-                 speak again."
-            n "Well, I should probably get to my next class. So, will you be 
-               able to- eep!"
+            nmc "I am just noticing that I'm having an easier time talking to her, now 
+                 that the shock of her starting the conversation has passed."
+            n "No worries! I get the whole \"you look young\" thing a lot. So I'll take 
+               that as a compliment."
+            nmc "She sticks her tongue out, despite her red and baggy eyes. I start to 
+                 force a laugh, but I stop myself as I see her start to speak again."
+            n "Well, I should probably get to my next class. So, will you be able to- 
+               eep!"
             nmc "Her legs buckle and she starts to fall! I..."
             $ cd_set(4, 4, 'Kazuki_1b_extend2')
             show screen countdown
@@ -731,13 +724,13 @@ label Kazuki_1b_extend:
         "No":
             $ answer_add("nat_no_or_hesitation")
             mc "No, why do you ask?"
-            n "Well, I was hoping you'd be able to take me to cross-country 
-               practice, but if you're busy..."
-            nmc "My throat collapses in on itself. God, I should have said yes. 
-                 And now I physically can't change my mind."
+            n "Well, I was hoping you'd be able to take me to cross-country practice, 
+               but if you're busy..."
+            nmc "My throat collapses in on itself. God, I should have said yes. And now 
+                 I physically can't change my mind."
             n "S... sorry for bothering you!"
-            nmc "My throat remains closed. I let out something like a wheeze as 
-                 wisps of air rattle off of my dry throat. Natalie walks off."
+            nmc "My throat remains closed. I let out something like a wheeze as wisps of
+                 air rattle off of my dry throat. Natalie walks off."
             mc "Dammit."
             $ points[1] += -2
         "...":
@@ -747,10 +740,9 @@ label Kazuki_1b_extend:
             n "Oh... Umm, s-s-..."
             nmc "... Better not to say anything at all."
             n "Sorry for bothering you!"
-            nmc "And with that, she runs off. Even with a textbook in one hand, 
-                 she still runs faster than I do. By quite a bit."
-            mc "Hah... as expected of the great co-captain of the cross country 
-                team..." 
+            nmc "And with that, she runs off. Even with a textbook in one hand, she
+                 still runs faster than I do. By quite a bit."
+            mc "Hah... as expected of the great co-captain of the cross country team..." 
             $ points[1] += -2
     jump Kazuki_1c
     
@@ -760,9 +752,9 @@ label Kazuki_1b_extend2:
     nnvlmc "... My body didn't even wait for me to make a decision. It moved all
             on its own, and embraced her. "
     extend "\nIt took another 5 seconds to realize that her soft chest was 
-            pushed into mine. "
-    extend " Her eyes are closed and her head is down. Long platinum hair make 
-            a veil blocking my view of her face. "
+             pushed into mine. "
+    extend " Her eyes are closed and her head is down. Her long platinum hair 
+            makes a veil blocking my view of her face. "
     nnvlmc "The blissful sensation of her willowy frame being held up by my own 
             hands."
     nvl clear
@@ -781,38 +773,37 @@ label Kazuki_1b_extend2:
             $ answer_add("nat_will_try")
             mc "Yeah, I'll come get you."
             n "Oh, you're the best. Here's my address."
-            nmc "She neatly scrawls - yes, neatly scrawls - her address on a 
-                 notecard and hands it to me."
+            nmc "She neatly scrawls - yes, neatly scrawls - her address on a notecard 
+                 and hands it to me."
             mc "Wait, you can't drive there?"
             n "Well... I don't quite have my driver license yet."
             mc "Seriously?"
-            n "So both of my parents work until 8:00PM every day, but the DMV 
-               closes at 4:00PM. That means that I can't take the driver's test 
-               unless someone drives me. And with gas and time being as valuable
-               as they are, that doesn't happen very often. And the one time 
-               someone gave me a ride to the DMV, two kids ran through the 
-               diagonal of the intersection during the test..."
-            nmc "Only Natalie would be cute while making tens of excuses. There 
-                 is a bit of irony to Natalie being able to do nearly everything 
-                 except for the simple act of driving."
+            n "So both of my parents work until 8:00PM every day, but the DMV closes at 
+               4:00PM. That means that I can't take the driver's test unless someone 
+               drives me. And with gas and time being as valuable as they are, that 
+               doesn't happen very often. And the one time someone gave me a ride to the
+               DMV, two kids ran through the diagonal of the intersection during the 
+               test..."
+            nmc "Only Natalie would be cute while making tens of excuses. There is a bit
+                 of irony to Natalie being able to do nearly everything except for the 
+                 simple act of driving."
             extend "\n...{w} ... "
             extend "She's still going..."
             n "... apparently, when that happens, you're supposed to come to a 
                complete stop rather than swerving, even if you can't come to a 
                complete stop safely, since..."
             $ minutes = minutes + 1
-            nmc "I could listen to her all day, but I should really get to 
-                 class..."
-            n "... Well, thanks for listening! I need to get to my next class. 
-               See ya later!"
+            nmc "I could listen to her all day, but I should really get to class..."
+            n "... Well, thanks for listening! I need to get to my next class. See 
+               ya later!"
             nmc "Perfect. So do I."
             mc "Later!"
             nmc "..."
             extend "\nI wonder if she fell on purpose."
         "No":
             $ answer_add("nat_no_or_hesitation")
-            nmc "I sadly shake my head. I'm a very busy man, with things to see 
-                 and people to do. Or something along those lines."
+            nmc "I sadly shake my head. I'm a very busy man, with things to see and
+                 people to do. Or something along those lines."
             $ points[1] += -2
             mc "Sorry, but I have to be somewhere."
             nmc "I walk off towards my next class, not looking back..."
@@ -849,19 +840,17 @@ label Kazuki_1c_continue:
         $ minutes = 600
         nmc "Well, I still have 5 minutes before class actually starts. I should
              probably..."
-        extend "\nHeh. Class. I look around the \"classroom\". The \"teacher\" 
-                is organizing unimportant papers on her desk."
-        nmc "That's the problem with these seminars. Some unexperienced girl a 
-             few years older than myself is trying to give advice to her 
-             similarly unexperienced peers, and with regards to how to live."
+        extend "\nHeh. Class. I look around the \"classroom\". The \"teacher\" is 
+                organizing unimportant papers on her desk."
+        nmc "That's the problem with these seminars. Some unexperienced girl only a  
+             few years older than myself is trying to give advice to her similarly 
+             unexperienced peers, and with regards to how to live."
         extend "\nOne wonders how these blasted community colleges are still 
                 standing. Oh right, they're obscenely cheap."
-        nmc "I wonder how much those seminar interns get paid. Probably too 
-             much."
+        nmc "I wonder how much those seminar interns get paid. Probably too much."
         $ minutes = 601
-        nmc "Well, I have 4 minutes left to kill. I should probably have a chat 
-             with Wil. To be honest, I don't really care how he decides to use 
-             his time before class, but since he is technically a friend of 
-             mine, it would only be just to offer the same concerns that he has 
-             offered to me."
+        nmc "Well, I have 4 minutes left to kill. I should probably have a chat with
+             Wil. To be honest, I don't really care how he decides to use his time 
+             before class, but since he is technically a friend of mine, it would 
+             only be just to offer the same concerns that he has offered to me."
         jump Kazuki_1d_wil
