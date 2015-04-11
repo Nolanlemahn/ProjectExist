@@ -306,4 +306,3 @@ init -2 python:
 
 init python:
     adj=user_adjustment
-    import renpy.store as store

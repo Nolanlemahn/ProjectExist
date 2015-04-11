@@ -48,7 +48,7 @@ label requested_start_cb:
     $ main_char_armor = "Nothing"
     $ main_known_moves = [1,2,3,0,0,0,0,0]
     $ answers = []
-    $ answer_add("self_40")
+    $ add_answer("self_40")
     $ flags = []
     $ points = init_points()
     $ reminders = []
@@ -145,7 +145,6 @@ label requested_start_cb:
     $ clock = True
     $ walletshow = True
     $ minutes = 1
-    $ jumping_in = True
     jump cb_test
     
 label cb_test:

@@ -34,7 +34,7 @@ label Kazuki_1d_wil:
     menu:
         extend ""
         "Ask to go camping with him this weekend":
-            $ answer_add("wil_camping")
+            $ add_answer("wil_camping")
             mc "Would you mind if I tagged along?"
             w "Huh? Tag what?"
             mc "I was wondering if I could go camping with you this weekend."
@@ -64,7 +64,7 @@ label Kazuki_1d_wil:
             nmc "I pull my laptop out of its bag and read some comics, pretending that I
                  am not here."
         "I need backup at tonight's meeting" if (answers[0] == "law_hesitation"):
-            $ answer_add("wil_backup")
+            $ add_answer("wil_backup")
             mc "I'm going to need help at tonight's meeting. Having another level head 
                 around - like yours - would be helpful."
             nmc "Some moral support is better than absolutely none. Besides, Wil took 
@@ -100,7 +100,7 @@ label Kazuki_1d_wil:
             w "Whatever. Looks like Tamara is about to start her crap show."
             nmc "Nodding, I trot back to my desk."
         "Actually, never mind":
-            $ answer_add("wil_nvm")
+            $ add_answer("wil_nvm")
             mc "... Never mind."
             w "What?"
             mc "I... it's not important."
@@ -117,7 +117,7 @@ label Kazuki_1d_wil:
     jump Kazuki_1d_tamara_b
 
 label Kazuki_1d_insert:
-    $ answer_add("wil_nvm")
+    $ add_answer("wil_nvm")
     mc "..."
     w "What?"
     nmc "Realizing that I had nothing to say of significant importance, I 
@@ -150,7 +150,7 @@ label Kazuki_1d_tamara_a:
     menu:
         extend ""
         "She can't prove that":
-            $ answer_add("tam_no_proof")
+            $ add_answer("tam_no_proof")
             $ points[2] += -2
             mc "I don't believe you have documentation of this first alleged tardiness."
             t "What makes you say that?"
@@ -158,7 +158,7 @@ label Kazuki_1d_tamara_a:
                 call that day."
             t "Tch... Just make sure it doesn't happen again."
         "I'll have Lawrence talk to her":
-            $ answer_add("tam_lawrence")
+            $ add_answer("tam_lawrence")
             nmc "I don't say anything. I do however, pull out my Nokia 3310."
             t "What are you doing?"
             mc "I'm calling Professor Lawrence. I was speaking with him before I arrived 
@@ -169,7 +169,7 @@ label Kazuki_1d_tamara_a:
             nmc "I guess his name carries weight everywhere around here... To my seat I 
                  go, then."
         "Apologizing will get this over with faster":
-            $ answer_add("tam_sorry")
+            $ add_answer("tam_sorry")
             mc "My apologies, Tamara. I'll make sure it doesn't happen again."
             $ points[2] += 3
             t "Fair enough."
@@ -178,7 +178,7 @@ label Kazuki_1d_tamara_a:
     jump Kazuki_1d_tamara_b
     
 label Kazuki_1d_tamara_b1:
-    $ answer_add("tam_indifference")
+    $ add_answer("tam_indifference")
     t "... Can't get a word out, huh? Oh well, as long as the point got 
        across..."
     nmc "Well actually, I didn't feel like gracing such a stupid question with a
@@ -393,20 +393,20 @@ label Kazuki_1d_tamara_b:
     menu:
         extend ""
         "Skip class":
-            $ answer_add("self_skip")
+            $ add_answer("self_skip")
             mc "There is absolutely no point in me going... but what would I do if I 
                 skipped?"
         "Attend":
-            $ answer_add("self_go")
+            $ add_answer("self_go")
             mc "I should probably go anyway, though. Just to keep up appearances."
         "...":
-            $ answer_add("self_indecisive")
+            $ add_answer("self_indecisive")
             mc "... I can't make up my mind."
     jump Kazuki_1e
     
 label Kazuki_1e:
     if("self_skip" not in answers and "self_go" not in answers):
-        $ answer_add("self_indecisive")
+        $ add_answer("self_indecisive")
         mc "... I can't make up my mind."
     li "Eh?"
     mc "Huh?"
@@ -468,11 +468,11 @@ label Kazuki_1e:
     menu:
         extend ""
         "Wil can get a date with Lily":
-            $ answer_add("wil_lily_group")
+            $ add_answer("wil_lily_group")
             nmc "I'm normally not one for playing matchmaker, but I owe Wil a few 
                  favors."
         "I can get a 4.0 in Japanese":
-            $ answer_add("self_40")
+            $ add_answer("self_40")
             nmc "To be honest, I should take advantage of this particular resource. My 
                  life is harder than I'd like it to be, and LAST sounds like it could be
                  useful."
@@ -484,7 +484,7 @@ label Kazuki_1e:
 label Kazuki_1g:
     $ minutes = minutes + 3
     if("wil_lily_group" not in answers and "self_40" not in answers):
-        $ answer_add("undecided_g40")
+        $ add_answer("undecided_g40")
         nmc "I suppose I can decide what that means later."
     $ tempsay = "."
     if("self_skip" in answers):
@@ -525,7 +525,7 @@ label Kazuki_1h:
           the most likely."
     nnvlmc "Clearly, I haven't died yet... actually, for the sake of argument, I
             should include that theory."
-    $ answer_add(
+    $ add_answer(
         nvlans(0, 
             nvlq(None,
                 "In front of me is an angel. This is Heaven.", 
@@ -613,13 +613,13 @@ label Kazuki_1h:
     menu:
         extend ""
         "I should get that essay done right now":
-            $ answer_add("lunch_essay_1")
+            $ add_answer("lunch_essay_1")
         "Don't eat and go to work early":
-            $ answer_add("lunch_work_1")
+            $ add_answer("lunch_work_1")
         "Grab a bagel before work":
-            $ answer_add("lunch_bagel_1")
+            $ add_answer("lunch_bagel_1")
         "...":
-            $ answer_add("lunch_work_1")
+            $ add_answer("lunch_work_1")
     jump Kazuki_1i
     
 label Kazuki_1i:
@@ -628,7 +628,7 @@ label Kazuki_1i:
         jump Kazuki_1j_essay
         
     if("lunch_work_1" not in answers and "lunch_bagel_1" not in answers):
-        $ answer_add("lunch_work_1")
+        $ add_answer("lunch_work_1")
         nmc "... I can't actually make up my mind, so I guess I'll eat later and 
              save myself the trouble."
         nmc "Either way, I can afford to skip a meal."
@@ -657,7 +657,7 @@ label Kazuki_1i:
         menu:
             extend ""
             "The physics department should know who I am":
-                $ answer_add("meeting_known")
+                $ add_answer("meeting_known")
                 nmc "If I am so important to Lawrence, then perhaps I could be of use to
                      the entire faculty, and that relationship, of course, would be of 
                      use to me."
@@ -666,13 +666,13 @@ label Kazuki_1i:
                      agenda."
                 nmc "Assuming, heh, that I don't come off as a bumbling idiot."
             "Lawrence clearly needs help":
-                $ answer_add("meeting_hlawrence")
+                $ add_answer("meeting_hlawrence")
                 nmc "Lawrence is good enough of a professor that I should help him, 
                      plain and simple."
                 nmc "I don't know exactly what's on the agenda for the meeting, but I'm 
                      sure that I'll be useful."
             "I don't have time for that":
-                $ answer_add("meeting_no")
+                $ add_answer("meeting_no")
                 nmc "Not only am I too busy for that meeting, but even if I did go, I'm 
                      not so sure if I'd be helpful."
     if("lunch_work_1" in answers):

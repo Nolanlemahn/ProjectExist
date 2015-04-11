@@ -124,7 +124,11 @@ label toggle_dev(toggled_mode):
         $ renpy.reload_script()
     $ in_debug = False
     return
-    
+
+label gret_stack:
+    $ renpy.say(None, ''.join(renpy.get_return_stack()))
+    return
+
 screen debug_menu:
     #start pure style/aesthetics values
     tag menu
@@ -142,6 +146,7 @@ screen debug_menu:
     
         vbox:
             textbutton _("Text History") action ShowMenu("text_history")
+            textbutton "Get return stack" xminimum 300 action ui.callsinnewcontext("gret_stack")
             textbutton "Change a variable" xminimum 300 action ui.callsinnewcontext("varmani")
             textbutton "View most common variables" xminimum 300 action ui.callsinnewcontext("basevars")
             textbutton "View given answers" xminimum 300 action ui.callsinnewcontext("given_answers")

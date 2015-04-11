@@ -21,6 +21,7 @@ init python:
         store.shadowtime = 0.7
         renpy.jump(store.hack_label)
         #renpy.pause(1.0)
+        return
 
 label menu_template:
     show screen shadow_down
@@ -35,6 +36,7 @@ label menu_template:
             jump fake_1
         "...":
             jump fake_1
+    return
 
 label reset_shadow:
     $ config.mouse = old_mouse

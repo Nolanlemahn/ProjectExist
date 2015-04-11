@@ -12,6 +12,7 @@ label m1_1v1_turna:
         "Run":
             "[m1name] is not a coward and refuses to run!{fast}"
             jump m1_1v1_turna
+    return
 
 label m1_1v1_turnb:
     menu:

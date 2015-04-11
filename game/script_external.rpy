@@ -7,9 +7,13 @@ label triple_min(interval):
     extend "..."
     return
 
+label add_answer(new_answer):
+    $ answers.append(new_answer)
+    return
+
 init -1 python:
-    def answer_add(new_answer):
-        answers.append(new_answer)
+    def add_answer(new_answer):
+        renpy.call("add_answer", new_answer)
         return
     
     def python_pass():
@@ -41,17 +45,17 @@ init -1 python:
         renpy.show(called_scene)
         renpy.with_statement(dissolve)
     
-    #question should be a string or None, *answers is any number of strings as additional parameters
+    #question should be a string or None, *candidates is any number of strings as additional parameters
     #selected answer becomes red on-screen, returns integer (min=1) in accordance to which answer chosen
     #additionally requires following definition or similar (ctc need not be defined):
     # $ nvlcap = NVLCharacter(None, kind=nvl, ctc=anim.Blink("extra/arrow.png"))
-    def nvlq(question, *answers):
+    def nvlq(question, *candidates):
         full_answer = ""
         menu_answers = []
         string_answers = []
         num_answers = 0
         
-        for answer in answers:
+        for answer in candidates:
             num_answers = num_answers + 1
             menu_answers.append(("> "+answer, num_answers))
             string_answers.append("> "+answer)

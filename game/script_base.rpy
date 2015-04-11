@@ -1,6 +1,9 @@
+init -1:
+    $ answers = []
+
 label start:#this_label_done
+    $ answers = []
     $ in_side_note = False
-    $ jumping_in = False
     show screen mlib_listener
     scene bg blackdrop
     with dissolve

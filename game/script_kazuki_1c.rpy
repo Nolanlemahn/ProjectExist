@@ -239,7 +239,7 @@ label Kazuki_1j_essay:
     menu:
         extend ""
         "Yes":
-            $ answer_add("lily_essay_1_yes")
+            $ add_answer("lily_essay_1_yes")
             call Kazuki_1j_essay_yes #returns
             if("self_40" not in answers):
                 jump Kazuki_1j_essay_stop
@@ -251,10 +251,10 @@ label Kazuki_1j_essay:
             else:
                 jump Kazuki_1j_essay_lazy
         "No":
-            $ answer_add("lily_essay_1_no")
+            $ add_answer("lily_essay_1_no")
             jump Kazuki_1j_essay_no
         "...":
-            $ answer_add("lily_essay_1_no")
+            $ add_answer("lily_essay_1_no")
             jump Kazuki_1j_essay_what
 
 label Kazuki_1j_essay_yes:
@@ -335,12 +335,12 @@ label Kazuki_1j_essay_yes:
     menu:
         extend ""
         "Yes":
-            $ answer_add("lily_essay_2_yes")#jump Kazuki_1j_essay_more
+            $ add_answer("lily_essay_2_yes")#jump Kazuki_1j_essay_more
         "No":
-            $ answer_add("lily_essay_2_no")#jump Kazuki_1j_essay_stop
+            $ add_answer("lily_essay_2_no")#jump Kazuki_1j_essay_stop
         "...":
             pass
-    return #line180
+    return #line244
     
 label Kazuki_1j_essay_no:
     $ points[4] += -2
@@ -417,7 +417,7 @@ label Kazuki_1j_essay_more:
     return
 
 label Kazuki_1j_essay_lazy:
-    $ answer_add("lily_essay_2_what")
+    $ add_answer("lily_essay_2_what")
     nmc "... I stared blankly at the laptop screen."
     mc "Uhh..."
     $ jump_break()
@@ -609,16 +609,16 @@ label Kazuki_1k_work_alt:# 2:42 PM
     menu:
         extend ""
         "Amnaki":
-            $ answer_add("work_excuse_amnaki")
+            $ add_answer("work_excuse_amnaki")
         "Lilian":
-            $ answer_add("work_excuse_lilian")
+            $ add_answer("work_excuse_lilian")
         "...":
             jump Kazuki_1k_work_mum
     jump Kazuki_1k_work_excuse
     
 label Kazuki_1k_work_mum:
     $ points[5] += -4
-    $ answer_add("work_excuse_none")
+    $ add_answer("work_excuse_none")
     nmc "I can't actually think of a reasonable excuse, so I say nothing."
     ro "... Whatever. Get to work. I'm taking a nap."
     jump Kazuki_1k_work_excuse

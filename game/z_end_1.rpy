@@ -62,3 +62,5 @@ label test_end_1:
     a "And that's okay now."
     nmc "Her hand went limp, and I felt my own body give out."
     nmc "It was nice knowing you, Athena..."
+    return
+    

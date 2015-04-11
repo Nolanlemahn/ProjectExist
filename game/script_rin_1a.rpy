@@ -277,4 +277,6 @@ label Rin_1d:
     rm "I don't have time to talk about this with the school board..."
     mc "Wait, why aren't you at work? Today is a Tuesday."
     rm ""
+    return
+    
     

@@ -28,7 +28,6 @@ label Kazuki_1a:#this_label_done
     $ main_char_weapon = "Fists"
     $ main_char_armor = "Nothing"
     $ main_known_moves = [1,2,0,0,0,0,0,0]
-    $ answers = []
     $ flags = []
     $ points = init_points()
     $ reminders = []
@@ -131,9 +130,7 @@ label Kazuki_1a:#this_label_done
     ###########
     $ minutes = 460
     $ clock = True
-    if(not jumping_in):
-        jump Kazuki_1b
-    return
+    jump Kazuki_1b
     
 label Kazuki_1b:
     scene bg blackdrop
@@ -469,13 +466,13 @@ label Kazuki_1b_2:
         extend ""
         "Today's lecture":
             #$ activate_mouse_hack()
-            $ answer_add("law_lecture")
+            $ add_answer("law_lecture")
         "The upcoming test":
-            $ answer_add("law_test")
+            $ add_answer("law_test")
         "Nothing at all":
-            $ answer_add("law_nothing")
+            $ add_answer("law_nothing")
         "...":
-            $ answer_add("law_hesitation")
+            $ add_answer("law_hesitation")
     jump Kazuki_1b_pre
     #call domchange("HP", -1, 1)
     #!URGENT : WRITE HERE!#
@@ -527,6 +524,7 @@ label Kazuki_1b_pre:
              another desk on my way out."
         l "I wonder if anyone has actually had the gall to name their child 
            'Crap'... That would make a great last name..."
+        $ add_answer("nat_xc-skipped")
         $ points[0] += 3
         #10:00PM
         call triple_min(2)
@@ -534,7 +532,7 @@ label Kazuki_1b_pre:
         #skip Kazuki_1b_extend
     elif ("law_nothing" in answers):
         $ answers.remove("law_nothing")
-        $ answer_add("law_hesitation")
+        $ add_answer("law_hesitation")
         mc "Actually, there was nothing I wanted to ask..."
         l "Oh. Well then. Get. Out."
         $ points[0] += -2
@@ -542,7 +540,7 @@ label Kazuki_1b_pre:
         l "Oh actually, I do have something to ask of you."
         call Kazuki_1b_stub
     else:
-        $ answer_add("law_hesitation")
+        $ add_answer("law_hesitation")
         mc "... Uh..."
         nmc "I am always prepared to make conversation. I am rarely prepared to 
              begin a completely new one.{w} ... Fortunately, Professor Lawrence 
@@ -605,7 +603,8 @@ label Kazuki_1b_stub:
             mc "I don't think so."
             l "Well, meet me in this classroom at 6 if you change your mind."
         "...":
-            call Kazuki_1b_interstitial
+            l "Not sure, eh? Well, if you do decide to come, meet me in this 
+               classroom at 6. Ciao."
     return
     # ^ jump Kazuki_1b_extend
         
@@ -635,11 +634,6 @@ label Kazuki_1b_extend:
                 2:00PM - 5:50PM: (Work + lunch)\n{w}
                 6:00PM - 8:00PM: (Cross-country practice)"
     nvl clear
-    if ("law_test" in answers):
-        $ answer_add("nat_xc-skipped")
-        nmc "Wait. I'm running late for my next class!"
-        extend "\nI break into a sprint and rush towards Anderson Hall..."
-        jump Kazuki_1c
     nmc "I hate Tuesdays. And Wednesdays. Well, I don't hate the days 
          themselves, but the manner in which my classes are scheduled for those 
          days. I like my classes for the most part, but 6 hours of non-stop 
@@ -722,7 +716,7 @@ label Kazuki_1b_extend:
                     pass
             jump Kazuki_1b_extend2
         "No":
-            $ answer_add("nat_no_or_hesitation")
+            $ add_answer("nat_no_or_hesitation")
             mc "No, why do you ask?"
             n "Well, I was hoping you'd be able to take me to cross-country practice, 
                but if you're busy..."
@@ -734,7 +728,7 @@ label Kazuki_1b_extend:
             mc "Dammit."
             $ points[1] += -2
         "...":
-            $ answer_add("nat_no_or_hesitation")
+            $ add_answer("nat_no_or_hesitation")
             nmc "I can't say anything in front of the perfect Natalie. What if I
                  stutter? What if I spit on her? What if I..."
             n "Oh... Umm, s-s-..."
@@ -770,7 +764,7 @@ label Kazuki_1b_extend2:
     menu:
         extend ""
         "Yes":
-            $ answer_add("nat_will_try")
+            $ add_answer("nat_will_try")
             mc "Yeah, I'll come get you."
             n "Oh, you're the best. Here's my address."
             nmc "She neatly scrawls - yes, neatly scrawls - her address on a notecard 
@@ -801,7 +795,7 @@ label Kazuki_1b_extend2:
             nmc "..."
             extend "\nI wonder if she fell on purpose."
         "No":
-            $ answer_add("nat_no_or_hesitation")
+            $ add_answer("nat_no_or_hesitation")
             nmc "I sadly shake my head. I'm a very busy man, with things to see and
                  people to do. Or something along those lines."
             $ points[1] += -2
@@ -822,7 +816,7 @@ label Kazuki_1b_fail:
     mc "Hah... as expected of the great co-captain of the cross country team..." 
     nmc "I accept my 402nd failure at speaking to a female, and head to my next 
          class..."
-    $ answer_add("nat_no_or_hesitation")
+    $ add_answer("nat_no_or_hesitation")
     $ points[1] += -2
     jump Kazuki_1c
     

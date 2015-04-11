@@ -1,11 +1,5 @@
 ﻿init python:
-    def scene_load(label_string):
-        scene_scope = base_scope.copy()
-        if(label_string is "Kazuki_1b"):
-            scene_scope.update(Kazuki_1b_scope)
-            renpy.call_replay("Kazuki_1b", scope=scene_scope)
-        return
-        
+    scopes = {}
     base_scope={'ingame':"Kazuki",
         'main_name':"?",
         'main_type':"kk",
@@ -83,6 +77,13 @@
         'nmc':Character(None, what_style="main_gray"),
         'nnvlmc':Character(None, color="#C0C0C0", kind=nvl_gray_narr),
         'minutes':460,
-        'clock':True}
+        'clock':True,
+        'in_side_note':False}
     #==============
-    Kazuki_1b_scope={}
+    scopes["Kazuki_1b"]={'main_name':"Kazuki"}
+    scopes["Kazuki_1c"]={'main_name':"Kazuki",
+        'main_char_currentBelly':70,
+        'answers':["law_hesitation", "nat_will_try"],
+        'minutes':596,
+        'points':[-2, 0, 0, 0, 0, 0, 0, 0]}
+        

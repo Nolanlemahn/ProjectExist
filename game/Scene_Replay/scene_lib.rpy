@@ -1,15 +1,22 @@
-﻿init python:
+﻿init -2 python:
+    scene_scope = {}
+
     def jump_break():
-        if(hasattr(store, 'jumping_in')):
-            if(store.jumping_in):
-                renpy.end_replay()
+        renpy.end_replay()
         return
                 
     def jump_in(label_string):
-        store.jumping_in = True;
-        scene_load(label_string)
+        scene_scope = {}
+        scene_scope = base_scope.copy()
+        scene_scope.update(scopes[label_string])
+        renpy.call_replay(label_string, scope=scene_scope)
+        #renpy.quit(relaunch=True)
         return
-    
+
+    def store_reset():
+        renpy.store.answers = []
+    config.start_callbacks.append(store_reset)
+
 screen scene_replay:
     # This ensures that any other menu screen is replaced.
     tag menu
