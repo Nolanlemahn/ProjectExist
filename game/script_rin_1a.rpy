@@ -84,7 +84,6 @@ label Rin_1a:#this_label_done
     
     $ minutes = 885
     $ clock = True
-    jump Rin_1c
     
 label Rin_1b:
     #ui.button("surprise")
@@ -163,6 +162,7 @@ label Rin_1b:
     nvlnmc "I channel energy through both of my hands."
     nvl clear
     
+    show world divide
     $ persistent.seen_move[3] = 1
     nmc "... Warlock's Fists. I pull energy from the world around me, and launch
          myself towards my shadow, pummeling it all the while."
@@ -181,7 +181,8 @@ label Rin_1b:
          answer. It simply wants to know what I consider myself to be."
     mc "Just a girl who perfectly understands darkness, and therefore perfectly
         understands this world."
-    s "... No. You are darkness. Compared to you, I am light."
+    doublespeak et s "So Rin, tell me, what was the author's main goal in this \
+particular passage?" "... No. You are darkness. Compared to you, I am light."
     nmc "My shadow lets out a light chuckle, which builds into hearty laughter,
          which finally becomes a hyena's call."
     mc "... Annoying."
@@ -189,6 +190,7 @@ label Rin_1b:
          living... "
 
 label Rin_1c:
+    hide world divide
     et "Rin? Hey, Rin. I was asking you a question."
     mc "I don't care."
     nmc "I have several goals in life, but making my English instructor happy 
@@ -276,7 +278,7 @@ label Rin_1d:
          to his swearing."
     rm "I don't have time to talk about this with the school board..."
     mc "Wait, why aren't you at work? Today is a Tuesday."
-    rm ""
+    rm "My boss called in sick. There was no one to secretary for."
     return
     
     

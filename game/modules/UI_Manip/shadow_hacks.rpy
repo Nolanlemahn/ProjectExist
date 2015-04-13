@@ -13,7 +13,7 @@ init python:
         store.old_mouse = config.mouse
         
         _preferences.mouse_move = True
-        config.mouse = { 'default' : [ ('menus/demo_mouse.png', 0, 0)] }
+        config.mouse = { 'default' : [ ('menus/shadow_mouse.png', 0, 0)] }
         
         renpy.hide_screen("countdown_tag")
         renpy.set_mouse_pos(store.mouse_hack_x, store.mouse_hack_y, 0.5)
