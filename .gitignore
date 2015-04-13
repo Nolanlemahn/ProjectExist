@@ -5,5 +5,6 @@ traceback.txt
 *.rpyc
 *.rpyb
 game/saves/
-game/debuglog.txt
+debuglog.txt
+debuglog2.txt
 *.dia~

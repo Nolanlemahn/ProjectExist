@@ -1,7 +1,6 @@
 ﻿init -1 python hide:
     from array import *
-    config.python_callbacks = []
-    
+
     layout.button_menu()
 
     # style.say_who_window.background = Frame("frame.png", 15, 15) #Background skin

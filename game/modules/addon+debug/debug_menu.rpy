@@ -24,6 +24,16 @@ init python:
                 setattr(persistent, attr, None)
         return
     
+    def secondary_debug_log():
+        file = config.gamedir + "/../debuglog2.txt"
+        f = open(file, "wt")
+        f.write("Where you were in the script and where the mouse was!\n")
+        script_seek = "\n" + str(renpy.get_filename_line()) + "\n"
+        f.write(script_seek)
+        f.write("\nMouse was at: " + (', '.join(str(x) for x in renpy.get_mouse_pos())))
+        f.close
+    config.interact_callbacks.append(secondary_debug_log)
+
     def stringStack(list_strings):
         returnable = ""
         for s in list_strings:

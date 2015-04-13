@@ -1,4 +1,6 @@
-﻿init -1 python:        
+﻿init -1 python:
+    config.python_callbacks = []
+    config.interact_callbacks = []
 #styles - ui
     style.clipFrame = Style(style.frame)
     style.clipFrame.background = Frame("menus/FoxFrameClip.png", 25, 25)
@@ -27,9 +29,6 @@ init -1:
         font "fonts/Respective_Slanted.ttf"
         size 64
     
-    
-    
-    $ cdw_color = (255, 0, 0, 255)#red
     $ style.create("game_box", "frame")
     $ style.game_box.background = Frame("menus/FoxGameBox.png", 25, 25)
     
@@ -206,12 +205,12 @@ init -1 python hide:
     config.fix_rollback_without_choice = False
 #These are our styles and whatnot
 init -1:
-    #$ renpy.watch("renpy.music.get_playing()", style = style.alertnow_text, xpos=0.0, xanchor='left', ypos=0.0, yanchor='bottom')
-    $ renpy.watch("renpy.get_filename_line()", style = style.alertnow_text, xpos=1.0, xanchor='right', ypos=0.0, yanchor='top')
+    $ renpy.watch("renpy.get_filename_line()", style = style.alertnow_text, 
+                   xpos=1.0, xanchor='right', ypos=0.15, yanchor='top')
     if(config.developer):
-        $ watch_header_rb = "In rollback: "
-        $ renpy.watch("watch_header_rb + str(renpy.in_fixed_rollback())", style = style.alertnow_text, xpos=0.0, xanchor='left', ypos=0.76, yanchor='bottom')
-        
+        $ renpy.watch("\"Mouse was at: \" + (', '.join(str(x) for x in renpy.get_mouse_pos()))", 
+                      style = style.alertnow_text, xpos=1.0, xanchor='right', ypos=0.2, 
+                      yanchor='top') 
     $ in_debug = False
     $ in_menu = False
     
@@ -260,6 +259,7 @@ init -1:
     $ nvlcap = NVLCharacter(None, kind=nvl, ctc=anim.Blink("extra/arrow.png"))
     
 init -2 python:
+    import os
     style.quick_button.set_parent('default')
     style.quick_button.background = None
     style.quick_button.xpadding = 5
@@ -284,7 +284,7 @@ init -2 python:
 
     ## These values tell Ren'Py how to build a distribution.
     config.version = "v0.2.8_(1066)"
-    config.log = config.gamedir + "/debuglog.txt"
+    config.log = os.path.abspath(config.gamedir + "/../debuglog.txt")
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
     build.include_update = True
