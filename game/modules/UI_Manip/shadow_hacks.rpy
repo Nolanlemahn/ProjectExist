@@ -12,6 +12,8 @@ init python:
         old_pref = _preferences.mouse_move
         store.old_mouse = config.mouse
         
+        #It seems that the default mouse is none. Consider getting standard
+        #cursor.
         _preferences.mouse_move = True
         config.mouse = { 'default' : [ ('menus/shadow_mouse.png', 0, 0)] }
         

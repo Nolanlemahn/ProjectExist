@@ -88,6 +88,7 @@ python early:
         # Get proper character names.
         chars = collections.OrderedDict()
         for name in info['chars']:
+            # Eventually stop using Pokémon exception handling here
             try:
                 char = eval(name)
                 
