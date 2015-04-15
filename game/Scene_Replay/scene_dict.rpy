@@ -40,6 +40,7 @@
         'stringmonth':"September",
         'main_char_cash':200.00,
         'has_phone':False,
+        'corruption':0,
         'walletshow':True,
         'main_char_show_rpg':True,
         'ui_check':False,

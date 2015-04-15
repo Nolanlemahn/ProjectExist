@@ -189,6 +189,7 @@ label Kazuki_1j_essay:
     nmc "And you were showing us how to transform matrices in a manner that... 
          oh."
     nmc "... I'm not actually getting anything done..."
+    $ essay_status = "a skeleton"
     nmc "I'm saying and typing a lot, but none of it is truly essay material."
     $ triple_min(10)
     nmc "\"In short, because your online notes are far clearer than you are 
@@ -301,6 +302,7 @@ label Kazuki_1j_essay_yes:
     $ points[4] += 2
     nmc "30 minutes later, we had... something. It certainly was an improvement 
          from what I had written by myself."
+    $ essay_status = "bad_but_mostly_complete"
     nmc "But the sentences simply didn't flow. Near the end, we may as well have
          been writing something along the lines of 
          \"Amnaki, you are great. I should have paid attention. This class is 
@@ -413,6 +415,9 @@ label Kazuki_1j_essay_more:
     li "Haha, okay. So, the sentences don't really transition into each other, 
         but they do outline what needs to be said. And we're still a few pages 
         short of the 10 we need..."
+    $ triple_min(5)
+    $ essay_status = "done"
+    mc "We... We actually have something reasonable now..."
     $ jump_break()
     return
 

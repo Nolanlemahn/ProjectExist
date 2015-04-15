@@ -44,6 +44,8 @@ label Kazuki_1a:#this_label_done
     $ stringmonth = "September"    
     $ main_char_cash = 200.00
     $ has_phone = False
+    # increase this if doing something evil
+    $ corruption = 0
     
     #]
     $ walletshow = True

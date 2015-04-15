@@ -580,6 +580,7 @@ label Kazuki_1h:
          about me already."
     nmc "However, as I'm opening the door, the teacher, seemingly frustrated by 
          my lack of remorse, decides to add injury to the insult."
+    $ essay_status = "not_started"
     mt "And I want a 10 page essay on my desk tomorrow about why you weren’t 
         paying attention in class."
     nmc "I just walk out of the classroom, managing to catch a short glimpse of 

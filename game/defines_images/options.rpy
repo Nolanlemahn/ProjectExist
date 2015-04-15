@@ -1,4 +1,9 @@
 ﻿init -1 python:
+
+    def size_reset():
+        renpy.reset_physical_size()
+    config.start_callbacks.append(size_reset)
+
     config.python_callbacks = []
     config.interact_callbacks = []
 #styles - ui
