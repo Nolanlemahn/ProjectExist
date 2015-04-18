@@ -60,21 +60,6 @@ init python:
         #renpy.pause(1.0)
         return
 
-label menu_template:
-    show screen shadow_down
-    # The menu would hold all of the choices from the previous menu
-    menu:
-        nmc ""
-        "Today's lecture":
-            jump fake_1
-        "The upcoming test":
-            jump fake_1
-        "Nothing at all":
-            jump fake_1
-        "...":
-            jump fake_1
-    return
-
 label reset_shadow:
     $ config.mouse = old_mouse
     $ renpy.jump(landing_label)
@@ -93,3 +78,18 @@ screen shadow_down:
     if time < 0:
         # redundantly set in_countdown to False just in case
         $ in_shadow_down = False
+
+label menu_template:
+    show screen shadow_down
+    # The menu would hold all of the choices from the previous menu
+    menu:
+        nmc ""
+        "Today's lecture":
+            jump fake_1
+        "The upcoming test":
+            jump fake_1
+        "Nothing at all":
+            jump fake_1
+        "...":
+            jump fake_1
+    return
