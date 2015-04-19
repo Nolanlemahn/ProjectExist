@@ -54,12 +54,13 @@ init -1 python hide:
 
 init -2 python:
     def show_rwatch():
-        renpy.watch(get_watch(1), style = style.alert_text, func_name = "fname", 
-                     xpos=1.0, xanchor='right', ypos=0.15, yanchor='top')
+        renpy.watch(get_watch(1), style = style.alert_text, 
+                     func_name = "show_files", xpos=1.0, xanchor='right', 
+                     ypos=0.15, yanchor='top')
         #if renpy.config.developer:
         renpy.watch(get_watch(2), 
-                    style = style.alert_text, xpos=1.0, xanchor='right', ypos=0.2, 
-                    yanchor='top')
+                    style = style.alert_text, func_name = "show_mouse", 
+                    xpos=1.0, xanchor='right', ypos=0.2, yanchor='top')
     def get_watch(index):
         if index is 1:
             return "renpy.get_filename_line()"
@@ -67,9 +68,6 @@ init -2 python:
             return "\"Mouse was at: \" + (', '.join(str(x) for x in renpy.get_mouse_pos()))"
         else:
             return "\"\""
-
-    def stopwatch():
-        renpy.unwatch(func_name = "fname")
 
 #These are our styles and whatnot
 init -1:
