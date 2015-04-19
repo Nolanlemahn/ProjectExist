@@ -88,7 +88,7 @@ label stalkme:
     scene bg mainmenu
     $ in_debug = True
     scene bg mainmenu
-    #$ renpy.watch("renpy.get_filename_line()", style = style.alertnow_text, xpos=1.0, xanchor='right', ypos=0.0, yanchor='top')
+    #$ renpy.watch("renpy.get_filename_line()", style = style.alert_text, xpos=1.0, xanchor='right', ypos=0.0, yanchor='top')
     #"I am now watching you. The line and filename you are in will be displayed in the upper-left corner. Please add this information to any reports pertaining to spelling/grammar errors. You will need to re-visit this menu item every time you launch the game - sorry!"
     "This is not necessary and is turned on by default."
     $ in_debug = False
