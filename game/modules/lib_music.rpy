@@ -33,7 +33,7 @@ init python:
     #####
     # Function name: dualwise()
     # 
-    # Descripiton: Transforms data into tuplets of two (well three including 
+    # Description: Transforms data into tuplets of two (well three including 
     # garbage). For looping sfx.
     # 
     # Parameters:
@@ -49,7 +49,7 @@ init python:
     #####
     # Function name: tripwise()
     # 
-    # Descripiton: Transforms data into tuplets of three (well four including 
+    # Description: Transforms data into tuplets of three (well four including 
     # garbage). For real sfx.
     # 
     # Parameters:
@@ -65,7 +65,7 @@ init python:
     #####
     # Function name: quadwise()
     # 
-    # Descripiton: Transforms data into tuplets of four (well five including 
+    # Description: Transforms data into tuplets of four (well five including 
     # garbage). For music.
     # 
     # Parameters:
@@ -85,7 +85,7 @@ init python:
     #####
     # Class name: mlib()
     # 
-    # Descripiton: Plays music/sfx based on the shortcode.
+    # Description: Plays music/sfx based on the shortcode.
     # 
     # Parameters:
     # selection - the shortcode
@@ -106,11 +106,11 @@ init python:
             self.data = []
             self.human_view = ""
             self.human_mute = False
+
         #####
         # Function name: __call__()
         # 
-        # Descripiton: Transforms data into tuplets of four (well five including 
-        # garbage). For music.
+        # Description: Plays the specified music.
         # 
         # Parameters:
         # selection - the shortcode for the audio file we play
@@ -139,10 +139,11 @@ init python:
                         renpy.pause(entry[2])
                     return
             return #nothing happened, oh well
+
         #####
         # Function name: load()
         # 
-        # Descripiton: Grabs data from the three text files, and sends it to the
+        # Description: Grabs data from the three text files, and sends it to the
         # Music Room, which we rebuild.
         # 
         # Returns: None
@@ -184,6 +185,33 @@ init python:
                 newLine = (shortname, fileloc, time)
                 self.sfxEntries2.append(newLine)
             return
+
+        #####
+        # Function name: get_playing()
+        # 
+        # Description: Gets a string representing the song that's playing in a 
+        # sane manner.
+        # 
+        # Parameters:
+        # showScreen - Put the data on the screen.
+        # 
+        # Returns: the transformed data
+        # 
+        # Format: [march] - <Title - Artist> - (File Location)
+        #####
+        def get_playing(self, showScreen = True):
+            entry = self.data
+            store.mlib_timer = 1.0
+            try:
+                self.human_view = "<" + entry[2] + ">"
+                if config.developer:
+                    self.human_view = "["+ entry[0] +"] - " + self.human_view +  "- (" + entry[1] + ")"
+            except:
+                self.human_view = "[Nothing is playing]"
+            if(showScreen):
+                renpy.call_in_new_context("mlib_show_data")
+            return self.human_view
+
         def silence(self, seconds=2.0):
             renpy.music.set_volume(0.0, seconds, channel="music")
             return
@@ -203,18 +231,6 @@ init python:
                 self.human_mute = False
                 renpy.music.set_volume(1.0, 2.0, channel="music")
             return
-        def get_playing(self, showScreen = True):
-            entry = self.data
-            store.mlib_timer = 1.0
-            try:
-                self.human_view = "<" + entry[2] + ">"
-                if config.developer:
-                    self.human_view = "["+ entry[0] +"] - " + self.human_view +  "- (" + entry[1] + ")"
-            except:
-                self.human_view = "[Nothing is playing]"
-            if(showScreen):
-                renpy.call_in_new_context("mlib_show_data")
-            return self.human_view
         def restart(self):
             if(renpy.music.get_playing()):
                 renpy.music.play(renpy.music.get_playing(), loop=True, fadein=1.0)
@@ -238,7 +254,7 @@ init python:
     #####
     # Function name: name_playing()
     # 
-    # Descripiton: Finds the name of the playing file.
+    # Description: Finds the name of the playing file.
     # 
     # Parameters:
     # selection - the shortcode

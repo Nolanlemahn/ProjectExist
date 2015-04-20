@@ -17,7 +17,7 @@ init -1 python:
     #####
     # Function name: img()
     # 
-    # Descripiton: Transforms an image to be used with a Theme.
+    # Description: Transforms an image to be used with a Theme.
     # 
     # Parameters:
     # name - image to modify
@@ -101,7 +101,7 @@ init python:
     #####
     # Function name: cd_set()
     # 
-    # Descripiton: Sets countdown variables so that the screen functions
+    # Description: Sets countdown variables so that the screen functions
     # correctly.
     # 
     # Parameters:

@@ -16,7 +16,7 @@ init python:
     #####
     # Function name: shadow_set()
     # 
-    # Descripiton: Prepare to move the mouse.
+    # Description: Prepare to move the mouse.
     # 
     # Parameters:
     # x - x coordinate to move to
@@ -38,7 +38,7 @@ init python:
     #####
     # Function shadow_hack()
     # 
-    # Descripiton: Actually move the mouse.
+    # Description: Actually move the mouse.
     #
     # Returns: None
     #####
