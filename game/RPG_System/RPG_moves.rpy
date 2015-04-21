@@ -29,7 +29,7 @@ init -1 python:
     #####
     # Class name: cb_move()
     # 
-    # Descripiton: Define moves for combat.
+    # Description: Define moves for combat.
     # 
     # Parameters:
     # power - the base power of the move
@@ -62,7 +62,7 @@ init -1 python:
         #####
         # Function name: asm_long_disp()
         # 
-        # Descripiton: Assemble a textual representation of the combat move. This is for .
+        # Description: Assemble a textual representation of the combat move. This is for .
         # 
         # Parameters:
         # move - the move object we are using.
@@ -76,7 +76,7 @@ init -1 python:
         #####
         # Function name: assign()
         # 
-        # Descripiton: Assign the move parameters to the character stats.
+        # Description: Assign the move parameters to the character stats.
         # 
         # Parameters:
         # move - the move object we are using.
@@ -114,7 +114,7 @@ init -1 python:
         #####
         # Function name: asm_disp()
         # 
-        # Descripiton: Assemble a textual representation of the combat move. This is mostly for debugging.
+        # Description: Assemble a textual representation of the combat move. This is mostly for debugging.
         # 
         # Parameters:
         # move - the move object we are using.

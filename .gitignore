@@ -8,3 +8,4 @@ game/saves/
 debuglog.txt
 debuglog2.txt
 *.dia~
+*.autosave

@@ -4,6 +4,15 @@ Tamara: points[2]
 Wil: points[3]
 Lilian: points[4]
 Robert: points[5]
+====
+$ cd_set(, , '')
+    show screen countdown
+    menu:
+        extend ""
+        "":
+            $ add_answer("")
+        "...":
+            jump 
 =====
 triple_min() plays three renpy.says with minute mods
 
@@ -57,3 +66,7 @@ lily_essay_2_what
 work_excuse_amnaki
 work_excuse_lilian
 work_excuse_none
+
+lily_lunch_1_pay
+lily_lunch_1_treat
+lily_lunch_1_bye

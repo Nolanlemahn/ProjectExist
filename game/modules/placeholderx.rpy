@@ -19,7 +19,7 @@ init -1 python:
     #####
     # Function name: Resize()
     # 
-    # Descripiton: Somewhat-intelligently resize an image. Basically a macro for
+    # Description: Somewhat-intelligently resize an image. Basically a macro for
     # im.scale with more math. Ratio only works for downscaling.
     # 
     # Parameters:
@@ -75,7 +75,7 @@ init -1 python:
     #####
     # Class name: PlaceholderX()
     # 
-    # Descripiton: Be a write-once placeholder - in other words, show a placeholder image
+    # Description: Be a write-once placeholder - in other words, show a placeholder image
     # only if the "actual" image does not exist. Do other fancy stuff, like with debug text.
     # 
     # Parameters:
@@ -106,7 +106,7 @@ init -1 python:
         #####
         # Function name: build_image()
         # 
-        # Descripiton: Actually assemble a new Image() object
+        # Description: Actually assemble a new Image() object
         # 
         # Parameters:
         # self - the current object
@@ -158,7 +158,7 @@ init -1 python:
         #####
         # Function name: parameterize()
         # 
-        # Descripiton: Parameterize the image without using image.py's
+        # Description: Parameterize the image without using image.py's
         # parameterize() call.
         # 
         # Parameters:

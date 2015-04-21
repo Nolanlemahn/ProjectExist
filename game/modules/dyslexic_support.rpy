@@ -53,7 +53,7 @@ init -1 python:
 #####
 # Label name: dyslexic
 # 
-# Descripiton: Changes the default font and reloads the script if need be.
+# Description: Changes the default font and reloads the script if need be.
 # 
 # Parameters: none
 # 

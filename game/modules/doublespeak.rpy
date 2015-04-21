@@ -20,7 +20,7 @@ python early:
     #####
     # Function name: doublespeak_parse()
     # 
-    # Descripiton: Parses a lexer, separating it into parts.
+    # Description: Parses a lexer, separating it into parts.
     # 
     # Parameters:
     # lexer - arguments from the renpy statement
@@ -50,7 +50,7 @@ python early:
     #####
     # Function name: doublespeak()
     # 
-    # Descripiton: Calls the say Screen with the messages and sayers.
+    # Description: Calls the say Screen with the messages and sayers.
     # 
     # Parameters:
     # info - the Dict() from multispeak_process()
@@ -77,7 +77,7 @@ python early:
     #####
     # Function name: multispeak_process()
     # 
-    # Descripiton: Format the info from doublespeak_parse().
+    # Description: Format the info from doublespeak_parse().
     # 
     # Parameters:
     # info - the Dict() from doublespeak_parse()
