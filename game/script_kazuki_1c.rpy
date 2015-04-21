@@ -417,9 +417,36 @@ label Kazuki_1j_essay_more:
         short of the 10 we need..."
     $ triple_min(5)
     $ essay_status = "done"
-    mc "We... We actually have something reasonable now..."
-    $ jump_break()
-    return
+    mc "We... We actually have something reasonable now..."#3:20PM
+    li "Is that all of the homework that you had for today?"
+    mc "Ehh. There's the actual math homework but that can be done over the 
+        weekend. There's no physics homework since we have that test coming up."
+    li "Oh, I see. I guess you don't need me anymore."
+    mc "I suppose I don't."
+    li "... We could get lunch."
+    mc "Yes. We could."
+    li "Err. I'm implying that you're welcome to join me for lunch."
+    nmc "... The issue here is that I'm relatively broke. I need to save about 
+         $800 a month in order to pay for the apartment. Suffice it to say that 
+         I haven't exactly met that quota yet."
+    li "Hey, if it's the money that you're worried about, I wouldn't mind 
+        treating you."
+    nmc "... Can I do that to her? Now that I think about it, we don't know each
+         other all too well, and I have absolutely no idea how well off she is."
+    $ cd_set(12, 12, 'Kazuki_1k_lunch_route')
+    show screen countdown
+    menu:
+        extend ""
+        "I'll pay for myself":
+            $ add_answer("lily_lunch_1_pay")
+        "Accept her offer to pay":
+            $ add_answer("lily_lunch_1_treat")
+        "Don't go to lunch with her":
+            $ add_answer("lily_lunch_1_bye")
+        "...":
+            jump Kazuki_1k_lunch_route# change this later
+    $ jump_break()#really?
+    jump Kazuki_1k_lunch_route
 
 label Kazuki_1j_essay_lazy:
     $ add_answer("lily_essay_2_what")
@@ -427,7 +454,7 @@ label Kazuki_1j_essay_lazy:
     mc "Uhh..."
     $ jump_break()
     return
-    
+
 label Kazuki_1j_essay_stop:
     mc "No, that won't be necessary."
     nmc "I save the file and close the window."
@@ -464,10 +491,13 @@ label Kazuki_1j_essay_stop:
     li "Still. This was nice."
     mc "Well, I'm glad that you thought so... Actually, now that I think about 
         it, I don't necessarily have to go to work..."
-    $ jump_break()
-    jump Kazuki_1k_late_lily#get lunch with her
+    li "Oh, yes you do. I'll talk to you later then."
+    mc "Ahh, okay. See ya."
+    nmc "... I guess I have to take the bus."
+    $ triple_min(3)
+    jump Kazuki_1k_work_alt#3:14
     
-label Kazuki_1k_late_lily:
+label Kazuki_1k_lunch_route:
     return
     
 label Kazuki_1k_work:
@@ -575,8 +605,8 @@ label Kazuki_1k_work:
     nmc "The rest of the calls went something along those lines."
     jump Kazuki_1l_work
 
-label Kazuki_1k_work_alt:# 2:42 PM
-    $ minutes = 882
+label Kazuki_1k_work_alt:# 2:42 PM or 3:05
+    #$ minutes = 882
     $ sio_l("bg workshop")
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for 
          as long as anyone can remember, which is of course, not very long at 
@@ -653,7 +683,6 @@ that I see on a regular basis."
     jump Kazuki_1l_work
     
 label Kazuki_1l_work:
-    call triple_min(15)
     $ sio_l("bg workshop")
     $ minutes = 1005
     #4:45PM
@@ -708,6 +737,8 @@ label Kazuki_1l_work_extend:
         $ main_char_cash = main_char_cash + 20
     if("lunch_essay_1" in answers):
         $ main_char_cash = main_char_cash - 20
+    if(essay_status == "done"):
+        $ main_char_cash = main_char_cash - 10
     mc "Sir? This is cash."
     ro "Check, cash, money order, gift card, same thing."
     mc "I really don't think that finances work that way."

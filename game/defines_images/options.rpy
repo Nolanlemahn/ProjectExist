@@ -52,15 +52,41 @@ init -1 python hide:
     config.default_text_cps = 20
     config.fix_rollback_without_choice = False
 
+# Temporary.
+screen _trace_screen:
+
+    zorder 1501
+
+    if _console.traced_expressions:
+
+        frame style "_console_trace":
+
+            vbox:
+
+                for expr in _console.traced_expressions:
+                    python:
+                        try:
+                            value = repr(eval(expr))
+                        except:
+                            value = "eval failed"
+
+                    hbox:
+                        #text "[expr!q]: " style "_console_trace_var"
+                        text "[value!q]" style "_console_trace_value"
+
 init -2 python:
     def show_rwatch():
-        renpy.watch(get_watch(1), style = style.alert_text, 
-                     func_name = "show_files", xpos=1.0, xanchor='right', 
-                     ypos=0.15, yanchor='top')
+        style._console_trace_value = style.alert_text
+        renpy.watch(get_watch(1))#,
+                     #xpos=1.0, xanchor='right', 
+                     #ypos=0.15, yanchor='top')
         #if renpy.config.developer:
-        renpy.watch(get_watch(2), 
-                    style = style.alert_text, func_name = "show_mouse", 
-                    xpos=1.0, xanchor='right', ypos=0.2, yanchor='top')
+        renpy.watch(get_watch(2))#,  
+                    #xpos=1.0, xanchor='right',
+                    #ypos=0.2, yanchor='top')
+        #renpy.show_screen("_trace_screen")
+    config.start_callbacks.append(show_rwatch)
+
     def get_watch(index):
         if index is 1:
             return "renpy.get_filename_line()"
@@ -69,9 +95,12 @@ init -2 python:
         else:
             return "\"\""
 
+#init -2:
+    #$ _console_trace_value = style.alert_text
+    #$ show_rwatch()
+
 #These are our styles and whatnot
 init -1:
-    $ show_rwatch()
     $ in_debug = False
     $ in_menu = False
     
