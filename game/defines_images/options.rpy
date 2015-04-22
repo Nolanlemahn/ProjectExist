@@ -52,48 +52,20 @@ init -1 python hide:
     config.default_text_cps = 20
     config.fix_rollback_without_choice = False
 
-# Temporary.
-screen _trace_screen:
-
-    zorder 1501
-
-    if _console.traced_expressions:
-
-        frame style "_console_trace":
-
-            vbox:
-
-                for expr in _console.traced_expressions:
-                    python:
-                        try:
-                            value = repr(eval(expr))
-                        except:
-                            value = "eval failed"
-
-                    hbox:
-                        #text "[expr!q]: " style "_console_trace_var"
-                        text "[value!q]" style "_console_trace_value"
-
 init -2 python:
-    def show_rwatch():
-        style._console_trace_value = style.alert_text
-        renpy.watch(get_watch(1))#,
-                     #xpos=1.0, xanchor='right', 
-                     #ypos=0.15, yanchor='top')
-        #if renpy.config.developer:
-        renpy.watch(get_watch(2))#,  
-                    #xpos=1.0, xanchor='right',
-                    #ypos=0.2, yanchor='top')
-        #renpy.show_screen("_trace_screen")
-    config.start_callbacks.append(show_rwatch)
+    get_watch = [["unused"]]
+    get_watch.append("renpy.get_filename_line()")
+    get_watch.append("\"Mouse was at: \" + (', '.join(str(x) for x in renpy.get_mouse_pos()))")
 
-    def get_watch(index):
-        if index is 1:
-            return "renpy.get_filename_line()"
-        elif index is 2:
-            return "\"Mouse was at: \" + (', '.join(str(x) for x in renpy.get_mouse_pos()))"
-        else:
-            return "\"\""
+    def show_watch():
+        #style._console_trace_value = style.alert_text
+        watch(get_watch[1], style = style.alert_text, func_name = "script_cursor", 
+              xpos=1.0, xanchor='right', ypos=0.15, yanchor='top')
+        #if renpy.config.developer:
+        watch(get_watch[2], style = style.alert_text, func_name = "mouse_pos",
+              xpos=1.0, xanchor='right', ypos=0.2, yanchor='top')
+        #renpy.show_screen("_trace_screen")
+    config.start_callbacks.append(show_watch)
 
 #init -2:
     #$ _console_trace_value = style.alert_text

@@ -2,7 +2,6 @@
 
 label Kazuki_1a:#this_label_done
     #window hide
-    #$ stopwatch()
     $ ingame = "Kazuki"
     $ main_name = "?"
     $ main_type = "kk"
