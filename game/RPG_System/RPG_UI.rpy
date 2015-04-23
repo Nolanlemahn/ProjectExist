@@ -114,3 +114,56 @@ label other_stats:#show combat stats
     $ notin_other_stats = True
     return
     
+init python:
+    def show_combatant_stats(combatant, xal1, yal1, showXP = True):
+        name = combatant.name
+        level = combatant.level
+        hp = combatant.currentHP
+        maxhp = combatant.maxHP
+        fp = combatant.currentBelly
+        maxfp = combatant.maxBelly
+        sp = combatant.currentSleep
+        maxsp = combatant.maxSleep
+        xp = combatant.currentXP
+        maxxp = combatant.maxXP
+        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1), style="game_box")
+        ui.hbox()
+        ui.text("%s" % name, size=checkSizeTwo())
+        ui.text("  Lv. %d" % level, xalign=1.0, size=checkSizeTwo())
+        ui.close()
+        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1 + 0.05), style="game_box")
+        ui.hbox()
+        ui.vbox()
+        ui.text("HP", size=checkSizeTwo())
+        ui.text("FP", size=checkSizeTwo())
+        ui.text("SP", size=checkSizeTwo())
+        ui.text("XP", size=checkSizeTwo())
+        ui.close()
+        ui.vbox()
+        ui.bar(maxhp, hp, xminimum=180, xmaximum=180)
+        ui.bar(maxfp, fp, xminimum=180, xmaximum=180)
+        ui.bar(maxsp, sp, xminimum=180, xmaximum=180)
+        ui.bar(maxxp, xp, xminimum=180, xmaximum=180)
+        ui.close()
+        ui.vbox() # Level from (hp/maxhp)
+        if (hp < 100):
+            ui.text(" %d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
+        else:
+            ui.text("%d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
+        if (fp < 100):
+            ui.text(" %d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
+        else:
+            ui.text("%d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
+        if (sp < 100):
+            ui.text(" %d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
+        else:
+            ui.text("%d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
+        if (xp < 100):
+            ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
+        elif (xp < 1000):
+            ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
+        else:
+            ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
+        ui.close()
+        ui.close()
+        return

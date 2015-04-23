@@ -133,90 +133,6 @@ init python:
             return 13
         else:
             return 24
-    
-    def show_stats(name, level, hp, maxhp, fp, maxfp, sp, maxsp, xp, maxxp, xal1, yal1):
-        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1), style="game_box")
-        ui.hbox()
-        ui.text("%s" % name, size=checkSizeTwo())
-        ui.text("  Lv. %d" % level, xalign=1.0, size=checkSizeTwo())
-        ui.close()
-        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1 + 0.05), style="game_box")
-        ui.hbox()
-        ui.vbox()
-        ui.text("HP", size=checkSizeTwo())
-        ui.text("FP", size=checkSizeTwo())
-        ui.text("SP", size=checkSizeTwo())
-        ui.text("XP", size=checkSizeTwo())
-        ui.close()
-        ui.vbox()
-        ui.bar(maxhp, hp, xminimum=180, xmaximum=180)
-        ui.bar(maxfp, fp, xminimum=180, xmaximum=180)
-        ui.bar(maxsp, sp, xminimum=180, xmaximum=180)
-        ui.bar(maxxp, xp, xminimum=180, xmaximum=180)
-        ui.close()
-        ui.vbox() # Level from (hp/maxhp)
-        if (hp < 100):
-            ui.text(" %d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
-        else:
-            ui.text("%d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
-        if (fp < 100):
-            ui.text(" %d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
-        else:
-            ui.text("%d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
-        if (sp < 100):
-            ui.text(" %d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
-        else:
-            ui.text("%d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
-        if (xp < 100):
-            ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
-        elif (xp < 1000):
-            ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
-        else:
-            ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
-        ui.close()
-        ui.close()
-        return
-        
-    def show_stats_noXP(name, level, hp, maxhp, fp, maxfp, sp, maxsp, xp, maxxp, xal1, yal1):
-        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1), style="game_box")
-        ui.hbox()
-        ui.text("%s" % name, size=checkSizeTwo())
-        ui.text("  Lv. %d" % level, xalign=1.0, size=checkSizeTwo())
-        ui.close()
-        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1 + 0.05), style="game_box")
-        ui.hbox()
-        ui.vbox()
-        ui.text("HP", size=checkSizeTwo())
-        ui.text("FP", size=checkSizeTwo())
-        ui.text("SP", size=checkSizeTwo())
-        #ui.text("XP", size=checkSizeTwo())
-        ui.close()
-        ui.vbox()
-        ui.bar(maxhp, hp, xminimum=180, xmaximum=180)
-        ui.bar(maxfp, fp, xminimum=180, xmaximum=180)
-        ui.bar(maxsp, sp, xminimum=180, xmaximum=180)
-        ui.close()
-        ui.vbox() # Level from (hp/maxhp)
-        if (xal1 == 0.98):
-            ui.text("?/?", xalign=1.0, size=checkSizeTwo())
-            ui.text("?/?", xalign=1.0, size=checkSizeTwo())
-            ui.text("?/?", xalign=1.0, size=checkSizeTwo())
-        else:
-            if (hp < 100):
-                ui.text(" %d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
-            else:
-                ui.text("%d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
-            if (fp < 100):
-                ui.text(" %d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
-            else:
-                ui.text("%d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
-            if (sp < 100):
-                ui.text(" %d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
-            else:
-                ui.text("%d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
-        ui.close()
-        ui.close()
-        return
         
     def domchange(passedvar, passedvalue, bool_loud):
         renpy.call("domchange", passedvar, passedvalue, bool_loud)
@@ -227,15 +143,7 @@ label domchange(passedvar, passedvalue, bool_loud):
         $ strchange = "+" + str(passedvalue) + " " +  passedvar
     else:
         $ strchange = str(passedvalue) + " " +  passedvar
-    if(passedvar == "HP"):
-        if(not fight_is_1v1):
-            $ main_char_currentHP = main_char_currentHP + passedvalue
-    elif(passedvar == "FP"):
-        if(not fight_is_1v1):
-            $ main_char_currentBelly = main_char_currentBelly + passedvalue
-    elif(passedvar == "SP"):
-        if(not fight_is_1v1):
-            $ main_char_currentSleep = main_char_currentSleep + passedvalue
+    $ main_char.doChange(passedvar, passedvalue)
     if(bool_loud == 1):
         $ updateUIroutine = 2
     return

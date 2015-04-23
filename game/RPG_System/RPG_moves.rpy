@@ -26,6 +26,21 @@ init:
     ###
 
 init -1 python:
+
+    #####
+    # Class name: cb_move()
+    # 
+    # Description: Define innate abilities for combat. Also symbols.
+    #
+    # Parameters:
+    # name - the name of the ability
+    # level - the level of the ability
+    #####
+    class cb_ability():
+        def __init__(self, name, level):
+            self.name = name
+            self.level = level
+
     #####
     # Class name: cb_move()
     # 
@@ -46,7 +61,6 @@ init -1 python:
     # Returns: a move object of sorts
     #####
     class cb_move:
-
         def __init__(self, power, accuracy, priority, parameter, parameterplus, typea, typeb, typec, cost, desc = ""):
             self.power = power
             self.accuracy = accuracy

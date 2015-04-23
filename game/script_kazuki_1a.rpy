@@ -3,31 +3,11 @@
 label Kazuki_1a:#this_label_done
     #window hide
     $ ingame = "Kazuki"
-    $ main_name = "?"
     $ main_type = "kk"
-    $ main_char_level = 5
-    # start implementing the table of stats
-    $ main_char_maxHP = 100
-    $ main_char_currentHP = 100
-    $ main_char_maxBelly = 100
-    $ main_char_currentBelly = 65
-    $ main_char_maxSleep = 100
-    $ main_char_currentSleep = 75
-    $ main_char_maxXP = 50
-    $ main_char_currentXP = 0
-    $ main_char_stats = [11,11,20,14,14,20]
-    # STR, DEX, RES, SPD, INT, SPI
-    $ main_char_ABI_SLO1 = "No ability"
-    $ main_char_ABI_SLOL1 = 0
-    $ main_char_ABI_SLO2 = "No ability"
-    $ main_char_ABI_SLOL2 = 0
-    $ main_char_RS_SLO1 = "No symbol"
-    $ main_char_RS_SLOL1 = 0
-    $ main_char_RS_SLO2 = "No symbol"
-    $ main_char_RS_SLOL2 = 0
-    $ main_char_weapon = "Fists"
-    $ main_char_armor = "Nothing"
-    $ main_known_moves = [1,2,0,0,0,0,0,0]
+    $ main_char = Combatant("Kazuki", 5, 11, 11, 20, 14, 14, 20, 100, 50, 100, 
+                            100, None, 0, None, 0, None, 0, None, 0, "Fists", 
+                            "Nothing", ["Pound", "Check"])
+    $ main_char.setState(HP = 100, XP = 0, Belly = 65, Sleep = 75)
     $ flags = []
     $ points = init_points()
     $ reminders = []
