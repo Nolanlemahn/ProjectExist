@@ -6,7 +6,7 @@ label Kazuki_1a:#this_label_done
     $ main_type = "kk"
     $ main_char = Combatant("Kazuki", 5, 11, 11, 20, 14, 14, 20, 100, 50, 100, 
                             100, None, 0, None, 0, None, 0, None, 0, "Fists", 
-                            "Nothing", ["Pound", "Check"])
+                            "Nothing", ["Pound", "Check"], "Human")
     $ main_char.setState(HP = 100, XP = 0, Belly = 65, Sleep = 75)
     $ flags = []
     $ points = init_points()

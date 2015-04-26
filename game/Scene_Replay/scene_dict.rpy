@@ -1,5 +1,6 @@
 ﻿init python:
     scopes = {}
+    special_cases = ["combat_test"]
     base_scope={'ingame':"Kazuki",
         'main_name':"?",
         'main_type':"kk",

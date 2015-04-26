@@ -12,7 +12,7 @@ init 1 python:
         def __init__(self, name, LVL, STR, DEX, RES, SPD, INT, SPI, maxHP, maxXP,
                      maxSleep, maxBelly, Ability1, Ability1Level, Ability2, 
                      Ability2Level, Symbol1, Symbol1Level, Symbol2, Symbol2Level, 
-                     Weapon, Armor, KnownMoves):
+                     Weapon, Armor, KnownMoves, AI = "Test"):
             self.name = name
             self.level = LVL
             self.strength = STR #determines damage with physical attacks
@@ -32,6 +32,7 @@ init 1 python:
             self.weapon = Weapon
             self.armor = Armor
             self.lookupMoves(KnownMoves)
+            self.AI = AI
             self.setState(default = True)
 
         def setState(self, HP = -1, XP = -1, Sleep = -1, Belly = -1, default = False):

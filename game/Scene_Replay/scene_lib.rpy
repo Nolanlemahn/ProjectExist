@@ -8,7 +8,8 @@
     def jump_in(label_string):
         scene_scope = {}
         scene_scope = base_scope.copy()
-        scene_scope.update(scopes[label_string])
+        if label_string not in special_cases:
+            scene_scope.update(scopes[label_string])
         renpy.call_replay(label_string, scope=scene_scope)
         #renpy.quit(relaunch=True)
         return

@@ -6,7 +6,13 @@ init 1 python:
             self.firstTurn = True
             self.firstStrike = firstStrike
             self.evaluate = None
-            self.turnProgress()
+            self.complete = False
+            self.combatWrapper
+
+        def combatWrapper(self):
+            while(self.complete == False):
+                self.turnProgress()
+                self.turnManagement()
 
         # see how we move to the next turn
         def turnProgress(self):
@@ -40,3 +46,10 @@ init 1 python:
             # If it isn't the first turn, check the combat system
             else:
                 self.evaluate = turnCheck(self.combatant1.speed, self.combatant2.speed)
+
+        def turnManagement(self):
+            if self.combatant1.human:
+                return
+
+        def AIRoutine(self):
+            return
