@@ -14,11 +14,11 @@
 init:
     $ cbm = collections.OrderedDict()
     # 0
-    $ cbm["Struggle"] = cb_move(50, 0.80, 0, "struggle", None, "physical", "normal", "close", ["", ""])
+    $ cbm["Struggle"] = cb_move("Struggle", 50, 0.80, 0, "struggle", None, "physical", "normal", "close", ["", ""])
     # 1-3
-    $ cbm["Pound"] = cb_move(50, 0.95, 0, None, None, "physical", "normal", "close", ["", ""])
-    $ cbm["Check"] = cb_move(10, 0.70, 1, "stun", 30, "physical", "normal", "close", ["", ""])
-    $ cbm["Warlock's Fist"] = cb_move(85, 1.00, -1, "homing", None, "physical", "dream", "close", [-4, "SP"])
+    $ cbm["Pound"] = cb_move("Pound", 50, 0.95, 0, None, None, "physical", "normal", "close", ["", ""])
+    $ cbm["Check"] = cb_move("Check", 10, 0.70, 1, "stun", 30, "physical", "normal", "close", ["", ""])
+    $ cbm["Warlock's Fist"] = cb_move("Warlock's Fist", 85, 1.00, -1, "homing", None, "physical", "dream", "close", [-4, "SP"])
     
     $ cbm["Pound"].desc = "A basic attack in which the user, with any blunt object (including fists), strikes the opponent."
     $ cbm["Check"].desc = "A somewhat advanced technique in which the user tries to get in a light but surprising hit before the opponent has time to react. This has a 30% chance of causing flinching."
@@ -61,7 +61,8 @@ init -1 python:
     # Returns: a move object of sorts
     #####
     class cb_move:
-        def __init__(self, power, accuracy, priority, parameter, parameterplus, typea, typeb, typec, cost, desc = ""):
+        def __init__(self, name, power, accuracy, priority, parameter, parameterplus, typea, typeb, typec, cost, desc = ""):
+            self.name = name
             self.power = power
             self.accuracy = accuracy
             self.priority = priority
