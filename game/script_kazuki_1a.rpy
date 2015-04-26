@@ -8,6 +8,7 @@ label Kazuki_1a:#this_label_done
                             100, None, 0, None, 0, None, 0, None, 0, "Fists", 
                             "Nothing", ["Pound", "Check"], "Human")
     $ main_char.setState(HP = 100, XP = 0, Belly = 65, Sleep = 75)
+    $ showMCStatus = True
     $ flags = []
     $ points = init_points()
     $ reminders = []
@@ -29,7 +30,6 @@ label Kazuki_1a:#this_label_done
     
     #]
     $ walletshow = True
-    $ main_char_show_rpg = True
     $ ui_check = False
     $ strchange = ""
     $ progress = "000"
@@ -118,11 +118,11 @@ label Kazuki_1b:
     scene bg blackdrop
     $ clock = False
     $ walletshow = False
-    $ main_char_show_rpg = False
+    $ showMCStatus = False
     scentered "Episode 0: Understanding"
     $ clock = True
     $ walletshow = True
-    $ main_char_show_rpg = True
+    $ showMCStatus = True
     $ mlib("march")
     scene bg fakefog
     with dissolve

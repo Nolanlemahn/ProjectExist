@@ -84,7 +84,6 @@ init -1:
     #$ right_after_question = False
     $ notin_other_stats = True
     $ inventory_see = True
-    $ main_char_show_rpg = False
     $ enemy_char_show_rpg = False
     $ single_death_check = False
     $ single_combat_check = False

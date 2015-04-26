@@ -218,7 +218,7 @@ screen say:
     #show rpg stats code
     # automatically re-draw the GUI headers if necessary
     if(not in_debug):
-        if(main_char_show_rpg):#the normal stats
+        if(showMCStatus):#the normal stats
             $ show_combatant_stats(main_char, .02, .01)
         if(clock):#maybe we don't even need to check this variable...?
             $ Calendar()
@@ -464,7 +464,6 @@ screen main_menu:
         if config.developer:
             textbutton _("Persistent Reset") action ui.callsinnewcontext("destroy_persistent")
             textbutton "Seriously break things" action ui.callsinnewcontext("reset_button")
-            textbutton "Test Combat" action Start("requested_start_cb")
             textbutton "" action NullAction() style "empty_button"
         textbutton "Report a Bug" action Help("game/dev/report.html")
         textbutton "Check for Updates" action ui.callsinnewcontext("pre_update")

@@ -1,4 +1,4 @@
-init 1 python:
+init python:
     
     #####
     # Class name: combatant()
@@ -12,7 +12,8 @@ init 1 python:
         def __init__(self, name, LVL, STR, DEX, RES, SPD, INT, SPI, maxHP, maxXP,
                      maxSleep, maxBelly, Ability1, Ability1Level, Ability2, 
                      Ability2Level, Symbol1, Symbol1Level, Symbol2, Symbol2Level, 
-                     Weapon, Armor, KnownMoves, AI = "Test"):
+                     Weapon, Armor, KnownMoves, AI = "Test", Default = True,
+                     currHP = -1, currXP = -1, currBelly = -1, currSleep = -1):
             self.name = name
             self.level = LVL
             self.strength = STR #determines damage with physical attacks
@@ -31,9 +32,11 @@ init 1 python:
             self.symbol2 = cb_ability(Symbol2, Symbol2Level)
             self.weapon = Weapon
             self.armor = Armor
+            self.inventory = [] # eventually sort
             self.lookupMoves(KnownMoves)
             self.AI = AI
-            self.setState(default = True)
+            self.movePriority = 0
+            self.setState(currHP, currXP, currBelly, currSleep, Default)
 
         def setState(self, HP = -1, XP = -1, Sleep = -1, Belly = -1, default = False):
             # default case
@@ -73,6 +76,9 @@ init 1 python:
                     renpy.error("Move not defined (in store.cbm): %s. Perhaps \
                                  you should double-check RPG_moves.rpy?" % cb_m)
             self.moves = actualMoves
+            return
+
+        def evaluateAbilities(self):
             return
 
         def addMove(self):

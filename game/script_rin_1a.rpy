@@ -46,7 +46,7 @@ label Rin_1a:#this_label_done
     #]
     
     $ walletshow = True
-    $ main_char_show_rpg = True
+    $ showMCStatus = True
     $ clock = True
     $ change = False
     $ strchange = ""

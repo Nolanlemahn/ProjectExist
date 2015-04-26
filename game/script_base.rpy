@@ -3,6 +3,7 @@ init -1:
 
 label start:#this_label_done
     $ answers = []
+    $ showMCStatus = False
     $ in_side_note = False
     show screen mlib_listener
     scene bg blackdrop
