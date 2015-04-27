@@ -34,7 +34,6 @@ init 1 python:
                 # Prepare for the next turn
                 self.reset()
 
-
         def reset(self):
             self.messageAddon = ""
             self.message1 = ""
@@ -172,7 +171,7 @@ init 1 python:
 
         def AIRoutine(self, attacker, defender):
             def AIMoveSelection():
-                return cbm["Warlock's Fist"]
+                return aic[attacker.AI](attacker, defender)
             chosenMove = AIMoveSelection()
             if(self.evaluate == "c1"):
                 attacker = self.combatant1

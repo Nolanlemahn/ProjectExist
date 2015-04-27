@@ -36,6 +36,7 @@ init python:
             self.lookupMoves(KnownMoves)
             self.AI = AI
             self.movePriority = 0
+            self.status = []
             self.setState(currHP, currXP, currBelly, currSleep, Default)
 
         def setState(self, HP = -1, XP = -1, Sleep = -1, Belly = -1, default = False):
