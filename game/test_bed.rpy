@@ -7,3 +7,5 @@ label combat_test:
                         100, None, 0, None, 0, None, 0, None, 0, "Fists", 
                         "Nothing", ["Pound", "Check"], "Test")
     $ fightInstance = Fight1v1(main_char, bully, "c1")
+    $ main_char, bully = fightInstance.process()
+    "Test"

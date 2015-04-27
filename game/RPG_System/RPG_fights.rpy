@@ -12,13 +12,13 @@
 #######
 
 screen combat_stats(cb1, cb2):
+    tag cb_stats
     $ show_combatant_stats(cb1, .02, .01)
     $ show_combatant_stats(cb2, .98, .01, False)
 
 init 1 python:
     class Fight1v1:
         def __init__(self, combatant1, combatant2, firstStrike = None):
-            store.showMCStatus = False
             self.combatant1 = combatant1
             self.combatant2 = combatant2
             self.firstTurn = True
@@ -34,7 +34,13 @@ init 1 python:
             self.damage2 = 0
             self.move1 = 0
             self.move2 = 0
+
+        def process(self):
+            store.showMCStatus = False
             self.combatWrapper()
+            renpy.hide_screen("cb_stats")
+            store.showMCStatus = True
+            return self.combatant1, self.combatant2
 
         def combatWrapper(self):
             while not self.complete:
