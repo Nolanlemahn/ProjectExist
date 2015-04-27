@@ -7,7 +7,7 @@ init python:
     def fix_newlines():
         for root, subdirs, files in os.walk(config.gamedir + "/../"):
             for file in files:
-                if ((file.endswith(".txt")) or (file.endswith(".rpy"))):
+                if((file.endswith(".txt")) or (file.endswith(".rpy"))):
                     #renpy.say(None, file)
                     file = os.path.abspath(root + "/" + file)
                     data = open(file, "rb").read()

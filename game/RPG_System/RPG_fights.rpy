@@ -12,37 +12,49 @@ init 1 python:
             self.firstStrike = firstStrike
             self.evaluate = None
             self.complete = False
-            Show("combat_stats")
+            self.messageAddon = ""
+            self.message1 = ""
+            self.message2 = ""
+            self.damage1 = 0
+            self.damage2 = 0
             self.combatWrapper()
 
         def combatWrapper(self):
-            self.turnProgress()
-            self.turnManagement()
+            while not self.complete:
+                # Check to see whose AI is checked first.
+                self.turnProgress()
+                # Grab the first person's choice
+                self.turnManagement()
+                # Grab the second person's choice
+                self.otherEvaluation()
+                # Actually try to deal damage
+                self.dealDamage()
 
         # see how we move to the next turn
         def turnProgress(self):
             c1priority = self.combatant1.movePriority
             c2priority = self.combatant2.movePriority
+            c1speed = self.combatant1.speed
+            c2speed = self.combatant2.speed
 
             def turnCheck(c1speed, c2speed):
-                if (c1priority > c2priority):
+                if(c1priority > c2priority):
                     evaluate = "c1"
-                elif (c2priority > c1priority):
+                elif(c2priority > c1priority):
                     evaluate = "c2"
                 # Priority said nothing, go by Combatant.speed
                 else:
-                    if (c1speed > c2speed):
+                    if(c1speed > c2speed):
                         evaluate = "c1"
                     else:#tie goes to the CPU
                         evaluate = "c2"
                 return evaluate
 
             # If it's the first turn, check the story for who goes first
-            if (self.firstTurn == True):
-                self.firstTurn = False
-                if (self.firstStrike == "c1"):
+            if(self.firstTurn == True):
+                if(self.firstStrike == "c1"):
                     self.evaluate = "c1"
-                elif (self.firstStrike == "c2"):
+                elif(self.firstStrike == "c2"):
                     self.evaluate = "c2"
                 # Story says nothing, check the combat system (move priority 
                 # or combatant speed)
@@ -52,21 +64,81 @@ init 1 python:
             else:
                 self.evaluate = turnCheck(self.combatant1.speed, self.combatant2.speed)
 
+
+        def dealDamage(self):
+            renpy.show_screen("combat_stats", self.combatant1, self.combatant2)
+            c1priority = self.combatant1.movePriority
+            c2priority = self.combatant2.movePriority
+            c1speed = self.combatant1.speed
+            c2speed = self.combatant2.speed
+
+            if(self.firstTurn == True):
+                self.firstTurn = False
+                if(self.firstStrike == "c1"):
+                    self.evaluate = "c1"
+                elif(self.firstStrike == "c2"):
+                    self.evaluate = "c2"
+            else:
+                if(c1speed > c2speed):
+                    self.evaluate = "c1"
+                else:#tie goes to the CPU
+                    self.evaluate = "c2"
+            if(self.evaluate == "c1"):
+                self.combatant2.dealDamage(self.damage1)
+                renpy.say(None, self.message1)
+                self.combatant1.dealDamage(self.damage2)
+                renpy.say(None, self.message2)
+            else:
+                self.combatant1.dealDamage(self.damage2)
+                renpy.say(None, self.message2)
+                self.combatant2.dealDamage(self.damage1)
+                renpy.say(None, self.message1)
+
         def turnManagement(self):
             if(self.evaluate == "c1"):
-                evaluation = self.combatant1
+                attacker = self.combatant1
+                defender = self.combatant2
             else:
-                evaluation = self.combatant2
+                attacker = self.combatant2
+                defender = self.combatant1
 
-            if(evaluation.AI == "Human"):
-                self.humanRoutine(evaluation.name)
+            if(attacker.AI == "Human"):
+                self.humanRoutine(attacker.name)
             else:
-                self.AIRoutine()
+                self.AIRoutine(attacker, defender)
+
+        def otherEvaluation(self):
+            if(self.evaluate == "c1"):
+                self.evaluate = "c2" # other turn
+                attacker = self.combatant2
+                defender = self.combatant1
+            else:
+                self.evaluate = "c1" # other turn
+                attacker = self.combatant1
+                defender = self.combatant2
+
+            if(attacker.AI == "Human"):
+                self.humanRoutine(attacker.name)
+            else:
+                self.AIRoutine(attacker, defender)
 
         def humanRoutine(self, combatantName):
             chose = renpy.call_in_new_context("combat_choice_1", combatantName, self)
             if(chose == "fight"):
                 chosenMove = self.moveSelection(combatantName)
+                if(chosenMove == "None"):
+                    self.humanRoutine(combatantName)
+                else:
+                    if(self.evaluate == "c1"):
+                        attacker = self.combatant1
+                        self.combatant1.movePriority = chosenMove.priority
+                        defender = self.combatant2
+                    else:
+                        attacker = self.combatant2
+                        self.combatant2.movePriority = chosenMove.priority
+                        defender = self.combatant1
+                    damage = self.calculateDamage(attacker, defender, chosenMove)
+                    self.attemptDamage(attacker, defender, chosenMove, damage)
 
         def moveSelection(self, combatantName):
             chose = "None"
@@ -74,11 +146,61 @@ init 1 python:
                 chose = renpy.call_in_new_context("load_moves_1", combatantName, self)
             return cbm[chose]
 
-        def AIRoutine(self):
-            return
+        def AIRoutine(self, attacker, defender):
+            def AIMoveSelection():
+                return cbm["Warlock's Fist"]
+            chosenMove = AIMoveSelection()
+            if(self.evaluate == "c1"):
+                attacker = self.combatant1
+                self.combatant1.movePriority = chosenMove.priority
+                defender = self.combatant2
+            else:
+                attacker = self.combatant2
+                self.combatant2.movePriority = chosenMove.priority
+                defender = self.combatant1
+            damage = self.calculateDamage(attacker, defender, chosenMove)
+            self.attemptDamage(attacker, defender, chosenMove, damage)
 
         def calculateDamage(self, attacker, defender, move):
-            return
+            critdice = renpy.random.randint(0, 100)
+            critmod = 1
+            if(critdice <= 9):
+                critmod = 2
+                self.messageAddon = " It was a critical hit!"
+            if(move.typea == "physical"):
+                loadedAttack =  attacker.strength
+                loadedDefense = defender.resistance
+            elif(move.typea == "projectile"):
+                loadedAttack =  attacker.dexterity
+                loadedDefense = defender.resistance
+            elif(move.typea == "aural"):
+                loadedAttack =  attacker.intelligence
+                loadedDefense = defender.spirit
+            sect1 = (attacker.level * 2 / 5) + 2
+            sect2 = (move.power)
+            sect3 = (loadedAttack)
+            sect4 = (loadedDefense)
+            sect5 = 1
+
+            battledice = renpy.random.randint(85, 100)
+            
+            damage = ((((((sect1 * sect2 * sect3 / 50) / sect4)) + 2) * critmod * battledice / 100) * sect5)
+            if(self.evaluate == "c1"):
+                self.damage1 = damage
+            else:
+                self.damage2 = damage
+
+        def attemptDamage(self, attacker, defender, move, damage):
+            hitdice = renpy.random.randint(0, 100)
+            if(hitdice >= move.accuracy):
+                message = attacker.name + " used " + move.name + "!" + " " + self.messageAddon
+            else:
+                message = attacker.name + " used " + move.name + "!" + " " + \
+"But the attack missed..."
+            if(self.evaluate == "c1"):
+                self.message1 = message
+            else:
+                self.message2 = message
 
 label combat_choice_1(combatantName, combatInstance):
     show screen combat_stats(combatInstance.combatant1, combatInstance.combatant2)
@@ -130,22 +252,22 @@ label load_moves_1(combatantName, combatInstance):
     "Select a move to use.{fast}{nw}"
     menu:
         extend "{fast}"
-        "%(movename1)s" if (moveCount > 0):
+        "%(movename1)s" if(moveCount > 0):
             $ chosenMove = movename1
-        "%(movename2)s" if (moveCount > 1):
+        "%(movename2)s" if(moveCount > 1):
             $ chosenMove = movename2
-        "%(movename3)s" if (moveCount > 2):
+        "%(movename3)s" if(moveCount > 2):
             $ chosenMove = movename3
-        "%(movename4)s" if (moveCount > 3):
+        "%(movename4)s" if(moveCount > 3):
             $ chosenMove = movename4
-        "%(movename5)s" if (moveCount > 4):
+        "%(movename5)s" if(moveCount > 4):
             $ chosenMove = movename5
-        "%(movename6)s" if (moveCount > 5):
+        "%(movename6)s" if(moveCount > 5):
             $ chosenMove = movename6
         "(Get move information on known moves)":
             call get_move_info
         "(Do something else)":
-            jump m1_1v1_turna
+            $ chosenMove = "Something Else"
     #if(battle_current):
     #    $ cbm[chosenmove].assign("m1", chosenmove)
     #    call load_moves_part3(chosenmove)
@@ -157,19 +279,19 @@ label get_move_info:
     "Which move would you like more information on?{fast}{nw}"
     menu:
         extend "{fast}"
-        "%(movename1)s" if (moveCount > 0):
+        "%(movename1)s" if(moveCount > 0):
             $ chosenMove = movename1
-        "%(movename2)s" if (moveCount > 1):
+        "%(movename2)s" if(moveCount > 1):
             $ chosenMove = movename2
-        "%(movename3)s" if (moveCount > 2):
+        "%(movename3)s" if(moveCount > 2):
             $ chosenMove = movename3
-        "%(movename4)s" if (moveCount > 3):
+        "%(movename4)s" if(moveCount > 3):
             $ chosenMove = movename4
-        "%(movename5)s" if (moveCount > 4):
+        "%(movename5)s" if(moveCount > 4):
             $ chosenMove = movename5
-        "%(movename6)s" if (moveCount > 5):
+        "%(movename6)s" if(moveCount > 5):
             $ chosenMove = movename6
-        "(Do something else)":
+        "(Done reading)":
             return
     call about_move(chosenMove)
     return

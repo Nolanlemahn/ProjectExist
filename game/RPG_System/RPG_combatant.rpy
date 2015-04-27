@@ -61,6 +61,9 @@ init python:
             elif(passedvar == "SP"):
                 self.currentSleep += passedvalue
 
+        def dealDamage(self, damage):
+            self.doChange("HP", damage * -1)
+
         def lookupMoves(self, KnownMoves):
             actualMoves = []
             movesCount = 0

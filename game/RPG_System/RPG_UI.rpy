@@ -68,22 +68,22 @@ init python:
             ui.bar(maxxp, xp, xminimum=180, xmaximum=180)
         ui.close()
         ui.vbox() # Level from (hp/maxhp)
-        if (hp < 100):
+        if(hp < 100):
             ui.text(" %d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
         else:
             ui.text("%d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
-        if (fp < 100):
+        if(fp < 100):
             ui.text(" %d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
         else:
             ui.text("%d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
-        if (sp < 100):
+        if(sp < 100):
             ui.text(" %d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
         else:
             ui.text("%d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
         if(showXP):
-            if (xp < 100):
+            if(xp < 100):
                 ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
-            elif (xp < 1000):
+            elif(xp < 1000):
                 ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
             else:
                 ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())

@@ -107,7 +107,7 @@ python early:
                     name = full_who_prefix + char.name + full_who_suffix
                     
                 # remove bold tags if style specifies non-bold labels
-                if (not style.say_label.bold):
+                if(not style.say_label.bold):
                     name = name[3:-4]
                     
                 # apply two_window

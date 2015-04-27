@@ -461,7 +461,7 @@ label Kazuki_1b_2:
 
     
 label Kazuki_1b_pre:
-    if ("law_lecture" in answers):
+    if("law_lecture" in answers):
         mc "There were a few concepts in today's lecture I didn't quite understand."
         l "Liar. I know you understood everything."
         nmc "Perceptive as always..."
@@ -473,7 +473,7 @@ label Kazuki_1b_pre:
         l "Ciao."
         $ points[0] += 1
         #9:45PM
-    elif ("law_test" in answers):
+    elif("law_test" in answers):
         mc "I was hoping I could ask you a few questions regarding the upcoming 
             test."
         l "Well, I won't be answering any."
@@ -512,7 +512,7 @@ label Kazuki_1b_pre:
         call triple_min(2)
         jump Kazuki_1c
         #skip Kazuki_1b_extend
-    elif ("law_nothing" in answers):
+    elif("law_nothing" in answers):
         $ answers.remove("law_nothing")
         $ add_answer("law_hesitation")
         mc "Actually, there was nothing I wanted to ask..."
@@ -600,7 +600,7 @@ label Kazuki_1b_extend:
     $ sio_s("bg hallway1")
     mc "Ah, dammit..."
     nmc "I visualize today's schedule in my head."
-    if ("law_hesitation" in answers):
+    if("law_hesitation" in answers):
         nnvlmc "8:05AM - 9:45AM: Physics 102\n{w}
                 10:05AM - 11:00AM: General Studies 110\n{w}
                 11:05AM - 12:00AM: Math 122\n{w}
@@ -656,7 +656,7 @@ label Kazuki_1b_extend:
                that I'm not a girl. I'm probably easy to pick on."
             nmc "Natalie gives me a surprisingly pronounced frown."
             $ minutes = minutes + 2
-            if ("law_hesitation" in answers):
+            if("law_hesitation" in answers):
                 mc "I suppose the school could get a bit dangerous at this time of the 
                     day. You knew Prof- err, Coach Cyrus had the practice moved?"
                 n "Yeah, he sent out an email late last night."
@@ -809,7 +809,7 @@ label Kazuki_1c:
 label Kazuki_1c_continue:
     #WRITEHERE#...
     $ sio_l("bg classroom2")
-    if ("law_test" in answers):
+    if("law_test" in answers):
         $ minutes = 606
         jump Kazuki_1d_tamara_a
     else:

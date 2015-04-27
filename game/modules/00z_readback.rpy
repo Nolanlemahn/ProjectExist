@@ -193,13 +193,13 @@ init python:
 
     def readback_show_prev_page():
         global readback_yvalue
-        if (readback_yvalue > 0):
+        if(readback_yvalue > 0):
             readback_yvalue -= 1
             renpy.restart_interaction()
 
     def readback_show_next_page():
         global readback_yvalue
-        if (readback_yvalue < readback_paged_max()):
+        if(readback_yvalue < readback_paged_max()):
             readback_yvalue += 1
             renpy.restart_interaction()
         else:
@@ -228,7 +228,7 @@ screen text_history:
                     if line[0]:
                         label line[0]
 
-                    if (line[1] != None):
+                    if(line[1] != None):
                         text line[1]
 
                     null height 10
@@ -256,7 +256,7 @@ screen text_history:
                             if line[0]:
                                 label line[0]
 
-                            if (line[1] != None):
+                            if(line[1] != None):
                                 text line[1]
 
                             null height 10

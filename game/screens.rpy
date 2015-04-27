@@ -321,7 +321,7 @@ screen say:
     # Use the quick menu.
     use left_quick_menu
     use quick_menu
-    if (battle_mode):
+    if(battle_mode):
         $ renpy.block_rollback()
 
 
@@ -526,7 +526,7 @@ screen navigation:
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Main Menu") action MainMenu()
         textbutton "Glossary" action ShowMenu("glossary")
-        if (persistent.debugmenu_installed):
+        if(persistent.debugmenu_installed):
             textbutton "Debug Menu" action ShowMenu("debug_menu")
         textbutton _("Help") action Help()
         textbutton _("Quit") action Quit()
@@ -744,9 +744,9 @@ screen preferences:
                 has vbox
 
                 #label _("Change Rollback Mode")
-                #if (not persistent.all_rollback):
+                #if(not persistent.all_rollback):
                 #    textbutton "Currently disabled\neverywhere" action ui.callsinnewcontext("rollback_mode")
-                #elif (not persistent.choice_rollback):
+                #elif(not persistent.choice_rollback):
                 #    textbutton "Currently disabled\nat choices" action ui.callsinnewcontext("rollback_mode")
                 #else:
                 #    textbutton "Enabled\neverywhere" action ui.callsinnewcontext("rollback_mode")
