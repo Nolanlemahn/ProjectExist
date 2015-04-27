@@ -48,6 +48,8 @@ init 1 python:
                 self.dealDamage()
                 # Prepare for the next turn
                 self.reset()
+                if(self.complete):
+                    break
 
         def reset(self):
             self.messageAddon = ""
@@ -124,6 +126,7 @@ init 1 python:
                 if(self.connected1 and self.combatant1.isMoving):
                     self.combatant2.dealDamage(self.damage1)
                 if(self.combatant1.isMoving):
+                    self.combatant1.applyMoveCost(self.move1.cost)
                     renpy.say(None, self.message1)
                 if(self.connected1 and self.combatant1.isMoving):
                     self.moveEffect()
@@ -139,6 +142,7 @@ init 1 python:
                 if(self.connected2 and self.combatant2.isMoving):
                     self.combatant1.dealDamage(self.damage2)
                 if(self.combatant2.isMoving):
+                    self.combatant2.applyMoveCost(self.move2.cost)
                     renpy.say(None, self.message2)
                 if(self.connected2 and self.combatant2.isMoving):
                     self.moveEffect()
@@ -153,6 +157,7 @@ init 1 python:
                 if(self.connected2 and self.combatant2.isMoving):
                     self.combatant1.dealDamage(self.damage2)
                 if(self.combatant2.isMoving):
+                    self.combatant2.applyMoveCost(self.move2.cost)
                     renpy.say(None, self.message2)
                 if(self.connected2 and self.combatant2.isMoving):
                     self.moveEffect()
@@ -168,6 +173,7 @@ init 1 python:
                 if(self.connected1 and self.combatant1.isMoving):
                     self.combatant2.dealDamage(self.damage1)
                 if(self.combatant1.isMoving):
+                    self.combatant1.applyMoveCost(self.move1.cost)
                     renpy.say(None, self.message1)
                 if(self.connected1 and self.combatant1.isMoving):
                     self.moveEffect()

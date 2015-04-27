@@ -65,6 +65,9 @@ init python:
                 self.currentSleep += passedvalue
             self.checkUp()
 
+        def applyMoveCost(self, cost):
+            self.doChange(cost[1], cost[0])
+
         def evaluateStatus(self):
             self = self.statusChain()
 
