@@ -1,3 +1,16 @@
+#######
+# File name: RPG_fights.rpy
+# 
+# Description: Implements combat between two Combatants
+# 
+# Original author: Nolan/NintendoToad
+# 
+# Type: Library, Screen
+# 
+# Usage:
+#     See: Fight1v1()
+#######
+
 screen combat_stats(cb1, cb2):
     $ show_combatant_stats(cb1, .02, .01)
     $ show_combatant_stats(cb2, .98, .01, False)
@@ -15,10 +28,12 @@ init 1 python:
             self.messageAddon = ""
             self.message1 = ""
             self.message2 = ""
-            self.conencted1 = False
-            self.conencted2 = False
+            self.connected1 = False
+            self.connected2 = False
             self.damage1 = 0
             self.damage2 = 0
+            self.move1 = 0
+            self.move2 = 0
             self.combatWrapper()
 
         def combatWrapper(self):
@@ -38,10 +53,12 @@ init 1 python:
             self.messageAddon = ""
             self.message1 = ""
             self.message2 = ""
-            self.conencted1 = False
-            self.conencted2 = False
+            self.connected1 = False
+            self.connected2 = False
             self.damage1 = 0
             self.damage2 = 0
+            self.combatant1.isMoving = True
+            self.combatant2.isMoving = True
 
         # see how we move to the next turn
         def turnProgress(self):
@@ -77,7 +94,6 @@ init 1 python:
             else:
                 self.evaluate = turnCheck(self.combatant1.speed, self.combatant2.speed)
 
-
         def dealDamage(self):
             renpy.show_screen("combat_stats", self.combatant1, self.combatant2)
             c1priority = self.combatant1.movePriority
@@ -102,20 +118,82 @@ init 1 python:
                         self.evaluate = "c1"
                     else:#tie goes to the CPU
                         self.evaluate = "c2"
+
             if(self.evaluate == "c1"):
-                if(self.connected1):
+                self.combatant1.evaluateStatus()
+                if(self.connected1 and self.combatant1.isMoving):
                     self.combatant2.dealDamage(self.damage1)
-                renpy.say(None, self.message1)
-                if(self.connected2):
+                if(self.combatant1.isMoving):
+                    renpy.say(None, self.message1)
+                if(self.connected1 and self.combatant1.isMoving):
+                    self.moveEffect()
+                if(self.combatant1.KOd):
+                    self.complete = True
+                    return
+                if(self.combatant2.KOd):
+                    self.complete = True
+                    return
+                ###
+                self.evaluate = "c2"
+                self.combatant2.evaluateStatus()
+                if(self.connected2 and self.combatant2.isMoving):
                     self.combatant1.dealDamage(self.damage2)
-                renpy.say(None, self.message2)
+                if(self.combatant2.isMoving):
+                    renpy.say(None, self.message2)
+                if(self.connected2 and self.combatant2.isMoving):
+                    self.moveEffect()
+                if(self.combatant1.KOd):
+                    self.complete = True
+                    return
+                if(self.combatant2.KOd):
+                    self.complete = True
+                    return
             else:
-                if(self.connected2):
+                self.combatant2.evaluateStatus()
+                if(self.connected2 and self.combatant2.isMoving):
                     self.combatant1.dealDamage(self.damage2)
-                renpy.say(None, self.message2)
-                if(self.connected1):
+                if(self.combatant2.isMoving):
+                    renpy.say(None, self.message2)
+                if(self.connected2 and self.combatant2.isMoving):
+                    self.moveEffect()
+                if(self.combatant1.KOd):
+                    self.complete = True
+                    return
+                if(self.combatant2.KOd):
+                    self.complete = True
+                    return
+                ###
+                self.evaluate = "c1"
+                self.combatant1.evaluateStatus()
+                if(self.connected1 and self.combatant1.isMoving):
                     self.combatant2.dealDamage(self.damage1)
-                renpy.say(None, self.message1)
+                if(self.combatant1.isMoving):
+                    renpy.say(None, self.message1)
+                if(self.connected1 and self.combatant1.isMoving):
+                    self.moveEffect()
+                if(self.combatant1.KOd):
+                    self.complete = True
+                    return
+                if(self.combatant2.KOd):
+                    self.complete = True
+                    return
+
+        def moveEffect(self):
+            if(self.evaluate == "c1"):
+                cbmove = self.move1
+                attacker = self.combatant1
+                defender = self.combatant2
+            else:
+                cbmove = self.move2
+                attacker = self.combatant2
+                defender = self.combatant1
+            if(cbmove.parameterplus == None):
+                return
+            defender = cbe[cbmove.parameter](attacker, defender, cbmove)
+            if(self.evaluate == "c1"):
+                self.combatant2 = defender
+            else:
+                self.combatant1 = defender
 
         def turnManagement(self):
             if(self.evaluate == "c1"):
@@ -154,10 +232,14 @@ init 1 python:
                 else:
                     if(self.evaluate == "c1"):
                         attacker = self.combatant1
+                        self.combatant1.isMoving = True
+                        self.move1 = chosenMove
                         self.combatant1.movePriority = chosenMove.priority
                         defender = self.combatant2
                     else:
                         attacker = self.combatant2
+                        self.combatant2.isMoving = True
+                        self.move2 = chosenMove
                         self.combatant2.movePriority = chosenMove.priority
                         defender = self.combatant1
                     damage = self.calculateDamage(attacker, defender, chosenMove)
@@ -175,10 +257,12 @@ init 1 python:
             chosenMove = AIMoveSelection()
             if(self.evaluate == "c1"):
                 attacker = self.combatant1
+                self.move1 = chosenMove
                 self.combatant1.movePriority = chosenMove.priority
                 defender = self.combatant2
             else:
                 attacker = self.combatant2
+                self.move2 = chosenMove
                 self.combatant2.movePriority = chosenMove.priority
                 defender = self.combatant1
             damage = self.calculateDamage(attacker, defender, chosenMove)
@@ -219,8 +303,7 @@ init 1 python:
                 message = attacker.name + " used " + move.name + "!" + self.messageAddon
                 connected = True
             else:
-                message = attacker.name + " used " + move.name + "!" + \
-" But the attack missed..."
+                message = attacker.name + " used " + move.name + "!" + " But the attack missed..."
                 connected = False
             if(self.evaluate == "c1"):
                 self.message1 = message

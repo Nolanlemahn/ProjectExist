@@ -8,13 +8,13 @@
 # Type: Library
 # 
 # Usage:
-#     Don't directly use this, but regularly update cbm
+#     See cb_move() below.
 #######
 
 init -1 python:
 
     #####
-    # Class name: cb_move()
+    # Class name: cb_ability()
     # 
     # Description: Define innate abilities for combat. Also symbols.
     #
@@ -26,6 +26,20 @@ init -1 python:
         def __init__(self, name, level):
             self.name = name
             self.level = level
+
+    #####
+    # Class name: cb_status()
+    # 
+    # Description: Define innate abilities for combat, like stun
+    #
+    # Parameters:
+    # name - the name of the status
+    # turns - number of turns to be inflicted
+    #####
+    class cb_ability():
+        def __init__(self, name, turns):
+            self.name = name
+            self.turns = turns
 
     #####
     # Class name: cb_move()

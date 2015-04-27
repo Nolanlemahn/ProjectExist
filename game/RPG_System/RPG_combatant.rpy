@@ -36,6 +36,8 @@ init python:
             self.lookupMoves(KnownMoves)
             self.AI = AI
             self.movePriority = 0
+            self.isMoving = True
+            self.KOd = True
             self.status = []
             self.setState(currHP, currXP, currBelly, currSleep, Default)
 
@@ -61,15 +63,47 @@ init python:
                 self.currentBelly += passedvalue
             elif(passedvar == "SP"):
                 self.currentSleep += passedvalue
+            self.checkUp()
+
+        def evaluateStatus(self):
+            self = self.statusChain()
+
+        def statusChain(self):
+            copy = self
+            index = 0
+            for condition in copy.status:
+                 copy = after_cbe[condition[0]](copy)
+            for condition in copy.status:
+                 copy.status[index][1] -= 1
+            copy.checkUp()
+            return copy
+
+        def checkUp(self):
+            knockedout = False
+            removed = False
             if(self.currentHP < 0):
                 self.currentHP = 0
+                knockedout = True
             if(self.currentBelly < 0):
                 self.currentBelly = 0
+                knockedout = True
             if(self.currentSleep < 0):
                 self.currentSleep = 0
+                knockedout = True
+            self.KOd = knockedout
+            for condition in self.status:
+                if(removed):
+                    self.checkUp()
+                    return
+                if(condition[1] <= 0):
+                    self.status.remove(condition)
+                    removed = True
 
         def dealDamage(self, damage):
             self.doChange("HP", damage * -1)
+
+        def inflictStatus(self, status):
+            self.status.append(status)
 
         def lookupMoves(self, KnownMoves):
             actualMoves = []
