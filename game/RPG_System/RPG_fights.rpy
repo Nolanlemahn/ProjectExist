@@ -15,6 +15,8 @@ init 1 python:
             self.messageAddon = ""
             self.message1 = ""
             self.message2 = ""
+            self.conencted1 = False
+            self.conencted2 = False
             self.damage1 = 0
             self.damage2 = 0
             self.combatWrapper()
@@ -29,6 +31,18 @@ init 1 python:
                 self.otherEvaluation()
                 # Actually try to deal damage
                 self.dealDamage()
+                # Prepare for the next turn
+                self.reset()
+
+
+        def reset(self):
+            self.messageAddon = ""
+            self.message1 = ""
+            self.message2 = ""
+            self.conencted1 = False
+            self.conencted2 = False
+            self.damage1 = 0
+            self.damage2 = 0
 
         # see how we move to the next turn
         def turnProgress(self):
@@ -79,19 +93,29 @@ init 1 python:
                 elif(self.firstStrike == "c2"):
                     self.evaluate = "c2"
             else:
-                if(c1speed > c2speed):
+                if(c1priority > c2priority):
                     self.evaluate = "c1"
-                else:#tie goes to the CPU
+                elif(c2priority > c1priority):
                     self.evaluate = "c2"
+                # Priority said nothing, go by Combatant.speed
+                else:
+                    if(c1speed > c2speed):
+                        self.evaluate = "c1"
+                    else:#tie goes to the CPU
+                        self.evaluate = "c2"
             if(self.evaluate == "c1"):
-                self.combatant2.dealDamage(self.damage1)
+                if(self.connected1):
+                    self.combatant2.dealDamage(self.damage1)
                 renpy.say(None, self.message1)
-                self.combatant1.dealDamage(self.damage2)
+                if(self.connected2):
+                    self.combatant1.dealDamage(self.damage2)
                 renpy.say(None, self.message2)
             else:
-                self.combatant1.dealDamage(self.damage2)
+                if(self.connected2):
+                    self.combatant1.dealDamage(self.damage2)
                 renpy.say(None, self.message2)
-                self.combatant2.dealDamage(self.damage1)
+                if(self.connected1):
+                    self.combatant2.dealDamage(self.damage1)
                 renpy.say(None, self.message1)
 
         def turnManagement(self):
@@ -193,14 +217,19 @@ init 1 python:
         def attemptDamage(self, attacker, defender, move, damage):
             hitdice = renpy.random.randint(0, 100)
             if(hitdice >= move.accuracy):
-                message = attacker.name + " used " + move.name + "!" + " " + self.messageAddon
+                message = attacker.name + " used " + move.name + "!" + self.messageAddon
+                connected = True
             else:
-                message = attacker.name + " used " + move.name + "!" + " " + \
-"But the attack missed..."
+                message = attacker.name + " used " + move.name + "!" + \
+" But the attack missed..."
+                connected = False
             if(self.evaluate == "c1"):
                 self.message1 = message
+                self.connected1 = connected 
             else:
                 self.message2 = message
+                self.connected2 = connected
+            self.messageAddon = ""
 
 label combat_choice_1(combatantName, combatInstance):
     show screen combat_stats(combatInstance.combatant1, combatInstance.combatant2)

@@ -60,6 +60,12 @@ init python:
                 self.currentBelly += passedvalue
             elif(passedvar == "SP"):
                 self.currentSleep += passedvalue
+            if(self.currentHP < 0):
+                self.currentHP = 0
+            if(self.currentBelly < 0):
+                self.currentBelly = 0
+            if(self.currentSleep < 0):
+                self.currentSleep = 0
 
         def dealDamage(self, damage):
             self.doChange("HP", damage * -1)
