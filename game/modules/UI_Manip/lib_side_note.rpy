@@ -13,13 +13,13 @@ init -1:
 
 init -1 python:
     def hide_side_note():
-        if (store.in_side_note == True):
+        if(store.in_side_note == True):
             store.snroutine = -1
             renpy.show(store.selected_note, at_list=[tip_right])
         return
     
     def side_note_callback():
-        if (hasattr(store, 'snroutine') and hasattr(store, 'selected_note')):
+        if(hasattr(store, 'snroutine') and hasattr(store, 'selected_note')):
             if store.snroutine > 0:
                 store.snroutine = store.snroutine - 1
                 if store.snroutine == 1:

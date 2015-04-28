@@ -16,7 +16,7 @@ label install_prologue:
 label rollback_mode:
     scene bg mainmenu
     $ in_debug = True
-    if (not persistent.all_rollback):
+    if(not persistent.all_rollback):
         "Right now, rollback is disabled everywhere."
         menu:
             extend ""
@@ -30,7 +30,7 @@ label rollback_mode:
                 "Done!"
             "Keep it that way":
                 "Very well."
-    elif (not persistent.choice_rollback):
+    elif(not persistent.choice_rollback):
         "Right now, rollback is only disabled at choices."
         menu:
             extend ""
@@ -65,11 +65,11 @@ label unlock_code:
     scene bg mainmenu
     $ in_debug = True
     $ unlockdevice = renpy.input("Type in the unlock code.")
-    if (unlockdevice=="debug"):
+    if(unlockdevice=="debug"):
         $ persistent.debugmenu_seen = True
         $ persistent.debugmenu_installed = True
         "The Debug Menu was unlocked."
-    elif (unlockdevice=="beta"):
+    elif(unlockdevice=="beta"):
         $ persistent.imabetatester = True
         $ persistent.imabetatester_seen = True
         "Any beta features have been unlocked."
@@ -85,13 +85,13 @@ label unlock_code:
 label install(addon):
     scene bg mainmenu
     $ in_debug = True
-    if (addon=="debug"):
+    if(addon=="debug"):
         $ persistent.debugmenu_installed = True
         "The Debug Menu was enabled."
-    if (addon=="rollback"):
+    if(addon=="rollback"):
         $ persistent.choice_rollback = True
         "Rollback beyond choices was enabled."
-    if (addon=="beta"):
+    if(addon=="beta"):
         $ persistent.imabetatester = True
         "Beta access was enabled."
     $ in_debug = False
@@ -101,13 +101,13 @@ label install(addon):
 label uninstall(addon):
     scene bg mainmenu
     $ in_debug = True
-    if (addon=="debug"):
+    if(addon=="debug"):
         $ persistent.debugmenu_installed = False
         "The Debug Menu was disabled."
-    if (addon=="rollback"):
+    if(addon=="rollback"):
         $ persistent.choice_rollback = False
         "Rollback beyond choices was disabled."
-    if (addon=="beta"):
+    if(addon=="beta"):
         $ persistent.imabetatester = False
         "Beta access was disabled."
     $ in_debug = False
@@ -131,15 +131,15 @@ screen install_extras:
         
         vbox:
             textbutton "Unlock/Cheat Code" xminimum 300 action ui.callsinnewcontext("unlock_code")
-            if (persistent.debugmenu_seen):
-                if (persistent.debugmenu_installed):
+            if(persistent.debugmenu_seen):
+                if(persistent.debugmenu_installed):
                     textbutton "Debug Menu [[X]" xminimum 300 action ui.callsinnewcontext("uninstall", "debug")
                 else:
                     textbutton "Debug Menu [[O]" xminimum 300 action ui.callsinnewcontext("install", "debug")
-            #if (persistent.cheat_disable_disable_rollback_seen):
+            #if(persistent.cheat_disable_disable_rollback_seen):
             
-            if (persistent.imabetatester_seen):
-                if (persistent.imabetatester):
+            if(persistent.imabetatester_seen):
+                if(persistent.imabetatester):
                     textbutton "Beta Access [[X]" xminimum 300 action ui.callsinnewcontext("uninstall", "beta")
                 else:
                     textbutton "Beta Access [[O]" xminimum 300 action ui.callsinnewcontext("install", "beta")

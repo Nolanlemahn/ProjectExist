@@ -2,11 +2,9 @@ label draft1:
     scene bg blackdrop
     $ clock = False
     $ walletshow = False
-    $ main_char_show_rpg = False
     scentered "Draft 1: ???"
     $ clock = True
     $ walletshow = True
-    $ main_char_show_rpg = True
     $ mlib("march")
     scene bg fakefog
     with dissolve

@@ -63,7 +63,7 @@ label Kazuki_1d_wil:
                you aren't here."
             nmc "I pull my laptop out of its bag and read some comics, pretending that I
                  am not here."
-        "I need backup at tonight's meeting" if (answers[0] == "law_hesitation"):
+        "I need backup at tonight's meeting" if(answers[0] == "law_hesitation"):
             $ add_answer("wil_backup")
             mc "I'm going to need help at tonight's meeting. Having another level head 
                 around - like yours - would be helpful."

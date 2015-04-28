@@ -3,31 +3,12 @@
 label Kazuki_1a:#this_label_done
     #window hide
     $ ingame = "Kazuki"
-    $ main_name = "?"
     $ main_type = "kk"
-    $ main_char_level = 5
-    # start implementing the table of stats
-    $ main_char_maxHP = 100
-    $ main_char_currentHP = 100
-    $ main_char_maxBelly = 100
-    $ main_char_currentBelly = 65
-    $ main_char_maxSleep = 100
-    $ main_char_currentSleep = 75
-    $ main_char_maxXP = 50
-    $ main_char_currentXP = 0
-    $ main_char_stats = [11,11,20,14,14,20]
-    # STR, DEX, RES, SPD, INT, SPI
-    $ main_char_ABI_SLO1 = "No ability"
-    $ main_char_ABI_SLOL1 = 0
-    $ main_char_ABI_SLO2 = "No ability"
-    $ main_char_ABI_SLOL2 = 0
-    $ main_char_RS_SLO1 = "No symbol"
-    $ main_char_RS_SLOL1 = 0
-    $ main_char_RS_SLO2 = "No symbol"
-    $ main_char_RS_SLOL2 = 0
-    $ main_char_weapon = "Fists"
-    $ main_char_armor = "Nothing"
-    $ main_known_moves = [1,2,0,0,0,0,0,0]
+    $ main_char = Combatant("Kazuki", 5, 11, 11, 20, 14, 14, 20, 100, 50, 100, 
+                            100, None, 0, None, 0, None, 0, None, 0, "Fists", 
+                            "Nothing", ["Pound", "Check"], "Human")
+    $ main_char.setState(HP = 100, XP = 0, Belly = 65, Sleep = 75)
+    $ showMCStatus = True
     $ flags = []
     $ points = init_points()
     $ reminders = []
@@ -49,7 +30,6 @@ label Kazuki_1a:#this_label_done
     
     #]
     $ walletshow = True
-    $ main_char_show_rpg = True
     $ ui_check = False
     $ strchange = ""
     $ progress = "000"
@@ -138,11 +118,11 @@ label Kazuki_1b:
     scene bg blackdrop
     $ clock = False
     $ walletshow = False
-    $ main_char_show_rpg = False
+    $ showMCStatus = False
     scentered "Episode 0: Understanding"
     $ clock = True
     $ walletshow = True
-    $ main_char_show_rpg = True
+    $ showMCStatus = True
     $ mlib("march")
     scene bg fakefog
     with dissolve
@@ -481,7 +461,7 @@ label Kazuki_1b_2:
 
     
 label Kazuki_1b_pre:
-    if ("law_lecture" in answers):
+    if("law_lecture" in answers):
         mc "There were a few concepts in today's lecture I didn't quite understand."
         l "Liar. I know you understood everything."
         nmc "Perceptive as always..."
@@ -493,7 +473,7 @@ label Kazuki_1b_pre:
         l "Ciao."
         $ points[0] += 1
         #9:45PM
-    elif ("law_test" in answers):
+    elif("law_test" in answers):
         mc "I was hoping I could ask you a few questions regarding the upcoming 
             test."
         l "Well, I won't be answering any."
@@ -532,7 +512,7 @@ label Kazuki_1b_pre:
         call triple_min(2)
         jump Kazuki_1c
         #skip Kazuki_1b_extend
-    elif ("law_nothing" in answers):
+    elif("law_nothing" in answers):
         $ answers.remove("law_nothing")
         $ add_answer("law_hesitation")
         mc "Actually, there was nothing I wanted to ask..."
@@ -620,7 +600,7 @@ label Kazuki_1b_extend:
     $ sio_s("bg hallway1")
     mc "Ah, dammit..."
     nmc "I visualize today's schedule in my head."
-    if ("law_hesitation" in answers):
+    if("law_hesitation" in answers):
         nnvlmc "8:05AM - 9:45AM: Physics 102\n{w}
                 10:05AM - 11:00AM: General Studies 110\n{w}
                 11:05AM - 12:00AM: Math 122\n{w}
@@ -676,7 +656,7 @@ label Kazuki_1b_extend:
                that I'm not a girl. I'm probably easy to pick on."
             nmc "Natalie gives me a surprisingly pronounced frown."
             $ minutes = minutes + 2
-            if ("law_hesitation" in answers):
+            if("law_hesitation" in answers):
                 mc "I suppose the school could get a bit dangerous at this time of the 
                     day. You knew Prof- err, Coach Cyrus had the practice moved?"
                 n "Yeah, he sent out an email late last night."
@@ -829,7 +809,7 @@ label Kazuki_1c:
 label Kazuki_1c_continue:
     #WRITEHERE#...
     $ sio_l("bg classroom2")
-    if ("law_test" in answers):
+    if("law_test" in answers):
         $ minutes = 606
         jump Kazuki_1d_tamara_a
     else:

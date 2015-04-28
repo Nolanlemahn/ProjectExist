@@ -92,7 +92,7 @@ init python:
             renpy.hide_screen("countdown_tag")
             renpy.fix_rollback()
             store.in_countdown = False
-        if (renpy.in_fixed_rollback()):
+        if(renpy.in_fixed_rollback()):
             renpy.hide_screen("countdown_tag")
             store.in_countdown = False
     config.mode_callbacks.append(menu_callback)

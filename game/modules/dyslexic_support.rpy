@@ -33,19 +33,25 @@ init -1 python:
     
         # here are the strings/numbers/booleans!
     def checkDefaultFont():
-        if (persistent.useDyslexic == True):
+        if(persistent.useDyslexic == True):
             return "fonts/OpenDyslexic-Regular.otf"
         else:
             return "fonts/calibri.ttf"
 
     def checkUserDev():
-        if (persistent.amDev == True):
+        if(persistent.amDev == True):
             return True
         else:
             return False
 
+    def checkSizeTwo():
+        if(persistent.useDyslexic == True):
+            return 13
+        else:
+            return 24
+
     def checkDefaultSize():
-        if (persistent.useDyslexic == True):
+        if(persistent.useDyslexic == True):
             return dyslexic_size
         else:
             return normal_size

@@ -45,14 +45,14 @@ init python:
         return
 
     def time_callback():#constantly calculate the time
-        if (hasattr(store, 'minutes')):
-            if (store.minutes > 1440):
+        if(hasattr(store, 'minutes')):
+            if(store.minutes > 1440):
                 store.minutes = store.minutes - 1440
                 store.theweekday = store.theweekday + 1
                 store.theday = store.theday + 1
                 store.dayofyear = dayofyear + 1
                 
-        if (hasattr(store, 'theweekday')):#setweekday
+        if(hasattr(store, 'theweekday')):#setweekday
             if store.theweekday > 7:
                 store.theweekday = store.theweekday - 7
             if store.theweekday == 1:
@@ -72,17 +72,17 @@ init python:
             else:
                 store.stringweekday = "Error"
                 
-        if (hasattr(store, 'theday')):#monthlim
+        if(hasattr(store, 'theday')):#monthlim
             if store.theday > store.daylim:
                 store.theday = store.theday - store.daylim
                 
-        if (hasattr(store, 'themonth')):#setmonth
+        if(hasattr(store, 'themonth')):#setmonth
             if store.themonth == 1:
                 store.stringmonth = "January"
                 store.daylim = 31
             if store.themonth == 2:
                 store.stringmonth = "February"
-                if ((((int(store.theyear) / 4)*4) - store.theyear) == 0):
+                if((((int(store.theyear) / 4)*4) - store.theyear) == 0):
                     store.daylim = 29
                 else:
                     store.daylim = 28
@@ -117,11 +117,11 @@ init python:
                store.stringmonth = "December"
                store.daylim = 31
             
-            if (hasattr(store, 'dayofyear') and hasattr(store, 'yearlim')):#yearstuff
+            if(hasattr(store, 'dayofyear') and hasattr(store, 'yearlim')):#yearstuff
                if store.dayofyear > store.yearlim:
                    store.dayofyear = store.dayofyear - store.yearlim
                    store.theyear = store.theyear + 1
-               if ((((int(store.theyear) / 4)*4) - store.theyear) == 0):
+               if((((int(store.theyear) / 4)*4) - store.theyear) == 0):
                    store.yearlim = 366
                else:
                    store.yearlim = 365
@@ -141,8 +141,8 @@ init python:
     def Clocks():
         ui.frame(xfill=False, xminimum = 110, yminimum=None, xalign=1.0, yalign = 0.76, style='clockFrame')
         ui.vbox()
-        if (minutes > 719):
-            if ((minutes - (int(minutes/60))*60) < 10):
+        if(minutes > 719):
+            if((minutes - (int(minutes/60))*60) < 10):
                 if((int(minutes/60)) == 12):
                     ui.text("12:0%d PM" % ((minutes - (int(minutes/60))*60)), xalign=1.0, size=checkSizeTwo())
                 else:
@@ -153,7 +153,7 @@ init python:
                 else:
                     ui.text("%d:%d PM" % ((int(minutes/60)-12), (minutes - (int(minutes/60))*60)), xalign=1.0, size=checkSizeTwo())
         else:
-            if ((minutes - (int(minutes/60))*60) < 10):
+            if((minutes - (int(minutes/60))*60) < 10):
                 if((int(minutes/60)) == 0):
                     ui.text("12:0%d AM" % ((minutes - (int(minutes/60))*60)), xalign=1.0, size=checkSizeTwo())
                 else:

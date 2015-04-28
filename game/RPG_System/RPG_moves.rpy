@@ -1,31 +1,46 @@
 #######
 # File name: RPG_moves.rpy
 # 
-# Description: Implements a dclass for hollding RPG moves.
+# Description: Implements a class for hollding RPG moves.
 # 
 # Original author: Nolan/NintendoToad
 # 
 # Type: Library
 # 
 # Usage:
-#     Don't directly use this, but regularly update cbm
+#     See cb_move() below.
 #######
 
-init:
-    $ cbm = collections.OrderedDict()
-    # 0
-    $ cbm["Struggle"] = cb_move(50, 0.80, 0, "struggle", None, "physical", "normal", "close", ["", ""])
-    # 1-3
-    $ cbm["Pound"] = cb_move(50, 0.95, 0, None, None, "physical", "normal", "close", ["", ""])
-    $ cbm["Check"] = cb_move(10, 0.70, 1, "stun", 30, "physical", "normal", "close", ["", ""])
-    $ cbm["Warlock's Fist"] = cb_move(85, 1.00, -1, "homing", None, "physical", "dream", "close", [-4, "SP"])
-    
-    $ cbm["Pound"].desc = "A basic attack in which the user, with any blunt object (including fists), strikes the opponent."
-    $ cbm["Check"].desc = "A somewhat advanced technique in which the user tries to get in a light but surprising hit before the opponent has time to react. This has a 30% chance of causing flinching."
-    $ cbm["Warlock's Fist"].desc = "A somewhat advanced technique that requires use of tactics learned in Dream Worlds. The user locks onto his opponent's mind, and launches a strong punch backed with Dream Energy."
-    ###
-
 init -1 python:
+
+    #####
+    # Class name: cb_ability()
+    # 
+    # Description: Define innate abilities for combat. Also symbols.
+    #
+    # Parameters:
+    # name - the name of the ability
+    # level - the level of the ability
+    #####
+    class cb_ability():
+        def __init__(self, name, level):
+            self.name = name
+            self.level = level
+
+    #####
+    # Class name: cb_status()
+    # 
+    # Description: Define innate abilities for combat, like stun
+    #
+    # Parameters:
+    # name - the name of the status
+    # turns - number of turns to be inflicted
+    #####
+    class cb_ability():
+        def __init__(self, name, turns):
+            self.name = name
+            self.turns = turns
+
     #####
     # Class name: cb_move()
     # 
@@ -46,8 +61,8 @@ init -1 python:
     # Returns: a move object of sorts
     #####
     class cb_move:
-
-        def __init__(self, power, accuracy, priority, parameter, parameterplus, typea, typeb, typec, cost, desc = ""):
+        def __init__(self, name, power, accuracy, priority, parameter, parameterplus, typea, typeb, typec, cost, desc = ""):
+            self.name = name
             self.power = power
             self.accuracy = accuracy
             self.priority = priority

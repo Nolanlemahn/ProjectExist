@@ -1,83 +1,3 @@
-label m1_1v1_turna:
-    "What will [m1name] do?{fast}{nw}"
-    menu:
-        extend "{fast}"
-        "Fight":
-            jump m1_1v1_turnb
-        "Bag":
-            jump battle_inventory
-        "Switch":
-            "There's no one to switch with...{fast}"
-            jump m1_1v1_turna
-        "Run":
-            "[m1name] is not a coward and refuses to run!{fast}"
-            jump m1_1v1_turna
-    return
-
-label m1_1v1_turnb:
-    menu:
-        extend "{fast}"
-        "%(movename1)s" if (moveexists > 0):
-            $ chosenmove = movename1
-            pass
-        "%(movename2)s" if (moveexists > 1):
-            $ chosenmove = movename2
-            pass
-        "%(movename3)s" if (moveexists > 2):
-            $ chosenmove = movename3
-            pass
-        "%(movename4)s" if (moveexists > 3):
-            $ chosenmove = movename4
-            pass
-        "%(movename5)s" if (moveexists > 4):
-            $ chosenmove = movename5
-            pass
-        "%(movename6)s" if (moveexists > 5):
-            $ chosenmove = movename6
-            pass
-        "(Get move information on known moves)":
-            jump get_move_info
-        "(Do something else)":
-            jump m1_1v1_turna
-    if(battle_current):
-        $ cbm[chosenmove].assign("m1", chosenmove)
-        call load_moves_part3(chosenmove)
-    return
-
-label get_move_info:
-    #tempa-broken
-    "Which move would you like more information on?{fast}{nw}"
-    menu:
-        extend "{fast}"
-        "%(movename1)s" if (moveexists > 0):
-            $ chosenmove = movename1
-            pass
-        "%(movename2)s" if (moveexists > 1):
-            $ chosenmove = movename2
-            pass
-        "%(movename3)s" if (moveexists > 2):
-            $ chosenmove = movename3
-            pass
-        "%(movename4)s" if (moveexists > 3):
-            $ chosenmove = movename4
-            pass
-        "%(movename5)s" if (moveexists > 4):
-            $ chosenmove = movename5
-            pass
-        "%(movename6)s" if (moveexists > 5):
-            $ chosenmove = movename6
-            pass
-        "%(movename7)s" if (moveexists > 6):
-            $ chosenmove = movename6
-            pass
-        "%(movename8)s" if (moveexists > 7):
-            $ chosenmove = movename6
-            pass
-        "(Do something else)":
-            jump m1_1v1_turna
-    call about_move(chosenmove)
-    return
-
 label inventory_crap:
     $ inventory_see = False
     $ notin_other_stats = False
@@ -114,3 +34,59 @@ label other_stats:#show combat stats
     $ notin_other_stats = True
     return
     
+init python:
+    def show_combatant_stats(combatant, xal1, yal1, showXP = True):
+        name = combatant.name
+        level = combatant.level
+        hp = combatant.currentHP
+        maxhp = combatant.maxHP
+        fp = combatant.currentBelly
+        maxfp = combatant.maxBelly
+        sp = combatant.currentSleep
+        maxsp = combatant.maxSleep
+        xp = combatant.currentXP
+        maxxp = combatant.maxXP
+        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1), style="game_box")
+        ui.hbox()
+        ui.text("%s" % name, size=checkSizeTwo())
+        ui.text("  Lv. %d" % level, xalign=1.0, size=checkSizeTwo())
+        ui.close()
+        ui.frame(xfill=False, xminimum = 330, yminimum=None, xalign=(xal1), yalign=(yal1 + 0.05), style="game_box")
+        ui.hbox()
+        ui.vbox()
+        ui.text("HP", size=checkSizeTwo())
+        ui.text("FP", size=checkSizeTwo())
+        ui.text("SP", size=checkSizeTwo())
+        if(showXP):
+            ui.text("XP", size=checkSizeTwo())
+        ui.close()
+        ui.vbox()
+        ui.bar(maxhp, hp, xminimum=180, xmaximum=180)
+        ui.bar(maxfp, fp, xminimum=180, xmaximum=180)
+        ui.bar(maxsp, sp, xminimum=180, xmaximum=180)
+        if(showXP):
+            ui.bar(maxxp, xp, xminimum=180, xmaximum=180)
+        ui.close()
+        ui.vbox() # Level from (hp/maxhp)
+        if(hp < 100):
+            ui.text(" %d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
+        else:
+            ui.text("%d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
+        if(fp < 100):
+            ui.text(" %d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
+        else:
+            ui.text("%d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
+        if(sp < 100):
+            ui.text(" %d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
+        else:
+            ui.text("%d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
+        if(showXP):
+            if(xp < 100):
+                ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
+            elif(xp < 1000):
+                ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
+            else:
+                ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
+        ui.close()
+        ui.close()
+        return

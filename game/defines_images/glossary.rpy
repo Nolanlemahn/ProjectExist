@@ -30,27 +30,27 @@ label about_sp:
 label about_char(some_char):
     scene bg fakefog
     $ in_debug = True
-    if (some_char == "kazuki"):
+    if(some_char == "kazuki"):
         centered "%(kazukiGloss)s"
-    if (some_char == "katherine"):
+    if(some_char == "katherine"):
         centered "%(rinGloss)s"
-    if (some_char == "jonathan"):
+    if(some_char == "jonathan"):
         centered "%(jonGloss)s"
-    if (some_char == "wil"):
+    if(some_char == "wil"):
         centered "empty file"
-    if (some_char == "proflaw"):
+    if(some_char == "proflaw"):
         centered "%(lawGloss)s"
-    if (some_char == "masamune"):
+    if(some_char == "masamune"):
         centered "%(masaGloss)s"
-    if (some_char == "athena"):
+    if(some_char == "athena"):
         centered "%(athenaGloss)s"
-    if (some_char == "natalie"):
+    if(some_char == "natalie"):
         centered "%(natGloss)s"
-    if (some_char == "tammy"):
+    if(some_char == "tammy"):
         centered "%(tammyGloss)s"
-    if (some_char == "lilian"):
+    if(some_char == "lilian"):
         centered "%(liliGloss)s"
-    if (some_char == "ultraman7"):
+    if(some_char == "ultraman7"):
         centered "%(ult7Gloss1)s"
         centered "%(ult7Gloss2)s"
         centered "%(ult7Gloss3)s"

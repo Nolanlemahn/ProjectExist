@@ -218,14 +218,8 @@ screen say:
     #show rpg stats code
     # automatically re-draw the GUI headers if necessary
     if(not in_debug):
-        if(fight_is_1v1):
-            $ show_stats (m1name, m1level, m1hp, m1maxhp, m1fp, m1maxfp, m1sp, m1maxsp, m1XP, m1maxXP, .02, .01)
-            $ show_stats_noXP(e1name, e1level, e1hp, e1maxhp, e1fp, e1maxfp, e1sp, e1maxsp, e1XP, e1maxXP, .98, .01)
-        elif(main_char_show_rpg):#the normal stats
-            $ show_stats(main_name, main_char_level, main_char_currentHP, main_char_maxHP, main_char_currentBelly, main_char_maxBelly, main_char_currentSleep, main_char_maxSleep, main_char_currentXP, main_char_maxXP, .02, .01)
-        if(enemy_char_show_rpg):
-            $ show_stats_noXP(enemy1_name, enemy1_char_level, enemy1_char_currentHP, enemy1_char_maxHP, enemy1_char_currentBelly, enemy1_char_maxBelly, enemy1_char_currentSleep, enemy1_char_maxSleep, .98, .01)
-
+        if(showMCStatus):#the normal stats
+            $ show_combatant_stats(main_char, .02, .01)
         if(clock):#maybe we don't even need to check this variable...?
             $ Calendar()
             $ Clocks()
@@ -325,8 +319,9 @@ screen say:
                     text what[1] id "what" slow_cps True
                     
     # Use the quick menu.
+    use left_quick_menu
     use quick_menu
-    if (battle_mode):
+    if(battle_mode):
         $ renpy.block_rollback()
 
 
@@ -469,7 +464,6 @@ screen main_menu:
         if config.developer:
             textbutton _("Persistent Reset") action ui.callsinnewcontext("destroy_persistent")
             textbutton "Seriously break things" action ui.callsinnewcontext("reset_button")
-            textbutton "Test Combat" action Start("requested_start_cb")
             textbutton "" action NullAction() style "empty_button"
         textbutton "Report a Bug" action Help("game/dev/report.html")
         textbutton "Check for Updates" action ui.callsinnewcontext("pre_update")
@@ -532,7 +526,7 @@ screen navigation:
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Main Menu") action MainMenu()
         textbutton "Glossary" action ShowMenu("glossary")
-        if (persistent.debugmenu_installed):
+        if(persistent.debugmenu_installed):
             textbutton "Debug Menu" action ShowMenu("debug_menu")
         textbutton _("Help") action Help()
         textbutton _("Quit") action Quit()
@@ -750,9 +744,9 @@ screen preferences:
                 has vbox
 
                 #label _("Change Rollback Mode")
-                #if (not persistent.all_rollback):
+                #if(not persistent.all_rollback):
                 #    textbutton "Currently disabled\neverywhere" action ui.callsinnewcontext("rollback_mode")
-                #elif (not persistent.choice_rollback):
+                #elif(not persistent.choice_rollback):
                 #    textbutton "Currently disabled\nat choices" action ui.callsinnewcontext("rollback_mode")
                 #else:
                 #    textbutton "Enabled\neverywhere" action ui.callsinnewcontext("rollback_mode")
@@ -818,6 +812,15 @@ init -2 python:
 ##############################################################################
 # Quick Menu
 
+screen left_quick_menu:
+    hbox:
+        style_group "quick"
+    
+        xalign 0.0
+        yalign 1.0
+        textbutton _("Show Watches") action Function(show_watch)
+        textbutton _("Hide Watches") action Function(unwatch, {"all":True})
+
 screen quick_menu:
 
     # Add an in-game quick menu.
@@ -826,7 +829,6 @@ screen quick_menu:
     
         xalign 1.0
         yalign 1.0
-        
         if(notin_other_stats):
             textbutton _("Stats") action ui.callsinnewcontext("other_stats")
         if(notin_other_stats and inventory_see):

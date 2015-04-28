@@ -3,6 +3,7 @@ init -1:
 
 label start:#this_label_done
     $ answers = []
+    $ showMCStatus = False
     $ in_side_note = False
     show screen mlib_listener
     scene bg blackdrop
@@ -14,7 +15,7 @@ label start:#this_label_done
     #$ save_name = begin_game()
     #$ renpy.block_rollback()
     #narr "This is a friendly reminder to go to the Options menu, and choose whether or not you would like Rollback to be enabled, and whether or not you want Developer/Writer commentary. By default, Rollback is disabled, and commentary is disabled."
-    if (persistent.standalone_dlc_avail):
+    if(persistent.standalone_dlc_avail):
         "There is standalone DLC installed and unlocked. Would you like to launch one of those instead of the main game?"
         menu:
             extend ""
@@ -40,7 +41,7 @@ label standalone_dlc_menu:
     "Which DLC would you like to launch?"
     menu:
         extend ""
-        "DLC#1: Prologue" if (persistent.dlc1_installed and renpy.has_label('dlc1_1a')):
+        "DLC#1: Prologue" if(persistent.dlc1_installed and renpy.has_label('dlc1_1a')):
             jump dlc1_1a
         "Cancel (Main game)":
             jump alternative_start
