@@ -36,9 +36,12 @@ init -1 python:
     def show_sn(st, at, tt="something wrong"):
         tip = tt
         return Fixed(
-            Frame(sn_frame_img, sn_width, sn_height),
+            Frame(sn_frame_img, sn_width + 4, sn_height),
             VBox(
-                Text("{size=[top_pixels]}\n{/size}%s" % tip, color="#fff", size=22, xmaximum=sn_width, first_indent=6, rest_indent=6)), ysize=sn_height), None
+                Text("{size=[top_pixels]}\n{/size}%s" % tip, color="#fff", size=22, first_indent=6, rest_indent=6),
+                xsize = sn_width - 2, ysize=sn_height
+                ), 
+            xminimum = sn_width, ysize=sn_height), None
 
 screen side_note:
     tag side_note_tag

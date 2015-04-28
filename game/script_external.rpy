@@ -7,15 +7,27 @@ label triple_min(interval):
     extend "..."
     return
 
-label add_answer(new_answer):
+label addAnswer(new_answer):
     $ answers.append(new_answer)
     return
 
+label removeAnswer(dead_answer):
+    $ answers.remove(dead_answer)
+    return
+
 init -1 python:
-    def add_answer(new_answer):
-        renpy.call("add_answer", new_answer)
+    def addAnswer(new_answer):
+        renpy.call("addAnswer", new_answer)
         return
-    
+
+    # Doesn't have a label version. Sorry!
+    def hasAnswer(check_answer):
+        return (check_answer in store.answers)
+
+    def removeAnswer(dead_answer):
+        renpy.call("removeAnswer", dead_answer)
+        return
+
     def python_pass():
         return
         

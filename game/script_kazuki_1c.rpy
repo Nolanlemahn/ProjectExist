@@ -2,6 +2,9 @@ label Kazuki_1j_skip:#we skipped lunch
     $ sio_l("bg workshop")
     $ minutes = minutes + 5
     #1:55PM
+    call impossible_problem_1
+    $ minutes += 30
+    #2:25M
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for 
          as long as anyone can remember, which is of course, not very 
          long at all. This in itself is a bit awkward, since Robert lost custody
@@ -87,7 +90,7 @@ label Kazuki_1j_skip:#we skipped lunch
     $ sio_l("bg blackdrop")
     $ triple_min(25)
     $ sio_l("bg workshop")
-    #3:25PM
+    #3:55PM
     nmc "I had run out of tasks for today, so I began to record data of the cars
          Robert had worked on over the past week."
     nmc "Specifically, the more useless data. Such as, that 60.3 percent of the 
@@ -240,7 +243,7 @@ label Kazuki_1j_essay:
     menu:
         extend ""
         "Yes":
-            $ add_answer("lily_essay_1_yes")
+            $ addAnswer("lily_essay_1_yes")
             call Kazuki_1j_essay_yes #returns
             if("self_40" not in answers):
                 jump Kazuki_1j_essay_stop
@@ -252,10 +255,10 @@ label Kazuki_1j_essay:
             else:
                 jump Kazuki_1j_essay_lazy
         "No":
-            $ add_answer("lily_essay_1_no")
+            $ addAnswer("lily_essay_1_no")
             jump Kazuki_1j_essay_no
         "...":
-            $ add_answer("lily_essay_1_no")
+            $ addAnswer("lily_essay_1_no")
             jump Kazuki_1j_essay_what
 
 label Kazuki_1j_essay_yes:
@@ -337,9 +340,9 @@ label Kazuki_1j_essay_yes:
     menu:
         extend ""
         "Yes":
-            $ add_answer("lily_essay_2_yes")#jump Kazuki_1j_essay_more
+            $ addAnswer("lily_essay_2_yes")#jump Kazuki_1j_essay_more
         "No":
-            $ add_answer("lily_essay_2_no")#jump Kazuki_1j_essay_stop
+            $ addAnswer("lily_essay_2_no")#jump Kazuki_1j_essay_stop
         "...":
             pass
     return #line244
@@ -438,18 +441,18 @@ label Kazuki_1j_essay_more:
     menu:
         extend ""
         "I'll pay for myself":
-            $ add_answer("lily_lunch_1_pay")
+            $ addAnswer("lily_lunch_1_pay")
         "Accept her offer to pay":
-            $ add_answer("lily_lunch_1_treat")
+            $ addAnswer("lily_lunch_1_treat")
         "Don't go to lunch with her":
-            $ add_answer("lily_lunch_1_bye")
+            $ addAnswer("lily_lunch_1_bye")
         "...":
-            jump Kazuki_1k_lunch_route# change this later
+            $ addAnswer("lily_lunch_1_silence")
     $ jump_break()#really?
-    jump Kazuki_1k_lunch_route
+    jump Kazuki_1k_lunch_route#3:20PM
 
 label Kazuki_1j_essay_lazy:
-    $ add_answer("lily_essay_2_what")
+    $ addAnswer("lily_essay_2_what")
     nmc "... I stared blankly at the laptop screen."
     mc "Uhh..."
     $ jump_break()
@@ -498,51 +501,56 @@ label Kazuki_1j_essay_stop:
     jump Kazuki_1k_work_alt#3:14
     
 label Kazuki_1k_lunch_route:
+    if hasAnswer("lily_lunch_1_silence"):
+        $ removeAnswer("lily_lunch_1_silence")
+        $ addAnswer("lily_lunch_1_bye")
+        li "Aww, are you too sleepy for a late lunch?"
+    elif hasAnswer("lily_lunch_1_bye"):
+        mc "I think I'm going to have to turn you down."
+        li "Oh?"
+    if hasAnswer("lily_lunch_1_bye"):
+        mc "It's... It's been a long day, and even if I were to skip lunch, I'd 
+            still need to get to cross-country later. It'd be best for me to not eat
+            anything."
+        nmc "My out-of-my-ass reply seems to have made some sense, as Lilian nods in
+             response."
+        li "Ah, I see. Well, thanks for keeping my company today. This was nice."
+        mc "You helped me more than I helped you."
+        li "That's not totally true... Anyway, I'll let you get some rest. See ya."
+        $ sn_draw("sn jaane")
+        mc "Jaa ne."
+        nmc "As Lilian skips off, I realize that I'm going to have to walk to 
+             work..."
+        jump Kazuki_1k_work_fail
+    else:
+        jump Kazuki_1k_lunch_lily
     return
-    
+
+label Kazuki_1k_lunch_lily:
+    return
+
+label Kazuki_1k_work_fail:
+    call impossible_problem_1
+    $ minutes += 30
+    ro "What the fuck clock in the bloody afternoon do you call this, you filthy
+        piece of... You lazy dickwad."#3:50PM
+    nmc "... The man is not known for his clean language."
+    mc "Yes, I'm late. I'm sorry."
+    ro "You know, back in my day, we were never actually late to work. Instead, 
+        we didn't show up. Because we knew what would happen if we went to work.
+        We'd be fired."
+    mc "... Am I being let go?"
+    ro "No, but I'm royally pissed off and I'm sending you home."
+    nmc "Robert wasn't known for his leniency either, but on most other days 
+         he's slightly more patient."
+    mc "Yes sir. Sorry sir."
+    nmc "As I turn my back, I realize that I'm going to have to walk home..."
+    return
+
 label Kazuki_1k_work:
     # 2:00PM
     $ minutes = 840
-    nmc "On the half-hour walk to Robert and Son's Machines, I realize that I 
-         have some time to think about problems. Specifically variants of 
-         impossible problems."
-    nmc "Consider for a moment, the Mutilated Chessboard Problem, as posed by 
-         Martin Gardner. Although I would have called it the 2-by-1 Corner 
-         Truncation Problem. The premise of the problem is that an unmodified 
-         chessboard can clearly be completely covered by a number of standard 
-         dominoes."
-    nmc "Of course, assuming that you place a domino over two adjacent squares 
-         and don't do anything silly, like placing a domino diagonally, using 
-         oversized dominoes, breaking dominoes in half, dangling dominoes off of
-         the board's edge, and so on. If you remove two white squares on the 
-         board however, can you still fill the chessboard with dominoes?"
-    nmc "The answer is, of course, no. While it's certainly true that removing 
-         these spaces still leaves the board with an even number of squares... 
-         well."
-    nmc "A domino placed with these restrictions must cover both a black and a 
-         white square. If the ratio between the quantity of black squares to 
-         white squares is anything but one-to-one, this is evidently 
-         impossible."
-    nmc "But what happens if I remove a black tile and a white tile? Does it 
-         matter which tiles I remove? And can I then fill the board with 
-         dominoes?"
-    nmc "The answer to this new problem is yes, that I will always be able to 
-         fill the board regardless of the two removed tiles. Additionally, the 
-         proof is still somewhat geometric. Imagine how a rook would travel 
-         through board, and realize that its movement pattern must alternate 
-         tiles: black, white, black, white, and so on. A single path is not 
-         necessarily possible if these two tiles are removed."
-    nmc "So what? Picture the removal of a black square. A single rook may still
-         traverse the entire board, but both starts and ends on a white square."
-    nmc "Then remove any white square. If remove one of the end squares, then 
-         we've presented the problem in an incredibly stupid manner, and have 
-         just asked \"well what happens if we remove a domino's worth of 
-         squares\"."
-    nmc "Remove a white square in the middle though, and we absolutely create 
-         two paths. Black at the start and white at the end. A traversable path 
-         with different ends. Quod erat demonstrandum."
-    nmc "But what if we tried to solve the problem in a non-geometric manner? 
-         Hmm..."
+    call impossible_problem_1
     # alternate intro to robert hale
     $ sio_l("bg workshop")
     $ minutes = 870#2:30
@@ -644,16 +652,16 @@ label Kazuki_1k_work_alt:# 2:42 PM or 3:05
     menu:
         extend ""
         "Amnaki":
-            $ add_answer("work_excuse_amnaki")
+            $ addAnswer("work_excuse_amnaki")
         "Lilian":
-            $ add_answer("work_excuse_lilian")
+            $ addAnswer("work_excuse_lilian")
         "...":
             jump Kazuki_1k_work_mum
     jump Kazuki_1k_work_excuse
     
 label Kazuki_1k_work_mum:
     $ points[5] += -4
-    $ add_answer("work_excuse_none")
+    $ addAnswer("work_excuse_none")
     nmc "I can't actually think of a reasonable excuse, so I say nothing."
     ro "... Whatever. Get to work. I'm taking a nap."
     jump Kazuki_1k_work_excuse
