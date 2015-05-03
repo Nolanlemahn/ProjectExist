@@ -14,7 +14,7 @@
 screen combat_stats(cb1, cb2):
     tag cb_stats
     $ show_combatant_stats(cb1, .02, .01)
-    $ show_combatant_stats(cb2, .98, .01, False)
+    $ show_combatant_stats(cb2, .98, .01, False, False)
 
 init 1 python:
     class Fight1v1:

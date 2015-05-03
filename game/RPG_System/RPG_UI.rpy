@@ -35,7 +35,7 @@ label other_stats:#show combat stats
     return
     
 init python:
-    def show_combatant_stats(combatant, xal1, yal1, showXP = True):
+    def show_combatant_stats(combatant, xal1, yal1, showXP = True, showNums = True):
         name = combatant.name
         level = combatant.level
         hp = combatant.currentHP
@@ -68,18 +68,23 @@ init python:
             ui.bar(maxxp, xp, xminimum=180, xmaximum=180)
         ui.close()
         ui.vbox() # Level from (hp/maxhp)
-        if(hp < 100):
-            ui.text(" %d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
+        if(showNums):
+            if(hp < 100):
+                ui.text(" %d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
+            else:
+                ui.text("%d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
+            if(fp < 100):
+                ui.text(" %d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
+            else:
+                ui.text("%d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
+            if(sp < 100):
+                ui.text(" %d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
+            else:
+                ui.text("%d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
         else:
-            ui.text("%d/%d" % (hp, maxhp), xalign=1.0, size=checkSizeTwo())
-        if(fp < 100):
-            ui.text(" %d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
-        else:
-            ui.text("%d/%d" % (fp, maxfp), xalign=1.0, size=checkSizeTwo())
-        if(sp < 100):
-            ui.text(" %d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
-        else:
-            ui.text("%d/%d" % (sp, maxsp), xalign=1.0, size=checkSizeTwo())
+            ui.text("???/???", size=checkSizeTwo())
+            ui.text("???/???", size=checkSizeTwo())
+            ui.text("???/???", size=checkSizeTwo())
         if(showXP):
             if(xp < 100):
                 ui.text("%d/%d" % (xp, maxxp), xalign=1.0, size=checkSizeTwo())
