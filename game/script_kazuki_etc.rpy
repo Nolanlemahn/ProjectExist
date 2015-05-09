@@ -71,9 +71,9 @@ label impossible_problem_1:
     hide asset chessboard rook3
     show asset chessboard rook4:
         xalign 0.5 yalign 0.35
-    nmc "Remove a white square in the middle though, and we absolutely create 
-         two paths. Black at the start and white at the end. Traversable paths 
-         with different ends. "
+    nmc "Remove one black and one white square from the center of the board 
+         though, and we absolutely create two paths. Black at the start and 
+         white at the end. Traversable paths with different ends. "
     hide asset chessboard rook4
     show asset chessboard rook5:
         xalign 0.5 yalign 0.35

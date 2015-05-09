@@ -379,7 +379,7 @@ label Kazuki_1j_essay_no:
     mc "You were a solid 20 miles per hour over the speed limit."
     li "Better than being late, right?"
     mc "Considering that we didn't get a ticket, I suppose that I should be 
-        thankful."
+        thankful, yes."
     nmc "I decide not to tell her that I'm still late, although certainly less 
          late than I would have been without her."
     li "Darn right! Well, I'll catch you later."
@@ -527,6 +527,28 @@ label Kazuki_1k_lunch_route:
     return
 
 label Kazuki_1k_lunch_lily:
+    if hasAnswer("lily_lunch_1_pay"):
+        mc "I can pay for myself. Where are we going?"
+    if hasAnswer("lily_lunch_1_treat"):
+        mc "My wallet has been hurting lately. I certainly would appreciate that."
+        li "Oh? What's up?"
+        nmc "There's no need to inconvenience her with how I pay for - on top of the
+             apartment rent - my father's bar tab, living expenses, and bail 
+             whenever he gets into trouble. Although he's been pretty good with the 
+             law lately."
+        mc "Ehh, I've been having a hard time keeping up with the bills lately is all."
+        nmc "... Technically true."
+        li "Ahh, okay. I'll have to take you somewhere nice then."
+        mc "What do you have in mind?"
+    li "Oh, you'll see. Come on. You haven't seen my car yet."
+    mc "I'm more concerned with where we're going than how we're getting there. 
+        And I haven't seen your license, either."
+    li "They're both surprises!"
+    nmc "Lilian leads the way to the parking lot..."
+    $ minutes += 3
+    $ sio_l("bg parkinglot1")
+    li "Here we are!"
+
     return
 
 label Kazuki_1k_work_fail:
@@ -731,7 +753,7 @@ label Kazuki_1l_work:
     jump Kazuki_1l_work_extend
 
 label Kazuki_1l_work_minus:
-    ro "Alexander Pope said that. He was a good man."
+    ro "Give up? Alexander Pope said that. He was a good man."
     mc "It sounds like you knew him."
     ro "I'm not that old... He died in 1744."
     jump Kazuki_1l_work_extend

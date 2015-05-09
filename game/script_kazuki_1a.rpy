@@ -728,7 +728,7 @@ label Kazuki_1b_extend2:
     nnvlmc "... My body didn't even wait for me to make a decision. It moved all
             on its own, and embraced her. "
     extend "\nIt took another 5 seconds to realize that her soft chest was 
-             pushed into mine. "
+             pushed into mine."
     extend " Her eyes are closed and her head is down. Her long platinum hair 
             makes a veil blocking my view of her face. "
     nnvlmc "The blissful sensation of her willowy frame being held up by my own 
@@ -740,7 +740,7 @@ label Kazuki_1b_extend2:
     nmc "That's when I realize... she is still in my arms. And that I am still 
          in hers."
     extend "\n... I let go of her. Reluctantly. But quickly."
-    n " So umm... will you be able to walk me over at a quarter to 8?"
+    n "So umm... will you be able to walk me over at a quarter to 8?"
     $ cd_set(5, 5, 'Kazuki_1b_fail')
     show screen countdown
     menu:

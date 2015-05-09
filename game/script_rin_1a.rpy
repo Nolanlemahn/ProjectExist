@@ -40,7 +40,7 @@ label Rin_1a:#this_label_done
     $ yearlim = 365
     $ daylim = 30
     $ stringweekday = "Tuesday"
-    $ stringmonth = "September"    
+    $ stringmonth = "September"
     $ main_char_cash = 200.00
     $ has_phone = False
     #]
