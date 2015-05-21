@@ -465,7 +465,7 @@ screen main_menu:
             textbutton _("Persistent Reset") action ui.callsinnewcontext("destroy_persistent")
             textbutton "Seriously break things" action ui.callsinnewcontext("reset_button")
             textbutton "" action NullAction() style "empty_button"
-        textbutton "Report a Bug" action Help("game/dev/report.html")
+        textbutton "Report a Bug" action Help("game/modules/report.html")
         textbutton "Check for Updates" action ui.callsinnewcontext("pre_update")
         textbutton "Dyslexic?" action ui.callsinnewcontext("dyslexic") text_style "dys_button_text"
         
