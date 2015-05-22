@@ -98,7 +98,7 @@ init python:
             global mlib_usage
             mlib_usage += 1
             if(mlib_usage > 1):
-                renpy.error('more than one mlib object in use, only use one')
+                renpy.error('Multiple mlib objects detected; only use one')
             self.selection = selection
             self.musicEntries = []
             self.sfxEntries1 = []

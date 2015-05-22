@@ -121,7 +121,7 @@ init python:
                     actualMoves.append(store.cbm[cb_m])
                 else:
                     renpy.error("Move not defined (in store.cbm): %s. Perhaps \
-                                 you should double-check RPG_moves.rpy?" % cb_m)
+ you should double-check RPG_moves.rpy?" % cb_m)
             self.moves = actualMoves
             return
 

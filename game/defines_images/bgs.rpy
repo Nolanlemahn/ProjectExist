@@ -7,7 +7,6 @@ image bg mainmenu = "drops/menu.png"
 image bg fog = PlaceholderX("drops/brickwall.png", "drops/fog.png", pretext = "(PLACEHOLDER) ")
 image bg fakefog = "drops/sneakfog.png"
 
-#a generic picture of the outside of sacramento
 image bg cafeteria1 = PlaceholderX("drops/template.png", "drops/cafe1.png", pretext = "(PLACEHOLDER) ")
 image bg city1 = PlaceholderX("drops/template.png", "drops/city1.png", pretext = "(PLACEHOLDER) ") #a generic picture of the outside of sacramento
 image bg city1 blur = PlaceholderX("drops/template.png", "drops/city1blur.png", pretext = "(PLACEHOLDER) ") #a generic picture of the outside of sacramento, but blurry (Kazuki is running)
