@@ -247,7 +247,6 @@ label mlib_show_data:
 
 init:
     $ mlib = mlib_space()
-    #$ break_renpy = mlib_space()
     $ mlib.load()
     
 init python:
