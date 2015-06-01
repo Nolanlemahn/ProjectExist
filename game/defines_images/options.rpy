@@ -1,7 +1,10 @@
 ﻿init -1 python:
 
     def size_reset():
-        renpy.reset_physical_size()
+        try:
+            renpy.reset_physical_size()
+        except:
+            return
     config.start_callbacks.append(size_reset)
 
     config.python_callbacks = []
