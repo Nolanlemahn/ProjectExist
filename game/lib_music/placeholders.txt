@@ -1,0 +1,6 @@
+[Music File]
+bgm/OppressiveGloom.mp3
+[Looped SFX File]
+sfx/beep-01a.mp3
+[Standard SFX File]
+sfx/beep-01a.mp3

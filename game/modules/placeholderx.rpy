@@ -109,7 +109,7 @@ init -1 python:
             loc1 = os.path.abspath(config.gamedir + "/" + self.img1)
             loc2 = os.path.abspath(config.gamedir + "/" + self.img2)
             if((not os.path.isfile(loc1)) and (not os.path.isfile(loc2))):
-                renpy.error("PlaceholderX requires that at least one of the images \
+                renpy.error("[PlaceholderX] Call requires that at least one of the images \
  actually exist. Check: %s" % loc2)
 
         #####

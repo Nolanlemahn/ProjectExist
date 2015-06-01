@@ -18,3 +18,8 @@ bgm/march2.mp3
 Lawrence's Reveal - AgentAbacus
 False
 ---
+testcase
+bgm/testcase.no
+Not an actual audio file
+True
+---

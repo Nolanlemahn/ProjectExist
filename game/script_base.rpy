@@ -92,4 +92,6 @@ label credits:
     nvln "Soundbible.com: {a=http://soundbible.com/61-City-Car-Horn.html}car horn sound{/a}."
     nvln "UncleKornicob: {a=http://soundbible.com/1787-Annoying-Alarm-Clock.html}alarm clock sound{/a}."
     nvln "The DavisWiki: {a=http://daviswiki.org/Memorial_Union}A single picture{/a}."
+    nvln "SoundJay: {a=http://www.soundjay.com/beep-sounds-1.html}Placeholders for lib_music{/a}"
+    nvln "Incompetech: {a=http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100885}Placeholders for lib_music{/a}"
     nvl clear
