@@ -15,22 +15,10 @@
     #style.say_who_window.xminimum = 150
     #style.say_who_window.yminimum = 15
     #style.say_who_window.xfill = False
-    
-    # #developer options
-    config.developer = checkUserDev()
-    config.keymap['save_delete'].append('K_BACKSPACE')
-    config.fast_skipping = True
 
     ## Please don't change this
     config.screen_width = 1200
     config.screen_height = 800
-    config.window_title = "Project Exist"
-    config.default_fullscreen = None
-    config.gl_resize = False
-
-    # These control the name and version of the game, that are reported
-    # with tracebacks and other debugging logs.
-    config.name = "Project Exist"
 
     #########################################
     #!URGENT : WE NEED OUR OWN THEME!#
@@ -154,20 +142,6 @@
 
     # config.main_menu_music = "main_menu_theme.ogg"
 
-
-    #########################################
-    ## Help.
-
-    ## This lets you configure the help option on the Ren'Py menus.
-    ## It may be:
-    ## - A label in the script, in which case that label is called to
-    ##   show help to the user.
-    ## - A file name relative to the base directory, which is opened in a
-    ##   web browser.
-    ## - None, to disable help.   
-    config.help = "README.html"
-
-
     #########################################
     ## Transitions.
 
@@ -200,14 +174,6 @@
 
     ## Used when the window is hidden.
     config.window_hide_transition = dissolve
-
-
-    #########################################
-    ## This is the name of the directory where the game's data is
-    ## stored. (It needs to be set early, before any other init code
-    ## is run, so the persistent information can be found by the init code.)
-python early:
-    config.save_directory = "project-exist-1"
 
 ##############################################################################
 # Say
