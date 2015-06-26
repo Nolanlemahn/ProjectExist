@@ -393,7 +393,7 @@ screen nvl:
                         text caption style "nvl_dialogue"
 
     add SideImage() xalign 0.0 yalign 1.0
-    
+    use left_quick_menu
     use quick_menu
         
 ##############################################################################

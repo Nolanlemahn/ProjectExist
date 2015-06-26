@@ -225,16 +225,16 @@ label Kazuki_1d_tamara_b:
          telling me that some sort of project is due today. She isn't younger, 
          otherwise she'd be in class, or at lunch, or at home."
     nmc "She isn't headed to work, otherwise she would be dressed a bit... 
-         differently. Her red tank top makes no attempt to cover her midriff, 
-         and does a spectacular job of accentuating her relatively large breasts."
-    nmc "Err, relative to other women her age, not relative to my breasts..."
-    nmc "Her right arm is limp, her left arm is loosely holding the folder, and 
-         her head is down. An uncommon but not rare occurance: she was depressed
-         before leaving home. That could be due to any number of things, 
-         although a break-up would be my guess."
-    nmc "Perhaps she has the mixed (in the literal sense) blessings of being 
-         both obscenely attractive and moderately intelligent, all the while
-         trying to keep her priorities straight..."
+         differently. Her red tank top makes no attempt to cover her lean 
+         midriff, and does a spectacular job of accentuating her relatively 
+         large breasts."
+    nmc "But her right arm is limp, her left arm is loosely holding the folder, 
+         and her head is down. An uncommon but not rare occurance: she was 
+         depressed before leaving home. That could be due to any number of 
+         things, although a break-up would be my guess."
+    nmc "Perhaps she has the mixed blessings of being both obscenely attractive 
+         and moderately intelligent, all the while trying to keep her priorities
+         straight..."
     $ sio_l("bg classroom2")
     $ mlib("falarm")
     $ minutes = minutes + 5

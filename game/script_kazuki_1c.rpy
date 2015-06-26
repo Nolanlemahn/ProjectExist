@@ -308,8 +308,8 @@ label Kazuki_1j_essay_yes:
     $ essay_status = "bad_but_mostly_complete"
     nmc "But the sentences simply didn't flow. Near the end, we may as well have
          been writing something along the lines of 
-         \"Amnaki, you are great. I should have paid attention. This class is 
-         useful.\" and so on."
+         \"Amnaki, you are an engaging instructor. I should have paid attention.
+         This class is useful.\" and so on."
     nmc "... In fact, that {i}is{/i} what we wrote for our concluding 
          paragraph."
     li "We did it!"
@@ -503,8 +503,11 @@ label Kazuki_1j_essay_stop:
 label Kazuki_1k_lunch_route:
     if hasAnswer("lily_lunch_1_silence"):
         $ removeAnswer("lily_lunch_1_silence")
-        $ addAnswer("lily_lunch_1_bye")
         li "Aww, are you too sleepy for a late lunch?"
+        mc "In a way... It's been a long day."
+        li "Tell you what. Take a nap in the car."
+        mc "... Do what?"
+        li "It's a 10 minute drive, anyway. I think it would do you some good."
     elif hasAnswer("lily_lunch_1_bye"):
         mc "I think I'm going to have to turn you down."
         li "Oh?"
@@ -512,19 +515,17 @@ label Kazuki_1k_lunch_route:
         mc "It's... It's been a long day, and even if I were to skip lunch, I'd 
             still need to get to cross-country later. It'd be best for me to not eat
             anything."
-        nmc "My out-of-my-ass reply seems to have made some sense, as Lilian nods in
-             response."
+        nmc "My out-of-the-ass reply seems to have made some sense, as Lilian nods 
+             in response."
         li "Ah, I see. Well, thanks for keeping my company today. This was nice."
         mc "You helped me more than I helped you."
-        li "That's not totally true... Anyway, I'll let you get some rest. See ya."
+        li "I suppose that's true... Anyway, I'll let you get some rest. See ya."
         $ sn_draw("sn jaane")
         mc "Jaa ne."
         nmc "As Lilian skips off, I realize that I'm going to have to walk to 
              work..."
         jump Kazuki_1k_work_fail
-    else:
-        jump Kazuki_1k_lunch_lily
-    return
+    jump Kazuki_1k_lunch_lily
 
 label Kazuki_1k_lunch_lily:
     if hasAnswer("lily_lunch_1_pay"):

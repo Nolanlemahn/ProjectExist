@@ -129,11 +129,11 @@ label Kazuki_1b:
     scene bg fog
     nnvlmc "This is my world. It is eerie, cold, and isolated."
     nnvlmc "Eerie enough that the shadows themselves are unsure of where to go."
-    extend " And so cold... I can't feel myself shiver."
+    extend " And so cold... I can't even feel myself shiver."
     extend " The isolation. I myself don't belong here."
-    nnvlmc "Despite this, there is neither the feeling of pain nor the sensation
-            of bliss. I merely exist, and wander through the fog. Fog so thick 
-            that I could drink it..."
+    nnvlmc "Despite this, there is neither the presence of pain nor the 
+            sensation of bliss. I merely exist, and wander through the fog. Fog 
+            so thick that I could drink it..."
     extend " Pain can only last for so long. The hatred that I have felt would 
             have killed a weaker man."
     nnvlmc "...I don't understand love. I have never experienced it, and I 
@@ -152,7 +152,7 @@ label Kazuki_1b:
     nnvlmc "Is this depression? Or simply a failure to fit in?"
     extend " This is my world, but I know neither where I will go nor where I 
             am."
-    nnvlmc "I walk past an hazy image of my family. I could not see it, except 
+    nnvlmc "I walk past a hazy image of my family. I could not see it, except 
             for in my mind."
     nnvlmc "Is that how my mother appeared when she died?"
     extend " Did my father truly once know how to smile?"

@@ -25,7 +25,7 @@ init -1 python hide:
     if persistent.amDev is None:
         persistent.amDev = False
 
-init -1 python:
+init -3 python:
     # magic values and styles
 
         # style for buttons that are always Dyslexic-formatted
