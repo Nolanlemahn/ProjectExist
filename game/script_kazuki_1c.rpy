@@ -549,6 +549,8 @@ label Kazuki_1k_lunch_lily:
     $ minutes += 3
     $ sio_l("bg parkinglot1")
     li "Here we are!"
+    show framed lilian car1:
+        xalign 0.5 yalign 0.3
     mc "Uhh... Wow."
     return
 

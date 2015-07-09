@@ -14,7 +14,14 @@ image asset chessboard rook3 = "assets/chessboard_rook3.png"
 image asset chessboard rook4 = "assets/chessboard_rook4.png"
 image asset chessboard rook5 = "assets/chessboard_rook5.png"
 
+# unframed versions of the assets
+image unframed lilian car1 = PlaceholderX("framed/template.png", "framed/lilian_car1.png", tsize = 45, tcolor = "#FF0000", talign=(0.3, 0.5), pretext = "(PLACEHOLDER) ")
+
 # framed, miscellaneous assets
+image baseFrame = "framed/border.png"
+image framed lilian car1 = LiveComposite((600, 450),
+                                         (0, 0), PlaceholderX("framed/template.png", "framed/lilian_car1.png", tsize = 45, tcolor = "#FF0000", talign=(0.3, 0.5), pretext = "(PLACEHOLDER) "),
+                                         (0, 0), Image("framed/border.png"))
 
 # assets for pseudo UI elements
 image world divide = "menus/WorldDivide.png"

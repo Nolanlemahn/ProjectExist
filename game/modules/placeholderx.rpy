@@ -144,7 +144,11 @@ init -1 python:
                 self.verify()
                 setimage = self.img1
                 setloc = loc1
-                text = self.pretext + " ".join(self.name) + ": " + self.img2
+                # self.name won't exist if this is being used as a displayable
+                if hasattr(self, 'name'):
+                    text = self.pretext + " ".join(self.name) + ": " + self.img2
+                else:
+                    text = self.pretext + " unknownCall" + ": " + self.img2
             
             # Do damnedest to get image parameters
             try:
