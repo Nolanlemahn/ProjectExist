@@ -5,6 +5,7 @@ init -1 python:
     sn_width = 400
     sn_height = 200
     top_pixels = 6
+    snroutine = -1
 
 init -1:
     transform tip_right:

@@ -9,7 +9,6 @@ label start:#this_label_done
     scene bg blackdrop
     with dissolve
     #jump test_iorpy_magic
-    $ snroutine = -1
     $ selected_note = ""
     #$ renpy.say(None, os.path.abspath(config.savedir))
     #$ save_name = begin_game()

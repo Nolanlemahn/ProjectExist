@@ -549,7 +549,7 @@ label Kazuki_1k_lunch_lily:
     $ minutes += 3
     $ sio_l("bg parkinglot1")
     li "Here we are!"
-
+    mc "Uhh... Wow."
     return
 
 label Kazuki_1k_work_fail:
