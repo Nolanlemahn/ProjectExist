@@ -552,6 +552,9 @@ label Kazuki_1k_lunch_lily:
     show framed lilian car1:
         xalign 0.5 yalign 0.3
     mc "Uhh... Wow."
+    nmc "Due to my job as a machine shop aide with Robert, I thought I would be 
+         more familiar with car makes and models. But this..."
+    mc "... This doesn't look like it drives..."
     return
 
 label Kazuki_1k_work_fail:
