@@ -27,7 +27,7 @@ label Kazuki_1j_skip:#we skipped lunch
         afternoon."
     $ minutes = minutes + 15
     $ sio_l("bg workshop")
-    mc "Hello, Robert and Son's Machines. Fuck you too."
+    mc "Hello, Robert and Son's Machines... I see. Fuck you too."
     nmc "Now normally, that sort of language would get me fired and could get me
          sued. However..."
     ro "Kazuki, was that Rachel on the phone?"
@@ -554,7 +554,31 @@ label Kazuki_1k_lunch_lily:
     mc "Uhh... Wow."
     nmc "Due to my job as a machine shop aide with Robert, I thought I would be 
          more familiar with car makes and models. But this..."
-    mc "... This doesn't look like it drives..."
+    mc "... This doesn't look like it'll even start..."
+    nmc "Well, I've been around cars enough to know that appearances aren't 
+         everything. But given that the front bumper is missing, I'd wager that 
+         this car has been through some rough times."
+    mc "I... I'm pretty sure that you can't legally drive this thing."
+    li "I'm licensed. Isn't that enough?"
+    mc "Where is your car's front bumper?"
+    li "Oh. I don't actually know... Well, it all happened so fast!"
+    mc "What kind of accident would rip the front bumper out of your car, 
+        but not put you in the hospital?"
+    li "Heh. I was put in the hospital, alright."
+    mc "... So when are you getting your car fixed?"
+    li "Eh, it'll get fixed when it gets fixed."
+    mc "... You know I work at an auto repair shop."
+    li "If it still works, it ain't broke. Well, get in!"
+    menu:
+        extend ""
+        "Ask about insurance":
+            pass
+        "Sounds like fun":
+            pass
+        "Not a good idea":
+            pass
+        "...":
+            pass
     return
 
 label Kazuki_1k_work_fail:
@@ -562,7 +586,7 @@ label Kazuki_1k_work_fail:
     $ minutes += 30
     ro "What the fuck clock in the bloody afternoon do you call this, you filthy
         piece of... You lazy dickwad."#3:50PM
-    nmc "... The man is not known for his clean language."
+    nmc "... The man is not known for his clean language, nor for his creativity."
     mc "Yes, I'm late. I'm sorry."
     ro "You know, back in my day, we were never actually late to work. Instead, 
         we didn't show up. Because we knew what would happen if we went to work.

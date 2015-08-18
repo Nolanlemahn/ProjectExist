@@ -8,15 +8,37 @@ init -1 python:
     snroutine = -1
 
 init -1:
-    transform tip_right:
+    #exactly where I want the sidenotes to be at/come in
+    transform sn_at:
+        xpos 1200 ypos 240
+        linear 1.0 xpos 800
+    #exactly where I want the sidenotes to leave
+    transform sn_leave:
         xpos 800 ypos 240
         linear 1.0 xpos 1200
 
+label sn_draw(select_tip):
+    $ snroutine = 4
+    $ selected_note = select_tip
+
+    show screen side_note
+    $ sn_resolver(select_tip)
+    return
+
 init -1 python:
+    #remap for label
+    def sn_draw(selected_sn):
+        renpy.call("sn_draw", selected_sn)
+        return
+    # be responsible for showing image
+    def sn_resolver(img):
+        renpy.show(img, at_list = [sn_at])
+        return
+
     def hide_side_note():
         if(store.in_side_note == True):
             store.snroutine = -1
-            renpy.show(store.selected_note, at_list=[tip_right])
+            renpy.show(store.selected_note, at_list=[sn_leave])
         return
     
     def side_note_callback():
@@ -24,11 +46,11 @@ init -1 python:
             if store.snroutine > 0:
                 store.snroutine = store.snroutine - 1
                 if store.snroutine == 1:
-                    renpy.show(store.selected_note, at_list=[tip_right])
+                    renpy.show(store.selected_note, at_list=[sn_leave])
                     renpy.hide_screen("side_note_tag")
                     store.snroutine = 0
             elif(store.snroutine == 0):
-                renpy.show(store.selected_note, at_list=[tip_right])
+                renpy.show(store.selected_note, at_list=[sn_leave])
                 renpy.hide(store.selected_note)
                 store.snroutine = -1
         return
