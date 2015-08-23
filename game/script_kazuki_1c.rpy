@@ -571,14 +571,33 @@ label Kazuki_1k_lunch_lily:
     li "If it still works, it ain't broke. Well, get in!"
     menu:
         extend ""
-        "Ask about insurance":
-            pass
+        "Ask about insurance":#well it's what Kazuki would do...
+            mc "What will happen when we get in an accident?"
+            li "Well, I'm guessing that someone is going to get hurt. Hopefully not one 
+                of us."
+            nmc "... She agrees with me? We {i}are{/i} getting in an accident 
+                 {i}at{/i} some point?"
+            mc "No, I mean, are you and your car insured?"
+            li "Again, I don't know. So, are we going to lunch or not?"
+            menu:
+                extend ""
+                "Sounds like fun":
+                    jump Kazuki_1k_hell_yes
+                "Not a good idea":
+                    jump Kazuki_1k_hell_no
         "Sounds like fun":
-            pass
+            jump Kazuki_1k_hell_yes
         "Not a good idea":
-            pass
-        "...":
-            pass
+            jump Kazuki_1k_hell_no
+    return
+
+label Kazuki_1k_hell_yes:
+    return
+
+label Kazuki_1k_hell_no:
+    mc "... Yeah, this doesn't seem like a good idea."
+    li "Hmm? Why not?"
+    mc ""
     return
 
 label Kazuki_1k_work_fail:
