@@ -576,7 +576,7 @@ label Kazuki_1k_lunch_lily:
             li "Well, I'm guessing that someone is going to get hurt. Hopefully not one 
                 of us."
             nmc "... She agrees with me? We {i}are{/i} getting in an accident 
-                 {i}at{/i} some point?"
+                 at {i}some{/i} point?"
             mc "No, I mean, are you and your car insured?"
             li "Again, I don't know. So, are we going to lunch or not?"
             menu:
@@ -592,6 +592,30 @@ label Kazuki_1k_lunch_lily:
     return
 
 label Kazuki_1k_hell_yes:
+    mc "Okay, \"why not\", I suppose."
+    li "Really?"
+    mc "Sure. I could use some fun, every now and then."
+    li "What's fun about mealtime?"
+    #to-do~
+    mc "... I can see why this is your favorite restaurant."
+    li "Oh, can you?"
+    nmc "The decor is very well done. Not fitting for a Thai restaurant, but 
+         tasteful regardless."
+    nmc "Jade pendants and lit Chinese lanterns are hanging from the wall."
+    nmc "A number of distinct smells waft through my nose."
+    nmc "Cilantro, tumeric, ginger, mustard, coconut, chicken stock... All the 
+         way from the main entrance. I couldn't even see the kitchen from where 
+         I was standing."
+    nmc "High-quality stuff. Fresh stuff. I think. I don't spend as much time in
+         the kitchen as I would like."
+    nmc "But of course, I didn't say any of this."
+    mc "Yes, I can."
+    li "Well, then that's one more thing we have in common."
+    mc "Oh? We have more than one thing in common?"
+    li "We're both human!"
+    mc "I was hoping for something slightly more... ground-breaking."
+    li "In that case, I've got nothing."
+    # I like that a little bit more better
     return
 
 label Kazuki_1k_hell_no:
@@ -637,7 +661,7 @@ label Kazuki_1k_work:
          physically changing the sign, so the name stuck."
     extend "\nHis words, not mine. There have been a few awkward moments though,
             when I have been mistaken as his son..."
-    nmc "Moments like these remind me of Robert's Irish descent."
+    nmc "Moments like those remind me of Robert's Irish descent."
     mc "Excuse me, Mr. Hale?"
     ro "That bitch Rachel called again."
     nmc "Rachel made the mistake of trying to get her cell phone repaired here. 
