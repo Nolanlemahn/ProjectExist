@@ -236,7 +236,7 @@ label test_iorpy_magic:
 #reverted method of reading certain files
     
 #v0.1.2 changelog from v0.1.1
-#Throium made marked functions safer
+#Thorium made marked functions safer
 #actual alphanumeric check
 
 #v0.1.1 changelog from v0.1.0

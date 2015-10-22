@@ -595,7 +595,33 @@ label Kazuki_1k_hell_yes:
     mc "Okay, \"why not\", I suppose."
     li "Really?"
     mc "Sure. I could use some fun, every now and then."
-    li "What's fun about mealtime?"
+    li "Right. Because you're just a blinding rainbow of happiness."
+    nmc "She's joking, but I really don't have the best of dispositions."
+    mc "... I still think you should get this car fixed as soon as possible."
+    li "You're just saying that because you're a mechanic."
+    mc "Who said that I was a mechanic?"
+    li "A hummingbird told me that you work at Robert and Son's. Did it lie?"
+    mc "Well, no... But I just do paperwork there. Really."
+    li "Boo! You're useless!"
+    mc "... Were you thinking that I'd fix the car if I bought you lunch?"
+    nmc "She says nothing, but looks at her feet with a smirk."
+    mc "How'd I guess?"
+    li "Maybe you know me better than you think."
+    mc "Whatever."
+    #~car transition~
+    mc "..."
+    li "..."
+    nmc "Well, to break the monotony, I think I'll ask about..."
+    menu:
+        extend ""
+        "The car":
+            mc "So, for how long have you had this clunker?"
+        "The restaurant":
+            #?
+            pass
+        "...":
+            #?
+            pass
     #to-do~
     mc "... I can see why this is your favorite restaurant."
     li "Oh, can you?"
