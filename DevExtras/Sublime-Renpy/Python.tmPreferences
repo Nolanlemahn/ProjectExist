@@ -3,9 +3,9 @@
 <plist version="1.0">
 	<dict>
 		<key>name</key>
-		<string>Renpy Indent Rules</string>
+		<string>Python Indent Rules</string>
 		<key>scope</key>
-		<string>source.renpy</string>
+		<string>source.python.renpy</string>
 		<key>settings</key>
 		<dict>
 			<key>decreaseIndentPattern</key>
