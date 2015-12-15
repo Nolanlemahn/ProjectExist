@@ -603,7 +603,7 @@ label Kazuki_1k_hell_yes:
     li "A hummingbird told me that you work at Robert and Son's. Did it lie?"
     mc "Well, no... But I just do paperwork there. Really."
     li "Boo! You're useless!"
-    mc "... Were you thinking that I'd fix the car if I bought you lunch?"
+    mc "... Were you thinking that I'd fix the car if you bought me lunch?"
     nmc "She says nothing, but looks at her feet with a smirk."
     mc "How'd I guess?"
     li "Maybe you know me better than you think."
@@ -612,39 +612,74 @@ label Kazuki_1k_hell_yes:
     mc "..."
     li "..."
     nmc "Well, to break the monotony, I think I'll ask about..."
+    $ cd_set(15, 15, 'Kazuki_1k_mid_drive')
+    show screen countdown
     menu:
         extend ""
         "The car":
-            mc "So, for how long have you had this clunker?"
-            li "Well, I got it from my father. He got it from his mother, who 
-                got it from her brother who..."
-            mc "No, really."
-            li "A week."
-            mc "... Really?"
-            li "Yeah. My big sister drove it up here while she was visiting, 
-                and she forgot to take it home."
-            mc "Bullshit. Who forgets their car?"
-            li "I mean... Remember that time I went to school without my shoes?"
-            mc "Your feet were featured in the school paper, Lilian. Are you telling me 
-                that forgetfulness runs in the family?"
-            li "I'd rather blame my parents than myself!"
-        "The restaurant":
-            nmc "... She won't tell me where we're going, but I wonder if she'll 
-                 tell me what kind of food we'll be having."
-            mc "So... where we're going... you're sure you want that to be a surprise? 
-                What if I'm allergic?"
-            li "I think if you had allergies, you'd be a pickier eater."
-            nmc "She's right. I don't have any food allergies that I know of, and I'll 
-                 eat just about anything. But how can she be so certain about my diet?
-                 We don't eat together very often."
-            mc "You keep track what I shove in my mouth?"
-            li "Well no, but every time I've seen you order food from the City Cafe, you 
-                kind of just... randomly pick something."
-            nmc "Okay, I do that, it's weird, fine, anyone would notice."
-        "...":
-            #?
+            $ addAnswer("lily_drive_1_car")
             pass
-    #to-do~
+        "The restaurant":
+            $ addAnswer("lily_drive_1_restaurant")
+            pass
+        "...":
+            $ addAnswer("lily_drive_1_nothing")
+            pass
+    jump Kazuki_1k_mid_drive
+
+label Kazuki_1k_hell_no:
+    mc "... Yeah, this doesn't seem like a good idea."
+    li "Hmm? Why not?"
+    mc ""#?
+    return
+
+label Kazuki_1k_mid_drive:
+    if hasAnswer("lily_drive_1_car"):
+        mc "So, for how long have you had this clunker?"
+        li "Well, I got it from my father. He got it from his mother, who 
+            got it from her brother who..."
+        mc "No, really."
+        li "A week."
+        mc "... Really?"
+        li "Yeah. My big sister drove it up here while she was visiting, 
+            and she forgot to take it home."
+        mc "Bullshit. Who forgets their car?"
+        li "I mean... Remember that time I went to school without my shoes?"
+        mc "Your feet were featured in the school paper, Lilian. Are you telling me 
+            that forgetfulness runs in the family?"
+        li "I'd rather blame my parents than myself!"
+    elif hasAnswer("lily_drive_1_restaurant"):
+        nmc "... She won't tell me where we're going, but I wonder if she'll 
+             tell me what kind of food we'll be having."
+        mc "So... where we're going... you're sure you want that to be a surprise? 
+            What if I'm allergic?"
+        li "I think if you had allergies, you'd be a pickier eater."
+        nmc "She's right. I don't have any food allergies that I know of, and I'll 
+             eat just about anything. But how can she be so certain about my diet?
+             We don't eat together very often."
+        mc "You keep track what I shove in my mouth?"
+        li "Well no, but every time I've seen you order food from the City Cafe, you 
+            kind of just... randomly pick something."
+        nmc "Okay, I do that, it's weird, fine, anyone would notice."
+    else:
+        $ addAnswer("lily_drive_1_nothing")
+        nmc "Actually, I'll just let her drive."
+        li "You look tired."
+        mc "Eyes on the road!"
+        li "Sheesh. Sorry. But you look tired. And a little beat-up."
+        nmc "My thoughts wander to this morning's mini-adventure... sharing 
+             what happened would probably be a bad idea."
+        mc "Yeah. My uhh, cat decided that my face was comfortable. And my cat 
+            had gas. Ugh."
+        nmc "I don't have a cat."
+        li "I thought you didn't have any pets?"
+        nmc "Shit."
+        mc "And that was a problem. So I fixed the problem by getting a cat."
+        li "Oh. So what does cat fart smell like?"
+        mc "Rotten beans."
+        li "Sounds lovely."
+
+label Kazuki_1k_post_drive:
     mc "... I can see why this is your favorite restaurant."
     li "Oh, can you?"
     nmc "The decor is very well done. Not fitting for a Thai restaurant, but 
@@ -664,12 +699,6 @@ label Kazuki_1k_hell_yes:
     mc "I was hoping for something slightly more... ground-breaking."
     li "In that case, I've got nothing."
     # I like that a little bit more better
-    return
-
-label Kazuki_1k_hell_no:
-    mc "... Yeah, this doesn't seem like a good idea."
-    li "Hmm? Why not?"
-    mc ""#?
     return
 
 label Kazuki_1k_work_fail:

@@ -156,7 +156,7 @@ label Kazuki_1b:
             for in my mind."
     nnvlmc "Is that how my mother appeared when she died?"
     extend " Did my father truly once know how to smile?"
-    extend " Was I truly an only child?"
+    extend " Was I really an only child?"
     nnvlmc "My questions echo through the space around me, but I did not speak."
     nvl clear
     nnvlmc "...{w} ...{w} ..."
@@ -242,9 +242,9 @@ label Kazuki_1b:
          into the mental river. Annoying. "
     $ mlib.stop()
     extend "I slide my hand towards my cell phone, turn off the alarm, and begin
-            my standard morning routine, which generally consists of a
-            shower, change of clothing, journal entry, breakfast, and a walk to 
-            the bus stop."
+            my standard morning routine: shower, get dressed, write in my 
+            journal, eat breakfast, and walk to the bus stop. At least, that's 
+            the plan."
     nmc "... I have wasted enough time with my little physical exam."
     nmc "So I shower. I pour the shampoo onto my head and whirl it through my 
          wet hair. My hand swipes and slams the bar of soap down my body, barely

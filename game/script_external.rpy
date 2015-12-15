@@ -17,7 +17,8 @@ label removeAnswer(dead_answer):
 
 init -1 python:
     def addAnswer(new_answer):
-        renpy.call("addAnswer", new_answer)
+        if new_answer not in store.answers:
+            renpy.call("addAnswer", new_answer)
         return
 
     # Doesn't have a label version. Sorry!
