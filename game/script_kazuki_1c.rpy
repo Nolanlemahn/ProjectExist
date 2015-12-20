@@ -630,8 +630,16 @@ label Kazuki_1k_hell_yes:
 label Kazuki_1k_hell_no:
     mc "... Yeah, this doesn't seem like a good idea."
     li "Hmm? Why not?"
-    mc ""#?
-    return
+    nmc "I could think of several reasons. I don't want to mess with a friend's 
+         love interest. I don't want to get into a car when Lilian is driving. 
+         The restaurant might be serving French food for all I know, which I 
+         really can't stand."
+    nmc "I can't say any of that. But I can say..."
+    mc "Feeling-funny-bye."
+    nmc "And I ran off. Juvenile? Yes. Viable? Also yes."
+    nmc "As Lilian fades into the distance , I realize that I'm going to have 
+         to walk to work..."
+    jump Kazuki_1k_work_fail
 
 label Kazuki_1k_mid_drive:
     if hasAnswer("lily_drive_1_car"):
@@ -647,7 +655,7 @@ label Kazuki_1k_mid_drive:
         li "I mean... Remember that time I went to school without my shoes?"
         mc "Your feet were featured in the school paper, Lilian. Are you telling me 
             that forgetfulness runs in the family?"
-        li "I'd rather blame my parents than myself!"
+        li "I'd rather blame my parents than myself! But yeah, I really think it does."
     elif hasAnswer("lily_drive_1_restaurant"):
         nmc "... She won't tell me where we're going, but I wonder if she'll 
              tell me what kind of food we'll be having."
@@ -661,6 +669,8 @@ label Kazuki_1k_mid_drive:
         li "Well no, but every time I've seen you order food from the City Cafe, you 
             kind of just... randomly pick something."
         nmc "Okay, I do that, it's weird, fine, anyone would notice."
+        mc "You're right. To my knowledge, I'm allergy-free."
+        li "Good to know!"
     else:
         $ addAnswer("lily_drive_1_nothing")
         nmc "Actually, I'll just let her drive."
@@ -678,6 +688,16 @@ label Kazuki_1k_mid_drive:
         li "Oh. So what does cat fart smell like?"
         mc "Rotten beans."
         li "Sounds lovely."
+    $ minutes += 4
+    extend " Hey uhh, these next few roads are sort of... hard for me, so I need you 
+            to shut up for a sec."
+    mc "No problem."
+    nmc "If she's as bad as a driver as she let's on, she seriously needs to 
+         concentrate. Okay, that's fine."
+    nvlmc "... I still don't understand. Why is she being so kind to me? There must 
+           be something that she wants from me."
+    #?
+    return
 
 label Kazuki_1k_post_drive:
     mc "... I can see why this is your favorite restaurant."
