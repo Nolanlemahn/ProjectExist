@@ -219,7 +219,6 @@ label Kazuki_1b:
     window show
     $ sio_l("bg kazuki bed")
     "... {w}... {w}..."
-    #doublespeak l mc "What?" "What are you saying?"
     mc "Hah... hah... hah... ... huh..."
     nmc "Gasp for air. Open my eyes. Look around. Untangle myself from the 
          covers. Peel the drenched tank-top off of my body. Check my pulse. 
@@ -343,7 +342,7 @@ label Kazuki_1b_2:
     nmc "... God dammit, my abs still really hurt. Adrenaline is one helluva 
          drug, I suppose."
     $ minutes = 485
-    nmc "As I breathe in the stale classroom air in an attempt to catch my 
+    nmc "As I inhale the stale classroom air in an attempt to catch my 
          breath, the bruise reawakens from its nap."
     mc "Haah... hoo... ow... shit..."
     nmc "My classmates turn towards me..."
@@ -364,14 +363,16 @@ label Kazuki_1b_2:
          down. The door opens again, but this time, the man entering the room 
          locks the door.\n"
     extend "Professor Lawrence, the Physics 102 teacher, locks the door at 8:05 
-            AM sharp. And attendance matters in his class."
+            AM sharp. And attendance matters in his class. Even when Lawrence is 
+            in a good mood, a missed class results in a 5% penalty to a 
+            student's final grade."
     nmc "\"If you're late for a morning class, then you're either paying for my 
          coffee, or paying for your test. If you're late for an afternoon class 
          well, then you're just stupid.\""
     nmc "According to an urban legend, a student was late for a single 8:05 AM 
          class, and received a 0 on the upcoming midterm. Another student was 
          late for a 3:15 PM class, and had the option to wear a dunce cap rather
-         than take the 0."
+         than take the 0. Apparently, Lawrence was in a bad mood on those days."
     nmc "... I'm still not sure a dunce cap would be an effective punishment. 
          That aside, I like Professor Lawrence. He refuses to put up with 
          nonsense, he maintains formality, and he gives me high marks."
@@ -431,7 +432,7 @@ label Kazuki_1b_2:
        the place of traditional curse words... and I think my reason
        for cursing itself is obvious."
     mc "First, with all due respect, I find rutabagas to be delicious, 
-        especially when fried under a layer of ground garlic with grapeseed oil.
+        especially when grilled under a layer of ground garlic with grapeseed oil.
         Second, wouldn't it be more appropriate for you to use the names of 
         obscure physicists? For instance, \"Oh for Merkel's sake\" instead
         of \"Oh for Pete's sake\"?"

@@ -694,12 +694,18 @@ label Kazuki_1k_mid_drive:
     mc "No problem."
     nmc "If she's as bad as a driver as she let's on, she seriously needs to 
          concentrate. Okay, that's fine."
-    nvlmc "... I still don't understand. Why is she being so kind to me? There must 
-           be something that she wants from me."
+    nvlmc "... I still don't understand. Why is she being so kind to me, and why now? 
+           There must be something that she wants from me."
+    nvlmc "Something more than just assistance with LAST, or companionship."
+    nvlmc "Conflicted, negative emotions pierce my mind like pins in a pincushion."
+    nvlmc "What she wants... is it loyalty? A secret keeper?"
     #?
     return
 
 label Kazuki_1k_post_drive:
+    "Waiter" "Hello again, Lilian. More than one this time, huh?"
+    li "Yup! For two, please!"
+    #?
     mc "... I can see why this is your favorite restaurant."
     li "Oh, can you?"
     nmc "The decor is very well done. Not fitting for a Thai restaurant, but 
@@ -718,7 +724,6 @@ label Kazuki_1k_post_drive:
     li "We're both human!"
     mc "I was hoping for something slightly more... ground-breaking."
     li "In that case, I've got nothing."
-    # I like that a little bit more better
     return
 
 label Kazuki_1k_work_fail:
