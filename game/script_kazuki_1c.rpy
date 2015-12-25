@@ -705,7 +705,9 @@ label Kazuki_1k_mid_drive:
 label Kazuki_1k_post_drive:
     "Waiter" "Hello again, Lilian. More than one this time, huh?"
     li "Yup! For two, please!"
-    #?
+    "Waiter" "Excellent. Right this way."
+    nmc "The waiter sits us down at a window table, fills our water glasses, 
+         hands us menus, and leaves."
     mc "... I can see why this is your favorite restaurant."
     li "Oh, can you?"
     nmc "The decor is very well done. Not fitting for a Thai restaurant, but 

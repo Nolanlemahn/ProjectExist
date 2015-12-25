@@ -114,37 +114,6 @@ init -1:
     #[
     $ updateUIroutine = 0
     #]
-    
-init -2 python:
-    import os
-    # Set a default value for the auto-forward time, and note that AFM is
-    # turned off by default.
-    config.default_afm_time = 10
-    config.default_afm_enable = False
-    config.windows_icon = "icon.png"
-    config.window_icon = "icon.png"
-
-    ## These values tell Ren'Py how to build a distribution.
-    config.version = "v0.2.8_(1066)"
-    config.log = os.path.abspath(config.gamedir + "/../debuglog.txt")
-    build.directory_name = "ProjEx_" + config.version
-    build.executable_name = "Project Exist"
-    build.include_update = True
-    build.classify('***/Project_Exist*.zip', None)
-    build.classify('flowcharts/**', None)
-    build.classify('**~', None)
-    build.classify('**.bak', None)
-    build.classify('**/.**', None)
-    build.classify('**/#**', None)
-    build.classify('**/thumbs.db', None)
-    build.classify('cleanup.bat', None)
-    build.classify('cleanup.command', None)
-    build.classify("**.rpy", None)
-
-
-    build.documentation('*.html')
-    build.documentation('*.txt')
-    #build.documentation('*.pdf')
 
 init python:
     adj=user_adjustment

@@ -31,7 +31,7 @@ init -2 python:
     config.gl_resize = False
 
     ## These values tell Ren'Py how to build a distribution.
-    config.version = "v0.2.8_(1066)"
+    config.version = "v0.2.8_(1068)"
     config.log = os.path.abspath(config.gamedir + "/../debuglog.txt")
     build.directory_name = "ProjEx_" + config.version
     build.executable_name = "Project Exist"
@@ -45,6 +45,10 @@ init -2 python:
     build.classify('*.sh', None)
     build.classify('*.bat', None)
     build.classify("**.rpy", None)
+
+    build.classify('cleanup.bat', None)
+    build.classify('cleanup.command', None)
+
     build.documentation('*.html')
     build.documentation('*.txt')
     #build.documentation('*.pdf')
