@@ -70,34 +70,44 @@ label Kazuki_1a:#this_label_done
     
     #Tamara
     $ t = Character('Tammy', color='#00FF00', kind=char_green, 
-        show_two_window = True)
+        show_two_window=True)
     $ nvlt = Character("Tammy", color='#00FF00', kind=nvl_green)
     
     #Wil
     $ w = Character('Wil', color="#FFFF00", kind=char_yellow, 
-        show_two_window = True)
+        show_two_window=True)
     $ nvlt = Character('Wil', color="#FFFF00", kind=nvl_yellow)
     
     #Ben
     $ b = Character('Ben', color="#6600CC", kind=char_purple, 
-        show_two_window = True)
+        show_two_window=True)
     $ nvlb = Character('Ben', color="#6600CC", kind=nvl_purple)
 
     #Lilian
     $ li = Character('Lilian', color="#00CC00", kind=char_forest, 
-        show_two_window = True)
+        show_two_window=True)
     $ nvlli = Character('Lilian', color="#00CC00", kind=nvl_forest)
     
     #Robert
     $ ro = Character('Robert', color="#FF9900", kind=char_tan, 
-        show_two_window = True)
+        show_two_window=True)
     $ nvlro = Character('Robert', color="#FF9900", kind=nvl_tan)
     
     #Athena
     $ a = Character('Athena', color="#FF0000", kind=char_red, 
-        show_two_window = True)
+        show_two_window=True)
     $ nvla = Character('Athena', color="#FF0000", kind=nvl_red)
     
+    #Ryan
+    $ ry = Character('Ryan', color= "#46C6C6", kind=char_teal,
+        show_two_window=True)
+    $ nvlry = Character('Ryan', color="#46C6C6", kind=nvl_teal)
+
+    #Selena
+    $ se = Character('Selena', color= "#CC6699", kind=char_bubgum,
+        show_two_window=True)
+    $ nvlse = Character('Selena', color="#CC6699", kind=nvl_bubgum)
+
     ###########
     
     #Kazuki

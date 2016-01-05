@@ -163,6 +163,24 @@ init -1:
         what_prefix="{color=#FF0000}", what_suffix = "{/color}",
         who_prefix="{color=#FF0000}", who_suffix = ":{/color}")
 
+    $ style.create("sub_teal", "default")
+    $ style.sub_teal.color = "#46C6C6"
+    $ char_teal = Character(what_style="sub_teal",
+        what_prefix="{color=#46C6C6}", what_suffix = "{/color}",
+        who_prefix="{color=#46C6C6}", who_suffix = "{/color}")
+    $ nvl_teal = Character(what_style="sub_teal", kind=nvl, 
+        what_prefix="{color=#46C6C6}", what_suffix = "{/color}",
+        who_prefix="{color=#46C6C6}", who_suffix = ":{/color}")
+
+    $ style.create("sub_bubgum", "default")
+    $ style.sub_bubgum.color = "#CC6699"
+    $ char_bubgum = Character(what_style="sub_bubgum",
+        what_prefix="{color=#CC6699}", what_suffix = "{/color}",
+        who_prefix="{color=#CC6699}", who_suffix = "{/color}")
+    $ nvl_bubgum = Character(what_style="sub_bubgum", kind=nvl, 
+        what_prefix="{color=#CC6699}", what_suffix = "{/color}",
+        who_prefix="{color=#CC6699}", who_suffix = ":{/color}")
+
 init -1:
     define dev = Character('Developer', color="#FFFFFF", kind=char_white, show_two_window=True)
     $ scentered = Character(None, what_style="scentered_text", window_style="centered_window")

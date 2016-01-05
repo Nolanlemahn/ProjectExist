@@ -39,3 +39,32 @@ label draft1:
     nnvlmc "Perhaps it doesn't matter. Perhaps all I need to do is wait for my 
             life to end..."
     return
+
+label draft2:
+    scene bg blackdrop
+    $ clock = False
+    $ walletshow = False
+    scentered "Draft 2: The Chase"
+    $ clock = True
+    $ walletshow = True
+    $ mlib("march")
+    scene bg fakefog
+    with dissolve
+    scene bg fog
+    nvln "Officer Ryan rams the gearstick into drive and stares down the road, as 
+          if the road is a rabid dog to be pacified."
+    nvlry "Move, you piece of shit."
+    nvln "Ryan didn't have time to read through the file. No one did. The call for 
+          immediate request and detain had only gone out 30 seconds ago. In fact, 
+          Ryan was in the middle of a coffee break."
+    nvlry "Selena, who the hell is this kid?"
+    nvlse "Kazuki Kamata. Age 18. Short black hair. Lanky. Unusual display of physical 
+           ability. Do not shoot for any reason."
+    nvln "Ryan's car grumbles to a start."
+    nvlry "Unusual display of physical ability? How unusual?"
+    nvlse "Umm. Parkour, surviving a 300-feet drop...{nw}"
+    nvlry "Please. Don't you remember that one story about that one woman that fell 
+           out of an airplane?"
+    nvlse "This kid was running at 25 miles an hour after the fall."
+    nvlry "... The fuck? That's almost as fast as Usain Bolt..."
+    return
