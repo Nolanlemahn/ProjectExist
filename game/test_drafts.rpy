@@ -48,8 +48,7 @@ label draft2:
     $ clock = True
     $ walletshow = True
     $ mlib("march")
-    scene bg fakefog
-    with dissolve
+    $ sio_l("bg fakefog")
     scene bg fog
     nvln "Officer Ryan rams the gearstick into drive and stares down the road, as 
           if the road is a rabid dog to be pacified."
@@ -67,4 +66,22 @@ label draft2:
            out of an airplane?"
     nvlse "This kid was running at 25 miles an hour after the fall."
     nvlry "... The fuck? That's almost as fast as Usain Bolt..."
+    nvlse "No, you don't understand. Kazuki ran at that pace for a solid 5 minutes."
+    nvlry "Where was he last spotted?"
+    nvlse "Corner of 5th and G."
+    nvln "Ryan jabs at his GPS, setting a route for G Street."
+    nvlry "Anyone else on his tail? Or catch him on CCTV?"
+    nvlse "The 5th and G sighting was on CCTV."
+    nvl clear
+    nvlry "How long ago was that?"
+    nvlse "2 minutes ago now."
+    nvlry "Anyone tag him?"
+    nvlse "No."
+    nvlry "Shit."
+    nvlse "Yeah. Get moving. Assume that he's armed and dangerous... especially if you 
+           don't see any weapons."
+    nvl clear
+    $ sio_l("bg fakefog")
+    scene bg fog
+    nnvlmc "It burns."
     return
