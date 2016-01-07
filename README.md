@@ -1,8 +1,10 @@
 Project Exist
 =============
 
-### The Pitch
+### PLEASE NOTE
+Due to a lack of resources and technical know-how, we only intend on supporting Intel 64-bit builds of Linux.
 
+### The Pitch
 Project Exist is an English visual novel (of the psychological horror genre) being developed by a team that, to an extent, rotates. It will be released for Microsoft Windows, Linux, and Mac OS X. The gameplay will follow a somewhat-branching plot line using a pool of pre-determined scenarios, and the player's choices. Rather than use x/y branching, nearly all branches in the game are point-based. The choices themselves focus on how the player interacts with the other characters. It features two main storylines.
 
 The main "themes" are the thought process and dreams; it is intended that much of the horror doesn't come from what humans do, but how they think. Along the same lines, rather than focus on nightmares, dreams are set-up to influence reality as opposed to the other way around. In a single sentence, our pitch is a game in which you: "Have your dreams affect reality and deal with a girl who can do that far better than you can."
