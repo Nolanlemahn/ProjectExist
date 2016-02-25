@@ -1,3 +1,8 @@
+#label after_load: - do stuff after the game loads
+#label splashscreen: - ran when game is first run
+#label before_main_menu: - start a movie in main menu?
+
+
 label triple_min(interval):
     $ minutes = minutes + interval
     "... "
