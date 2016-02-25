@@ -12,11 +12,13 @@
 #     textbutton "Dyslexic?" action ui.callsinnewcontext("dyslexic") text_style "dys_button_text"
 #######
 
-init -1 python:#magic numbers
+image bg blackdrop = "#000000"#black backgound redef just in case
+
+#magic numbers
+init -4 python:
     dyslexic_size = 16
     normal_size = 26
-    
-image bg blackdrop = "#000000"#black backgound redef just in case
+
 
 init -1 python hide:
     # persistent table  

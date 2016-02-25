@@ -1,4 +1,157 @@
-﻿# start styles: UI
+﻿# start styles: Theme
+init -1 python hide:
+    from array import *
+
+    layout.button_menu()
+    # style.say_who_window.background = Frame("frame.png", 15, 15) #Background skin
+
+    #########################################
+    #!URGENT : WE NEED OUR OWN THEME!#
+    theme.threeD(
+        # Color scheme: Colorblind
+                                    
+        ## The color of an idle widget face.
+        widget = "#898989",
+
+        ## The color of a focused widget face.
+        widget_hover = "#464646",
+
+        ## The color of the text in a widget.
+        widget_text = "#CCCCCC",
+
+        ## The color of the text in a selected widget. (For
+        ## example, the current value of a preference.)
+        widget_selected = "#F2F2F2",
+
+        ## The color of a disabled widget face. 
+        disabled = "#898989",
+
+        ## The color of disabled widget text.
+        disabled_text = "#666666",
+
+        ## The color of informational labels.
+        label = "#c2c2c2",
+
+        ## The color of a frame containing widgets.
+        frame = "#252525",
+
+        ## The background of the main menu. This can be a color
+        ## beginning with '#', or an image filename. The latter
+        ## should take up the full height and width of the screen.
+        mm_root = "drops/menu.png",
+
+        ## The background of the game menu. This can be a color
+        ## beginning with '#', or an image filename. The latter
+        ## should take up the full height and width of the screen.
+        gm_root = "#393939",
+
+        ## If this is True, the in-game window is rounded. If False,
+        ## the in-game window is square.
+        rounded_window = False
+
+        ## And we're done with the theme. The theme will customize
+        ## various styles, so if we want to change them, we should
+        ## do so below.            
+        )
+
+    style.window.background = Frame("menus/FoxDialogueBox.png", 25, 25)
+    style.frame.background = Frame("menus/FoxFrameBox.png", 25, 25)
+
+    ## Margin is space surrounding the window, where the background
+    ## is not drawn.
+
+    # style.window.left_margin = 6
+    # style.window.right_margin = 6
+    # style.window.top_margin = 6
+    # style.window.bottom_margin = 6
+
+    ## Padding is space inside the window, where the background is
+    ## drawn.
+
+    # style.window.left_padding = 6
+    # style.window.right_padding = 6
+    # style.window.top_padding = 6
+    # style.window.bottom_padding = 6
+
+    ## This is the minimum height of the window, including the margins
+    ## and padding.
+
+    # style.window.yminimum = 250
+
+    style.default.font = checkDefaultFont()
+    style.default.size = checkDefaultSize()
+
+    ## Note that these only change the size of some of the text. Other
+    ## buttons have their own styles.
+
+
+    #########################################
+    ## These settings let you change some of the sounds that are used by
+    ## Ren'Py.
+
+    ## Set this to False if the game does not have any sound effects.
+
+    config.has_sound = True
+
+    ## Set this to False if the game does not have any music.
+
+    config.has_music = True
+
+    ## Set this to False if the game does not have voicing.
+
+    config.has_voice = True
+    config.has_autosave = False
+    style.empty_button = Style(style.button_text)
+    ## Sounds that are used when button and imagemaps are clicked.
+
+    # style.button.activate_sound = "click.wav"
+    # style.imagemap.activate_sound = "click.wav"
+
+    ## Sounds that are used when entering and exiting the game menu.
+
+    # config.enter_sound = "click.wav"
+    # config.exit_sound = "click.wav"
+
+    ## A sample sound that can be played to check the sound volume.
+
+    # config.sample_sound = "click.wav"
+
+    ## Music that is played while the user is at the main menu.
+
+    # config.main_menu_music = "main_menu_theme.ogg"
+
+    #########################################
+    ## Transitions.
+
+    ## Used when entering the game menu from the game.
+    config.enter_transition = dissolve
+
+    ## Used when exiting the game menu to the game.
+    config.exit_transition = dissolve
+
+    ## Used between screens of the game menu.
+    config.intra_transition = dissolve
+
+    ## Used when entering the game menu from the main menu.
+    config.main_game_transition = dissolve
+
+    ## Used when returning to the main menu from the game.
+    config.game_main_transition = dissolve
+
+    ## Used when entering the main menu from the splashscreen.
+    config.end_splash_transition = dissolve
+
+    ## Used when entering the main menu after the game has ended.
+    config.end_game_transition = dissolve
+
+    ## Used when a game is loaded.
+    config.after_load_transition = dissolve
+
+    ## Used when the window is shown.
+    config.window_show_transition = dissolve
+
+    ## Used when the window is hidden.
+    config.window_hide_transition = dissolve
 init -1 python:
     style.clipFrame = Style(style.frame)
     style.clipFrame.background = Frame("menus/FoxFrameClip.png", 25, 25)

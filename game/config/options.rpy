@@ -1,5 +1,7 @@
 ﻿init -1 python:
-
+    ## Please don't change this
+    config.screen_width = 1200
+    config.screen_height = 800
     def size_reset():
         try:
             renpy.reset_physical_size()
