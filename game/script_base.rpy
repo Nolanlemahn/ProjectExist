@@ -2,6 +2,7 @@ init -1:
     $ answers = []
 
 label start:#this_label_done
+    $ in_game = True
     $ answers = []
     $ showMCStatus = False
     $ in_side_note = False
@@ -32,9 +33,6 @@ label start:#this_label_done
             call rollfind
             jump Rin_1a
     #end_of_label
-
-label after_load:
-    return
 
 label standalone_dlc_menu:
     "Which DLC would you like to launch?"

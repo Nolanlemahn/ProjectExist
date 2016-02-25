@@ -90,9 +90,11 @@ screen navigation:
 
         textbutton _("Return") action Return()
         textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Save Game") action ShowMenu("save")
+        if(in_game):
+            textbutton _("Save Game") action ShowMenu("save")
         textbutton _("Load Game") action ShowMenu("load")
-        textbutton _("Main Menu") action MainMenu()
+        if(in_game):
+            textbutton _("Main Menu") action MainMenu()
         textbutton "Glossary" action ShowMenu("glossary")
         if(persistent.debugmenu_installed):
             textbutton "Debug Menu" action ShowMenu("debug_menu")

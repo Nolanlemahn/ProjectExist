@@ -1,4 +1,9 @@
-#label after_load: - do stuff after the game loads
+init -1:
+    $ in_game = False
+
+label after_load:#do stuff after the game loads
+    $ in_game = True
+    return
 #label splashscreen: - ran when game is first run
 #label before_main_menu: - start a movie in main menu?
 
