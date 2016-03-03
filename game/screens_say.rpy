@@ -1,11 +1,4 @@
-﻿##############################################################################
-# Say
-# TODO: CLEANUP
-# http://www.renpy.org/doc/html/screen_special.html#say
-screen say:
-    tag say
-    #show rpg stats code
-    # automatically re-draw the GUI headers if necessary
+﻿screen say_prepend:
     if(not in_debug):
         if(showMCStatus):#the normal stats
             $ show_combatant_stats(main_char, .02, .01)
@@ -16,6 +9,14 @@ screen say:
             $ updateUI(intchange)
         if(walletshow):
             $ Wallet()
+
+##############################################################################
+# Say
+# TODO: CLEANUP
+# http://www.renpy.org/doc/html/screen_special.html#say
+screen say:
+    tag say
+    use say_prepend
             
     ############################################
     # Defaults

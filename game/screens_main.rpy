@@ -1,9 +1,21 @@
-﻿##############################################################################
+﻿screen upper_tabs():
+    window:
+        style "gm_root"
+    frame:
+        style_group "gm_nav"
+        xalign 0.02
+        yalign 0.02
+        hbox:
+            textbutton _("Preferences") action ShowMenu("preferences")
+            textbutton _("Load Game") action ShowMenu("load")
+
+
+##############################################################################
 # Main Menu 
 #
 # http://www.renpy.org/doc/html/screen_special.html#main-menu
 
-screen main_menu:
+screen main_menu():
 
     # This ensures that any other menu screen is replaced.
     tag menu
@@ -75,10 +87,7 @@ init -2 python:
 #
 # http://www.renpy.org/doc/html/screen_special.html#navigation
 screen navigation:
-
-    # The background of the game menu.
-    window:
-        style "gm_root"
+    use upper_tabs
 
     # The various buttons.
     frame:
@@ -87,12 +96,10 @@ screen navigation:
         yalign .98
         
         has vbox
-
+        text "Paused" xalign 0.5 size 22
         textbutton _("Return") action Return()
-        textbutton _("Preferences") action ShowMenu("preferences")
         if(in_game):
             textbutton _("Save Game") action ShowMenu("save")
-        textbutton _("Load Game") action ShowMenu("load")
         if(in_game):
             textbutton _("Main Menu") action MainMenu()
         textbutton "Glossary" action ShowMenu("glossary")
@@ -117,6 +124,7 @@ init -2 python:
 screen file_picker:
 
     frame:
+        yalign 0.14
         style "file_picker_frame"
 
         has vbox
@@ -206,7 +214,7 @@ init -2 python:
 # Preferences
 # http://www.renpy.org/doc/html/screen_special.html#prefereces
     
-screen preferences:
+screen preferences():
 
     tag menu
 
@@ -216,6 +224,7 @@ screen preferences:
     # Put the navigation columns in a three-wide grid.
     grid 3 1:
         style_group "prefs"
+        yalign 0.14
         xfill True
 
         # The left column.

@@ -371,10 +371,10 @@ label Kazuki_1b_2:
          the fact that my mother is dead."
     nmc "I take my seat next to Jonathan and watch the rest of the class settle 
          down. The door opens again, but this time, the man entering the room 
-         locks the door.\n"
-    extend "Professor Lawrence, the Physics 102 teacher, locks the door at 8:05 
+         locks the door."
+    extend "\nProfessor Lawrence, the Physics 102 teacher, locks the door at 8:05 
             AM sharp. And attendance matters in his class. Even when Lawrence is 
-            in a good mood, a missed class results in a 5% penalty to a 
+            in a good mood, a missed class results in a 5%% penalty to a 
             student's final grade."
     nmc "\"If you're late for a morning class, then you're either paying for my 
          coffee, or paying for your test. If you're late for an afternoon class 
