@@ -1,8 +1,14 @@
 Project Exist
 =============
 
-### PLEASE NOTE
-Due to a lack of resources and technical know-how, we only intend on supporting Intel 64-bit builds of Linux.
+### DEVEOPMENT STATUS
+Development has been put on indefinite hold due to... Ah... Unfortunate circumstances. While there are current goals, it is unlikely that they will be finished in a timely manner. The roadmap is, in general:
+- Polish the GUI
+- Reduce the amount hard-coded GUI offsets
+- Re-polish the Combat/Player system
+- Write more (surprise)
+- Redesign the personalities of the characters
+- Improve support for Linux
 
 ### The Pitch
 Project Exist is an English visual novel (of the psychological horror genre) being developed by a team that, to an extent, rotates. It will be released for Microsoft Windows, Linux, and Mac OS X. The gameplay will follow a somewhat-branching plot line using a pool of pre-determined scenarios, and the player's choices. Rather than use x/y branching, nearly all branches in the game are point-based. The choices themselves focus on how the player interacts with the other characters. It features two main storylines.
