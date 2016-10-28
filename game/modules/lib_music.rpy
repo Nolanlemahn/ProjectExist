@@ -111,9 +111,9 @@ init python:
             if(mlib_usage > 1):
                 renpy.error('[lib_music] Multiple mlib objects detected; only use one')
             self.selection = selection
-            self.musicEntries = []
-            self.sfxEntries1 = []
-            self.sfxEntries2 = []
+            self.musicEntries = dict()
+            self.sfxEntries1 = dict()
+            self.sfxEntries2 = dict()
             self.pholder_music = ""
             self.pholder_sfx1 = ""
             self.pholder_sfx2 = ""
@@ -128,46 +128,48 @@ init python:
         # 
         # Parameters:
         # selection - the shortcode for the audio file we play
+        # type - "music" or "loopedSFX" or "normSFX"
+        # doLoop - if "music", do we loop?
         # 
         # Returns: None
         #####
-        def __call__(self, selection):
+        def __call__(self, selection, type = "", doLoop = True):
             #bgm
-            for entry in self.musicEntries:
-                if(selection == entry[0]):
-                    self.data = entry
-                    if not os.path.isfile(config.gamedir + "/" + entry[1]):
-                        renpy.music.play(self.pholder_music, loop=True, fadein=1.0)
-                        return
-                    else:
-                        renpy.music.play(entry[1], loop=True, fadein=1.0)
-                        return
+            try:
+                audio = self.musicEntries[selection]
+                self.data = audio
+                renpy.music.play(audio[1], loop=doLoop, fadein=1.0)
+                return
+            except KeyError:
+                if(type == "music"):
+                    renpy.music.play(self.pholder_music, loop=True, fadein=1.0)
+                    return
             
-            for entry in self.sfxEntries1:
-                if(selection == entry[0]):
-                    self.data = entry
-                    if not os.path.isfile(config.gamedir + "/" + entry[1]):
-                        renpy.music.play(self.pholder_sfx1, loop=True)
-                        return
-                    else:
-                        renpy.music.play(entry[1], loop=True)
-                        return
+            #sfx looped
+            try:
+                audio = self.sfxEntries1[selection]
+                self.data = audio
+                renpy.music.play(audio[1], loop=doLoop, fadein=1.0)
+                return
+            except KeyError:
+                if(type == "loopedSFX"):
+                    renpy.music.play(self.pholder_sfx1, loop=True)
+                    return
                 
-            #sfxs
-            for entry in self.sfxEntries2:
-                if(selection == entry[0]):
-                    self.data = entry
-                    if not os.path.isfile(config.gamedir + "/" + entry[1]):
-                        renpy.sound.play(self.pholder_sfx1)
-                        if(entry[2] != 0):
-                            renpy.pause(entry[2])
-                        return
-                    else:
-                        renpy.sound.play(entry[1])
-                        if(entry[2] != 0):
-                            renpy.pause(entry[2])
-                        return
-            renpy.error("[lib_music] Shortcode '%s' not found." % selection)
+            #normal sfxs
+            try:
+                audio = self.sfxEntries2[selection]
+                renpy.sound.play(audio[0])
+                if(entry[3] != 0):
+                    renpy.pause(entry[3])
+                return
+            except KeyError:
+                if(type == "normSFX"):
+                    renpy.sound.play(self.pholder_sfx2)
+                    if(entry[3] != 0):
+                        renpy.pause(entry[3])
+                    return
+            renpy.error("[lib_music] Fatal error handling shortcode '%s'." % selection)
 
         #####
         # Function name: load()
@@ -189,7 +191,7 @@ init python:
             verify_file(placeholder_audio, "placeholder audio files")
 
             # Step 1. Find and parse the files for music.
-            self.musicEntries = []
+            self.musicEntries = dict()
             #mlib_data = os.path.abspath(config.gamedir + "/lib_music/music.txt")
             mlib_data = file(mlib_data).read().decode("utf-8")
             mlib_data = mlib_data.split("\n")
@@ -199,30 +201,30 @@ init python:
                 else:
                     unlocked = False
                 newLine = (shortname, fileloc, longname, unlocked)
-                self.musicEntries.append(newLine)
+                self.musicEntries[shortname] = newLine
             
             # Step 2. Rebuild MusicRoom instance with our music
             global mr
             mr = MusicRoom(fadeout=1.0)
-            for entry in self.musicEntries:
-                mr.add(entry[1], always_unlocked=entry[3])
+            for key, value in self.musicEntries.iteritems():
+                if os.path.isfile(config.gamedir + "/" + value[1]):
+                    mr.add(value[1], always_unlocked=value[3])
                 
             # Step 3. Find and parse the files for sfx.
-            self.sfxEntries1 = []
+            self.sfxEntries1 = dict()
             #sfxlib1 = os.path.abspath(config.gamedir + "/lib_music/fakesfx.txt")
             sfxlib1 = file(sfxlib1).read().decode("utf-8")
             sfxlib1 = sfxlib1.split("\n")
             for shortname, fileloc, nothing in dualwise(sfxlib1):
-                newLine = (shortname, fileloc)
-                self.sfxEntries1.append(newLine)
-            self.sfxEntries2 = []
+                self.sfxEntries1[shortname] = (shortname, fileloc)
+            self.sfxEntries2 = dict()
             #sfxlib2 = os.path.abspath(config.gamedir + "/lib_music/realsfx.txt")
             sfxlib2 = file(sfxlib2).read().decode("utf-8")
             sfxlib2 = sfxlib2.split("\n")
             for shortname, fileloc, time, nothing in tripwise(sfxlib2):
                 time = ast.literal_eval(time)
                 newLine = (shortname, fileloc, time)
-                self.sfxEntries2.append(newLine)
+                self.sfxEntries2[shortname] = fileloc
 
             # Step 4. Load the placeholder files.
             pholder_data = open(placeholder_audio)
@@ -318,9 +320,9 @@ init python:
         never_seeked = True
         file_playing = renpy.music.get_playing()
             # seek only through the music
-        for entry in mlib.musicEntries:
-            if(file_playing == entry[1]):
-                file_playing = entry[2]
+        for key, value in mlib.musicEntries.iteritems():
+            if(file_playing == value[1]):
+                file_playing = value[2]
                 never_seeked = False
                 break
             
@@ -343,8 +345,9 @@ screen music_room:
 
         # The buttons that play each track.
         # This will NOT work if the audio would play a placeholder (the file must exist this time)
-        for entry in mlib.musicEntries:
-            textbutton entry[2] action (SetVariable('playing', name_playing()), mr.Play(entry[1]))
+        for key, value in mlib.musicEntries.iteritems():
+            if os.path.isfile(config.gamedir + "/" + value[1]):
+                textbutton value[2] action (SetVariable('playing', name_playing()), mr.Play(value[1]))
         null height 20
 
         # Buttons that let us advance tracks.

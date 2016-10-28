@@ -88,7 +88,7 @@ init -1 python:
     # 
     # Returns: the transformed image
     #####
-    class PlaceholderX(renpy.Displayable):
+    class PlaceholderX(renpy.display.core.Displayable):
 
         def after_setstate(self):
             self.build = None
@@ -183,9 +183,12 @@ init -1 python:
         # 
         # Returns: the transformed image with new parameters
         #####
-        def parameterize(self, name, parameters):
+
+        def _duplicate(self, args):
+
+            args = args or self._args
             placeheld = PlaceholderX(self.img1, self.img2, self.tsize, self.tcolor, self.talign, self.pretext)
-            placeheld.name = list(name) + list(parameters)
+            placeheld.name = list(args.name) + list(args.args)
             return placeheld
 
         # Be prepared for Callbacks
