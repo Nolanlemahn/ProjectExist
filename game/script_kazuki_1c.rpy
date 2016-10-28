@@ -939,14 +939,13 @@ label Kazuki_1l_work_extend:
     mc "So you're telling me that you didn't expect me to get anything done?"
     ro "Correct. And I was, in turn, impressed."
     ro "Well in any case, here's your check for the day."
-    $ main_char_cash = main_char_cash + 60
     if("lunch_work_1" in answers):
-        $ main_char_cash = main_char_cash + 20
+        $ main_char_cash = main_char_cash + 80
     if("lunch_essay_1" in answers):
-        $ main_char_cash = main_char_cash - 20
+        $ main_char_cash = main_char_cash + 40
     if(essay_status == "done"):
-        $ main_char_cash = main_char_cash - 10
-    mc "Sir? This is cash."
+        $ main_char_cash = main_char_cash + 50
+    mc "Sir? This isn't a check. This is cash."
     ro "Check, cash, money order, gift card, same thing."
     mc "I really don't think that finances work that way."
     ro "Sure they do. Money is money."

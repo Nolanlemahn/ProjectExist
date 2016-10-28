@@ -159,15 +159,13 @@ init python:
             #normal sfxs
             try:
                 audio = self.sfxEntries2[selection]
-                renpy.sound.play(audio[0])
-                if(entry[3] != 0):
-                    renpy.pause(entry[3])
+                renpy.sound.play(audio[1])
+                if(audio[2] != 0):
+                    renpy.pause(audio[2])
                 return
             except KeyError:
                 if(type == "normSFX"):
                     renpy.sound.play(self.pholder_sfx2)
-                    if(entry[3] != 0):
-                        renpy.pause(entry[3])
                     return
             renpy.error("[lib_music] Fatal error handling shortcode '%s'." % selection)
 
@@ -224,7 +222,7 @@ init python:
             for shortname, fileloc, time, nothing in tripwise(sfxlib2):
                 time = ast.literal_eval(time)
                 newLine = (shortname, fileloc, time)
-                self.sfxEntries2[shortname] = fileloc
+                self.sfxEntries2[shortname] = newLine
 
             # Step 4. Load the placeholder files.
             pholder_data = open(placeholder_audio)
