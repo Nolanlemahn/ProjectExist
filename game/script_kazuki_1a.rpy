@@ -261,9 +261,9 @@ label Kazuki_1b:
          right shoulder."
     $ minutes = minutes + 2
     extend " I generally take 2-minute showers, give or take a few seconds.{w} 
-            I step out of the shower and dry myself off with a black t-shirt. It
-            is ripped in too many places to be socially acceptable as outdoor 
-            attire."
+            I step out of the shower and dry myself off with a black t-shirt."
+    nmc "It is ripped in too many places to be socially acceptable as outdoor 
+         attire. But as a towel, it is perfect."
     $ sio_s("bg kazuki bedroom")
     $ minutes = minutes + 5
     nmc "I toss the shirt on the towel rack and open my closet."

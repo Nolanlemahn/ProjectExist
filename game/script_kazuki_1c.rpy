@@ -152,14 +152,17 @@ label Kazuki_1j_lunch:#originally had a bus crash intended; bad idea
         bagels."
     nmc "In response, Father gets up and takes another swing at me. Persistent 
          bastard."
-    nmc "I crack a cutting board over his head, hopefully putting him down for a
-         bit longer than a few seconds."
+    nmc "I slam a cutting board into his head, hopefully putting him down for a
+         bit longer than a few seconds. The board shatters into pieces around
+         us."
     d "Hnngggrr eaaaaah-"
-    nmc "Father collapses to the floor as a heap of flesh, making a gargling 
-         sound all the while."
+    nmc "Father collapses to the floor, making a gargling sound. I drop the
+         remains of the cutting board into the trash - the glass shards are 
+         no longer useful for kitchen use."
+    nmc "... We needed to get a plastic one, anyway."
     mc "You haven't won a fight since I turned 14... I'm leaving now."
     nmc "Father, still on the floor, lifts his right hand and makes a \"blah 
-         blah\" motion with it. An unsuspecting target for a wad of cash. The 
+         blah\" motion with it. An unsuspecting target for the wad of cash. The 
          money drops to the floor with a light rustle. I can't resist a smirk as
          I lift the plastic plate off of the floor while he picks himself up."
     d "I wasn't ready."
@@ -401,7 +404,7 @@ label Kazuki_1j_essay_what:
     nmc "... I should probably head to work now... I guess I have to take the 
          bus."
     $ triple_min(5)
-    jump Kazuki_1k_work_alt
+    jump Kazuki_1k_work_alt # 2:42 PM
 
 label Kazuki_1j_essay_more:
     $ points[4] += 2
@@ -498,7 +501,7 @@ label Kazuki_1j_essay_stop:
     mc "Ahh, okay. See ya."
     nmc "... I guess I have to take the bus."
     $ triple_min(3)
-    jump Kazuki_1k_work_alt#3:14
+    jump Kazuki_1k_work_alt#3:14 -- make a new jump-to
     
 label Kazuki_1k_lunch_route:
     if hasAnswer("lily_lunch_1_silence"):
