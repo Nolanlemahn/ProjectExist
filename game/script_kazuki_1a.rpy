@@ -398,24 +398,22 @@ label Kazuki_1b_2:
     nmc "I stretch my fingers and begin talking with my classmates."
     #]
     
-    #the if statement is a relic of a bugfix, leaving it here for now
-    if(True):
-        nvln "{color=#C0C0C0}%%kazokaz{/color}: Good morning, Jonathan.{fast}"
-        extend "\n{color=#ADD8E6}+jonrod{/color}: still can't believe you swore 
-                in class lol{fast}"
-        extend "\n{color=#C0C0C0}%%kazokaz{/color}: Shut up.{fast}"
-        extend "\n{color=#FFFF00}willard92{/color}: you guys are so productive 
-                in the morning{fast}"
-        extend "\n{color=#FFFF00}willard92{/color}: best use of a physics 
-                lecture ever{fast}"
-        extend "\n{color=#C0C0C0}%%kazokaz{/color}: Then I can assume you are 
-                making excellent headway on your English essay?{fast}"
-        extend "\n{color=#FFFF00}willard92{/color}: yes{fast}"
-        extend "\n{color=#ADD8E6}+jonrod{/color}: bullshit{fast}"
-        extend "\n{color=#C0C0C0}%%kazokaz{/color}: Technically, now you're 
-                swearing in class...{fast}"
-        extend "\n{color=#ADD8E6}+jonrod{/color}: lolno{fast}"
-        nvl clear
+    nvln "{color=#C0C0C0}%%kazokaz{/color}: Good morning, Jonathan.{fast}"
+    extend "\n{color=#ADD8E6}+jonrod{/color}: still can't believe you swore 
+            in class lol{fast}"
+    extend "\n{color=#C0C0C0}%%kazokaz{/color}: Shut up.{fast}"
+    extend "\n{color=#FFFF00}willard92{/color}: you guys are so productive 
+            in the morning{fast}"
+    extend "\n{color=#FFFF00}willard92{/color}: best use of a physics 
+            lecture ever{fast}"
+    extend "\n{color=#C0C0C0}%%kazokaz{/color}: Then I can assume you are 
+            making excellent headway on your English essay?{fast}"
+    extend "\n{color=#FFFF00}willard92{/color}: yes{fast}"
+    extend "\n{color=#ADD8E6}+jonrod{/color}: bullshit{fast}"
+    extend "\n{color=#C0C0C0}%%kazokaz{/color}: Technically, now you're 
+            swearing in class...{fast}"
+    extend "\n{color=#ADD8E6}+jonrod{/color}: lolno{fast}"
+    nvl clear
     $ minutes = 515
     nmc "Never mind. IRC is a waste of time. I pull out my notepad and focus on 
          the lecture."

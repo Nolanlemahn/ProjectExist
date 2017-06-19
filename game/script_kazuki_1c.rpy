@@ -470,6 +470,7 @@ label Kazuki_1j_essay_stop:
     "{i}Grumble...{/i}"
     nmc "Now that my stomach reminds me, I haven't had anything to eat since 
          this morning myself."
+    $ minutes += 2
     li "..."
     nmc "By now, the school cafeteria has probably stopped serving lunch."
     li "..."
@@ -477,6 +478,8 @@ label Kazuki_1j_essay_stop:
     li "...!"
     nmc "I wonder what I could do for a-"
     li "{size=40}Hey! I'm talking to you!{/size}"
+    mc "Oh. Sorry. I'm considering my lunch options at the moment."
+    $ minutes += 2
     nmc "I'm already fairly late for work... missing a day of work would 
          certainly be unusual for me, but it probably wouldn't hurt."
     mc "... Well, fuck me."
@@ -489,6 +492,7 @@ label Kazuki_1j_essay_stop:
     mc "Oh, never mind. It doesn't really matter."
     li "Doesn't really matter?! Listen to yourself! Uurgh. This is why you don't
         have any friends."
+    $ minutes += 2
     mc "That... hurt. A lot."
     nmc "Lilian probably has a point here. My lack of care does seem to turn 
          people away."
@@ -500,8 +504,8 @@ label Kazuki_1j_essay_stop:
     li "Oh, yes you do. I'll talk to you later then."
     mc "Ahh, okay. See ya."
     nmc "... I guess I have to take the bus."
-    $ triple_min(3)
-    jump Kazuki_1k_work_alt#3:14 -- make a new jump-to
+    $ triple_min(5)
+    jump Kazuki_1k_work_fail
     
 label Kazuki_1k_lunch_route:
     if hasAnswer("lily_lunch_1_silence"):
@@ -729,6 +733,10 @@ label Kazuki_1k_post_drive:
     li "We're both human!"
     mc "I was hoping for something slightly more... ground-breaking."
     li "In that case, I've got nothing."
+    nmc "I let out a sigh. She's funny, but in the cute-stupid way."
+    mc "How often do you come here again? The host seemed to recognize you."
+    li "Once a week. Maybe twice or thrice, depending on my mood."
+    mc "... You eat out three times a week?"
     return
 
 label Kazuki_1k_work_fail:
@@ -815,7 +823,7 @@ label Kazuki_1k_work:
     nmc "My shift wore on, with most of the calls sounding like that."
     jump Kazuki_1l_work
 
-label Kazuki_1k_work_alt:# 2:42 PM or 3:05
+label Kazuki_1k_work_alt:# 2:42 PM
     #$ minutes = 882
     $ sio_l("bg workshop")
     nmc "Robert Hale has been the proud owner of Robert and Son's Machines for 
