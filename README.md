@@ -2,11 +2,11 @@ Project Exist
 =============
 
 ### DEVEOPMENT STATUS
-Development has been put on indefinite hold due to... Ah... Unfortunate circumstances. While there are current goals, it is unlikely that they will be finished in a timely manner. The roadmap is, in general:
+Development fully resumed in February 2018. The roadmap is, in general:
 - Polish the GUI
 - Reduce the amount hard-coded GUI offsets
 - Re-polish the Combat/Player system
-- Write more (surprise)
+- Write more (surprise!)
 - Redesign the personalities of the characters
 - Improve support for Linux
 
