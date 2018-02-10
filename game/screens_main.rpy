@@ -43,7 +43,7 @@ screen main_menu():
         textbutton "" action NullAction() style "empty_button"
         if config.developer:
             textbutton _("Persistent Reset") action ui.callsinnewcontext("destroy_persistent")
-            textbutton "Seriously break things" action ui.callsinnewcontext("reset_button")
+            textbutton "Delete All Saves" action ui.callsinnewcontext("reset_button")
             textbutton "" action NullAction() style "empty_button"
         textbutton "Report a Bug" action Help("game/modules/report.html")
         textbutton "Check for Updates" action ui.callsinnewcontext("pre_update")

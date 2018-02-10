@@ -200,17 +200,17 @@ init python:
         shutil.rmtree(os.path.abspath(home + "/My Games/" + dirname + "/" + savename))
         return
         
-    def freaking_delete_every_external_file_associated_with_this():
+    def remove_all_saves():
         try:
             shutil.rmtree(os.path.abspath(home + "/My Games/" + dirname))
             shutil.rmtree(os.path.abspath(config.savedir))
         except:
-            renpy.say(None, "We were unable to delete things.")
+            renpy.say(None, "We were unable to delete anything.")
         return
         
 label reset_button:
     $ renpy.reload_script()
-    $ freaking_delete_every_external_file_associated_with_this()
+    $ remove_all_saves()
     return
     
 label test_iorpy_magic:

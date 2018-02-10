@@ -1,16 +1,20 @@
+init -2 python:
+    def GameRead(path, enc = "utf-8"):
+        return file(config.gamedir + path).read().decode(enc)
+
 init -1:
-    $ athenaGloss = file(config.gamedir + "/glossary/characters/athenagloss.txt").read().decode("utf-8")
-    $ jonGloss = file(config.gamedir + "/glossary/characters/jongloss.txt").read().decode("utf-8")
-    $ kazukiGloss = file(config.gamedir + "/glossary/characters/kazukigloss.txt").read().decode("utf-8")
-    $ lawGloss = file(config.gamedir + "/glossary/characters/lawgloss.txt").read().decode("utf-8")
-    $ masaGloss = file(config.gamedir + "/glossary/characters/masagloss.txt").read().decode("utf-8")
-    $ natGloss = file(config.gamedir + "/glossary/characters/natgloss.txt").read().decode("utf-8")
-    $ rinGloss = file(config.gamedir + "/glossary/characters/ringloss.txt").read().decode("utf-8")
-    $ tammyGloss = file(config.gamedir + "/glossary/characters/tammygloss.txt").read().decode("utf-8")
-    $ ult7Gloss1 = file(config.gamedir + "/glossary/characters/ult7gloss1.txt").read().decode("utf-8")
-    $ ult7Gloss2 = file(config.gamedir + "/glossary/characters/ult7gloss2.txt").read().decode("utf-8")
-    $ ult7Gloss3 = file(config.gamedir + "/glossary/characters/ult7gloss3.txt").read().decode("utf-8")
-    $ liliGloss = file(config.gamedir + "/glossary/characters/liligloss.txt").read().decode("utf-8")
+    $ athenaGloss = GameRead("/glossary/characters/athenagloss.txt")
+    $ jonGloss = GameRead("/glossary/characters/jongloss.txt")
+    $ kazukiGloss = GameRead("/glossary/characters/kazukigloss.txt")
+    $ lawGloss = GameRead("/glossary/characters/lawgloss.txt")
+    $ masaGloss = GameRead("/glossary/characters/masagloss.txt")
+    $ natGloss = GameRead("/glossary/characters/natgloss.txt")
+    $ rinGloss = GameRead("/glossary/characters/ringloss.txt")
+    $ tammyGloss = GameRead("/glossary/characters/tammygloss.txt")
+    $ ult7Gloss1 = GameRead("/glossary/characters/ult7gloss1.txt")
+    $ ult7Gloss2 = GameRead("/glossary/characters/ult7gloss2.txt")
+    $ ult7Gloss3 = GameRead("/glossary/characters/ult7gloss3.txt")
+    $ liliGloss = GameRead("/glossary/characters/liligloss.txt")
     
 label about_fp:
     scene bg mainmenu
