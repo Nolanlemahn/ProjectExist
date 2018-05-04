@@ -29,7 +29,7 @@ label Kazuki_1d_wil:
     $ minutes = 603
     w "Hah... anyway, class starts soon. You should probably sit down."
     mc "Yeah, see ya... Wait, hang on. I wanted to ask you something..."
-    $ cd_set(7, 7, 'Kazuki_1d_insert')
+    $ PrepCoundown(7, 7, 'Kazuki_1d_insert')
     show screen countdown
     menu:
         extend ""
@@ -145,7 +145,7 @@ label Kazuki_1d_tamara_a:
             weight'."
     mc "I'm sorry, but what do you mean by \"again\"?"
     t "This is the second time you have been late to class this week. What gives?"
-    $ cd_set(15, 15, 'Kazuki_1d_tamara_b1')
+    $ PrepCoundown(15, 15, 'Kazuki_1d_tamara_b1')
     show screen countdown
     menu:
         extend ""
@@ -388,7 +388,7 @@ label Kazuki_1d_tamara_b:
          mathematics courses until the end of time."
     nmc "Double integrals, rotations and optimizations; such topics come to me 
          naturally. Or so I pretend."
-    $ cd_set(30, 30, 'Kazuki_1e')
+    $ PrepCoundown(30, 30, 'Kazuki_1e')
     show screen countdown
     menu:
         extend ""
@@ -463,7 +463,7 @@ label Kazuki_1e:
     $ minutes = minutes + 3
     nmc "I unceremoniously stuff the flier in my bag. Actually, now that I think
          about it..."
-    $ cd_set(15, 15, 'Kazuki_1g')
+    $ PrepCoundown(15, 15, 'Kazuki_1g')
     show screen countdown
     menu:
         extend ""
@@ -571,12 +571,12 @@ label Kazuki_1h:
          whispering, probably insults, gossip, and laughter."
     $ mtname = "Ms. Amnaki"
     mc "Oh, so that's her name, Amnaki..."
-    mt "{size=40}Get out right now! If you can't even be bothered to stay awake 
-        during my class, then I can't even be bothered to see you.{/size}"
+    mt "{size=40}Get out right now!{/size} If you can't even be bothered to stay 
+        awake during my class, then I can't even be bothered to look at you."
     nmc "I gather my things and make my way towards the classroom door. I know I
          should be feeling guilt right now, or shame. But quite frankly I 
          couldn’t care less what the teacher thinks of me now. Or my classmates 
-         for that matter - it’s not as if they don’t have rumours and gossip 
+         for that matter - it’s not as if they don’t have rumors and gossip 
          about me already."
     nmc "However, as I'm opening the door, the teacher, seemingly frustrated by 
          my lack of remorse, decides to add injury to the insult."
@@ -609,7 +609,7 @@ label Kazuki_1h:
          because you have to."
     nmc "Fun fact, that wise man was myself."
     nmc "In any case, I have to figure out something to do for lunch."
-    $ cd_set(30, 30, 'Kazuki_1i')
+    $ PrepCoundown(30, 30, 'Kazuki_1i')
     show screen countdown
     menu:
         extend ""

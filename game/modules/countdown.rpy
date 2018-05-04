@@ -9,7 +9,7 @@
 # Type: Library, Screen
 # 
 # Usage:
-#     $ cd_set(Int, Int, String)
+#     $ PrepCountdown(Int, Int, String)
 #     show screen countdown
 #######
 
@@ -99,7 +99,7 @@ init python:
     
 
     #####
-    # Function name: cd_set()
+    # Function name: PrepCountdown()
     # 
     # Description: Sets countdown variables so that the screen functions
     # correctly.
@@ -111,7 +111,7 @@ init python:
     # 
     # Returns: None
     #####
-    def cd_set(start_time, end_time, target_str):
+    def PrepCountdown(start_time, end_time, target_str):
         #don't bother checking store
         store.time = start_time
         store.timer_range = end_time

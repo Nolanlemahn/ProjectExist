@@ -241,7 +241,7 @@ label Kazuki_1j_essay:
     mc "Ugh. You aren't a funny person."
     li "Okay really, I just don't have anything better to do. Do you want help 
         or not?"
-    $ cd_set(15, 15, 'Kazuki_1j_essay_what')
+    $ PrepCoundown(15, 15, 'Kazuki_1j_essay_what')
     show screen countdown
     menu:
         extend ""
@@ -338,7 +338,7 @@ label Kazuki_1j_essay_yes:
     # if mc indicated that he isn't interested in the 40 we're making him say no
     if("self_40" not in answers):
         return #line180
-    $ cd_set(15, 15, 'return_stub')
+    $ PrepCoundown(15, 15, 'return_stub')
     show screen countdown
     menu:
         extend ""
@@ -439,7 +439,7 @@ label Kazuki_1j_essay_more:
         treating you."
     nmc "... Can I do that to her? Now that I think about it, we don't know each
          other all too well, and I have absolutely no idea how well off she is."
-    $ cd_set(12, 12, 'Kazuki_1k_lunch_route')
+    $ PrepCoundown(12, 12, 'Kazuki_1k_lunch_route')
     show screen countdown
     menu:
         extend ""
@@ -619,7 +619,7 @@ label Kazuki_1k_hell_yes:
     mc "..."
     li "..."
     nmc "Well, to break the monotony, I think I'll ask about..."
-    $ cd_set(15, 15, 'Kazuki_1k_mid_drive')
+    $ PrepCoundown(15, 15, 'Kazuki_1k_mid_drive')
     show screen countdown
     menu:
         extend ""
@@ -838,7 +838,7 @@ label Kazuki_1k_work_alt:# 2:42 PM
          and grime of my brow, wrench in hand... actually I just handle the 
          taxes, the telephone, and the computers."
     mc "Apologies for the tardiness, Mr. Hale."
-    ro "Infernal self-entitled crap-infested ignorant plebeian capatalist 
+    ro "Infernal self-entitled crap-infested ignorant plebeian capitalist 
         scum-of-the-earth bitch."
     nmc "... The man is not known for his clean language."
     mc "Umm. Mr. Hale?"
@@ -857,12 +857,14 @@ label Kazuki_1k_work_alt:# 2:42 PM
          to make any demands."
     ro "Yeah, about that. Tell me why you weren't here on time again?"
     mc "Well..."
-    $ cd_set(15, 15, 'Kazuki_1k_work_mum')
+    $ PrepCoundown(15, 15, 'Kazuki_1k_work_mum')
     show screen countdown
     menu:
         extend ""
         "Amnaki":
             $ addAnswer("work_excuse_amnaki")
+            mc "... I had some school trouble. Ms. Amnaki gave me some extra 
+                work to do."
         "Lilian":
             $ addAnswer("work_excuse_lilian")
         "...":
@@ -919,23 +921,23 @@ label Kazuki_1l_work:
     mc "Considering that your expectations are generally low..."
     ro "\"Blessed is the man who expects nothing, for he shall never be 
         disappointed.\""
-    $ cd_set(7, 7, 'Kazuki_1l_work_minus')
+    $ PrepCoundown(7, 7, 'Kazuki_1l_work_minus')
     show screen countdown
     menu:
         extend ""
         "Mark Twain?":
             mc "Was it Mark Twain that said that?"
-            ro "No. It was actully Alexander Pope."
+            ro "No. It was actually Alexander Pope."
         "Alexander Pope?":
             mc "That sounds like an Alexander Pope quote." 
             ro "It was indeed him who said it."
         "Oscar Fingal O'Flahertie Wills Wilde?":
             mc "That sounds like Oscar Fingal O'Flahertie Wills Wilde."
             ro "Who?"
+            nmc "I'm not entirely sure why I felt like spewing out the poet's 
+                 full name. Oh well."
             mc "You know. Oscar Wilde?"
-            ro "No... no I don't know."
-            mc "Never mind. So it wasn't Oscar Wilde who said that?"
-            ro "No, it was actually Alexander Pope."
+            ro "Oh. No, it was actually Alexander Pope."
         "...":
             jump Kazuki_1l_work_minus
     jump Kazuki_1l_work_extend

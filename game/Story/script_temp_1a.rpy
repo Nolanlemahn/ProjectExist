@@ -1,11 +1,4 @@
-﻿#Dying Hell: 15+ for language
-#NintendoToad: writer
-#NintendoToad: music (hopefully - title theme in progress...)
-#[NintendoToad's IRL friend]: artist
-# We need photos: restaurant, parking lot, culdesac, inside a car, parked car
-# We should replace photos: brickwall
-# We need audio: car sounds in general, stomach grumble
-# Try to avoid non-PNGs
+﻿# Try to avoid non-PNGs
 
 #vars
            

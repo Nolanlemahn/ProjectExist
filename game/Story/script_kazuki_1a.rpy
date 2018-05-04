@@ -450,7 +450,7 @@ label Kazuki_1b_2:
        since you didn't stampede out with the rest of them. Am I right?"
     mc "Uhh..."
     nmc "I end up asking about..."
-    $ cd_set(7, 7, 'Kazuki_1b_pre')
+    $ PrepCoundown(7, 7, 'Kazuki_1b_pre')
     #$ override_mouse_set(600, 420, "fake_1", "surprise")
     show screen countdown
     menu:
@@ -581,7 +581,7 @@ label Kazuki_1b_stub:
     l "So, are you coming?"
     $ minutes = minutes + 2
     #9:50PM
-    $ cd_set(20, 20, 'Kazuki_1b_interstitial')
+    $ PrepCoundown(20, 20, 'Kazuki_1b_interstitial')
     show screen countdown
     menu:
         extend ""
@@ -643,7 +643,7 @@ label Kazuki_1b_extend:
     nmc "Oh my God. She knows my name."
     mc "That's me. What's up?"
     n "Are you going to cross-country today?"
-    $ cd_set(5, 5, 'Kazuki_1b_fail')
+    $ PrepCoundown(5, 5, 'Kazuki_1b_fail')
     show screen countdown
     menu:
         extend ""
@@ -697,7 +697,7 @@ label Kazuki_1b_extend:
             n "Well, I should probably get to my next class. So, will you be able to- 
                eep!"
             nmc "Her legs buckle and she starts to fall! I..."
-            $ cd_set(4, 4, 'Kazuki_1b_extend2')
+            $ PrepCoundown(4, 4, 'Kazuki_1b_extend2')
             show screen countdown
             menu:
                 extend ""
@@ -750,7 +750,7 @@ label Kazuki_1b_extend2:
          in hers."
     extend "\n... I let go of her. Reluctantly. But quickly."
     n "So umm... will you be able to walk me over at a quarter to 8?"
-    $ cd_set(5, 5, 'Kazuki_1b_fail')
+    $ PrepCoundown(5, 5, 'Kazuki_1b_fail')
     show screen countdown
     menu:
         extend ""
