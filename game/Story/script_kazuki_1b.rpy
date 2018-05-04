@@ -574,10 +574,8 @@ label Kazuki_1h:
     mt "{size=40}Get out right now!{/size} If you can't even be bothered to stay 
         awake during my class, then I can't even be bothered to look at you."
     nmc "I gather my things and make my way towards the classroom door. I know I
-         should be feeling guilt right now, or shame. But quite frankly I 
-         couldn’t care less what the teacher thinks of me now. Or my classmates 
-         for that matter - it’s not as if they don’t have rumors and gossip 
-         about me already."
+         should be feeling guilt right now, or shame, but I'm just happy to be 
+         out of the room."
     nmc "However, as I'm opening the door, the teacher, seemingly frustrated by 
          my lack of remorse, decides to add injury to the insult."
     $ essay_status = "not_started"

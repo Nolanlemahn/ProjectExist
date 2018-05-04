@@ -5,29 +5,10 @@ label Rin_1a:#this_label_done
     $ shadow_name = "Rin's Shadow"
     $ main_name = "?"
     $ main_type = "kf"
-    $ main_char_level = 5
-    # start implementing the table of stats
-    $ main_char_maxHP = 100
-    $ main_char_currentHP = 100
-    $ main_char_maxBelly = 100
-    $ main_char_currentBelly = 100
-    $ main_char_maxSleep = 400
-    $ main_char_currentSleep = 350
-    $ main_char_maxXP = 50
-    $ main_char_currentXP = 0
-    $ main_char_stats = [20,20,20,20,20,20]
-    # STR, DEX, RES, SPD, INT, SPI
-    $ main_char_ABI_SLO1 = "No ability"
-    $ main_char_ABI_SLOL1 = 0
-    $ main_char_ABI_SLO2 = "No ability"
-    $ main_char_ABI_SLOL2 = 0
-    $ main_char_RS_SLO1 = "No symbol"
-    $ main_char_RS_SLOL1 = 0
-    $ main_char_RS_SLO2 = "No symbol"
-    $ main_char_RS_SLOL2 = 0
-    $ main_char_weapon = "Fists"
-    $ main_char_armor = "Nothing"
-    $ main_known_moves = [1,2,0,0,0,0]
+    $ main_char = Combatant("Rin", 5, 11, 11, 20, 14, 14, 20, 100, 50, 100, 
+                            100, None, 0, None, 0, None, 0, None, 0, "Fists", 
+                            "Nothing", ["Pound", "Check"], "Human")
+    $ main_char.setState(HP = 100, XP = 0, Belly = 65, Sleep = 75)
     $ answers = []
     
     $ j_name = "???"
@@ -55,20 +36,20 @@ label Rin_1a:#this_label_done
     ###########
     
     $ etname = "English Teacher"
-    $ et = DynamicCharacter("etname", show_two_window=True)
+    $ et = DynamicCharacter("etname")
     
     #Jonathan
-    $ j = DynamicCharacter("j_name", color="#ADD8E6", kind=char_blue, show_two_window=True)
+    $ j = DynamicCharacter("j_name", color="#ADD8E6", kind=char_blue)
     $ nvlj = Character('Johnathan', color="#ADD8E6", kind=nvl_blue)
     
     #Kazuki
-    $ k = Character("Kazuki", color="#C0C0C0", kind=char_gray, show_two_window=True)#standardmain
+    $ k = Character("Kazuki", color="#C0C0C0", kind=char_gray)#standardmain
     $ nvlk = DynamicCharacter("main_name", color="#C0C0C0", kind=nvl_gray)#nvlmain
     $ nk = Character(None, what_style="main_gray")#thinkmain
     $ nnvlk = Character(None, color="#C0C0C0", kind=nvl_gray)#nvl-thinkmain
     
     #Rin
-    $ mc = Character("Rin", color="#C0C0C0", kind=char_gray, show_two_window=True)
+    $ mc = Character("Rin", color="#C0C0C0", kind=char_gray)
     $ nmc = Character(None, color="#C0C0C0", kind=char_gray)
     $ nvlmc = Character("Rin", color="#C0C0C0", kind=nvl_gray, who_suffix = ":")
     $ nvlnmc = Character(None, color="#C0C0C0", kind=nvl_gray)
@@ -79,7 +60,7 @@ label Rin_1a:#this_label_done
     $ nvlrm = DynamicCharacter("mother_name", color="#FFFFFF", kind=nvl_white, who_suffix = ":")
     
     #Shadow
-    $ s = DynamicCharacter("shadow_name", color="#C0C0C0", kind=char_gray, show_two_window=True)
+    $ s = DynamicCharacter("shadow_name", color="#C0C0C0", kind=char_gray)
     $ nvls = DynamicCharacter("shadow_name", color="#C0C0C0", kind=nvl_gray, who_suffix = ':')
     
     $ minutes = 885
@@ -173,7 +154,7 @@ label Rin_1b:
     nmc "My shadow raises its hands in surrender. That is because I am holding 
          my shadow by its neck, and standing over the gaping hole that is my 
          heart."
-    mc "... Pain is the body's acknowledgement of fear. Fear is the 
+    mc "... Pain is the body's acknowledgment of fear. Fear is the 
         understanding that you are no longer in control of your own destiny.
         You fear me, and now you feel pain."
     s "... What are you?"
@@ -181,8 +162,9 @@ label Rin_1b:
          answer. It simply wants to know what I consider myself to be."
     mc "Just a girl who perfectly understands darkness, and therefore perfectly
         understands this world."
-    doublespeak et s "So Rin, tell me, what was the author's main goal in this \
-particular passage?" "... No. You are darkness. Compared to you, I am light."
+    et "So Rin, tell me, what was the author's main goal in this particular 
+        passage?" (multiple=2)
+    s "... No. You are darkness. Compared to you, I am light." (multiple=2)
     nmc "My shadow lets out a light chuckle, which builds into hearty laughter,
          which finally becomes a hyena's call."
     mc "... Annoying."

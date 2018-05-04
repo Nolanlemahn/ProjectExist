@@ -1,7 +1,19 @@
 ﻿# Try to avoid non-PNGs
 
 #vars
-           
+
+label Test_1a:
+  $ l = Character("Left")
+  $ m = Character("Middle")
+  $ r = Character("Right")
+  l "Hi" (multiple = 2)
+  r "Hi" (multiple = 2)
+
+  l "Hi" (multiple = 3)
+  m "Hi" (multiple = 3)
+  r "Hi" (multiple = 3)
+  "Hmmm...."
+  return
     
 label Maou_1a:
     with dissolve

@@ -51,7 +51,7 @@ init -2 python:
 
     # Two custom characters that store what they said
     class ReadbackADVCharacter(ADVCharacter):
-        def do_done(self, who, what):
+        def do_done(self, who, what, multiple = ""):
             store_say(who, what)
             super(ReadbackADVCharacter, self).do_done(who, what)
             return
@@ -62,7 +62,7 @@ init -2 python:
             return
 
     class ReadbackNVLCharacter(NVLCharacter):
-        def do_done(self, who, what):
+        def do_done(self, who, what, multiple = ""):
             store_say(who, what)
             super(ReadbackNVLCharacter, self).do_done(who, what)
             return

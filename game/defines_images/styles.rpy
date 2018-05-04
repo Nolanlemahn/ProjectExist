@@ -335,7 +335,7 @@ init -1:
         who_prefix="{color=#CC6699}", who_suffix = ":{/color}")
 
 init -1:
-    define dev = Character('Developer', color="#FFFFFF", kind=char_white, show_two_window=True)
+    define dev = Character('Developer', color="#FFFFFF", kind=char_white)
     $ scentered = Character(None, what_style="scentered_text", window_style="centered_window")
     $ narr = Character(None)
     $ nvldev = NVLCharacter('Developer', color="#FFFFFF", kind=nvl_white)

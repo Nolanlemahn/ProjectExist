@@ -290,7 +290,8 @@ label Kazuki_1j_essay_yes:
     li "Statistically speaking, you probably were at one point. But even if 
         you're right, that isn't something you can write here."
     mc "So, what do I write?"
-    doublespeak li mc "Complete and utter..." "Bullshit?"
+    li "Complete and utter..." (multiple=2)
+    mc "Bullshit?" (multiple=2)
     li "Well, I was going to say nonsense, but that works too!"
     mc "Okay, that isn't really my thing. Unless I'm pretending that I'm 
         well-prepared for a presentation or something."
@@ -865,6 +866,7 @@ label Kazuki_1k_work_alt:# 2:42 PM
             $ addAnswer("work_excuse_amnaki")
             mc "... I had some school trouble. Ms. Amnaki gave me some extra 
                 work to do."
+            ro "Were you late to one of her classes?"
         "Lilian":
             $ addAnswer("work_excuse_lilian")
         "...":

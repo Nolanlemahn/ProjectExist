@@ -32,6 +32,9 @@ label start:#this_label_done
         "Katherine (Main female character)":
             call rollfind
             jump Rin_1a
+        "Test scene":
+            call rollfind
+            jump Test_1a
     #end_of_label
 
 label standalone_dlc_menu:

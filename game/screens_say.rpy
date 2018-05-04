@@ -22,99 +22,73 @@ screen say:
     # Defaults
     default side_image = None
     default two_window = False
-    default doublespeak = False
     
-    # Check for not doublespeak first
-    if(not doublespeak):
-        # Decide if we want to use the one-window or two-window varaint.
-        if not two_window:
-            # The one window variant.        
+
+    # The two window variant.
+    vbox:
+        style "say_two_window_vbox"
+        if who:            
             window:
-                id "window"
-                has vbox:
-                    style "say_vbox"
-                if who:
-                    text who id "who"
-                text what id "what"
-        else:
-            # The two window variant.
-            vbox:
-                style "say_two_window_vbox"
-                if who:            
-                    window:
-                        style "say_who_window"
-                        text who:
-                            id "who"
-                window:
-                    id "window"
-                    has vbox:
-                        style "say_vbox"
-                    text what id "what"
+                style "say_who_window"
+                text who:
+                    id "who"
+        window:
+            id "window"
+            has vbox:
+                style "say_vbox"
+            text what id "what"
         # If there's a side image, display it above the text.
         if side_image:
             add side_image
         else:
             add SideImage() xalign 0.0 yalign 1.0
-
-    else:
-        # Ignore SideImage
-        if not two_window:
-            # The one window variant.        
-            window:
-                xsize config.screen_width/2
-                xalign 0.0
-                id "window"
-                has vbox:
-                    style "say_vbox"
-                if who:
-                    text who.items()[0][0] id "who"
-                text what[0] id "what" slow_cps True
-            window:
-                xsize config.screen_width/2
-                xalign 1.0
-                id "window"
-                has vbox:
-                    style "say_vbox"
-                if who:
-                    text who.items()[1][0] id "who"
-                text what[1] id "what" slow_cps True
-        else:
-            # The two window variant.
-            vbox:
-                xsize config.screen_width/2
-                style "say_two_window_vbox"
-                if who:            
-                    window:
-                        style "say_who_window"
-                        text who.items()[0][0]:
-                            id "who"
-                window:
-                    id "window"
-                    has vbox:
-                        style "say_vbox"
-                    text what[0] id "what" slow_cps True
-            vbox:
-                xsize config.screen_width/2
-                xpos config.screen_width/2
-                style "say_two_window_vbox"
-                if who:            
-                    window:
-                        style "say_who_window"
-                        text who.items()[1][0]:
-                            id "who"
-                window:
-                    id "window"
-                    has vbox:
-                        style "say_vbox"
-                    text what[1] id "what" slow_cps True
-                    
+      
     # Use the quick menu.
     use left_quick_menu
     use quick_menu
     if(battle_mode):
         $ renpy.block_rollback()
 
+screen multiple_say:
+    tag say
+    $ thisBlock = multiple[0]
+    $ totalBlocks = multiple[1]
+    if(thisBlock == 0):
+      use say_prepend
+            
+    ############################################
+    # Defaults
+    default side_image = None
+    default two_window = False
+    
 
+    # The two window variant.
+    vbox:
+        xsize config.screen_width/totalBlocks
+        xpos config.screen_width/totalBlocks*(thisBlock - 1)
+        style "say_two_window_vbox"
+        if who:            
+            window:
+                style "say_who_window"
+                text who:
+                    id "who"
+        window:
+            id "window"
+            has vbox:
+                style "say_vbox"
+            text what id "what"
+        # If there's a side image, display it above the text.
+        if side_image:
+            add side_image
+        else:
+            add SideImage() xalign 0.0 yalign 1.0
+      
+    # Use the quick menu.
+    if(thisBlock == 0):
+      use left_quick_menu
+      use quick_menu
+    if(battle_mode):
+        $ renpy.block_rollback()
 
 screen choice:
     $ in_menu = True

@@ -43,10 +43,10 @@ label Kazuki_1a:#this_label_done
     ###########
     
     $ mtname = "Math Teacher"
-    $ mt = DynamicCharacter("mtname", show_two_window=True)
+    $ mt = DynamicCharacter("mtname")
     
     $ dname = "\"Father\""
-    $ d = DynamicCharacter("dname", show_two_window=True)
+    $ d = DynamicCharacter("dname")
 
     #Rin
     $ r = Character('Rin', color="#000000", kind=char_null, 
